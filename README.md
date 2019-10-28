@@ -2,6 +2,7 @@
 This project is managed by Atmafox for Bruno Carvalho.  His website can be found at http://ffrpg4e.wikidot.com
 
 ## Project Layout
+```
 common: Common content and LaTeX configuration
 common/font: Fonts used across multiple books
 common/img: Images used across multiple books
@@ -15,3 +16,4 @@ core/errata: Chapters and other included TeX for FFRPG4e
 worldbooks: Setting/world book sources
 
 adventures: Adventure book sources
+```
