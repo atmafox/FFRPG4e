@@ -4506,7 +4506,7 @@ number of actions, instead of only one. Specialties:
 > The minimum difficulty for your reactions is zero. In the start of the
 > next round, the difficulty of your reactions reverts to normal.
 >
-> ![](media/image46.wmf){width="6.393700787401575in"
+> ![](media/image46.pdf){width="6.393700787401575in"
 > height="3.0826771653543306in"}![](media/image5.png){width="0.17222222222222222in"
 > height="0.275in"}*Lethal Precision*: Requires Air level 18. If you
 > discard an initiative dice after rolling an attack that may not have
@@ -7534,7 +7534,7 @@ that increase damage by some Stat level, like the Colichemarde, and the
 damage increased by the special effect, and *Soul Eater* applies to all
 actions made with that weapon that requires a weapon attack.
 
-![](media/image63.wmf){width="5.863385826771654in"
+![](media/image63.pdf){width="5.863385826771654in"
 height="4.360236220472441in"}
 
 #### Light Swords / Knives
@@ -9440,7 +9440,7 @@ ability. Another advantage in favor of consumables is that they do not
 have minimum levels to be used, allowing a group to gain powers beyond
 the usual in dire circumstances.
 
-![](media/image64.wmf){width="3.0818897637795275in"
+![](media/image64.pdf){width="3.0818897637795275in"
 height="1.8881889763779527in"}
 
 ![](media/image9.png){width="0.4937007874015748in"
