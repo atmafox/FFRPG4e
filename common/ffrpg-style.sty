@@ -1,19 +1,91 @@
 \ProvidesPackage{ffrpg-style}
 
-\RequirePackage[margin=0.75in]{geometry}
+\RequirePackage{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\RequirePackage{enumitem}
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
+\RequirePackage{hyperref}
+
+% configure page geometry
+\geometry{
+	letterpaper,
+	margin=0.75in,
+	footskip=30pt}
+
+% Get our common images added to the path
+\graphicspath{{../img/}}
+
+% Get our fonts set up, ferrum is missing styles so fake them
+\providefontfamily\ferrum{ferrum.otf}[
+	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
+	AutoFakeBold	= 1.5 ]
+\setmainfont{Caladea}
+
+% Column centered Boco, inherit existing columns
+\newenvironment{boco}{
+	 \par\medskip
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \bgroup\color{blue}%
+	}
+	{\egroup
+	 \medskip}
+
+% Used for page centered Boco but two column text
+\newenvironment{multiboco}{
+	 \par\medskip
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{blue}%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
+
+% Column centered Mog, inherit existing columns
+\newenvironment{mog}{
+	 \par\medskip
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \bgroup\color{red}%
+	}
+	{\egroup
+	 \medskip}
+
+% Page centered mog, two column text
+\newenvironment{multimog}{
+	 \par\medskip
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{red}%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
 
 % Get all our header/footers done
 \pagestyle{fancy}
 \fancyhead{} % Clear the header -- we don't use it
 \fancyfoot{} % Clear the footer, making new one
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\fancyfoot[C]{\leftmark\ - Page \thepage}
+\fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \includegraphics{../img/common/aircrystal.png} \leftmark\ - Page \thepage \includegraphics{../img/common/firecrystal.png} \includegraphics{../img/common/watercrystal.png}}
 
 % Alright, let's set appropriate section layouts
-\titleformat{\section}{\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\normalsize\bfseries\centering}{\thesubsection}{1em}{}
+\titleformat{\chapter}{\ferrum\huge\bfseries\centering}{\thechapter}{1em}{}
+\titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\ferrum\large\itshape\centering}{\thesubsubsection}{1em}{}
 
 \endinput
