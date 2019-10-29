@@ -2,26 +2,22 @@
 \usepackage{import}
 
 % Get standard imports/etc for FFRPG4e documents
-\import{../common/standard}
-
-% And our standard formatting style
-\usepackage{ffrpg-style}
+\import{../common/}{common}
 
 \title{Final Fantasy RPG 4e Revised Edition - Core Rulebook}
 \author{Paul Carvalho}
 \date{28 October 2019}
 
 \begin{document}
-
-% Custom title page
-\include{revised/title}
-
+% Stuff before main book
+\frontmatter
+\maketitle
+% Author's forward, before the ToC
+\include{revised/author}
 % Auto-generated ToC
 \tableofcontents
-
-\chapter{Summary}
-\include{revised/summary}
-
+% Main book chapters
+\mainmatter
 \chapter{Introduction}
 \include{revised/introduction}
 
