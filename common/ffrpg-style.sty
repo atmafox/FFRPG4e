@@ -10,11 +10,14 @@
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
 \RequirePackage{hyperref}
+\RequirePackage{svg}
 
 % configure page geometry
 \geometry{
 	letterpaper,
-	margin=0.75in,
+	margin=0.65in,
+	left=0.5in,
+	right=0.5in,
 	footskip=30pt}
 
 % Get our common images added to the path
@@ -25,15 +28,25 @@
 	Path			= ../common/font/,
 	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
+\providefontfamily\arabtype{arabtype.ttf}[
+	Path			= ../common/font/]
+\providefontfamily\yumin{yumin.ttf}[
+	Path			= ../common/font/,
+	AutoFakeBold	= 1.5  ]
 \setmainfont{Caladea}
+
+% Colours for the two characters
+\definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
+\definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
 	 \par\medskip
+	 \yumin
 	 \begin{center}
 	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
 	 \end{center}
-	 \bgroup\color{blue}%
+	 \bgroup\color{bocoblue}\small%
 	}
 	{\egroup
 	 \medskip}
@@ -41,11 +54,12 @@
 % Used for page centered Boco but two column text
 \newenvironment{multiboco}{
 	 \par\medskip
+	 \yumin
 	 \begin{center}
 	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
 	 \end{center}
 	 \begin{multicols}{2}
-	 \bgroup\color{blue}%
+	 \bgroup\color{bocoblue}\small%
 	}
 	{\egroup
 	 \end{multicols}
@@ -54,10 +68,11 @@
 % Column centered Mog, inherit existing columns
 \newenvironment{mog}{
 	 \par\medskip
+	 \arabtype
 	 \begin{center}
 	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
 	 \end{center}
-	 \bgroup\color{red}%
+	 \bgroup\color{mogred}\Large%
 	}
 	{\egroup
 	 \medskip}
@@ -65,11 +80,12 @@
 % Page centered mog, two column text
 \newenvironment{multimog}{
 	 \par\medskip
+	 \arabtype
 	 \begin{center}
 	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
 	 \end{center}
 	 \begin{multicols}{2}
-	 \bgroup\color{red}%
+	 \bgroup\color{mogred}\Large%
 	}
 	{\egroup
 	 \end{multicols}
@@ -77,10 +93,15 @@
 
 % Get all our header/footers done
 \pagestyle{fancy}
-\fancyhead{} % Clear the header -- we don't use it
-\fancyfoot{} % Clear the footer, making new one
+\fancyhf{}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \includegraphics{../img/common/aircrystal.png} \leftmark\ - Page \thepage \includegraphics{../img/common/firecrystal.png} \includegraphics{../img/common/watercrystal.png}}
+\fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \hspace{75pt} \includegraphics{../img/common/aircrystal.png} \hspace{75pt} \leftmark\ - Page \thepage \hspace{75pt} \includegraphics{../img/common/firecrystal.png} \hspace{75pt} \includegraphics{../img/common/watercrystal.png}}
+
+% And headers/footers for the chapter pages
+\fancypagestyle{plain}{%
+	 \fancyhf{}
+	 \fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \hspace{75pt} \includegraphics{../img/common/aircrystal.png} \hspace{75pt} \leftmark \hspace{75pt} \includegraphics{../img/common/firecrystal.png} \hspace{75pt} \includegraphics{../img/common/watercrystal.png}}
+	}
 
 % Alright, let's set appropriate section layouts
 \titleformat{\chapter}{\ferrum\huge\bfseries\centering}{\thechapter}{1em}{}
