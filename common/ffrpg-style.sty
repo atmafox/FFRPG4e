@@ -1,5 +1,18 @@
 \ProvidesPackage{ffrpg-style}
 
 \RequirePackage[margin=0.75in]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+
+% Get all our header/footers done
+\pagestyle{fancy}
+\fancyhead{} % Clear the header -- we don't use it
+\fancyfoot{} % Clear the footer, making new one
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyfoot[C]{\leftmark\ - Page \thepage}
+
+% Alright, let's set appropriate section layouts
+\titleformat{\section}{\normalfont\Large\bfseries\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\centering}{\thesubsection}{1em}{}
 
 \endinput
