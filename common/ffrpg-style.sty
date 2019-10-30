@@ -1,7 +1,7 @@
 \ProvidesPackage{ffrpg-style}
 
 \RequirePackage{geometry}
-\RequirePackage{xcolor}
+\RequirePackage[table,xcdraw,svgnames]{xcolor}
 \RequirePackage{fontspec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
@@ -10,7 +10,8 @@
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
 \RequirePackage{hyperref}
-\RequirePackage{svg}
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
 
 % configure page geometry
 \geometry{
@@ -18,7 +19,8 @@
 	margin=0.65in,
 	left=0.5in,
 	right=0.5in,
-	footskip=30pt}
+	bottom=40pt,
+	footskip=20pt}
 
 % Get our common images added to the path
 \graphicspath{{../img/}}
@@ -29,10 +31,11 @@
 	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
 \providefontfamily\arabtype{arabtype.ttf}[
-	Path			= ../common/font/]
+	Path			= ../common/font/,
+	AutoFakeBold	= 1.5 ]
 \providefontfamily\yumin{yumin.ttf}[
 	Path			= ../common/font/,
-	AutoFakeBold	= 1.5  ]
+	AutoFakeBold	= 1.5 ]
 \setmainfont{Caladea}
 
 % Colours for the two characters
@@ -93,15 +96,27 @@
 
 % Get all our header/footers done
 \pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \hspace{75pt} \includegraphics{../img/common/aircrystal.png} \hspace{75pt} \leftmark\ - Page \thepage \hspace{75pt} \includegraphics{../img/common/firecrystal.png} \hspace{75pt} \includegraphics{../img/common/watercrystal.png}}
+  \fancyhf{}
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+  \fancyfoot[C]{%
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/earthcrystal.png} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/aircrystal.png} \hspace{75pt} %
+    \leftmark\ - Page \thepage \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
+  }
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
-	 \fancyhf{}
-	 \fancyfoot[C]{\includegraphics{../img/common/earthcrystal.png} \hspace{75pt} \includegraphics{../img/common/aircrystal.png} \hspace{75pt} \leftmark \hspace{75pt} \includegraphics{../img/common/firecrystal.png} \hspace{75pt} \includegraphics{../img/common/watercrystal.png}}
-	}
+  \fancyhf{}
+  \fancyfoot[C]{%
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/earthcrystal.png} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/aircrystal.png} \hspace{75pt} %
+    \leftmark \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
+    }
+  }
 
 % Alright, let's set appropriate section layouts
 \titleformat{\chapter}{\ferrum\huge\bfseries\centering}{\thechapter}{1em}{}
