@@ -15,15 +15,7 @@
 \RequirePackage{indentfirst}
 
 % configure page geometry
-%\geometry{
-%	letterpaper,
-%	margin=0.65in,
-%	left=0.5in,
-%	right=0.5in,
-%	bottom=40pt,
-%	footskip=20pt}
-\geometry%
-{
+\geometry{
   top=0.65in,
   left=0.5in,
   right=0.5in,
@@ -104,27 +96,53 @@
 	 \end{multicols}
 	 \medskip}
 
+% Macro for the crystal images
+\newcommand{\crystal}[2]{
+  \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
+}
+
+% Also, let's make define a nice minipage wrapper
+\newenvironment{ffminipage}{
+  \noindent\begin{minipage}{\textwidth}
+}{  
+  \vspace{\parskip}\end{minipage}
+}
+
+% and the table definition for job listings
+\newenvironment{jobspectable}{
+  \begin{tabular}{rp{\dimexpr 0.75\linewidth-2\tabcolsep}}
+  \textbf{Specialties}: \\ 
+} {
+  \end{tabular}
+}
+
+\newenvironment{jobabiltable}{
+  \begin{tabular}{p{\dimexpr 0.125\linewidth - 2\tabcolsep}p{\dimexpr 0.75\linewidth-2\tabcolsep}}
+} {
+  \end{tabular}
+}
+
 % Get all our header/footers done
 \pagestyle{fancy}
   \fancyhf{}
   \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalearth.pdf} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalair.pdf} \hspace{75pt} %
+    \crystal{earth}{10pt} \hspace{75pt} %
+    \crystal{air}{10pt} \hspace{75pt} %
     \leftmark\ - Page \thepage \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
+    \crystal{fire}{10pt} \hspace{75pt} %
+    \crystal{water}{10pt}
   }
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
   \fancyhf{}
   \fancyfoot[C]{%
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalearth.pdf} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalair.pdf} \hspace{75pt} %
+    \crystal{earth}{10pt} \hspace{75pt} %
+    \crystal{air}{10pt} \hspace{75pt} %
     \leftmark \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
+    \crystal{fire}{10pt} \hspace{75pt} %
+    \crystal{water}{10pt}
     }
   }
 
