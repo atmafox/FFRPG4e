@@ -44,58 +44,6 @@
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
 \definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
 
-% Column centered Boco, inherit existing columns
-\newenvironment{boco}{
-	 \par\medskip
-	 \yumin
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
-	 \end{center}
-	 \bgroup\color{bocoblue}\small%
-	}
-	{\egroup
-	 \medskip}
-
-% Used for page centered Boco but two column text
-\newenvironment{multiboco}{
-	 \par\medskip
-	 \yumin
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
-	 \end{center}
-	 \begin{multicols}{2}
-	 \bgroup\color{bocoblue}\small%
-	}
-	{\egroup
-	 \end{multicols}
-	 \medskip}
-
-% Column centered Mog, inherit existing columns
-\newenvironment{mog}{
-	 \par\medskip
-	 \arabtype
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
-	 \end{center}
-	 \bgroup\color{mogred}\Large%
-	}
-	{\egroup
-	 \medskip}
-
-% Page centered mog, two column text
-\newenvironment{multimog}{
-	 \par\medskip
-	 \arabtype
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
-	 \end{center}
-	 \begin{multicols}{2}
-	 \bgroup\color{mogred}\Large%
-	}
-	{\egroup
-	 \end{multicols}
-	 \medskip}
-
 % Macro for the crystal images
 \newcommand{\crystal}[2]{
   \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
@@ -115,6 +63,62 @@
 } {
   \end{tabular}
 }
+
+% Column centered Boco, inherit existing columns
+\newenvironment{boco}{
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+	 \par\medskip
+	 \yumin
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \bgroup\color{bocoblue}\small%
+	}
+	{\egroup
+	 \end{minipage}
+	 \medskip}
+
+% Used for page centered Boco but two column text
+\newenvironment{multiboco}{
+	 \par\medskip
+	 \yumin
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{bocoblue}\small%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
+
+% Column centered Mog, inherit existing columns
+\newenvironment{mog}{
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+	 \par\medskip
+	 \arabtype
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \bgroup\color{mogred}\Large%
+	}
+	{\egroup
+	 \end{minipage}
+	 \medskip}
+
+% Page centered mog, two column text
+\newenvironment{multimog}{
+	 \par\medskip
+	 \arabtype
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{mogred}\Large%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
 
 % Get all our header/footers done
 \pagestyle{fancy}
