@@ -16,18 +16,18 @@
    version="1.1"
    id="svg4689"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="CrystalEarth.svg">
+   sodipodi:docname="CrystalAir.svg">
   <defs
      id="defs4683">
     <linearGradient
        inkscape:collect="always"
        id="linearGradient911">
       <stop
-         style="stop-color:#64ca76;stop-opacity:1"
+         style="stop-color:#d3a12a;stop-opacity:1"
          offset="0"
          id="stop907" />
       <stop
-         style="stop-color:#40b02d;stop-opacity:1"
+         style="stop-color:#a96b0a;stop-opacity:1"
          offset="1"
          id="stop909" />
     </linearGradient>
@@ -35,11 +35,11 @@
        inkscape:collect="always"
        id="linearGradient903">
       <stop
-         style="stop-color:#3db217;stop-opacity:1"
+         style="stop-color:#c18e1c;stop-opacity:1"
          offset="0"
          id="stop899" />
       <stop
-         style="stop-color:#21791d;stop-opacity:1"
+         style="stop-color:#8c5205;stop-opacity:1"
          offset="1"
          id="stop901" />
     </linearGradient>
@@ -47,11 +47,11 @@
        inkscape:collect="always"
        id="linearGradient887">
       <stop
-         style="stop-color:#76d5a3;stop-opacity:1"
+         style="stop-color:#fff1b9;stop-opacity:1"
          offset="0"
          id="stop883" />
       <stop
-         style="stop-color:#3cb215;stop-opacity:1"
+         style="stop-color:#e8d376;stop-opacity:1"
          offset="1"
          id="stop885" />
     </linearGradient>
@@ -147,11 +147,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.4576912"
-     inkscape:cx="-9.8889708"
-     inkscape:cy="70.526789"
+     inkscape:zoom="2.4449569"
+     inkscape:cx="-53.726182"
+     inkscape:cy="75.332054"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer4"
      showgrid="false"
      units="px"
      showborder="true"
