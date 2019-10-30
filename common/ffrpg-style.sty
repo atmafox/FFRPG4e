@@ -12,15 +12,25 @@
 \RequirePackage{hyperref}
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
+\RequirePackage{indentfirst}
 
 % configure page geometry
-\geometry{
-	letterpaper,
-	margin=0.65in,
-	left=0.5in,
-	right=0.5in,
-	bottom=40pt,
-	footskip=20pt}
+%\geometry{
+%	letterpaper,
+%	margin=0.65in,
+%	left=0.5in,
+%	right=0.5in,
+%	bottom=40pt,
+%	footskip=20pt}
+\geometry%
+{
+  top=0.65in,
+  left=0.5in,
+  right=0.5in,
+  bottom=0.25in,
+  footskip=40pt,
+  includefoot
+}
 
 % Get our common images added to the path
 \graphicspath{{../img/}}
@@ -99,8 +109,8 @@
   \fancyhf{}
   \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/earthcrystal.png} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/aircrystal.png} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalearth.pdf} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalair.pdf} \hspace{75pt} %
     \leftmark\ - Page \thepage \hspace{75pt} %
     \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
     \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
@@ -110,8 +120,8 @@
 \fancypagestyle{plain}{%
   \fancyhf{}
   \fancyfoot[C]{%
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/earthcrystal.png} \hspace{75pt} %
-    \adjincludegraphics[valign=M,height=10pt]{../img/common/aircrystal.png} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalearth.pdf} \hspace{75pt} %
+    \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalair.pdf} \hspace{75pt} %
     \leftmark \hspace{75pt} %
     \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalfire.pdf} \hspace{75pt} %
     \adjincludegraphics[valign=M,height=10pt]{../img/common/crystalwater.pdf}%
@@ -119,9 +129,9 @@
   }
 
 % Alright, let's set appropriate section layouts
-\titleformat{\chapter}{\ferrum\huge\bfseries\centering}{\thechapter}{1em}{}
+\titleformat{\chapter}{\ferrum\huge\bfseries\itshape\centering}{\thechapter}{1em}{}
 \titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\ferrum\large\itshape\centering}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
 
 \endinput
