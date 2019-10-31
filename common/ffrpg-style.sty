@@ -45,28 +45,67 @@
 \definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
 
 % Macro for the crystal images
+% I want to make this verify the input, but for now... this works
 \newcommand{\crystal}[2]{
   \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
 }
 
-
 % Types of terms
-
+% Magic system
 \newcommand{\tspell}[1]{\textit{#1}}
 \newcommand{\tspellgroup}[1]{\textbf{#1}}
+% Character build pieces
 \newcommand{\tability}[1]{\textbf{\textit{#1}}}
 \newcommand{\tspec}[1]{\textit{#1}}
 \newcommand{\taction}[1]{\textbf{!#1}}
 \newcommand{\tstatus}[1]{\textbf{#1}}
 \newcommand{\tsummon}[1]{\textbf{#1}}
 \newcommand{\tperformance}[1]{\textbf{#1}}
+\newcommand{\tquirk}[1]{\textbf{#1}}
+\newcommand{\ttrait}[1]{#1}
+% Equipment
+\newcommand{\tequip}[1]{#1}
+\newcommand{\teqpweapon}[1]{\tequip{#1}}
+\newcommand{\teqparmor}[1]{\tequip{#1}}
+\newcommand{\teqpitem}[1]{\tequip{#1}}
+\newcommand{\teqpacc}[1]{\tequip{#1}}
+% Optional rules
+\newcommand{\toption}[1]{\textbf{#1}}
 
+% Elements/damage types
+\newcommand{\telem}[1]{#1}
+\newcommand{\telemcrush}[1]{\telem{#1}}
+\newcommand{\telempunct}[1]{\telem{#1}}
+\newcommand{\telemcut}[1]{\telem{#1}}
+\newcommand{\telemfire}[1]{\telem{#1}}
+\newcommand{\telemice}[1]{\telem{#1}}
+\newcommand{\telemlit}[1]{\telem{#1}}
+\newcommand{\telemair}[1]{\telem{#1}}
+\newcommand{\telemearth}[1]{\telem{#1}}
+\newcommand{\telemwater}[1]{\telem{#1}}
+\newcommand{\telembio}[1]{\telem{#1}}
+\newcommand{\telemlight}[1]{\telem{#1}}
+\newcommand{\telemshadow}[1]{\telem{#1}}
 
+% Attack classes
+\newcommand{\tatk}[1]{#1}
+\newcommand{\tatkmagic}[1]{\tatk{#1}}
+\newcommand{\tatkphys}[1]{\tatk{#1}}
 
-
-
-
-
+% Status types - note, the four crystal elements
+%  are used for status classes involving them
+\newcommand{\tstatus}[1]{#1}
+\newcommand{\tstatmental}[1]{\tstatus{#1}}
+\newcommand{\tstatseal}[1]{\tstatus{#1}}
+\newcommand{\tstatillus}[1]{\tstatus{#1}}
+\newcommand{\tstatfatal}[1]{\tstatus{#1}}
+\newcommand{\tstatflight}[1]{\tstatus{#1}}
+\newcommand{\tstattime}[1]{\tstatus{#1}}
+\newcommand{\tstatweak}[1]{\tstatus{#1}}
+\newcommand{\tstattoxic}[1]{\tstatus{#1}}
+\newcommand{\tstatbarr}[1]{\tstatus{#1}}
+\newcommand{\tstatstr}[1]{\tstatus{#1}}
+\newcommand{\tstattfrm}[1]{\tstatus{#1}}
 
 % Also, let's make define a nice minipage wrapper
 \newenvironment{ffminipage}{
