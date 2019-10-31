@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # Libreoffice Lock Files
 .~lock.*
+
+# Vscode Projects
+*.code-workspace
