@@ -3,23 +3,21 @@
 \ProvidesPackage{ffrpg-chapter}[2019/10/31 v4.0.0a common chapter page for FFRPG material]
 
 \RequirePackage{ffrpg-style}
+\RequirePackage{tikz}
 
-\renewcommand*{\maketitle}{%
-  \begin{titlepage}
-  {\raggedleft%
-	\includegraphics[width=3cm]{example-image-16x9}\par
-  }\vspace{1cm}
-	\centering
-  {\scshape\LARGE Columbidae University \par}
-  \vspace{1cm}
-  {\huge\bfseries\@title\unskip\strut\par}
-  \vspace{2cm}
-  {\Large\itshape\@author\unskip\strut\par}
-  \vfill
-  \vfill
-
-  {\large \@date\par}
-  \end{titlepage}
+\makechapterstyle{ffrpg-chapter}{
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapnumfont}{\normalfont\sffamily\huge\bfseries}
+  \renewcommand*{\printchapternum}{
+    \flushright
+    \begin{tikzpicture}
+      \draw[fill,color=black] (0,0) rectangle (2cm,2cm);
+      \draw[color=white] (1cm,1cm) node { \chapnumfont\thechapter };
+    \end{tikzpicture}
+  }
+  \renewcommand*{\chaptitlefont}{\normalfont\sffamily\Huge\bfseries}
+  \renewcommand*{\printchaptertitle}[1]{\flushright\chaptitlefont##1}
 }
+\chapterstyle{ffrpg-chapter}
 
 \endinput

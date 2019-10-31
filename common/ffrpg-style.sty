@@ -34,9 +34,11 @@
 	AutoFakeBold	= 1.5 ]
 \providefontfamily\arabtype{arabtype.ttf}[
 	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
 \providefontfamily\yumin{yumin.ttf}[
 	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
 \setmainfont{Caladea}
 
@@ -58,12 +60,12 @@
 \newcommand{\tability}[1]{\textbf{\textit{#1}}}
 \newcommand{\tspec}[1]{\textit{#1}}
 \newcommand{\taction}[1]{\textbf{!#1}}
-\newcommand{\tstatus}[1]{\textbf{#1}}
 \newcommand{\tsummon}[1]{\textbf{#1}}
 \newcommand{\tperformance}[1]{\textbf{#1}}
 \newcommand{\tquirk}[1]{\textbf{#1}}
 \newcommand{\ttrait}[1]{#1}
 \newcommand{\tjob}[1]{#1}
+\newcommand{\tskill}[1]{#1}
 % Equipment
 \newcommand{\tequip}[1]{#1}
 \newcommand{\teqpweapon}[1]{\tequip{#1}}
@@ -96,7 +98,7 @@
 
 % Status types - note, the four crystal elements
 %  are used for status classes involving them
-\newcommand{\tstatus}[1]{#1}
+\newcommand{\tstatus}[1]{\textbf{#1}}
 \newcommand{\tstatmental}[1]{\tstatus{#1}}
 \newcommand{\tstatseal}[1]{\tstatus{#1}}
 \newcommand{\tstatillus}[1]{\tstatus{#1}}
