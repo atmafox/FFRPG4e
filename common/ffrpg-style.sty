@@ -49,6 +49,25 @@
   \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
 }
 
+
+% Types of terms
+
+\newcommand{\tspell}[1]{\textit{#1}}
+\newcommand{\tspellgroup}[1]{\textbf{#1}}
+\newcommand{\tability}[1]{\textbf{\textit{#1}}}
+\newcommand{\tspec}[1]{\textit{#1}}
+\newcommand{\taction}[1]{\textbf{!#1}}
+\newcommand{\tstatus}[1]{\textbf{#1}}
+\newcommand{\tsummon}[1]{\textbf{#1}}
+\newcommand{\tperformance}[1]{\textbf{#1}}
+
+
+
+
+
+
+
+
 % Also, let's make define a nice minipage wrapper
 \newenvironment{ffminipage}{
   \noindent\begin{minipage}{\textwidth}
@@ -56,10 +75,16 @@
   \vspace{\parskip}\end{minipage}
 }
 
-% and the table definition for job listings
-\newenvironment{jobtable}{
+% and the table definition for job specaliztions
+\newenvironment{jobspec}{
   \begin{tabular}{rp{\dimexpr 0.75\linewidth-2\tabcolsep}}
   \textbf{Specialties}: \\ 
+} {
+  \end{tabular}
+}
+% for straight choices
+\newenvironment{jobchoice}{
+  \begin{tabular}{rp{\dimexpr 0.75\linewidth-2\tabcolsep}}
 } {
   \end{tabular}
 }
