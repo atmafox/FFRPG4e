@@ -64,6 +64,18 @@
   \end{tabular}
 }
 
+\newenvironment{jobstats}{
+  \begin{table}[ht]
+    \rowcolors{1}{gray!10}{}
+    \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
+      \toprule
+      Level & 1 & 15 & 30 & 60 \\ \midrule
+} {
+      \bottomrule
+    \end{tabular}
+  \end{table}
+}
+
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
  	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
