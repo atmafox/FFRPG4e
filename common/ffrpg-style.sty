@@ -13,6 +13,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
+\RequirePackage{url}
 
 % configure page geometry
 \geometry{
@@ -130,23 +131,34 @@
 \newcommand{\tmtypehuman}[1]{\tmtype{#1}}
 \newcommand{\tmtypeundead}[1]{\tmtype{#1}}
 
+% parskip standard sizes
+\newcommand{\pc}{\parskip 10pt}
+\newcommand{\pw}{\parskip 15pt}
+
 % Also, let's make define a nice minipage wrapper
-\newenvironment{ffminipage}{
-  \noindent\begin{minipage}{\textwidth}
-}{  
-  \vspace{\parskip}\end{minipage}
+\newenvironment{ffminipage}{%
+  \noindent\begin{minipage}{\textwidth}%
+}{%
+  \end{minipage}\vspace{\parskip}%
+}
+
+% And one for two-column view
+\newenvironment{ffcolpage}{%
+  \noindent\begin{minipage}{\dimexpr 0.5\textwidth-0.5\columnsep}%
+}{%
+  \end{minipage}\vspace{\parskip}%
 }
 
 % and the table definition for job specaliztions
 \newenvironment{jobspec}{
-  \begin{tabular}{rp{\dimexpr 0.75\linewidth-2\tabcolsep}}
+  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
   \textbf{Specialties}: \\ 
 } {
   \end{tabular}
 }
 % for straight choices
 \newenvironment{jobchoice}{
-  \begin{tabular}{rp{\dimexpr 0.75\linewidth-2\tabcolsep}}
+  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
 } {
   \end{tabular}
 }
