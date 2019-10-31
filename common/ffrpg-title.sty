@@ -1,0 +1,25 @@
+% This package defines title page layout for FFRPG material
+% Please check for updates
+\ProvidesPackage{ffrpg-title}[2019/10/31 v4.0.0a common title page for FFRPG material]
+
+\RequirePackage{ffrpg-style}
+
+\renewcommand*{\maketitle}{%
+  \begin{titlepage}
+  {\raggedleft%
+	\includegraphics[width=3cm]{example-image-16x9}\par
+  }\vspace{1cm}
+	\centering
+  {\scshape\LARGE Columbidae University \par}
+  \vspace{1cm}
+  {\huge\bfseries\@title\unskip\strut\par}
+  \vspace{2cm}
+  {\Large\itshape\@author\unskip\strut\par}
+  \vfill
+  \vfill
+
+  {\large \@date\par}
+  \end{titlepage}
+}
+
+\endinput
