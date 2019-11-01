@@ -271,3 +271,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Libreoffice Lock Files
+.~lock.*
+
+# Vscode Projects
+*.code-workspace
