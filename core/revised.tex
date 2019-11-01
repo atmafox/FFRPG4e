@@ -1,27 +1,25 @@
-\documentclass[letterpaper,11pt,twoside]{book}
+\documentclass[11pt,oneside]{book}
 \usepackage{import}
 
 % Get standard imports/etc for FFRPG4e documents
-\import{../common/standard}
+\import{../common/}{common}
 
-% And our standard formatting style
-\usepackage{ffrpg-style}
-
-\title{Final Fantasy RPG 4e Revised Edition - Core Rulebook}
-\author{Paul Carvalho}
-\date{28 October 2019}
+\title{Core Rulebook}
+\author{Bruno Carvalho}
+\date{Revised Edition}
 
 \begin{document}
-
-% Custom title page
-\include{revised/title}
-
+% Stuff before main book
+\frontmatter
+\maketitle
 % Auto-generated ToC
 \tableofcontents
 
-\chapter{Summary}
-\include{revised/summary}
+% Author's forward
+\include{revised/author}
 
+% Main book chapters
+\mainmatter
 \chapter{Introduction}
 \include{revised/introduction}
 

@@ -5,7 +5,11 @@ This project is managed by Atmafox for Bruno Carvalho.  His website can be found
 ```
 common: Common content and LaTeX configuration
 common/font: Fonts used across multiple books
-common/img: Images used across multiple books
+
+img: All images for project
+img/common: Shared images across multiple books
+img/core: Images used for core books
+img/core/errata: Images used only in errata
 
 core: Core book sources
 core/revised.tex: Master FFRPG4e Revised TeX

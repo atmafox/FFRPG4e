@@ -1,1 +1,233 @@
 \ProvidesPackage{ffrpg-style}
+
+\RequirePackage{geometry}
+\RequirePackage[table,xcdraw,svgnames]{xcolor}
+\RequirePackage{fontspec}
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\RequirePackage{enumitem}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{placeins}
+\RequirePackage{hyperref}
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
+\RequirePackage{indentfirst}
+\RequirePackage{url}
+
+% configure page geometry
+\geometry{
+  top=0.65in,
+  left=0.5in,
+  right=0.5in,
+  bottom=0.25in,
+  footskip=40pt,
+  includefoot
+}
+
+% Get our common images added to the path
+\graphicspath{{../img/}}
+
+% Get our fonts set up, ferrum is missing styles so fake them
+\providefontfamily\ferrum{ferrum.otf}[
+	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
+	AutoFakeBold	= 1.5 ]
+\providefontfamily\arabtype{arabtype.ttf}[
+	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
+	AutoFakeBold	= 1.5 ]
+\providefontfamily\yumin{yumin.ttf}[
+	Path			= ../common/font/,
+	AutoFakeSlant	= 0.2,
+	AutoFakeBold	= 1.5 ]
+\setmainfont{Caladea}
+
+% Colours for the two characters
+\definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
+\definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
+
+% Macro for the crystal images
+% I want to make this verify the input, but for now... this works
+\newcommand{\crystal}[2]{
+  \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
+}
+
+% Types of terms
+% Magic system
+\newcommand{\tspell}[1]{\textit{#1}}
+\newcommand{\tspellgroup}[1]{\textbf{#1}}
+% Character build pieces
+\newcommand{\tability}[1]{\textbf{\textit{#1}}}
+\newcommand{\tspec}[1]{\textit{#1}}
+\newcommand{\taction}[1]{\textbf{!#1}}
+\newcommand{\tsummon}[1]{\textbf{#1}}
+\newcommand{\tperformance}[1]{\textbf{#1}}
+\newcommand{\tquirk}[1]{\textbf{#1}}
+\newcommand{\ttrait}[1]{#1}
+\newcommand{\tjob}[1]{#1}
+\newcommand{\tskill}[1]{\textbf{#1}}
+% Equipment
+\newcommand{\tequip}[1]{#1}
+% Elements/damage types
+\newcommand{\telem}[1]{#1}
+% Attack classes
+\newcommand{\tatk}[1]{#1}
+
+% Optional rules
+\newcommand{\toption}[1]{\textbf{#1}}
+
+% Status types - note, the four crystal elements
+%  are used for status classes involving them
+\newcommand{\tstatus}[1]{\textbf{#1}}
+
+% mob ranks
+\newcommand{\tmob}[1]{\textbf{#1}}
+\newcommand{\tmobmini}[1]{\tmob{#1}}
+\newcommand{\tmobcomm}[1]{\tmob{#1}}
+\newcommand{\tmobleet}[1]{\tmob{#1}}
+\newcommand{\tmobboss}[1]{\tmob{#1}}
+
+% mob types
+\newcommand{\tmtype}[1]{\textbf{#1}}
+\newcommand{\tmtypeaberr}[1]{\tmtype{#1}}
+\newcommand{\tmtypeaqua}[1]{\tmtype{#1}}
+\newcommand{\tmtypeconstr}[1]{\tmtype{#1}}
+\newcommand{\tmtypedemon}[1]{\tmtype{#1}}
+\newcommand{\tmtypedrgn}[1]{\tmtype{#1}}
+\newcommand{\tmtypeelem}[1]{\tmtype{#1}}
+\newcommand{\tmtypebeast}[1]{\tmtype{#1}}
+\newcommand{\tmtypehuman}[1]{\tmtype{#1}}
+\newcommand{\tmtypeundead}[1]{\tmtype{#1}}
+
+% parskip standard sizes
+\newcommand{\pc}{\parskip 10pt}
+\newcommand{\pw}{\parskip 15pt}
+
+% Also, let's make define a nice minipage wrapper
+\newenvironment{ffminipage}{%
+  \noindent\begin{minipage}{\textwidth}%
+}{%
+  \end{minipage}\vspace{\parskip}%
+}
+
+% And one for two-column view
+\newenvironment{ffcolpage}{%
+  \noindent\begin{minipage}{\dimexpr 0.5\textwidth-0.5\columnsep}%
+}{%
+  \end{minipage}\vspace{\parskip}%
+}
+
+% and the table definition for job specaliztions
+\newenvironment{jobspec}{
+  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+  \textbf{Specialties}: \\ 
+} {
+  \end{tabular}
+}
+% for straight choices
+\newenvironment{jobchoice}{
+  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+} {
+  \end{tabular}
+}
+
+\newenvironment{jobstats}{
+  \begin{table}[ht]
+    \rowcolors{1}{gray!10}{}
+    \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
+      \toprule
+      Level & 1 & 15 & 30 & 60 \\ \midrule
+} {
+      \bottomrule
+    \end{tabular}
+  \end{table}
+}
+
+% Column centered Boco, inherit existing columns
+\newenvironment{boco}{
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+	 \par\medskip
+	 \yumin
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \bgroup\color{bocoblue}\small%
+	}
+	{\egroup
+	 \end{minipage}
+	 \medskip}
+
+% Used for page centered Boco but two column text
+\newenvironment{multiboco}{
+	 \par\medskip
+	 \yumin
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{bocoblue}\small%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
+
+% Column centered Mog, inherit existing columns
+\newenvironment{mog}{
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+	 \par\medskip
+	 \arabtype
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \bgroup\color{mogred}\Large%
+	}
+	{\egroup
+	 \end{minipage}
+	 \medskip}
+
+% Page centered mog, two column text
+\newenvironment{multimog}{
+	 \par\medskip
+	 \arabtype
+	 \begin{center}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \end{center}
+	 \begin{multicols}{2}
+	 \bgroup\color{mogred}\Large%
+	}
+	{\egroup
+	 \end{multicols}
+	 \medskip}
+
+% Get all our header/footers done
+\pagestyle{fancy}
+  \fancyhf{}
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+  \fancyfoot[C]{%
+    \crystal{earth}{10pt} \hspace{75pt} %
+    \crystal{air}{10pt} \hspace{75pt} %
+    \leftmark\ - Page \thepage \hspace{75pt} %
+    \crystal{fire}{10pt} \hspace{75pt} %
+    \crystal{water}{10pt}
+  }
+
+% And headers/footers for the chapter pages
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{%
+    \crystal{earth}{10pt} \hspace{75pt} %
+    \crystal{air}{10pt} \hspace{75pt} %
+    \leftmark \hspace{75pt} %
+    \crystal{fire}{10pt} \hspace{75pt} %
+    \crystal{water}{10pt}
+    }
+  }
+
+% Alright, let's set appropriate section layouts
+\titleformat{\chapter}{\ferrum\huge\bfseries\itshape\centering}{\thechapter}{1em}{}
+\titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+
+\endinput
