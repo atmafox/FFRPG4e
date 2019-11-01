@@ -83,22 +83,22 @@
 
 % mob ranks
 \newcommand{\tmob}[1]{\textbf{#1}}
-\newcommand{\tmobmini}[1]{\tmob{#1}}
-\newcommand{\tmobcomm}[1]{\tmob{#1}}
-\newcommand{\tmobleet}[1]{\tmob{#1}}
-\newcommand{\tmobboss}[1]{\tmob{#1}}
+\newcommand{\tmobmini}[1]{\tmob{Minion}}
+\newcommand{\tmobcomm}[1]{\tmob{Common}}
+\newcommand{\tmobleet}[1]{\tmob{Elite}}
+\newcommand{\tmobboss}[1]{\tmob{Boss}}
 
 % mob types
 \newcommand{\tmtype}[1]{\textbf{#1}}
-\newcommand{\tmtypeaberr}[1]{\tmtype{#1}}
-\newcommand{\tmtypeaqua}[1]{\tmtype{#1}}
-\newcommand{\tmtypeconstr}[1]{\tmtype{#1}}
-\newcommand{\tmtypedemon}[1]{\tmtype{#1}}
-\newcommand{\tmtypedrgn}[1]{\tmtype{#1}}
-\newcommand{\tmtypeelem}[1]{\tmtype{#1}}
-\newcommand{\tmtypebeast}[1]{\tmtype{#1}}
-\newcommand{\tmtypehuman}[1]{\tmtype{#1}}
-\newcommand{\tmtypeundead}[1]{\tmtype{#1}}
+\newcommand{\tmtypeaberr}{\tmtype{Aberration}}
+\newcommand{\tmtypeaqua}{\tmtype{Aquan}}
+\newcommand{\tmtypeconstr}{\tmtype{Construct}}
+\newcommand{\tmtypedemon}{\tmtype{Demon}}
+\newcommand{\tmtypedrgn}{\tmtype{Dragon}}
+\newcommand{\tmtypeelem}{\tmtype{Elemental}}
+\newcommand{\tmtypebeast}{\tmtype{Beast}}
+\newcommand{\tmtypehuman}{\tmtype{Humanoid}}
+\newcommand{\tmtypeundead}{\tmtype{Undead}}
 
 % parskip standard sizes
 \newcommand{\pc}{\parskip 10pt}
@@ -142,6 +142,17 @@
       \bottomrule
     \end{tabular}
   \end{table}
+}
+
+% mob stat block
+\newcolumntype{A}{p{\dimexpr \textwidth-2\columnsep}}
+\newenvironment{mobstats} {
+	\rowcolors{1}{gray!10}{}
+	\begin{tabular}{rlrlrlrl}
+    \toprule
+} {
+	\bottomrule
+	\end{tabular}
 }
 
 % Column centered Boco, inherit existing columns
