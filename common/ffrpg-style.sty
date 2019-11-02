@@ -153,6 +153,11 @@
 \krddefinekeys{mobstatsx}[ms@]{%
 	cmd/name/MOBNAME;
 	cmd/level/-;
+	choice/rarity/common/
+		common.do=\let\ms@rarity\tmobcomm,
+		minion.do=\let\ms@rarity\tmobmini,
+		elite.do=\let\ms@rarity\tmobleet,
+		boss.do=\let\ms@rarity\tmobboss;
 	choice/type/invalid/
 		invalid.do=\let\ms@type\tmtypeinvalid,
 		abberation.do=\let\ms@type\tmtypeaberr,
@@ -163,10 +168,7 @@
 		elemental.do=\let\ms@type\tmtypeelem,
 		beast.do=\let\ms@type\tmtypebeast,
 		humanoid.do=\let\ms@type\tmtypehuman,
-		undead.do=\let\ms@type\tmtypeundead,
-		/
-		\def\userinput{#1};
-	cmd/rarity/\tmobcomm{};
+		undead.do=\let\ms@type\tmtypeundead;
 	cmd/earth/-;
     cmd/air/-;
     cmd/fire/-;
@@ -186,15 +188,16 @@
 	\rowcolors{1}{gray!10}{}
 	\begin{tabular}{rlrlrlrl}
 	\toprule
-	\multicolumn{7}{c}{ \ms@level\textsuperscript{th} Level \ms@rarity{} \ms@rarity{}} & 
-	\multicolumn{1}{r}{ \ms@init Init }\\ \midrule
+	\multicolumn{7}{c}{ \ms@level\textsuperscript{th} Level \ms@rarity{} \ms@type{}} & 
+	\multicolumn{1}{r}{ \ms@init{} Init }\\ \midrule
 	\textbf{Earth}: & \ms@earth & \textbf{Air}: \ms@air & \textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water \\
 	\textbf{HP}: & \ms@hp & \textbf{MP}: \ms@mp & \textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm \\
 } {
 	\bottomrule
 	\end{tabular}
+	\pc
 }
-
+\newcommand{\mobstatrow}{\multicolumn{8}{A}}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
