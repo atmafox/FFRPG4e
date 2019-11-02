@@ -182,28 +182,26 @@
 	cmd/init/3;
 }
 
-\newcolumntype{A}{p{\dimexpr \textwidth-2\columnsep}}
-
 \newlength{\numwidth}
 \setlength{\numwidth}{\widthof{0}}
 
-\newenvironment*{mobstats}[1][] {
-	\krdsetkeys{mobstatsx}{#1}%
+\newcommand{\mobstatrow}[1]{\multicolumn{6}{p{\dimexpr \textwidth-2\columnsep}}{#1}\\}
+
+\newenvironment*{mobstats}[1][] {%
+	\krdsetkeys{mobstatsx}{#1}
 	\subsubsection{\ms@name}%
 	\rowcolors{1}{gray!10}{}%
 	\begin{tabular}{rp{5\numwidth}rp{5\numwidth}rp{5\numwidth}}
-	\toprule
+		\toprule
 	% Icon stuff after hfill if we get there
-	\multicolumn{6}{A}{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \\ \midrule
-	\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp\\
-	\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp\\ 
-	\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init\\ \midrule
+		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
+		\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp \\
+		\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp \\ 
+		\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init \\ \midrule
 } {
 	\bottomrule
 	\end{tabular}\\\pc\par
 }
-
-\newcommand{\mobstatrow}[1]{\multicolumn{6}{A}{#1}\\}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
