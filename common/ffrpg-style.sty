@@ -103,6 +103,7 @@
 \newcommand{\tmtypebeast}{\tmtype{Beast}}
 \newcommand{\tmtypehuman}{\tmtype{Humanoid}}
 \newcommand{\tmtypeundead}{\tmtype{Undead}}
+\newcommand{\tmtypeinvalid}{\tmtype{INVALID}}
 
 % parskip standard sizes
 \newcommand{\pc}{\parskip 10pt}
@@ -149,26 +150,26 @@
 }
 
 % mob stat block
-\krddefinekeys{mobstatsx}[ms@]{
+\krddefinekeys{mobstatsx}[ms@]{%
 	cmd/name/MOBNAME;
 	cmd/level/-;
 	choice/type/invalid/
-		invalid.do=\tmtype{INVALID TYPE},
-		abberation.do=\tmtypeaberr{},
-		aquatic.do=\tmtypeaqua{},
-		construct.do=\tmtypeconstr{},
-		demon.do=\tmtypedemon{},
-		dragon.do=\tmtypedrgn{},
-		elemental.do=\tmtypeele{},
-		beast.do=\tmtypebeast{},
-		humanoid.do=\tmtypehuman{},
-		undead.do=\tmtypeundead{},
+		invalid.do=\let\ms@type\tmtypeinvalid,
+		abberation.do=\let\ms@type\tmtypeaberr,
+		aquatic.do=\let\ms@type\tmtypeaqua,
+		construct.do=\let\ms@type\tmtypeconstr,
+		demon.do=\let\ms@type\tmtypedemon,
+		dragon.do=\let\ms@type\tmtypedrgn,
+		elemental.do=\let\ms@type\tmtypeelem,
+		beast.do=\let\ms@type\tmtypebeast,
+		humanoid.do=\let\ms@type\tmtypehuman,
+		undead.do=\let\ms@type\tmtypeundead,
 		/
 		\def\userinput{#1};
 	cmd/rarity/\tmobcomm{};
 	cmd/earth/-;
-  cmd/air/-;
-  cmd/fire/-;
+    cmd/air/-;
+    cmd/fire/-;
 	cmd/water/-;
 	cmd/hp/-;
 	cmd/mp/-;
@@ -176,7 +177,6 @@
 	cmd/marm/-;
 	cmd/init/3;
 }
-
 
 \newcolumntype{A}{p{\dimexpr \textwidth-2\columnsep}}
 
@@ -282,7 +282,7 @@
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
 
-% Return % processing to normal
-%\makeatother
+% Return @ processing to normal
+\makeatother
 
 \endinput
