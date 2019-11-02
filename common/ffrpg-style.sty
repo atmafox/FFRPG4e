@@ -183,15 +183,15 @@
 }
 
 \newlength{\numwidth}
-\setlength{\numwidth}{\widthof{0}}
+\settowidth{\numwidth}{0}
 
-\newcommand{\mobstatrow}[1]{\multicolumn{6}{p{\dimexpr \textwidth-2\columnsep}}{#1}\\}
+\newcommand{\mobstatrow}[1]{\multicolumn{6}{p{\dimexpr \textwidth-2\tabcolsep}}{#1}\\}
 
 \newenvironment*{mobstats}[1][] {%
 	\krdsetkeys{mobstatsx}{#1}
 	\subsubsection{\ms@name}%
 	\rowcolors{1}{gray!10}{}%
-	\begin{tabular}{rp{5\numwidth}rp{5\numwidth}rp{5\numwidth}}
+	\begin{tabular*}{\textwidth}{rp{5\numwidth}rp{5\numwidth}rp{5\numwidth}}
 		\toprule
 	% Icon stuff after hfill if we get there
 		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
@@ -200,7 +200,7 @@
 		\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init \\ \midrule
 } {
 	\bottomrule
-	\end{tabular}\\\pc\par
+	\end{tabular*}\\\pc\par
 }
 
 % Column centered Boco, inherit existing columns
