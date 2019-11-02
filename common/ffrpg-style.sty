@@ -14,6 +14,10 @@
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
 \RequirePackage{url}
+\RequirePackage{keyreader}
+
+% We'll need @ for keyval templates in here
+\makeatletter
 
 % configure page geometry
 \geometry{
@@ -145,15 +149,52 @@
 }
 
 % mob stat block
+\krddefinekeys{mobstatsx}[ms@]{
+	cmd/name/MOBNAME;
+	cmd/level/-;
+	choice/type/invalid/
+		invalid.do=\tmtype{INVALID TYPE},
+		abberation.do=\tmtypeaberr{},
+		aquatic.do=\tmtypeaqua{},
+		construct.do=\tmtypeconstr{},
+		demon.do=\tmtypedemon{},
+		dragon.do=\tmtypedrgn{},
+		elemental.do=\tmtypeele{},
+		beast.do=\tmtypebeast{},
+		humanoid.do=\tmtypehuman{},
+		undead.do=\tmtypeundead{},
+		/
+		\def\userinput{#1};
+	cmd/rarity/\tmobcomm{};
+	cmd/earth/-;
+  cmd/air/-;
+  cmd/fire/-;
+	cmd/water/-;
+	cmd/hp/-;
+	cmd/mp/-;
+	cmd/arm/-;
+	cmd/marm/-;
+	cmd/init/3;
+}
+
+
 \newcolumntype{A}{p{\dimexpr \textwidth-2\columnsep}}
-\newenvironment{mobstats} {
+
+\newenvironment*{mobstats}[1][] {
+	\krdsetkeys{mobstatsx}{#1}%
+	\subsubsection{\ms@name}
 	\rowcolors{1}{gray!10}{}
 	\begin{tabular}{rlrlrlrl}
-    \toprule
+	\toprule
+	\multicolumn{7}{c}{ \ms@level\textsuperscript{th} Level \ms@rarity{} \ms@rarity{}} & 
+	\multicolumn{1}{r}{ \ms@init Init }\\ \midrule
+	\textbf{Earth}: & \ms@earth & \textbf{Air}: \ms@air & \textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water \\
+	\textbf{HP}: & \ms@hp & \textbf{MP}: \ms@mp & \textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm \\
 } {
 	\bottomrule
 	\end{tabular}
 }
+
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
@@ -240,5 +281,8 @@
 \titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+
+% Return % processing to normal
+%\makeatother
 
 \endinput
