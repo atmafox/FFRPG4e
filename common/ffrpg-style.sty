@@ -14,6 +14,12 @@
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
 \RequirePackage{url}
+\RequirePackage{keyreader}
+\RequirePackage{fmtcount}
+\RequirePackage{calc}
+
+% We'll need @ for keyval templates in here
+\makeatletter
 
 % configure page geometry
 \geometry{
@@ -83,22 +89,23 @@
 
 % mob ranks
 \newcommand{\tmob}[1]{\textbf{#1}}
-\newcommand{\tmobmini}[1]{\tmob{#1}}
-\newcommand{\tmobcomm}[1]{\tmob{#1}}
-\newcommand{\tmobleet}[1]{\tmob{#1}}
-\newcommand{\tmobboss}[1]{\tmob{#1}}
+\newcommand{\tmobmini}[1]{\tmob{Minion}}
+\newcommand{\tmobcomm}[1]{\tmob{Common}}
+\newcommand{\tmobleet}[1]{\tmob{Elite}}
+\newcommand{\tmobboss}[1]{\tmob{Boss}}
 
 % mob types
 \newcommand{\tmtype}[1]{\textbf{#1}}
-\newcommand{\tmtypeaberr}[1]{\tmtype{#1}}
-\newcommand{\tmtypeaqua}[1]{\tmtype{#1}}
-\newcommand{\tmtypeconstr}[1]{\tmtype{#1}}
-\newcommand{\tmtypedemon}[1]{\tmtype{#1}}
-\newcommand{\tmtypedrgn}[1]{\tmtype{#1}}
-\newcommand{\tmtypeelem}[1]{\tmtype{#1}}
-\newcommand{\tmtypebeast}[1]{\tmtype{#1}}
-\newcommand{\tmtypehuman}[1]{\tmtype{#1}}
-\newcommand{\tmtypeundead}[1]{\tmtype{#1}}
+\newcommand{\tmtypeaberr}{\tmtype{Aberration}}
+\newcommand{\tmtypeaqua}{\tmtype{Aquan}}
+\newcommand{\tmtypeconstr}{\tmtype{Construct}}
+\newcommand{\tmtypedemon}{\tmtype{Demon}}
+\newcommand{\tmtypedrgn}{\tmtype{Dragon}}
+\newcommand{\tmtypeelem}{\tmtype{Elemental}}
+\newcommand{\tmtypebeast}{\tmtype{Beast}}
+\newcommand{\tmtypehuman}{\tmtype{Humanoid}}
+\newcommand{\tmtypeundead}{\tmtype{Undead}}
+\newcommand{\tmtypeinvalid}{\tmtype{INVALID}}
 
 % parskip standard sizes
 \newcommand{\pc}{\parskip 10pt}
@@ -143,6 +150,60 @@
     \end{tabular}
   \end{table}
 }
+
+% mob stat block
+\krddefinekeys{mobstatsx}[ms@]{%
+	cmd/name/MOBNAME;
+	cmd/level/-;
+	choice/rank/common/
+		minion.do=\let\ms@rank\tmobmini\let\ms@init2,
+		common.do=\let\ms@rank\tmobcomm\let\ms@init3,
+		elite.do=\let\ms@rank\tmobleet\let\ms@init4,
+		boss.do=\let\ms@rank\tmobboss\let\ms@init5;
+	choice/type/invalid/
+		invalid.do=\let\ms@type\tmtypeinvalid,
+		abberation.do=\let\ms@type\tmtypeaberr,
+		aquatic.do=\let\ms@type\tmtypeaqua,
+		construct.do=\let\ms@type\tmtypeconstr,
+		demon.do=\let\ms@type\tmtypedemon,
+		dragon.do=\let\ms@type\tmtypedrgn,
+		elemental.do=\let\ms@type\tmtypeelem,
+		beast.do=\let\ms@type\tmtypebeast,
+		humanoid.do=\let\ms@type\tmtypehuman,
+		undead.do=\let\ms@type\tmtypeundead;
+	cmd/earth/-;
+    cmd/air/-;
+    cmd/fire/-;
+	cmd/water/-;
+	cmd/hp/-;
+	cmd/mp/-;
+	cmd/arm/-;
+	cmd/marm/-;
+	cmd/init/3;
+}
+
+\newcolumntype{A}{p{\dimexpr \textwidth-2\columnsep}}
+
+\newlength{\numwidth}
+\setlength{\numwidth}{\widthof{0}}
+
+\newenvironment*{mobstats}[1][] {
+	\krdsetkeys{mobstatsx}{#1}%
+	\subsubsection{\ms@name}%
+	\rowcolors{1}{gray!10}{}%
+	\begin{tabular}{rp{5\numwidth}rp{5\numwidth}rp{5\numwidth}}
+	\toprule
+	% Icon stuff after hfill if we get there
+	\multicolumn{6}{A}{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \\ \midrule
+	\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp\\
+	\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp\\ 
+	\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init\\ \midrule
+} {
+	\bottomrule
+	\end{tabular}\\\pc\par
+}
+
+\newcommand{\mobstatrow}[1]{\multicolumn{6}{A}{#1}\\}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
@@ -229,5 +290,8 @@
 \titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+
+% Return @ processing to normal
+\makeatother
 
 \endinput
