@@ -15,6 +15,7 @@
 \RequirePackage{indentfirst}
 \RequirePackage{url}
 \RequirePackage{keyreader}
+\RequirePackage{fmtcount}
 
 % We'll need @ for keyval templates in here
 \makeatletter
@@ -184,20 +185,20 @@
 
 \newenvironment*{mobstats}[1][] {
 	\krdsetkeys{mobstatsx}{#1}%
-	\subsubsection{\ms@name}
-	\rowcolors{1}{gray!10}{}
-	\begin{tabular}{rlrlrlrl}
+	\subsubsection{\ms@name}%
+	\rowcolors{1}{gray!10}{}%
+	\begin{tabular}{rlrlrl}
 	\toprule
-	\multicolumn{7}{c}{ \ms@level\textsuperscript{th} Level \ms@rarity{} \ms@type{}} & 
-	\multicolumn{1}{r}{ \ms@init{} Init }\\ \midrule
-	\textbf{Earth}: & \ms@earth & \textbf{Air}: \ms@air & \textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water \\
-	\textbf{HP}: & \ms@hp & \textbf{MP}: \ms@mp & \textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm \\
+	\multicolumn{6}{A}{ \ordinalnum{\ms@level{}} Level \ms@rarity{} \ms@type{} \hfill XXX} \\ \midrule
+	\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp\\
+	\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp\\ 
+	\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init\\ \midrule
 } {
 	\bottomrule
-	\end{tabular}
-	\pc
+	\end{tabular}\\\pc\par
 }
-\newcommand{\mobstatrow}{\multicolumn{8}{A}}
+
+\newcommand{\mobstatrow}[1]{\multicolumn{6}{A}{#1}\\}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
