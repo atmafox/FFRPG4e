@@ -1,53 +1,53 @@
-Items and potions specialist, able to use consumables with their full potential. Its main Stat is Water. Be an Alchemist if you want your character to be more durable, capable of staying alive longer and use items offensively better. \pc
+Through offensive maneuvers, a Berserker believes that the best defense is a good offense and try to cause as much damage as quickly as possible. Water is an important Stat to this class. Be a Berserker if you want to increase your ability to cause physical damage as soon as possible; after all, dead enemies don’t fight. \pc
 
-\textbf{Representatives}: Rikku (FFX), Chemist Job (FFV, FFT, FFTA) \pc
+\textbf{Representatives}: Monk Job (FFV, FFT), Cyan Garamonde (FFVI), Berserker Job (FFV), Viking Job (FFIII) \pc
 
 \begin{ffminipage}
 {\centering \textbf{Abilities}\par }
 
-\noindent\tability{Quick Hands}: Core Ability acquired at level 1. \taction{Draw} is a free action for you. You still need to spend initiative dice normally to use items or replace equipment. \pc
+\noindent\tability{Counter Attack}: Core Ability acquired at level 1. After suffering the damage of a \tatk{physical} attack, you can discard any initiative die to perform the \taction{Attack} action against the character who attacked you. \taction{Attack} actions made with Counter Attack have 0 difficulty. \pc
 
 \begin{jobspec}
-\crystal{fire}{12pt} & %
-\tspec{Combat Medic}: Requires Fire level 3. You may equip \tequip{medium armor} and the following weapons: \tequip{Rifles / Crossbows}. \\
-\crystal{water}{12pt} & %
-\tspec{Impromptu Mage}: Requires Water level 3. Whenever you use an item that casts a Spell, you may use your Water Stat, rather than the Fire Stat, as Offensive Stat, to hit and deal damage. \\
-\crystal{earth}{12pt} & %
-\tspec{Treatment}: Requires Earth level 5. You gain access to the Quick action \taction{Treatment}. With it, you suppress bad conditions on a target, helping him to overcome his discomfort. Suppress all negative status effects on the target until the end of the round. This does not extend the status’ duration. \\
-\end{jobspec}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Pharmacology}: Core Ability acquired at level 19. Whenever you use an item to recover HP or MP, double its effects. You may add your Air level to your Armor and your Water level to your Magic Armor. \pc
-
-\begin{jobspec}
-\crystal{air}{12pt} & %
-\tspec{Alchemical Fire}: Requires Air level 12. Whenever you use a consumable that deals damage, the item does 10\% extra damage at the end of the round, ignoring ARM or MARM. \\
-\crystal{water}{12pt} & %
-\tspec{Vaccination}: Requires Water level 12. When using an item to cure status, the target becomes immune to the cured status effect for 2 rounds. \\
-\crystal{fire}{12pt} & %
-\tspec{Poison Distilling}: Requires Fire level 12. When using a consumable that inflicts negative status effects, the inflicted status lasts one extra round. \\
-\end{jobspec}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Distribute}: Core Ability acquired at level 35. Whenever you heal someone, the amount that exceeds its maximum HP is divided evenly between you and all allies except the character that was initially cured. Distribute does not affect healing effects that target more than one target. \pc
-
-\begin{jobspec}
-\crystal{fire}{12pt} & %
-\tspec{Mix}: Requires Fire level 16. You gain the Slow (1) action \taction{Mix}. You can mix two items and use them in a single action. If mixing two identical healing items, you generate the effect of the next higher-level item (for example, two \titem{Potions} turn into a \titem{Hi-Potion}). If you mix two different healing items, you generate the effect of the cheapest item in the whole Group (Mixing a \titem{Soft} and \titem{Tonic} creates the effect of Tonic in the Group). If you mix two identical battle items, you cast the next strongest Spell of the same group (two \titem{Bomb Fragment} cast the Spell \tspell{Fira}). If you mix two different battle items, you cast the Spell from the cheapest item against a Group (using the single target damage if the spell deals reduced damage to groups). Special cases may be examined individually by the GM and cause unique effects. \\
+\crystal{air}{12pt} \crystal{fire}{12pt} & %
+\tspec{Hamedo}: Requires Air level 6 and Fire level 5. You gain access to the reaction \taction{Hamedo}. Use after being targeted by an attack. Perform the \taction{Attack} action against the character targeting you. If the target drops to 0 HP or for any reason cannot attack you after suffering your attack, his action is spent without causing any effect. \\
 \crystal{earth}{12pt} \crystal{water}{12pt} & %
-\tspec{Alchemical Tenacity}: Requires Earth and Water level 14. Increase your HP bonus by 1x your level and your MP bonus by 1x your level. \\
+\tspec{Riposte}: Requires Earth level 6 and Water level 4. After receiving a \tatk{physical} attack, you may use your Counter Attack even if the attack fails for any reason. \\
+\crystal{earth}{12pt} \crystal{air}{12pt} & %
+\tspec{Kharmic Strike}: Requires Earth and Air level 5. During your Counter Attack, you ignore the target’s \tstatus{Flight} status. Increase the difficulty of reactions to your Counter Attack by 30. \\
 \end{jobspec}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Unstable Potion}: Core Ability acquired at level 50. At the beginning of each day, you can choose to sample an unstable potion, using yourself as a guinea pig. If you do, choose one of the \tstatus{Transformation} type negative statuses. You become vulnerable to it and resistant to all other \tstatus{Transformation} type statuses. Any other effects that give you resistance or immunity to the chosen status automatically fail, even from equipment. This effect lasts the entire day. \pc
+\noindent\tability{Provoke}: Core Ability acquired at level 19. You gain the Quick \tatk{magical} action \taction{Provoke}. Insult your opponent, causing him to attack you or lose focus. Make a Water vs Fire attack, difficulty 20. If successful, until the end of the next round, if the targeted enemy doesn’t include you as a target in any of his attacks, you may perform the \taction{Attack} action against him as a free action after the enemy’s action. You may add your Air level to your ARM and your Water level to your MARM. \pc
 
 \begin{jobspec}
-\crystal{air}{12pt} & %
-\tspec{Double Item}: Requires Air level 18. You gain the Quick action \taction{W-Item}. With it, you may use two drawn items with only one action. \\
 \crystal{earth}{12pt} & %
-\tspec{Auto-Potion}: Requires Earth level 18. You gain the reaction \taction{Auto-Potion}. You can use it when you suffer an attack. You draw an item from your inventory and use it on yourself. The item’s effects happen after the effects of the attack you suffered. \\
+\tspec{Ignore the Pain}: Requires Earth level 16. Increase your ARM by 50\% against attacks made by enemies under the effect of the \taction{Provoke} action. \\
+\crystal{fire}{12pt} & %
+\tspec{Howl}: Requires Fire level 10. You gain the Ranged Quick \tatk{magical} action \taction{Howl}. Roaring to intimidate your opponents, you make them more vulnerable to magical effects. Perform a Water vs Water attack, difficulty 40. This action causes the \tstatus{Weaken (Mental)} status on a target until the end of the next round. \\
+\crystal{earth}{12pt} \crystal{fire}{12pt} & %
+\tspec{Sovereign Mind}: Requires Earth level 9 and Fire level 7. When performing a Counter Attack or \taction{Hamedo}, instead of the \taction{Attack} action, you may use any of your actions that that can target the opponent, provided the action is not Slow. \\
 \end{jobspec}
-\end{ffminipage
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Fury}: Core Ability acquired at level 35. While your current HP is 25\% of your max HP or less, you gain the \tstatus{Strengthen (Physical)} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. In addition, you gain the \tspell{Dispel} Spell at level 40. \pc
+
+\begin{jobspec}
+\crystal{water}{12pt} & %
+\tspec{Bloodlust}: Requires Water level 12. While your current HP is 25\% of your max HP or less, your allies gain the \tstatus{Strengthen (Physical)} status. Your allies lose this status if your current HP is more than 25\% of your max HP for any reason. \\
+\crystal{air}{12pt} \crystal{water}{12pt} & %
+\tspec{Critical Comeback}: Requires Air level 14 and Water level 12. Whenever you suffer a critical hit, gain an extra initiative die with the value 10. \\
+\end{jobspec}
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Unwavering Fury}: Core Ability acquired at level 50. Once per round, when you suffer a \tatk{physical} attack, you can increase or decrease by one the d100 result. Also, once per round, you may use your Counter Attack as a free action. \pc
+
+\begin{jobspec}
+\crystal{earth}{12pt} & %
+\tspec{Furious Madness}: Requires Earth level 18. You may, as an action, inflict the \tstatus{Berserk} status on yourself until the end of the round. Also, whenever you are under the \tstatus{Berserk} status, you also gain the \tstatus{Strengthen (Physical)} status for the same duration. Finally, while you are under the \tstatus{Berserk} status, you may Counter Attack and use the \taction{Attack}, \taction{Hamedo}, \taction{Howl} and \taction{Provoke} actions, if you have them, instead of only the \taction{Attack} action. \\
+\crystal{fire}{12pt} & %
+\tspec{Rage Magic}: Requires Fire level 18. You can use your Counter Attack when hit by Spells and \tatk{magical} attacks. Also, whenever you use a Spell that deals damage, you may spend 25\% extra MP after rolling the spell attack. If you do, the Spell may have critical hits, dealing twice damage. \\
+\end{jobspec}
+\end{ffminipage}
