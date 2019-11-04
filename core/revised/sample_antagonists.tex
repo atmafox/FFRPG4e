@@ -20,7 +20,7 @@
 
 \begin{ffcolpage}
     \begin{mobstats}[name=Imp, level=7, type=humanoid, rank=minion, earth=18,air=32,fire=12,water=22, hp=20, mp=15, arm=2, marm=5]
-        \mobstatrow{ \tability{Short Sword}: Quick physical action, Air vs Earth, diff 40, 6 damage (\telem{Cut}) }
+        \mobstatrow{ \tability{Short Sword}: Quick \tatk{physical} action, Air vs Earth, diff 40, 6 damage (\telem{Cut}) }
         \mobstatrow{ \tspellblue{Goblin Punch}: Blue Spell, 1 MP, Air vs Earth, diff 40, 6 damage (\telem{Cut}) or instead deals 24 damage (\telem{Cut}) against 7th level targets.}
     \end{mobstats} 
     Little green humanoids, usually malignant and territorial, who form tribes. They use improvised weapons and armor. They don't have great intelligence or physical strength but are very cunning.
@@ -28,7 +28,7 @@
 
 \begin{ffcolpage}
     \begin{mobstats}[name=Venzuubius; Poison Demon, level=9, type=demon, rank=boss, earth=30,air=12,fire=40,water=19, hp=200, mp=150, arm=2, marm=2]
-        \mobstatrow{ \tability{Mind Blast}: Quick magical action, Fire vs Water, diff 40, 12 damage (\telem{Crush}) }
+        \mobstatrow{ \tability{Mind Blast}: Quick \tatk{magical} action, Fire vs Water, diff 40, 12 damage (\telem{Crush}) }
         \mobstatrow{ \tability{Third Eye}: Reaction, Earth vs Earth, diff 40, blocks a melee attack }
         \mobstatrow{ \tspellblue{Flash}: Blue Spell, 14 MP, Fire vs Water, diff 0, 15 damage (\telem{Light}), if greater than dif 70, inflicts the \tstatus{Blind} status on the target until the end the round. }
         \mobstatrow{ \tspellblue{Poison Gas}: Blue Spell, 16 MP, Group, Fire vs Water, diff 70, inflicts the \tstatus{Poison} status on target until the end of next round. }
@@ -37,4 +37,12 @@
     One of the lesser Demon Lords, Venzuubius is arrogant and prideful. He acts with great overconfidence, treating his lesser brethren with disdain and his superiors with distrust. In battle, he tends to boast about his own abilities instead of quickly finishing his foes.
 \end{ffcolpage}
 
+\begin{ffcolpage}
+    \begin{mobstats}[name=Lesser Zombie, level=12, type=undead, rank=minion, earth=50,air=12,fire=35,water=31, hp=64, mp=40, arm=13, marm=11]
+        \mobstatrow{ \tability{Slam}: Quick \taction{physical} action, Earth vs Earth, diff 40, 20 damage (\telem{Crush}) }
+        \mobstatrow{ \tspell{Poison}: Black Spell, 10 MP, Fire vs Water, diff 40, 15 damage (\telem{Bio}), inflicts the \tstatus{Poison} status on target until the end of the next round. }
+        \mobstatrow{ \tstatus{Zombie}, \tstatus{Vulnerable (Fire)}, \tstatus{Vulnerable (Light)}, \tstatus{Ice Immune}, \tstatus{Fatal Immune} }
+    \end{mobstats} 
+    Reanimated carcasses of dead humanoids who blindly follow their dark masters. They are slow and devoid of free will.
+\end{ffcolpage}
 \end{multicols}
