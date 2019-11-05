@@ -3,7 +3,7 @@
 \RequirePackage{geometry}
 \RequirePackage[table,xcdraw,svgnames]{xcolor}
 \RequirePackage{fontspec}
-\RequirePackage{graphicx}
+\RequirePackage[xetex]{graphicx}
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{fancyhdr}
@@ -168,7 +168,7 @@
 
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
-  \begin{table}[ht]
+  \begin{center}
     \rowcolors{1}{gray!10}{}
     \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
       \toprule
@@ -179,7 +179,7 @@
     	Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
       \bottomrule
     \end{tabular}
-  \end{table}
+  \end{center}
 }
 
 % mob stat block
