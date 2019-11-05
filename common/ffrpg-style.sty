@@ -240,31 +240,12 @@
 	\end{tabular*}\\\pc\par
 }
 
-% Define oure options for the below
-\krddefinekeys{jobdescx}[jd@]{%
-  cmd/name/invalid;
-}
-
 % Display the job image, possibly the shadow
 \newcommand{\jobimage}[1]{
 	\parbox[right]{0.3\textwidth}{
-		\adjincludegraphics[width=0.3\textwidth]{#1}
+		\adjincludegraphics[width=0.3\textwidth]{"/home/atma/Pictures/Characters/SilvervixPear.eps"}
 	}
-}
 
-% And now, the 'standard' layout for job description
-\newenvironment*{jobdesc}[1][]{%
-	\krdsetkeys{jobdescx}{#1}
-	\begin{minipage}[c]{0.6\textwidth}
-}{
-	\end{minipage}
-	\jobimage{\jd@name}
-}
-% Display the quirk image, possibly the shadow
-\newcommand{\quirkimage}[1]{
-	\parbox[right]{0.15\textwidth}{
-		\adjincludegraphics[width=0.15\textwidth]{#1}
-	}
 }
 
 % Column centered Boco, inherit existing columns
