@@ -21,7 +21,7 @@ Defensive Job specialized on protecting themselves and reducing physical damage.
 \noindent\tability{Tireless}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM. While your current HP is 25\% of your max HP or less, you gain the \tstatus{Protect} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. \pc
 
 \begin{jobspec}
-\crystal{earth}{12pt}d & %
+\crystal{earth}{12pt} & %
 \tspec{Inspiring Courage}: Requires Earth level 12. While your current HP is 25\% of your max HP or less, your allies gain the \tstatus{Protect} status. Your allies lose this status if your current HP is more than 25\% of your max HP for any reason. \\
 \crystal{water}{12pt} & %
 \tspec{Preventative Defense}: Requires Water level 15. Your \tability{Tireless} ability activate when your current HP is 50\% of maximum, instead of 25\%. \\
@@ -31,23 +31,23 @@ Defensive Job specialized on protecting themselves and reducing physical damage.
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Deadly Accuracy}: Core Ability acquired at level 35. After rolling an attack, you may reduce or increase the d100 result by 1. \pc
+\noindent\tability{Unshakable}: Core Ability acquired at level 35. You gain the reaction \taction{Shield Wall}. When you and at least one ally is hit by an attack that deals \tatk{physical} damage, perform an Earth vs Fire attack, difficulty 70. Your allies don’t suffer the attack’s effects regardless of the die result. If you fail, for each of the attack’s targets, you suffer the attack’s effects once. If you are successful, for each of the attack’s targets, you suffer the 50\% of attack’s damage. If you have a critical hit, you suffer the attack’s effects only once. \pc
 
 \begin{jobspec}
-\crystal{air}{12pt} & %
-\tspec{Deep Cut}: Requires Air level 16. When you attain a critical hit with an action that deals damage, ignore the target’s ARM and MARM. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} \crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Zen Focus}: Requires Earth, Air, Fire and Water level 8. At the beginning of each round, you may choose one of your initiative die’s value instead of rolling it. \\
+\crystal{fire}{12pt} \crystal{water}{12pt} & %
+\tspec{Runic Shield}: Requires Fire and Water level 12. You may use your \taction{Shield Wall} reaction against magical damage attacks. \\
+\crystal{earth}{12pt} \crystal{air}{12pt} & %
+\tspec{Reinforced Shield}: Requires Earth and Air level 13. Whenever you are successful with the \taction{Shield Wall} reaction, you gain the \tstatus{Strengthen (Armor)} status until the end of the round. \\
 \end{jobspec}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Fierce Assault}: Core Ability acquired at level 50. If you can act more than once on the same phase, you can perform these actions together. If you do and deal damage, you may add all damage dealt before reducing it by the target’s ARM or MARM. Regardless of how many attacks you do, reduce the ARM or MARM only once. \pc
+\noindent\tability{Indestructible}: Core Ability acquired at level 50. Whenever any effect gives you \tstatus{Barrier}-type positive status, increase by a round its duration. \pc
 
 \begin{jobspec}
 \crystal{earth}{12pt} & %
-\tspec{Rain of Blows}: Requires level 18 in Earth. Once per round, after being successful with the \taction{Attack} action, you may repeat the action as a free action. \\
-\crystal{fire}{12pt} & %
-\tspec{Precise Hits}: Requires Fire level 18. Once per round, you may re-roll an attack when using a \tatk{physical} or \tatk{magical} action. \\
+\tspec{Scream}: Requires Earth level 18. You gain the reaction \taction{Scream}. Use it when you suffer an attack that inflicts a negative status effect. Perform a Water vs (the greater between Air or Fire) attack, difficulty 70. If successful, the attack doesn’t inflict any negative status and, if the attack did damage, you recover HP equal to twice the damage dealt. \\
+\crystal{water}{12pt} & %
+\tspec{Uncontrollable}: Requires Water level 18. You gain the Slow (3) \tatk{physical} action \taction{Meatbone Slash}. Putting all your weight behind the strike, you perform a weapon attack. If successful, the target takes damage equal to your maximum HP, or 999, whichever is less. \\
 \end{jobspec}
 \end{ffminipage}
