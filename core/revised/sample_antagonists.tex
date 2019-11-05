@@ -57,4 +57,76 @@
     Hybrids of men and fish, Sahuagins are led into battle by dangerous captains. They are slow on land, but powerful enemies.
 \end{ffcolpage}
 
+\begin{ffcolpage}
+    \begin{mobstats}[name=Risen Sorcerer, level=19, type=undead, rank=minion, earth=32,air=31,fire=86,water=55, hp=110, mp=100, arm=8, marm=15]
+        \mobstatrow{ \tability{Staff}: Quick \tatk{magical} action, Fire vs Water, diff 40, 48 damage (\telem{Crush}) }
+        \mobstatrow{ \tspell{Gravity}: Time Spell, 9 MP, Fire vs Water, diff 25, reduce target's HP by 25\% of its current value }
+        \mobstatrow{ \tspell{Armor Up}: Time Spell, 20 MP, grants \tstatus{Strengthen (Armor)} to an ally until end of next round }
+        \mobstatrow{ \tspell{Mental Up}: Time Spell, 20 MP, grants \tstatus{Strengthen (Mental)} to an ally until end of next round }
+        \mobstatrow{ \tstatus{Zombie}, \tstatus{Vulnerable (Ice)}, \tstatus{Vulnerable (Light)}, \tstatus{Fire Immune}, \tstatus{Fatal Immune} }
+    \end{mobstats} 
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=Risen Lancer, level=19, type=undead, rank=minion, earth=65,air=60,fire=39,water=43, hp=110, mp=80, arm=15, marm=8]
+        \mobstatrow{ \tability{Lance}: Quick \tatk{physical} action, Earth vs Earth, diff 40, 36 damage (\telem{Puncture}) }
+        \mobstatrow{ \tability{Wide Arc}: Slow (4) \tatk{physical} action, Earth vs Earth, diff 40, 36 damage. Another random enemy suffers 25\% of the damage dealt, ignoring ARM }
+        \mobstatrow{ \tstatus{Zombie}, \tstatus{Vulnerable (Ice)}, \tstatus{Vulnerable (Light)}, \tstatus{Fire Immune}, \tstatus{Fatal Immune} }
+    \end{mobstats} 
+    These animated skeletons are a mockery of living beings. Some are fighters, and some command magical powers. They are devoid of free will and will return to dust if its dark master dies.
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=False Priest, level=20, type=humanoid, rank=elite, earth=30,air=43,fire=75,water=72, hp=500, mp=200, arm=8, marm=20]
+        \mobstatrow{ \tability{Wand}: Ranged Quick \tatk{magical} action, Fire vs Fire, diff 40, 42 damage (\telem{Crush}) }
+        \mobstatrow{ \tspell{Blind}: Black Spell, Fire vs Water, diff 70, inflicts the \tstatus{Blind} status until the end of next round }
+        \mobstatrow{ \tspell{Fire Wave}: Spell, 16 MP, Fire vs Water, diff 0, 49 single damage (\telem{Fire}) or 35 group damage (\telem{Fire}) }
+        \mobstatrow{ \tspell{Summon Risen}: Spell, 20 MP, Summon two random Risen minions.  This may be used only if the False Priest has no allies. }
+        \mobstatrow{ \tstatus{Vulnerable (Ice)}, \tstatus{Vulnerable (Lightning)}, \tstatus{Shadow Immune}, \tstatus{Immune: Death}, \tstatus{Immune: Stone}, \tstatus{Immune: Gravity} }
+    \end{mobstats} 
+    This evil priest command Risen skeletons. He may summon them do his biddings, using nearby corpses. However, his powers can't raise undead armies... yet.
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=Giant Bat, level=21, type=beast, rank=minion, earth=60,air=69,fire=60,water=30, hp=116, mp=112, arm=32, marm=21]
+        \mobstatrow{ \tability{Bite}: Quick \tatk{physical} action, Earth vs Air, diff 40, 36 damage (\telem{Cut}) }
+        \mobstatrow{ \tability{Arrow Guard}: Reaction, Air vs Air, diff 30, avoids a Ranged \tatk{physical} attack }
+        \mobstatrow{ \tspellblue{Red Feast}: Blue Spell, 10 MP, Earth vs Air, diff 40, 30 damage (\telem{Puncture}), The Giant Bat heals itself half of the damage dealt. }
+        \mobstatrow{ \tstatus{Flight}, \tstatus{Vulnerable (Air)}, \tstatus{Immune: Blind}, \tstatus{Improved Critical} }
+    \end{mobstats} 
+    Huge blood-sucker bats who live in caverns. They hate sunlight. Usually they don't attack adventurers unless they're provoked, or someone trespasses their lair.
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=Red Flan, level=22, type=abberation, rank=common, earth=51,air=48,fire=75,water=65, hp=255, mp=148, arm=20, marm=26]
+        \mobstatrow{ \tability{Slam}: Quick \tatk{physical} action, Earth vs Earth, diff 40, 25 damage (\telem{Crush}) }
+        \mobstatrow{ \tspell{Fire}: Black Spell, 8 MP, Fire vs Water, diff 0, 35 damage (\telem{Fire}) }
+        \mobstatrow{ \tspell{Flame}: Spell, 15 MP, Group, Fire vs Water, diff 0, 25 group damage (\telem{Fire}) }
+        \mobstatrow{ \tstatus{Resist (Cut)}, \tstatus{Resist (Crush)}, \tstatus{Resist (Puncture)}, \tstatus{Fire Absorb}, \tstatus{Vulnerable (Ice)}, \tstatus{Vulnerable (Water)}, \tstatus{Immune: Weaken} }
+    \end{mobstats} 
+    Amorphous elemental that looks like goo and have dominion over fire. Common in volcanic areas. They are hot to the touch and very aggressive.
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=Iron Golem, level=30, type=construct, rank=common, earth=112,air=34,fire=82,water=96, hp=400, mp=255, arm=70, marm=30]
+        \mobstatrow{ \tability{Axe}: Slow (1) \tatk{physical} action, Earth vs Air, diff 40, 110 damage (\telem{Cut}) }
+        \mobstatrow{ \tability{Block}: Reaction, Earth vs Earth, diff 40, avoid a \tatk{physical} attack. }
+        \mobstatrow{ \tspellblue{Matra Magic}: Blue Spell, 55 MP, Group, Fire vs Water, diff 0, 80 group damage (\telem{Fire}) }
+        \mobstatrow{ \tability{Rust Spray}: Quick Ranged \tatk{magical} action, Group, Fire vs Water, diff 70, inflicts the \tstatus{Weaken (Armor)} status until the end of next round }
+        \mobstatrow{ \tstatus{Immune: Virus}, \tstatus{Vulnerable (Lightning)}, \tstatus{Immune (Cut)}, \tstatus{Immune: Mental}, \tstatus{Immune: Toxic}, \tstatus{Immune: Transform}, \tstatus{Immune: Death} }
+    \end{mobstats} 
+    A huge construct animated by magic, wielding a rusty axe. They have no free will, limited to comply with its creator’s orders.
+\end{ffcolpage}
+
+\begin{ffcolpage}
+    \begin{mobstats}[name=Kraken, level=38, type=aquatic, rank=elite, earth=99,air=84,fire=91,water=123, hp=1500, mp=555, arm=43, marm=95]
+        \mobstatrow{ \tability{Tentacle}: Quick \tatk{physical} action, Earth vs Air, diff 40, 90 damage (\telem{Crush}) }
+        \mobstatrow{ \tspellblue{Aqua Rake}: Blue Magic, 85 MP, Group, Fire vs Water, diff 0, 117 damage (\telem{Water}) }
+        \mobstatrow{ \tability{Ink}: Quick \tatk{magical} action, Group, Fire vs Water, diff 70, inflicts the \tstatus{Blind} status on this and the next two rounds }
+        \mobstatrow{ \tability{Devour}: Slow (2) \tatk{physical} action, Earth vs Earth, diff 80, Inflicts the \tstatus{Condemn} status until the end of next round }
+        \mobstatrow{ \tstatus{Immune (Water)}, \tstatus{Vulnerable (Lightning)}, \tstatus{Immune: Fatal}, \tstatus{Immune: Blind}, \tstatus{Vulnerable: Mental} }
+    \end{mobstats} 
+    An octopus and squid hybrid, the Kraken is a colossal beast that terrorizes the oceans, destroying ships with its powerful tentacles.
+\end{ffcolpage}
+
 \end{multicols}
