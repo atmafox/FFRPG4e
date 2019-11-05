@@ -238,6 +238,14 @@
 	\end{tabular*}\\\pc\par
 }
 
+% Display the job image, possibly the shadow
+\newcommand{\jobimage}[1]{
+	\parbox[right]{0.3\textwidth}{
+		\adjincludegraphics[width=0.3\textwidth]{"/home/atma/Pictures/Characters/SilvervixPear.eps"}
+	}
+
+}
+
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
  	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
