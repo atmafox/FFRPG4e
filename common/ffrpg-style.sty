@@ -246,6 +246,14 @@
 
 }
 
+% And now, the 'standard' layout for job description
+\newenvironment{jobdesc}[1]{
+	\begin{minipage}[c]{0.6\textwidth}
+}{
+	\end{minipage}
+	\jobimage{replaceme}
+}
+
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
  	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
