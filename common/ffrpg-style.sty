@@ -260,6 +260,12 @@
 	\end{minipage}
 	\jobimage{\jd@name}
 }
+% Display the quirk image, possibly the shadow
+\newcommand{\quirkimage}[1]{
+	\parbox[right]{0.15\textwidth}{
+		\adjincludegraphics[width=0.15\textwidth]{#1}
+	}
+}
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
