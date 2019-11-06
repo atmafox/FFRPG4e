@@ -1,6 +1,8 @@
 # FFRPG4e
 This project is managed by Atmafox for Bruno Carvalho.  His website can be found at http://ffrpg4e.wikidot.com
 
+Project todos at https://github.com/atmafox/FFRPG4e/projects/1
+
 ## Project Layout
 ```
 common: Common content and LaTeX configuration
