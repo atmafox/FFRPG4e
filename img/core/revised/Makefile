@@ -15,7 +15,7 @@ eps: $(PNG_EPS_FILES) $(JPG_EPS_FILES)
 %.eps: %.jpg
 	$(CONVERT) $< $@
 
-.PHONY: clean print
+.PHONY: clean
 
 clean: $(PNG_EPS_FILES) $(JPG_EPS_FILES)
 	rm -rf $(PNG_EPS_FILES) $(JPG_EPS_FILES)
