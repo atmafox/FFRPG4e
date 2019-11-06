@@ -240,21 +240,21 @@
 	\end{tabular*}\\\pc\par
 }
 
-% Display the job image, possibly the shadow
-\newcommand{\jobimage}[1]{
-	\parbox[right]{0.3\textwidth}{
-		\adjincludegraphics[width=0.3\textwidth]{"/home/atma/Pictures/Characters/SilvervixPear.eps"}
-	}
-
-}
-
+% Define oure options for the below
 \krddefinekeys{jobdescx}[jd@]{%
   cmd/name/invalid;
 }
 
+% Display the job image, possibly the shadow
+\newcommand{\jobimage}[1]{
+	\parbox[right]{0.3\textwidth}{
+		\adjincludegraphics[width=0.3\textwidth]{"../img/core/revised/#1.eps"}
+	}
+}
+
 % And now, the 'standard' layout for job description
 \newenvironment*{jobdesc}[1][]{%
-  	\krdsetkeys{jobdescx}{#1}
+	\krdsetkeys{jobdescx}{#1}
 	\begin{minipage}[c]{0.6\textwidth}
 }{
 	\end{minipage}
