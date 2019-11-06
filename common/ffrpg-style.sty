@@ -169,16 +169,16 @@
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
   \begin{center}
-    \rowcolors{1}{gray!10}{}
-    \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
-      \toprule
+	\rowcolors{1}{gray!10}{}
+	\begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
+	  \toprule
 			Level & \js@lva & \js@lvb & \js@lvc & \js@lvd \\ \midrule
 			HP Bonus & \js@hpa & \js@hpb & \js@hpc & \js@hpd \\
 			MP Bonus & \js@mpa & \js@mpb & \js@mpc & \js@mpd \\
 			Armor   & \multicolumn{4}{l}{ \js@armor } \\
-    	Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
-      \bottomrule
-    \end{tabular}
+		Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
+	  \bottomrule
+	\end{tabular}
   \end{center}
 }
 
@@ -203,8 +203,8 @@
 		humanoid.do=\let\ms@type\tmtypehuman,
 		undead.do=\let\ms@type\tmtypeundead;
 	cmd/earth/-;
-    cmd/air/-;
-    cmd/fire/-;
+	cmd/air/-;
+	cmd/fire/-;
 	cmd/water/-;
 	cmd/hp/-;
 	cmd/mp/-;
@@ -246,12 +246,17 @@
 
 }
 
+\krddefinekeys{jobdescx}[jd@]{%
+  cmd/name/invalid;
+}
+
 % And now, the 'standard' layout for job description
-\newenvironment{jobdesc}[1]{
+\newenvironment*{jobdesc}[1][]{%
+  	\krdsetkeys{jobdescx}{#1}
 	\begin{minipage}[c]{0.6\textwidth}
 }{
 	\end{minipage}
-	\jobimage{replaceme}
+	\jobimage{\jd@name}
 }
 
 % Column centered Boco, inherit existing columns
@@ -315,23 +320,23 @@
   \fancyhf{}
   \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
-    \crystal{earth}{10pt} \hspace{\stretch{1}} %
-    \crystal{air}{10pt} \hspace{\stretch{1}} %
-    {\ferrum \leftmark\ - Page \thepage } \hspace{\stretch{1}} %
-    \crystal{fire}{10pt} \hspace{\stretch{1}} %
-    \crystal{water}{10pt}
+	\crystal{earth}{10pt} \hspace{\stretch{1}} %
+	\crystal{air}{10pt} \hspace{\stretch{1}} %
+	{\ferrum \leftmark\ - Page \thepage } \hspace{\stretch{1}} %
+	\crystal{fire}{10pt} \hspace{\stretch{1}} %
+	\crystal{water}{10pt}
   }
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
   \fancyhf{}
   \fancyfoot[C]{%
-    \crystal{earth}{10pt} \hspace{\stretch{1}} %
-    \crystal{air}{10pt} \hspace{\stretch{1}} %
-    {\ferrum \leftmark } \hspace{\stretch{1}} %
-    \crystal{fire}{10pt} \hspace{\stretch{1}} %
-    \crystal{water}{10pt}
-    }
+	\crystal{earth}{10pt} \hspace{\stretch{1}} %
+	\crystal{air}{10pt} \hspace{\stretch{1}} %
+	{\ferrum \leftmark } \hspace{\stretch{1}} %
+	\crystal{fire}{10pt} \hspace{\stretch{1}} %
+	\crystal{water}{10pt}
+	}
   }
 
 % Alright, let's set appropriate section layouts
