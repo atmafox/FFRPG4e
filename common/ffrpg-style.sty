@@ -171,16 +171,16 @@
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
   \begin{center}
-    \rowcolors{1}{gray!10}{}
-    \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
-      \toprule
+	\rowcolors{1}{gray!10}{}
+	\begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
+	  \toprule
 			Level & \js@lva & \js@lvb & \js@lvc & \js@lvd \\ \midrule
 			HP Bonus & \js@hpa & \js@hpb & \js@hpc & \js@hpd \\
 			MP Bonus & \js@mpa & \js@mpb & \js@mpc & \js@mpd \\
 			Armor   & \multicolumn{4}{l}{ \js@armor } \\
-    	Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
-      \bottomrule
-    \end{tabular}
+		Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
+	  \bottomrule
+	\end{tabular}
   \end{center}
 }
 
@@ -248,12 +248,17 @@
 
 }
 
+\krddefinekeys{jobdescx}[jd@]{%
+  cmd/name/invalid;
+}
+
 % And now, the 'standard' layout for job description
-\newenvironment{jobdesc}[1]{
+\newenvironment*{jobdesc}[1][]{%
+  	\krdsetkeys{jobdescx}{#1}
 	\begin{minipage}[c]{0.6\textwidth}
 }{
 	\end{minipage}
-	\jobimage{replaceme}
+	\jobimage{\jd@name}
 }
 
 % Column centered Boco, inherit existing columns
