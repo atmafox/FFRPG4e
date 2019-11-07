@@ -153,10 +153,9 @@
 }
 
 % for all choices
-\krddefinekeys{jobchoice}[jc@]{
-	bool/header/true;
-	cmd/text/Specialties;
-}
+\krddefinekeys{jobchoice}[jc@]{bool/header;cmd/text;}
+\krdpresetkeys{jobchoice}{header=true,text=Specialties}
+
 \newenvironment*{jobchoice}[1][]{
 	\krdsetkeys{jobchoice}{#1}
 	\begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
