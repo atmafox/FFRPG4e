@@ -229,7 +229,8 @@
 
 \newenvironment*{mobstats}[1][] {%
 	\krdsetkeys{mobstats}{#1}
-	\subsubsection{\ms@name}%
+	\bgroup\ferrum\large\itshape \ms@name\egroup \pc
+
 	\rowcolors{1}{gray!10}{}%
 	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
 		\toprule
