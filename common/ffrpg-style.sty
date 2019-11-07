@@ -167,6 +167,9 @@
 	cmd/armor/;
 	cmd/weapons/;
 }
+\krdpresetkeys{jobstats}{%
+	lva=1,lvb=15,lvc=30,lvd=60,
+	hpa=,hpb=,hpc=,hpd=,mpa=,mpb=,mpc=,mpd=,armor=,weapons=}
 
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
@@ -185,7 +188,7 @@
 }
 
 % mob stat block
-\krddefinekeys{mobstatsx}[ms@]{%
+\krddefinekeys{mobstats}[ms@]{%
 	cmd/name/MOBNAME;
 	cmd/level/-;
 	choice/rank/common/
@@ -214,6 +217,10 @@
 	cmd/marm/-;
 	cmd/init/3;
 }
+\krdpresetkeys{mobstats}{%
+	name=MOBNAME,level=-,rank=common,type=invalid,init=3,
+	earth=-,air=-,fire=-,water=-,hp=-,mp=-,arm=-,marm=-
+}
 
 \newlength{\numwidth}
 \settowidth{\numwidth}{0}
@@ -221,7 +228,7 @@
 \newcommand{\mobstatrow}[1]{#1 \\}
 
 \newenvironment*{mobstats}[1][] {%
-	\krdsetkeys{mobstatsx}{#1}
+	\krdsetkeys{mobstats}{#1}
 	\subsubsection{\ms@name}%
 	\rowcolors{1}{gray!10}{}%
 	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
@@ -241,9 +248,10 @@
 }
 
 % Define oure options for the below
-\krddefinekeys{jobdescx}[jd@]{%
+\krddefinekeys{jobdesc}[jd@]{%
   cmd/name/invalid;
 }
+\krdpresetkeys{jobdesc}{name=invalid}
 
 
 % Display the job image, possibly the shadow
@@ -255,7 +263,7 @@
 
 % And now, the 'standard' layout for job description
 \newenvironment*{jobdesc}[1][]{%
-	\krdsetkeys{jobdescx}{#1}
+	\krdsetkeys{jobdesc}{#1}
 	\begin{minipage}[c]{0.65\textwidth}
 }{
 	\end{minipage}
