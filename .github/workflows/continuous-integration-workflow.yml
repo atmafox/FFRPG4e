@@ -9,6 +9,6 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          root_file: core/revised.tex
+          root_file: revised.tex
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
