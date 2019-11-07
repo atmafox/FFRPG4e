@@ -179,26 +179,27 @@
 		7.do=\def\ac@slow{Slow (7)},
 		8.do=\def\ac@slow{Slow (8)},
 		9.do=\def\ac@slow{Slow (9)};
-	bool/reaction/false;
-	bool/magical/false;
-	bool/ranged/false;
-	bool/free/false;
-
+	bool/reaction;
+	bool/magical;
+	bool/ranged;
+	bool/free;
 }
+\krdpresetkeys{actype}{reaction=false,magical=false,ranged=false,free=false,slow=quick}
 
 \newcommand*{\actype}[1][]{
 	\krdsetkeys{actype}{#1}%
 	\textit{%
-		\ifac@free%
-			Free
-		\fi
 		\ifac@ranged%
 			Ranged
 		\fi%
 		\ifac@magical%
 			Magical
 		\fi%
+		\ifac@free%
+			Free
+		\else%
 		\ac@slow{}
+		\fi%
 	}%
 	\ifac@reaction%
 		reaction%
