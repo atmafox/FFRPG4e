@@ -3,7 +3,7 @@
 \RequirePackage{geometry}
 \RequirePackage[table,xcdraw,svgnames]{xcolor}
 \RequirePackage{fontspec}
-\RequirePackage{graphicx}
+\RequirePackage[xetex]{graphicx}
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 \RequirePackage{fancyhdr}
@@ -17,12 +17,14 @@
 \RequirePackage{keyreader}
 \RequirePackage{fmtcount}
 \RequirePackage{calc}
+\RequirePackage[rflt]{floatflt}
 
 % We'll need @ for keyval templates in here
 \makeatletter
 
 % configure page geometry
 \geometry{
+  letterpaper,
   top=0.65in,
   left=0.5in,
   right=0.5in,
@@ -168,18 +170,18 @@
 
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
-  \begin{table}[ht]
-    \rowcolors{1}{gray!10}{}
-    \begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
-      \toprule
+  \begin{center}
+	\rowcolors{1}{gray!10}{}
+	\begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
+	  \toprule
 			Level & \js@lva & \js@lvb & \js@lvc & \js@lvd \\ \midrule
 			HP Bonus & \js@hpa & \js@hpb & \js@hpc & \js@hpd \\
 			MP Bonus & \js@mpa & \js@mpb & \js@mpc & \js@mpd \\
 			Armor   & \multicolumn{4}{l}{ \js@armor } \\
-    	Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
+		Weapons & \multicolumn{4}{l}{\begin{tabular}{@{}l} \js@weapons \\ \end{tabular}} \\
+	  \bottomrule
+	\end{tabular}
+  \end{center}
 }
 
 % mob stat block
@@ -203,8 +205,8 @@
 		humanoid.do=\let\ms@type\tmtypehuman,
 		undead.do=\let\ms@type\tmtypeundead;
 	cmd/earth/-;
-    cmd/air/-;
-    cmd/fire/-;
+	cmd/air/-;
+	cmd/fire/-;
 	cmd/water/-;
 	cmd/hp/-;
 	cmd/mp/-;
@@ -238,26 +240,54 @@
 	\end{tabular*}\\\pc\par
 }
 
+% Define oure options for the below
+\krddefinekeys{jobdescx}[jd@]{%
+  cmd/name/invalid;
+}
+
+
+% Display the job image, possibly the shadow
+\newcommand{\jobimage}[1]{
+	\parbox[right]{0.3\textwidth}{
+		\adjincludegraphics[width=0.3\textwidth,trim={1.75in 0 0 0}]{#1}
+	}
+}
+
+% And now, the 'standard' layout for job description
+\newenvironment*{jobdesc}[1][]{%
+	\krdsetkeys{jobdescx}{#1}
+	\begin{minipage}[c]{0.65\textwidth}
+}{
+	\end{minipage}
+	\jobimage{\jd@name}
+}
+% Display the quirk image, possibly the shadow
+\newcommand{\quirkimage}[1]{
+	\parbox[right]{0.15\textwidth}{
+		\adjincludegraphics[width=0.15\textwidth]{#1}
+	}
+}
+
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
  	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
-	 \par\medskip
+	 \par\smallskip
 	 \yumin
 	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \includegraphics[width=0.1\textwidth]{../img/common/boco}
 	 \end{center}
 	 \bgroup\color{bocoblue}\small%
 	}
 	{\egroup
 	 \end{minipage}
-	 \medskip}
+	 \smallskip}
 
 % Used for page centered Boco but two column text
 \newenvironment{multiboco}{
 	 \par\medskip
 	 \yumin
 	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/boco.png}
+	 \includegraphics[width=0.075\textwidth]{../img/common/boco}
 	 \end{center}
 	 \begin{multicols}{2}
 	 \bgroup\color{bocoblue}\small%
@@ -269,23 +299,23 @@
 % Column centered Mog, inherit existing columns
 \newenvironment{mog}{
  	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
-	 \par\medskip
+	 \par\smallskip
 	 \arabtype
 	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \includegraphics[width=0.1\textwidth]{../img/common/mog}
 	 \end{center}
 	 \bgroup\color{mogred}\Large%
 	}
 	{\egroup
 	 \end{minipage}
-	 \medskip}
+	 \smallskip}
 
 % Page centered mog, two column text
 \newenvironment{multimog}{
 	 \par\medskip
 	 \arabtype
 	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/mog.png}
+	 \includegraphics[width=0.075\textwidth]{../img/common/mog}
 	 \end{center}
 	 \begin{multicols}{2}
 	 \bgroup\color{mogred}\Large%
@@ -299,23 +329,23 @@
   \fancyhf{}
   \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
-    \crystal{earth}{10pt} \hspace{\stretch{1}} %
-    \crystal{air}{10pt} \hspace{\stretch{1}} %
-    {\ferrum \leftmark\ - Page \thepage } \hspace{\stretch{1}} %
-    \crystal{fire}{10pt} \hspace{\stretch{1}} %
-    \crystal{water}{10pt}
+	\crystal{earth}{10pt} \hspace{\stretch{1}} %
+	\crystal{air}{10pt} \hspace{\stretch{1}} %
+	{\ferrum \leftmark\ - Page \thepage } \hspace{\stretch{1}} %
+	\crystal{fire}{10pt} \hspace{\stretch{1}} %
+	\crystal{water}{10pt}
   }
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
   \fancyhf{}
   \fancyfoot[C]{%
-    \crystal{earth}{10pt} \hspace{\stretch{1}} %
-    \crystal{air}{10pt} \hspace{\stretch{1}} %
-    {\ferrum \leftmark } \hspace{\stretch{1}} %
-    \crystal{fire}{10pt} \hspace{\stretch{1}} %
-    \crystal{water}{10pt}
-    }
+	\crystal{earth}{10pt} \hspace{\stretch{1}} %
+	\crystal{air}{10pt} \hspace{\stretch{1}} %
+	{\ferrum \leftmark } \hspace{\stretch{1}} %
+	\crystal{fire}{10pt} \hspace{\stretch{1}} %
+	\crystal{water}{10pt}
+	}
   }
 
 % Alright, let's set appropriate section layouts
