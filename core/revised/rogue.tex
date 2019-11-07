@@ -1,9 +1,10 @@
-An expert in surviving with what life throws at him. The Rogue makes its own destiny, obtaining resources from where nobody expects. His main Stats are Air and Water. His skills strengthen the group, making their allies better prepared to face their challenges. Many of their skills are related to luck and may have unpredictable results. \pc
+\begin{jobdesc}[name=pjob-rogue]
+    An expert in surviving with what life throws at him. The Rogue makes its own destiny, obtaining resources from where nobody expects. His main Stats are Air and Water. His skills strengthen the group, making their allies better prepared to face their challenges. Many of their skills are related to luck and may have unpredictable results. \pc
 
-\textbf{Representatives}: Cid Pollendina (FFIV), Edgar Roni Figaro (FFVI), Setzer Gabbiani (FFVI), Cait Sith (FFVII), Selphie Tilmitt (FFVIII), Wakka (FFX), Lady Luck Dressphere (FFX-2), Corsair Job (FFXI), Rikku (FFX), Gadgeteer Job (FFTA), Mustadio Bunanza (FFT), Locke Cole (FFVI), Yuffie Kisaragi (FFVII), Rikku (FFX), Thief Job (FFI, FFIII, FFV, FFXI, FFT, FFTA, FFX-2), Zidane Tribal (FFIX) \pc
+    \textbf{Representatives}: Cid Pollendina (FFIV), Edgar Roni Figaro (FFVI), Setzer Gabbiani (FFVI), Cait Sith (FFVII), Selphie Tilmitt (FFVIII), Wakka (FFX), Lady Luck Dressphere (FFX-2), Corsair Job (FFXI), Rikku (FFX), Gadgeteer Job (FFTA), Mustadio Bunanza (FFT), Locke Cole (FFVI), Yuffie Kisaragi (FFVII), Rikku (FFX), Thief Job (FFI, FFIII, FFV, FFXI, FFT, FFTA, FFX-2), Zidane Tribal (FFIX) \pc
 
-\jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpc=1x,armor=Medium,
-    weapons=\tequip{Claws / Gloves} \\ \tequip{Wands} \\ \tequip{Throwing Weapons}] 
+    \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpc=1x,armor=Medium,weapons=\tequip{Claws / Gloves} \\ \tequip{Wands} \\ \tequip{Throwing Weapons}] 
+\end{jobdesc}
 
 \begin{ffminipage}
 {\centering \textbf{Abilities}\par }
@@ -105,7 +106,9 @@ In addition, at any time out of combat, you can pay half weapon’s or armor’s
 \tspec{Magic Reels}: Requires Water level 20. You gain the Quick action \taction{Magic Reels}. Do 3 Water vs Water (the greater between opponents’) attacks, difficulty 40. If all fail, you are reduced to 0 HP and your opponents recover HP equal to the amount of HP you lost. If successful in at least one, you cast a random Spell without spending MP, even if you don’t know it. Roll 1d10 and compare to the table below to see what Spell will be cast. For each critical hit, the Spell is cast again, up to 4 Spell casts if you obtain 3 critical hits. \\
 \end{jobspec}
 
-\rowcolors{1}{gray!10}{}
+\begin{minipage}{.6\textwidth}%
+\raggedleft
+\rowcolors{1}{gray!10}{}%
 \begin{tabular}{cccc}
     \toprule
     \textbf{D10 Roll} & \textbf{1 Hit} & \textbf{2 Hits} & \textbf{3 Hits} \\ \midrule
@@ -119,6 +122,7 @@ In addition, at any time out of combat, you can pay half weapon’s or armor’s
     \textbf{8} & \tspell{Bio} & \tspell{Venom} & \tspell{Virus} \\
     \textbf{9} & \tspell{Aera} & \tspell{Aerga} & \tspell{Whirlwind} \\
     \textbf{10} & \tspell{Reset} & \tspell{Remove} & \tspell{X-Zone} \\ \bottomrule
-\end{tabular}
+\end{tabular}\end{minipage}
+\parbox[m]{.35\textwidth}{\adjincludegraphics[width=.35\textwidth]{block-rogue}}
 
 \end{ffminipage}
