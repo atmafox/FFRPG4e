@@ -12,4 +12,4 @@ jobs:
           root_file: revised.tex
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
-          extra_packages: "geometry xcolor fontspec graphicx multicol enumitem fancyhdr titlesec placeins hyperref booktabs adjustbox indentfirst url keyreader fmtcount calc csquotes"
+          extra_packages: "geometry xcolor fontspec multicol enumitem fancyhdr titlesec placeins hyperref booktabs adjustbox indentfirst url keyreader fmtcount calc csquotes"
