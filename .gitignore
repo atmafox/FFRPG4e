@@ -280,3 +280,6 @@ TSWLatexianTemp*
 
 # Mac stuff
 .DS_Store
+
+# For the VIM users, swap files
+*.sw?
