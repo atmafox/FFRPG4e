@@ -117,6 +117,15 @@
 \newcommand{\tmtypeundead}{\tmtype{Undead}}
 \newcommand{\tmtypeinvalid}{\tmtype{INVALID}}
 
+
+% specific kinds of rules text
+%\colorlet{rulebg}{gray!20}
+%\newcommand{actionrule}[1]{
+%	\sethlcolor{rulebg}\hl{
+%		#1
+%	}
+%}
+
 % parskip standard sizes
 \newcommand{\pc}{\parskip 10pt}
 \newcommand{\pw}{\parskip 15pt}
@@ -138,13 +147,22 @@
 % and the table definition for job specaliztions
 \newenvironment{jobspec}{
   \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
-  \textbf{Specialties}: \\ 
+  \textbf{XX DEPRICATED XX}: \\ 
 } {
   \end{tabular}
 }
-% for straight choices
-\newenvironment{jobchoice}{
-  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+
+% for all choices
+\krddefinekeys{jobchoice}[jc@]{
+	bool/header/true;
+	cmd/text/Specialties;
+}
+\newenvironment*{jobchoice}[1][]{
+	\krdsetkeys{jobchoice}{#1}
+	\begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+		\ifjc@header%
+			\textbf{\jc@text}:\\
+		\fi%
 } {
   \end{tabular}
 }
@@ -164,12 +182,16 @@
 	bool/reaction/false;
 	bool/magical/false;
 	bool/ranged/false;
+	bool/free/false;
 
 }
 
 \newcommand*{\actype}[1][]{
 	\krdsetkeys{actype}{#1}%
 	\textit{%
+		\ifac@free%
+			Free
+		\fi
 		\ifac@ranged%
 			Ranged
 		\fi%
