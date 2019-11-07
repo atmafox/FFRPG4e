@@ -4,21 +4,33 @@
 
 \RequirePackage{ffrpg-style}
 
+% Add new commands to get info to the title page
+\newcommand*{\edition}[1]{\gdef\@edition{#1}}
+\newcommand*{\@edition}{Currently not set - Please fix}
+\newcommand*{\version}[1]{\gdef\@version{#1}}
+\newcommand*{\@version}{Currently not set - Please fix}
+\newcommand*{\titleimage}[1]{\gdef\@titleimage{#1}}
+\newcommand*{\@titleimage}{example-image-16x9}
+
 \renewcommand*{\maketitle}{%
   \begin{titlepage}
-  {\raggedleft%
-	\includegraphics[width=3cm]{example-image-16x9}\par
-  }\vspace{1cm}
-	\centering
-  {\scshape\LARGE Columbidae University \par}
-  \vspace{1cm}
-  {\huge\bfseries\@title\unskip\strut\par}
-  \vspace{2cm}
-  {\Large\itshape\@author\unskip\strut\par}
+  \centering
+  \includegraphics[width=\textwidth]{../img/common/ffrpg-title.pdf}\par
+  \Huge\ferrum\bfseries\@title\unskip\strut\par
+	\vspace{\stretch{1}}
+  \hspace{\stretch{1}} \crystal{earth}{15pt}%
+    \hspace{\stretch{1}} \crystal{water}{15pt} %
+    \hspace{\stretch{1}} \crystal{fire}{15pt} %
+    \hspace{\stretch{1}} \crystal{air}{15pt} %
+    \hspace{\stretch{1}}\strut\par
+  \vspace{\stretch{1}}
+  \Large\ferrum\bfseries\@edition\ Edition\unskip\strut\par
+  \vspace{\stretch{1}}
+  {\large Version:\ \@version\par}
   \vfill
   \vfill
 
-  {\large \@date\par}
+  {\centering\includegraphics[width=0.9\textwidth]{\@titleimage}}
   \end{titlepage}
 }
 
