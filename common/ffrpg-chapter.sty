@@ -33,11 +33,11 @@
     {1pc}%
     {\Huge\itshape\ferrum} %
     [\ifcf@usequote%
-      \vfill\upshape\Large\hspace{0.4\textwidth}\ferrum\parbox{0.35\textwidth}{\raggedleft%
-      {\em ``\cf@quote''}% 
+      \vfill\upshape\Large\hspace{0.4\textwidth}\ferrum\parbox{0.35\textwidth}{%
+      {\em ``\cf@quote''}}% 
       \ifcf@useauthor%
-        \\ - \cf@author
-      \fi}%
+        \\ \hspace{0.4\textwidth}\parbox{0.35\textwidth}{\raggedleft - \cf@author}
+      \fi%
     \fi]%
     \chapter{\cf@title}
 }
