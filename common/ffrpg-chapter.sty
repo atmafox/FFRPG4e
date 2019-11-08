@@ -1,23 +1,45 @@
 % This package defines title page layout for FFRPG material
 % Please check for updates
-\ProvidesPackage{ffrpg-chapter}[2019/10/31 v4.0.0a common chapter page for FFRPG material]
+\ProvidesPackage{ffrpg-chapter}
 
 \RequirePackage{ffrpg-style}
-\RequirePackage{tikz}
 
-\makechapterstyle{ffrpg-chapter}{
-  \renewcommand*{\printchaptername}{}
-  \renewcommand*{\chapnumfont}{\normalfont\sffamily\huge\bfseries}
-  \renewcommand*{\printchapternum}{
-    \flushright
-    \begin{tikzpicture}
-      \draw[fill,color=black] (0,0) rectangle (2cm,2cm);
-      \draw[color=white] (1cm,1cm) node { \chapnumfont\thechapter };
-    \end{tikzpicture}
-  }
-  \renewcommand*{\chaptitlefont}{\normalfont\sffamily\Huge\bfseries}
-  \renewcommand*{\printchaptertitle}[1]{\flushright\chaptitlefont##1}
+% Chapter Page Style Command
+% Must be used every time since it sets a global style and then makes a chapter
+
+\krddefinekeys{chapterformat}[cf@]{
+  cmd/image;
+  cmd/quote;
+  bool/usequote;
+  cmd/author;
+  bool/useauthor;
+  cmd/title;
 }
-\chapterstyle{ffrpg-chapter}
+
+\krdpresetkeys{chapterformat}{
+  image=example-image-16x9,
+  quote=XXX There Should Be A Real Quote Here XXX,
+  author=XXX Some Dude XXX,
+  usequote=true,
+  useauthor=true,
+  title=XXX this is a chapter XXX,
+}
+
+\newcommand*{\styledchapter}[1][]{
+  \krdsetkeys{chapterformat}{#1}
+  \titleformat{\chapter}[display]%
+    {\ferrum\Large\filcenter}%
+    {\centering\adjincludegraphics[width=0.9\textwidth]{\cf@image}}%
+    {1pc}%
+    {\Huge\itshape\ferrum}%
+    [\ifcf@usequote%
+      \vfill\upshape\Large\raggedleft\ferrum%
+      {\em ``\cf@quote''}% 
+      \ifcf@useauthor%
+        \\ - \cf@author
+      \fi%
+    \fi]%
+    \chapter{\cf@title}
+}
 
 \endinput
