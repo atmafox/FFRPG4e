@@ -12,3 +12,4 @@ jobs:
           root_file: revised.tex
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
+          extra_packages: "mwe"
