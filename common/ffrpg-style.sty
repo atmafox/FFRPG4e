@@ -9,7 +9,9 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks=true,linkcolor=blue,bookmarksopen=true,ocgcolorlinks]{hyperref}
+\RequirePackage[open,openlevel=2,atend]{bookmark}
+%\RequirePackage[ocgcolorlinks]{ocgx2}
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
@@ -21,6 +23,8 @@
 
 % We'll need @ for keyval templates in here
 \makeatletter
+
+\bookmarksetup{}
 
 % configure page geometry
 \geometry{
