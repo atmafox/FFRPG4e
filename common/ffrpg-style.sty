@@ -149,14 +149,6 @@
   \end{minipage}\vspace{\parskip}%
 }
 
-% and the table definition for job specaliztions
-\newenvironment{jobspec}{
-  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
-  \textbf{XX DEPRICATED XX}: \\ 
-} {
-  \end{tabular}
-}
-
 % for all choices
 \krddefinekeys{jobchoice}[jc@]{bool/header;cmd/text;}
 \krdpresetkeys{jobchoice}{header=true,text=Specialties}

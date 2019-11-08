@@ -12,7 +12,7 @@
 
 \textbf{\textit{Nature's Path}}: Core ability acquired at leavel 1. You are a druid, and gain the multipliers and equipment choices above. \pc
 
-\begin{jobchoice}
+\begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
 \textit{Primal Arcana}: Requires level 1. Increase your MP bonus multiplier by 1. You may equip light armor. Also, you gain one of the following Spell groups: \tspellgroup{Healing}, \tspellgroup{Fire}, \tspellgroup{Ice}, \tspellgroup{Lightning}, \tspellgroup{Poison}, or \tspellgroup{Slow}. \\
 \crystal{level}{12pt} & %
@@ -25,26 +25,26 @@
 \begin{ffminipage}
 \noindent\textbf{\textit{Awakened}}: Core Ability acquired at level 1. Select an option: Blue Mage, Summoner or Geomancer. This choice determines what defines your abilities and powers. \pc
 
-\begin{jobchoice}
+\begin{jobchoice}[header=false]
 \crystal{level}{12pt} & \textit{Blue Mage}: You may learn Blue Magic Spells, but you can only cast Initiate Spells. Learn two Blue Magic Initiate Spells at character creation. Also, whenever you suffer the effects of a Blue Magic Spell and are not reduced to 0 HP, you permanently learn the Spell. The list and description of the \nameref{sec:magic-blue} Spells starts at page \pageref{sec:magic-blue}. \\
 \crystal{level}{12pt} & \textit{Geomancer}: You earn the Ranged Slow (2) magical action \taction{Geomancy}. The geomancer has the power to use the terrain to his advantage, invoking magical effects. Their powers vary accordingly to the terrain where the battle takes place, be it \nameref{subsec:geo-plains}, \nameref{subsec:geo-forest}, \nameref{subsec:geo-mountain}, \nameref{subsec:geo-snow}, \nameref{subsec:geo-sea}, \nameref{subsec:geo-swamp}, \nameref{subsec:geo-urban}, \nameref{subsec:geo-underground}, \nameref{subsec:geo-lava}, \nameref{subsec:geo-desert}, or \nameref{subsec:geo-cosmic}. The rules for these effects and their descriptions are in the \nameref{sec:magic-geo} section, starting at page \pageref{sec:magic-geo}. \\
 \crystal{level}{12pt} & \textit{Summoner}: You gain the Quick \tatk{magical} action \taction{Tame}. To use it, make a Water vs Fire attack, difficulty 40. If successful, you deal non-elemental damage equal to your character level. If the opponent is reduced to 0 HP by this attack, you capture the enemy’s soul, and can release it later with an action to have the captured enemy perform his most powerful attack against targets of your choice. \taction{Tame} may also be used as a reaction when an enemy drops to 0 HP. In this case, the enemy's soul is captured if it hits, regardless of damage. Use the Stats of captured enemy to determine the effects of this action. While you own a captured soul, you may not use the \taction{Tame} action. \\
 \end{jobchoice}
 
-\begin{jobspec}
+\begin{jobchoice}
 \crystal{earth}{12pt} \crystal{air}{12pt} & %
 \textit{Martial Channeling}: Requires Earth and Air level 4. Whenever you use a magical action (but not Spells), you may substitute the attack roll for a weapon attack, maintaining the same difficulty. You are successful in your action if you succeed with the weapon attack. If you do succeed, and the action deals damage, you deal weapon damage instead of the action’s damage. Other than attack roll and damage, this Specialty don't change anything else in the action. \\
 \crystal{fire}{12pt} & %
 \textit{Light Steps}: Requires Fire level 6. You gain the \tspellgroup{Flight} Spell group. \\
 \crystal{water}{12pt} & %
 \textit{Arcane Fury}: Requires Water level 4. You gain the Ranged Quick magical action \taction{Intimidation}. You attack your enemy’s self-confidence with your presence of spirit. Perform a Water vs Fire attack, difficulty 40. If successful, until the end of the next round, when the target roll doubles in an attack roll, instead of having a critical hit, its attack fails. Treat this as a \tstatus{Mental}-type status effect. \\
-\end{jobspec}
+\end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
 \noindent\textbf{\textit{Nature's Blessings}}: Core Ability acquired at level 10. You gain an extra ability dependent on your Awakened ability type: \pc
 
-\begin{jobchoice}
+\begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
 \textit{Blue Mage}: You may cast \nameref{subsec:blue-acolyte} Spells. \\
 \crystal{level}{12pt} & %
@@ -53,21 +53,21 @@
 \textit{Summoner}: You gain \taction{Call}, allowing them to obtain the help of Summoned Monsters they've obtained in their adventures. The complete rules for these are in the \nameref{sec:magic-summoned} section, starting at page \pageref{sec:magic-summoned}. \\
 \end{jobchoice}
 
-\begin{jobspec}
+\begin{jobchoice}
 \crystal{air}{12pt} & %
 \textit{Air Gust}: Requires Air level 7. You gain the Ranged Slow (2) magical action \textbf{!Air Wave}. Using it, you perform an (Air or Fire) vs Water attack against a target, difficulty 40. If successful, choose one: You deal 10x Air level Air-elemental damage or grant the Float status to your group until the end of the round. At 30th level or greater, you may spend 30 MP when using this action to increase the damage to 15 x Air level or force the target to lose their highest initiative dice this round. No more than one initiative die can be lost this way by a target each round. Treat this as a Seal-type status effect. \\
 \crystal{water}{12pt} \crystal{air}{12pt} & %
 \textit{Weak Point}: Requires Water and Air level 5. You gain the action \textbf{!Advice}. It allows you to choose an ally and point out the weaknesses of the enemy. Until the end of the next round, whenever the chosen ally performs an attack that can score critical hit, critical hits happen even if the attack didn’t overcome the difficulty. \\
 \crystal{earth}{12pt} \crystal{water}{12pt} & %
 \textit{Magical Camouflage}: Requires Earth and Water level 7. Whenever you or an ally uses an action or spell that targets your own group, you may choose up to two targets to avoid the effects of the spell or action. \\
-\end{jobspec}
+\end{jobchoice}
 
 \end{ffminipage}
 
 \begin{ffminipage}
 \noindent\textbf{\textit{Natural Domain}}: Core Ability acquired at level 20. You gain one of the following three extra abilities: \pc
 
-\begin{jobchoice}
+\begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
 \textit{Blue Mage}: You may roll 1d100 whenever a combatant uses a Blue Magic spell on any ally or foe,
 automatically learning the spell if the roll is equal to or lower than the Blue Mage's level. \\
@@ -77,20 +77,20 @@ automatically learning the spell if the roll is equal to or lower than the Blue 
 \textit{Summoner}: You may now have up to two monster’s souls under the effect of \taction{Tame} at the same time. \\
 \end{jobchoice}
 
-\begin{jobspec}
+\begin{jobchoice}
 \crystal{air}{12pt} \crystal{fire}{12pt} & %
 \textit{Monster's Language}: Requires Air level 10 and Fire level 8. You gain the Ranged Quick magical action \taction{Parley}. Speaking the monsters’ language, you can try to convince them to abandon the fight. Perform a Fire vs Fire attack, difficulty 70. If successful, the target will use on its next action to \taction{Flee}, obtaining automatic success if you wish. Treat this as a \tstatus{Fatal}-type status effect. \\
 \crystal{water}{12pt} & %
 \textit{Adaptive Tolerance}: Requires Water level 9. Whenever you suffer the effects of a Status effect, you gain \tstatus{(Status) Resistance} to that status effect until the end of combat. \\
 \crystal{earth}{12pt} & %
 \textit{Earth Slash}: Requires Earth level 10. You gain the Slow (2) magical action \taction{Earth Slash}. Using it, you perform an (Earth or Fire) vs Water attack against all other combatants (allies and foes), difficulty 40. This attack automatically fails against targets that are under the \tstatus{Float} or \tstatus{Flight} status effect. If successful, choose for each target: either deal damage equal to 7x Earth level, \telem{Earth}-elemental, or inflict the \tstatus{Immobilize} status until the end of the round. At 40th level or greater, you may spend 60 MP when using this action to double the duration of the status effect and increase the damage to 14x Earth level. \\
-\end{jobspec}
+\end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
 \noindent\textbf{\textit{Natural Mastery}}: Core Ability acquired at level 30. You gain an extra ability, depending on the choice made in the Awakened ability. \pc
 
-\begin{jobchoice}
+\begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
 \textit{Blue Mage}: You learn Blue Magic Spells after suffering them even if they are reduced to 0 HP because of its effect and increase your MP bonus by 1 times their level. Also, you may can now cast Master and Ancient Spells. \\
 \crystal{level}{12pt} & %
@@ -99,7 +99,7 @@ automatically learning the spell if the roll is equal to or lower than the Blue 
 \textit{Summoner}: You gain the Quick magical action \textbf{!Summon}. It may be used only once per combat. Using it, you choose a Summoned Monster to materialize. Until the end of the round, you can’t use any Call beyond the summoned. On the other hand, the Summoned Monster, in addition to its normal Call effects, will also protect you from harm, effectively granting you the Wall status until the end of the round, and other effects, depending on the Summoned Monster. The complete rules for this and the description of the Summoned Monsters are below, starting at page 76. \\
 \end{jobchoice}
 
-\begin{jobspec}
+\begin{jobchoice}
 \crystal{fire}{12pt} \crystal{water}{12pt} & %
 \textit{Quagmire}: Requires Fire level 8 and Water level 10. You gain the Slow (4) magical action \textbf{!Quagmire}. Using it, you realize a (Water or Fire) vs Water attack against a target, difficulty 40. This attack automatically fails against targets under the effect of \textbf{Float} or Flight status effects. If successful, you deal 17x Water level Water-elemental damage and inflict the \textbf{Slow} status over the next two rounds. At 40th level or greater, you may spend 60 MP to use this action against a group, rather than a single target. \\
 \crystal{water}{12pt} \crystal{air}{12pt} & %
@@ -107,5 +107,5 @@ automatically learning the spell if the roll is equal to or lower than the Blue 
 \crystal{earth}{12pt} \crystal{fire}{12pt} & %
 \textit{Natural Resilience}: Requires Earth level 10 and Fire level 8. Choose \textbf{Toxic}, \textbf{Seal}, or
 \textbf{Transform}. You become immune to all the negative statuses of the chosen type. \\
-\end{jobspec}
+\end{jobchoice}
 \end{ffminipage}
