@@ -4,13 +4,43 @@
 
 \RequirePackage{ffrpg-style}
 
-\titleformat{\chapter}[display]
-  {\ferrum\Large\filcenter}
-  {\centering\adjincludegraphics[width=0.9\textwidth]{example-image-16x9}}
-  {1pc}
-  {\vspace{1pc}%
-   \Huge\itshape\ferrum}
-%  [\vfill\upshape\Large\raggedleft\ferrum%
-%   {\em ``Some quote''} \\ - Test]
+% Chapter Page Style Command
+% Must be used every time since it sets a global style and then makes a chapter
+
+\krddefinekeys{chapterformat}[cf@]{
+  cmd/image;
+  cmd/quote;
+  bool/usequote;
+  cmd/author;
+  bool/useauthor;
+  cmd/title;
+}
+
+\krdpresetkeys{chapterformat}{
+  image=example-image-16x9,
+  quote=XXX There Should Be A Real Quote Here XXX,
+  author=XXX Some Dude XXX,
+  usequote=true,
+  useauthor=true,
+  title=XXX this is a chapter XXX,
+}
+
+\newcommand*{\styledchapter}[1][]{
+  \krdsetkeys{chapterformat}{#1}
+  \titleformat{\chapter}[display]%
+    {\ferrum\Large\filcenter}%
+    {\centering\adjincludegraphics[width=0.9\textwidth]{example-image-16x9}}%
+    {1pc}%
+    {\Huge\itshape\ferrum}%
+    [\ifcf@usequote%
+      \vfill\upshape\Large\raggedleft\ferrum%
+      {\em ``\cf@quote''}% 
+      \ifcf@useauthor%
+        \\ - \cf@author
+      \fi%
+    \fi]%
+    \chapter{\cf@title}
+}
+
 
 \endinput
