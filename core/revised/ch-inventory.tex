@@ -103,3 +103,30 @@ Favoring defense against physical damage, this type of armor is popular among Wa
 \begin{tabarm}[label=inv-harm]
     \tabarmrow[name=Leather Plate,mlevel=1,cost=99,arm=3,marm=0,effect=None]
 \end{tabarm}
+
+\clearpage
+\subsection{Weapons}
+\label{subsec:inv-weapons}
+
+\begin{multicols}{2}
+Weapons are the main offensive equipment.  Unlike armor, which are very similar, each type of weapon is quite different from others.  Each type of weapon has an Offensive Stat and a Defensive Stat.  When you use the \taction{Attack} or any other action that specifies a ``weapon attack'', you attack using the equipped weapon's Offensive and Defensive Stats unless the action says otherwise.  For example, Flamberge's (a Light Sword / Knife) damage is equal to 10x.  As its Offensive Stat is Air, the damage will be equal to ten times your Air level before any other modifiers.
+
+In addition, the attack and damage type (physical or magical), the element (usually Cut, Puncture, or Crush), and if the attack is Ranged or Melee, all depends on the equipped weapon.
+
+Every action that needs a weapon attack to hit and does not state the action's range (Ranged or Melee) and/or the action's elements uses the base weapon's range and element.  Actions that do state their range and/or element override the base weapon's characteristics.
+
+Many weapons also have special effects.  All effects that modify the weapon's attack or damage only work with the \taction{Attack} action, unless the action says otherwise.  The exceptions to this rule are all effects that increase damage by some Stat level like the Colichemarde and the Soul Eater weapon ability.  Actions that key off weapon damage use the damage increased by the special effect and the Soul Eater applies to all actions made with that weapon that require a weapon attack.
+\end{multicols}
+
+\begin{center}
+    \adjincludegraphics[width=0.9\textwidth]{block-shopping}
+\end{center}
+\clearpage
+
+\subsubsection{Light Swords / Knives}
+
+Fast weapons that deal \telem{Puncture}-elemental damage.  Their Offensive and Deffensive Stats are Air.  Due to their weak damage, they are largely a defensive option.  While a character is equipped with one of these weapons, they may use the reaction \taction{Parry}.  It is used when they suffer a physical attack to make a roll Air vs Air at difficulty 40.  If successful, they don't suffer the attack's effects.  These weapons are always Melee.
+
+\begin{tabwpn}[label=inv-lsword,range=melee,type=physical,element=puncture,roll=airvair]
+    \tabwpnrow[name=Epee,mlevel=1,cost=55,damage=2x,effect=None]
+\end{tabwpn}
