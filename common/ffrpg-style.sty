@@ -323,11 +323,53 @@
 	\end{minipage}
 	\jobimage{\jd@name}
 }
+
 % Display the quirk image, possibly the shadow
 \newcommand{\quirkimage}[1]{
 	\parbox[right]{0.15\textwidth}{
 		\adjincludegraphics[width=0.15\textwidth]{#1}
 	}
+}
+
+% Armor table
+% Define oure options for the below
+\krddefinekeys{tabarm}[ta@]{%
+	cmd/label/tab:undefined;
+}
+\krdpresetkeys{tabarm}{
+	label=tab:undefined
+}
+
+\krddefinekeys{tabarmrow}[tar@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/arm/-;
+	cmd/marm/-;
+	cmd/effect/None;
+}
+\krdpresetkeys{tabarmrow}{
+	name=UNDEFINED,mlevel=1,cost=-,arm=-,marm=-,effect=None
+}
+
+\newenvironment*{tabarm}[1][]{
+	\krdsetkeys{tabarm}{#1}
+	\begin{table}[h]
+  		\centering
+		\label{\ta@label}
+    	\rowcolors{1}{gray!20}{}
+		\begin{tabular*}{lrrrrp{3in}}
+        	\toprule
+        	\textbf{Name} & \textbf{Min. Level} & \textbf{Cost} & \textbf{ARM} & \textbf{MARM} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular*}
+	\end{table}
+}
+
+\newcommand{\tabarmrow}[1]{
+	\krdsetkeys{tabarmrow}{#1}
+	\tar@name{} & \tar@mlevel{} & \tar@cost{} & \tar@arm{} & \tar@marm{} & \tar@effect{} \tabularnewline
 }
 
 % Column centered Boco, inherit existing columns
