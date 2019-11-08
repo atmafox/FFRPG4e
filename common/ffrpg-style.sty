@@ -301,7 +301,7 @@
 	\end{tabular*}\\[2mm]
 }
 
-% Define oure options for the below
+% Define our options for the below
 \krddefinekeys{jobdesc}[jd@]{%
   cmd/name/invalid;
 }
@@ -332,7 +332,6 @@
 }
 
 % Armor table
-% Define oure options for the below
 \krddefinekeys{tabarm}[ta@]{%
 	cmd/label/undefined;
 }
@@ -374,6 +373,54 @@
   \krdsetkeys{tabarmrow}{#1} \tar@arm &
   \krdsetkeys{tabarmrow}{#1} \tar@marm &
   \krdsetkeys{tabarmrow}{#1} \tar@effect \\
+}
+
+% Weapon table
+% Define oure options for the below
+\krddefinekeys{tabwpn}[tw@]{%
+	cmd/label/undefined;
+	cmd/roll/UNDEF;
+	cmd/type/UNDEF;
+	cmd/range/UNDEF;
+	cmd/element/UNDEF;
+}
+\krdpresetkeys{tabwpn}{
+	label=undefined,roll=UNDEF,type=UNDEF,range=UNDEF,element=UNDEF
+}
+
+\krddefinekeys{tabwpnrow}[twr@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/damage/-;
+	cmd/effect/None;
+}
+\krdpresetkeys{tabwpnrow}{
+	name=UNDEFINED,mlevel=-,cost=-,damage=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabwpn}[1][]{%
+	\krdsetkeys{tabwpn}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\tw@label}
+	    \rowcolors{1}{}{gray!20}
+		\begin{tabular}{lrrrp{0.4\textwidth}}
+				\toprule
+				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
+        		\textbf{Name} & \textbf{Level} & \textbf{Cost} & \textbf{Damage} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabwpnrow}[1][]{
+  \krdsetkeys{tabwpnrow}{#1} \twr@name &
+  \krdsetkeys{tabwpnrow}{#1} \twr@mlevel &
+  \krdsetkeys{tabwpnrow}{#1} \twr@cost &
+  \krdsetkeys{tabwpnrow}{#1} \twr@damage &
+  \krdsetkeys{tabwpnrow}{#1} \twr@effect \\
 }
 
 % Column centered Boco, inherit existing columns
