@@ -62,6 +62,11 @@
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
 \definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
 
+% This is for leaving temporary inline comments about game mechanics that need clarification and that sort of thing. It should stand out badly but not be hard to read. It should probably also flag a warning in the console every time it's used.
+\newcommand{\review}[1]{
+	\bgroup\color{red}\textbf{((#1))}\egroup
+}
+
 % Macro for the crystal images
 % I want to make this verify the input, but for now... this works
 \newcommand{\crystal}[2]{
@@ -94,8 +99,7 @@
 % Optional rules
 \newcommand{\toption}[1]{\textbf{#1}}
 
-% Status types - note, the four crystal elements
-%  are used for status classes involving them
+% Status types 
 \newcommand{\tstatus}[1]{\textbf{#1}}
 
 % mob ranks
@@ -118,6 +122,15 @@
 \newcommand{\tmtypeundead}{\tmtype{Undead}}
 \newcommand{\tmtypeinvalid}{\tmtype{INVALID}}
 
+
+% specific kinds of rules text
+%\colorlet{rulebg}{gray!20}
+%\newcommand{actionrule}[1]{
+%	\sethlcolor{rulebg}\hl{
+%		#1
+%	}
+%}
+
 % parskip standard sizes
 \newcommand{\pc}{\parskip 10pt}
 \newcommand{\pw}{\parskip 15pt}
@@ -136,20 +149,60 @@
   \end{minipage}\vspace{\parskip}%
 }
 
-% and the table definition for job specaliztions
-\newenvironment{jobspec}{
-  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
-  \textbf{Specialties}: \\ 
-} {
-  \end{tabular}
-}
-% for straight choices
-\newenvironment{jobchoice}{
-  \begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+% for all choices
+\krddefinekeys{jobchoice}[jc@]{bool/header;cmd/text;}
+\krdpresetkeys{jobchoice}{header=true,text=Specialties}
+
+\newenvironment*{jobchoice}[1][]{
+	\krdsetkeys{jobchoice}{#1}
+	\begin{tabular}{W{r}{\dimexpr 0.15\linewidth-2\tabcolsep}p{\dimexpr 0.8\linewidth-2\tabcolsep}}
+		\ifjc@header%
+			\textbf{\jc@text}:\\
+		\fi%
 } {
   \end{tabular}
 }
 
+\krddefinekeys{actype}[ac@]{
+	choice/slow/quick/
+		quick.do=\def\ac@slow{Quick},
+		1.do=\def\ac@slow{Slow (1)},
+		2.do=\def\ac@slow{Slow (2)},
+		3.do=\def\ac@slow{Slow (3)},
+		4.do=\def\ac@slow{Slow (4)},
+		5.do=\def\ac@slow{Slow (5)},
+		6.do=\def\ac@slow{Slow (6)},
+		7.do=\def\ac@slow{Slow (7)},
+		8.do=\def\ac@slow{Slow (8)},
+		9.do=\def\ac@slow{Slow (9)};
+	bool/reaction;
+	bool/magical;
+	bool/ranged;
+	bool/free;
+}
+\krdpresetkeys{actype}{reaction=false,magical=false,ranged=false,free=false,slow=quick}
+
+\newcommand*{\actype}[1][]{
+	\krdsetkeys{actype}{#1}%
+	\textit{%
+		\ifac@ranged%
+			Ranged
+		\fi%
+		\ifac@magical%
+			Magical
+		\fi%
+		\ifac@free%
+			Free
+		\else%
+		\ac@slow{}
+		\fi%
+	}%
+	\ifac@reaction%
+		reaction%
+	\else%
+		action%
+	\fi%
+}
 
 \krddefinekeys{jobstats}[js@]{%
 	cmd/lva/1;
