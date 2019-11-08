@@ -75,10 +75,31 @@ Armors are the main defensive equipment. Although some specific armor can empowe
 
 \subsubsection{Light Armor}
 
-This armor is commonly used by Mages and Rune Knights. Its main purpose is to protect against magical damage, leaving it relatively ineffective against physical damage.
+This armor is commonly used by Mages and Rune Knightss. Its main purpose is to protect against magical damage, leaving it relatively ineffective against physical damage.
 
-\begin{tabarm}[label=tab:inv-larm]
+\begin{tabarm}[label=inv-larm]
     \tabarmrow[name=Cotton Robe,mlevel=1,cost=100,arm=0,marm=3,effect=None]
+    \tabarmrow[name=Snow Cape,mlevel=1,cost=142,arm=0,marm=3,effect=Auto - \tstatus{Resist (Ice)}]
+    \tabarmrow[name=Mistle Robe,mlevel=1,cost=143,arm=0,marm=3,effect=\tstatus{Sleep} Immunity]
+    \tabarmrow[name=Leather Robe,mlevel=10,cost=585,arm=2,marm=10,effect=None]
+    \tabarmrow[name=Temple Cloth,mlevel=10,cost=866,arm=2,marm=10,effect=Auto - \tstatus{Resist (Shadow)}]
+    \tabarmrow[name=Robe of Lords,mlevel=64,cost=Artifact,arm=87,marm=179,effect=Add Twice Fire level to Spells' damage; Maximum MP + 20\%]
 \end{tabarm}
 
-\end{table}
+\clearpage
+\subsubsection{Medium Armor}
+
+This armor type is common between many different Jobs.  It is balanced between physical and magic defenses, leaving no easily exploitable weakness.
+
+\begin{tabarm}[label=inv-marm]
+    \tabarmrow[name=Leather Outfit,mlevel=1,cost=84,arm=1,marm=1,effect=None]
+\end{tabarm}
+
+\clearpage
+\subsubsection{Heavy Armor}
+
+Favoring defense against physical damage, this type of armor is popular among Warriors and Adepts.  However, it does leave the wearer more vulnerable to magical damage.
+
+\begin{tabarm}[label=inv-harm]
+    \tabarmrow[name=Leather Plate,mlevel=1,cost=99,arm=3,marm=0,effect=None]
+\end{tabarm}

@@ -334,10 +334,10 @@
 % Armor table
 % Define oure options for the below
 \krddefinekeys{tabarm}[ta@]{%
-	cmd/label/tab:undefined;
+	cmd/label/undefined;
 }
 \krdpresetkeys{tabarm}{
-	label=tab:undefined
+	label=undefined
 }
 
 \krddefinekeys{tabarmrow}[tar@]{%
@@ -349,27 +349,31 @@
 	cmd/effect/None;
 }
 \krdpresetkeys{tabarmrow}{
-	name=UNDEFINED,mlevel=1,cost=-,arm=-,marm=-,effect=None
+	name=UNDEFINED,mlevel=-,cost=-,arm=-,marm=-,effect=UNDEFINED
 }
 
-\newenvironment*{tabarm}[1][]{
-	\krdsetkeys{tabarm}{#1}
+\newenvironment*{tabarm}[1][]{%
+	\krdsetkeys{tabarm}{#1}%
 	\begin{table}[h]
-  		\centering
-		\label{\ta@label}
-    	\rowcolors{1}{gray!20}{}
-		\begin{tabular}{lrrrrp{3in}}
-        	\toprule
-        	\textbf{Name} & \textbf{Min. Level} & \textbf{Cost} & \textbf{ARM} & \textbf{MARM} & \textbf{Effect} \\ \midrule
-	}{
+		\centering
+		\label{tab:\ta@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrrrrp{0.35\textwidth}}
+        		\toprule
+        		\textbf{Name} & \textbf{Level} & \textbf{Cost} & \textbf{ARM} & \textbf{MARM} & \textbf{Effect} \\ \midrule
+}{
 			\bottomrule
 		\end{tabular}
 	\end{table}
-	}
+}
 
-\newcommand{\tabarmrow}[1][]{
-	\krdsetkeys{tabarmrow}{#1}
-	\tar@name{} & \tar@mlevel{} & \tar@cost{} & \tar@arm{} & \tar@marm{} & \tar@effect{} \tabularnewline
+\newcommand*{\tabarmrow}[1][]{
+  \krdsetkeys{tabarmrow}{#1} \tar@name &
+  \krdsetkeys{tabarmrow}{#1} \tar@mlevel &
+  \krdsetkeys{tabarmrow}{#1} \tar@cost &
+  \krdsetkeys{tabarmrow}{#1} \tar@arm &
+  \krdsetkeys{tabarmrow}{#1} \tar@marm &
+  \krdsetkeys{tabarmrow}{#1} \tar@effect \\
 }
 
 % Column centered Boco, inherit existing columns
