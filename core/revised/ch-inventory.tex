@@ -130,3 +130,84 @@ Fast weapons that deal \telem{Puncture}-elemental damage.  Their Offensive and D
 \begin{tabwpn}[label=inv-lsword,range=melee,type=physical,element=puncture,roll=airvair]
     \tabwpnrow[name=Femme Fatale,mlevel=64,cost=Artifact,damage=16x,effect=\tstatus{Death} touch \newline \telem{Shadow}-elemental damage]
 \end{tabwpn}
+
+\clearpage
+
+\subsection{Accessories}
+\label{subsec:inv-accessories}
+
+\begin{multicols}{2}
+Each character can equip up to two accessories at the same time.  However, the equipment's magic interferes with each other.  Thus, if two accessories or an accessory and another piece of equipment including a weapon or armor would have the same effect, they do not stack.  Only the most powerful item of this type will affect you.  Similarly if a character equips three or more accessories, their effects cancel each other and the character will not receive the benefits of any of them.  For example, if a character equips the Wyglar armor (+ 20\% Max HP) and the Orrachea Armlet (+ 10\% Max HP), the HP increase is only 20\%.
+
+Morever, if two distinct pieces of equipment impart opposite effects only the negative effect will be gained.  For example, if a character is equipped with an accessory granting \tstatus{Mute} immunity and an armor with SOS-\tstatus{Mute}, that character will be immune to the \tstatus{Mute} status until their HP is below 25\%, but once their HP drops below 25\% will suffer the \tstatus{Mute} and lose their immunity.
+
+Although it may seem simple, equipping an accessory requires the character to spend at least a few minutes focusing on its magic.  Thus, it is impossible to equip or change accessories in the middle of a combat.
+\end{multicols}
+
+\begin{tabacc}[label=inv-acc1]
+    \tabaccrow[name=Nishijin Belt,mlevel=1,cost=500,effect=\tstatus{Sleep} Immunity]
+\end{tabacc}
+
+\clearpage
+\section{Inventory}
+\label{sec:inv-inventory}
+
+\begin{multicols}{2}
+All items the group possess who are not equipped on a character are part of the Inventory. In addition to spare equipment, the Inventory contain consumables, such as potions, elixirs and battle items. The Inventory is a group shared resource, such as Destiny points. Thus, if the group has a potion in the Inventory, any character in the group may use the \taction{Draw} action to retrieve it. Consumables are spent after one use.
+
+Every group should devote a part of the obtained Gil to purchase consumables for the Inventory. Even for groups capable of emulating all consumable effects through Spells and Abilities, you never know when the White Mage will drop to 0 HP and the Monk will need to use a Phoenix Down.
+
+Not having an Inventory suitable to the challenges ahead is a sure way to shorten the group's lifespan. Having the right items to use when the occasion requires it can dramatically increase the group’s combat ability. Another advantage in favor of consumables is that they do not have minimum levels to be used, allowing a group to gain powers beyond the usual in dire circumstances.
+
+\begin{center}
+    \adjincludegraphics[width=0.45\textwidth]{block-pumpkinsale}
+\end{center}
+
+\begin{boco}
+Optional Rule: \textbf{Individual Inventory} \pc
+
+Some groups do not like the shared Inventory rule. In that case, you may play with each character having its own individual items. If you use this rule, any character may use !Draw to draw an item from his own inventory and give to another player with a single action, but the player who received the item still must use the \taction{Item} action to use the consumable or equip the weapon. \pw
+
+Optional Rule: \textbf{Carrying Capacity} \pc
+
+By default, there is no limit about how many items a character or a group may carry. This mimics the videogames and allows for quicker play. However, if you do want to enforce carrying limits when using the aforementioned Individual Inventory rule, treat the maximum number of consumables a character may carry as two times his Earth level. Alchemists use their highest Stat level instead of Earth to calculate how many items they can carry. \pc
+
+If you want to enforce the Carrying Capacity rule with the default Shared Inventory option, consider the group's total carrying limit as the sum of each character's individual carrying capacity. \pc
+
+Characters carrying more items than their carrying capacity suffer increased difficulty in all their attacks, reactions and physical Challenges.
+
+\end{boco}
+
+\end{multicols}
+
+\clearpage
+\subsection{Potions and Healing Items}
+\label{subsec:potions}
+
+\begin{tabitem}[label=inv-potions]
+    \tabitemrow[name=Tonic,cost=25,effect=Heals 25 HP to a single target]
+\end{tabitem}
+
+\clearpage
+\subsection{Battle Items}
+\label{subsec:battleitems}
+
+\begin{tabitem}[label=inv-battles]
+    \tabitemrow[name=Arctic Wind,cost=100,effect=Cast the spell \tspell{Blizzard}]
+\end{tabitem}
+\vfill
+\begin{center}
+    \adjincludegraphics[width=0.75\textwidth]{block-market}
+\end{center}
+
+\clearpage
+\section{Equipment Effects}
+\label{sec:equipeffects}
+
+\begin{table}[h]
+    \begin{tabular}{p{0.3\textwidth}<{\arraybackslash\dotfill}@{}>{\raggedleft\arraybackslash\dotfill}p{0.6\textwidth}}
+        Arcane Damage & 50\% damage is dealt to MP in addition to HP \\
+        Arcane Destruction & Full damage is dealt to the MP in addition to the HP \\
+        Arcane Focus (Spell) & You can use this weapon to cast the listed spell, spending MP as usual.  You do not need to know the spell. \\
+    \end{tabular}
+\end{table}
