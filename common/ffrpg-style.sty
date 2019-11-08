@@ -409,16 +409,16 @@
   		\centering
 		\label{\ta@label}
     	\rowcolors{1}{gray!20}{}
-		\begin{tabular*}{lrrrrp{3in}}
+		\begin{tabular}{lrrrrp{3in}}
         	\toprule
         	\textbf{Name} & \textbf{Min. Level} & \textbf{Cost} & \textbf{ARM} & \textbf{MARM} & \textbf{Effect} \\ \midrule
-}{
+	}{
 			\bottomrule
-		\end{tabular*}
+		\end{tabular}
 	\end{table}
-}
+	}
 
-\newcommand{\tabarmrow}[1]{
+\newcommand{\tabarmrow}[1][]{
 	\krdsetkeys{tabarmrow}{#1}
 	\tar@name{} & \tar@mlevel{} & \tar@cost{} & \tar@arm{} & \tar@marm{} & \tar@effect{} \tabularnewline
 }
