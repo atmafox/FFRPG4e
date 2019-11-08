@@ -427,7 +427,6 @@
 }
 
 % Weapon table
-% Define oure options for the below
 \krddefinekeys{tabwpn}[tw@]{%
 	cmd/label/undefined;
 	cmd/roll/UNDEF;
@@ -472,6 +471,84 @@
   \krdsetkeys{tabwpnrow}{#1}\twr@cost & %
   \krdsetkeys{tabwpnrow}{#1}\twr@damage & %
   \krdsetkeys{tabwpnrow}{#1}\twr@effect \\
+}
+
+% Accessory table
+\krddefinekeys{tabacc}[tc@]{%
+	cmd/label/undefined;
+}
+\krdpresetkeys{tabacc}{
+	label=undefined
+}
+
+\krddefinekeys{tabaccrow}[tcr@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/effect/UNDEFINED;
+}
+\krdpresetkeys{tabaccrow}{
+	name=UNDEFINED,mlevel=-,cost=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabacc}[1][]{%
+	\krdsetkeys{tabacc}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\tc@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrrp{0.35\textwidth}}
+        		\toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabaccrow}[1][]{%
+  \krdsetkeys{tabaccrow}{#1}\tcr@name & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@mlevel & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@cost & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@effect \\
+}
+
+% Item table
+\krddefinekeys{tabitem}[ti@]{%
+	cmd/label/undefined;
+}
+\krdpresetkeys{tabitem}{
+	label=undefined
+}
+
+\krddefinekeys{tabitemrow}[tir@]{%
+	cmd/name/UNDEFINED;
+	cmd/cost/-;
+	cmd/effect/UNDEFINED;
+}
+\krdpresetkeys{tabitemrow}{
+	name=UNDEFINED,cost=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabitem}[1][]{%
+	\krdsetkeys{tabitem}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\ti@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrp{0.5\textwidth}}
+        		\toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabitemrow}[1][]{%
+  \krdsetkeys{tabitemrow}{#1}\tir@name & %
+  \krdsetkeys{tabitemrow}{#1}\tir@cost & %
+  \krdsetkeys{tabitemrow}{#1}\tir@effect \\
 }
 
 % Column centered Boco, inherit existing columns
