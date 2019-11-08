@@ -62,6 +62,11 @@
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
 \definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
 
+% This is for leaving temporary inline comments about game mechanics that need clarification and that sort of thing. It should stand out badly but not be hard to read. It should probably also flag a warning in the console every time it's used.
+\newcommand{\review}[1]{
+	\bgroup\color{red}\textbf{((#1))}\egroup
+}
+
 % Macro for the crystal images
 % I want to make this verify the input, but for now... this works
 \newcommand{\crystal}[2]{
