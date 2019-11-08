@@ -229,7 +229,8 @@
 
 \newenvironment*{mobstats}[1][] {%
 	\krdsetkeys{mobstats}{#1}
-	\subsubsection{\ms@name}%
+	\bgroup\ferrum\large\itshape \ms@name\egroup \pc
+
 	\rowcolors{1}{gray!10}{}%
 	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
 		\toprule
@@ -351,7 +352,7 @@
     \hspace{\stretch{1}} %
 	\crystal{earth}{10pt} \hspace{\stretch{1}} %
 	\crystal{air}{10pt} \hspace{\stretch{1}} %
-	\hspace{\stretch{2}} %
+	{\ferrum Chapter \thechapter } \hspace{\stretch{1}} %
 	\crystal{fire}{10pt} \hspace{\stretch{1}} %
 	\crystal{water}{10pt} \hspace{\stretch{1}}
 	}
