@@ -1,21 +1,26 @@
-For these free souls, life is a stage, and their art can wield supernatural effects. Its main Stat is Water, but an Artist can find all four Stats useful. Their skills vary greatly depending on the type of performances he can use: Dance, Song or Mimicry. The performance list and its descriptions are below, starting at page XXX!!!. \pc
+\label{subsec:pjob-artist}
+\begin{jobdesc}[name=pjob-artist]
+  For these free souls, all life is a stage on which they weave magic from the arts of dance and song and mimicry. Their main Stat is Water, but an Artist can find all four Stats useful. Their abilities vary greatly, each specializing in one of the three arts.\pc
 
-\textbf{Representatives}: Edward Chris van Muir (FFIV), Bard Job (FFIII, FFV, FFXI, FFT), Penelo (FFTA2), Dancer Job (FFV, FFT, FFXI), Songstress Dressphere (FFX-2), Gogo (FFVI), Mime Job (FFV, FFT).\pc
+  \textbf{Representatives}: Edward Chris van Muir (FFIV), Bard Job (FFIII, FFV, FFXI, FFT), Penelo (FFTA2), Dancer Job (FFV, FFT, FFXI), Songstress Dressphere (FFX-2), Gogo (FFVI), Mime Job (FFV, FFT).\pc
 
-{\centering \textbf{Abilities}\par}
+  \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpb=balls,mpc=1x,armor=Medium,
+    weapons=Claws / Gloves\\Light Swords / Knives\\Instruments\\Throwing Weapons]
 
-\jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpb=balls,mpc=1x,armor=Medium,
-  weapons=Claws / Gloves\\Light Swords / Knives\\Instruments\\Throwing Weapons]
+\end{jobdesc}
+
 
 \begin{ffminipage}
-  \tability{Strength of Character}: You are an artist and gain the multiplers and equipment listed above\pc
+  {\centering \textbf{Abilities} \par{}}
+
+  \tability{Strength of Character}: Core ability acquired at level 1. You are an artist and gain the multipliers and equipment listed above\pc
 
   \begin{jobchoice}
     \crystal{air}{12pt} & %
-    \tspec{Singular Courage}: Requires Air level 3. You gain the \actype{} \taction{Hide}. Using it, you courageously search for the nearest hiding place and inflict the \tstatus{Vanish} status to yourself until the end of the round. If you do any other action before the end of the round, you lose the \tstatus{Vanish} status.\\
+    \tspec{Singular Courage}: Requires Air level 3. You gain the \actype{} \taction{Hide}: Courageously search for the nearest hiding place and gain \tstatus{Vanish} status  until the end of the round. If you take any other action before the end of the round, you lose \tstatus{Vanish}.\\
 
     \crystal{water}{12pt} & %
-    \tspec{Seduction}: Requires Water level 4. You gain the \actype[reaction=true] \taction{Flirt}. It may be used when you are the sole target of an attack. You perform a Water vs Fire attack, difficulty 0. If successful, you must designate a new valid target for the attack, chosen among your allies. In case of a critical hit, the new target does not need to be chosen among your allies. If there is no other valid target, this reaction automatically fails.\\
+    \tspec{Seduction}: Requires Water level 4. You gain the \actype[reaction=true] \taction{Flirt}. It may be used when you are the sole target of an attack. You perform a Water vs Fire attack, difficulty 0. If successful, you must designate a new valid target for the attack, chosen from among your allies. In case of a critical hit, the new target may also be an enemy. If there is no other valid target, this reaction automatically fails.\\
 
     \crystal{earth}{12pt} & %
     \tspec{Roll with the Blow}: Requires Earth level 5. You resist Crush-elemental damage.\\
@@ -24,29 +29,29 @@ For these free souls, life is a stage, and their art can wield supernatural effe
 
 
 \begin{ffminipage}
-  \tability{Artistic Niche}: Core Ability acquired at level 1. You learn first level performances and gain one of the following actions, which will decisively influence your skills:\pc
+  \tability{Artistic Niche}: Core Ability acquired at level 1. You learn first level performances and choose your primary art:\pc
 
   \begin{jobchoice}[header=false]
     \crystal{level}{12pt} & %
-    \taction{Dance} gives you access to physical performances focused on your opponents, causing injury, reducing their ability to fight and helping you to get rid of your enemies. Through this action you can use any known \tperformance{Dance}-type known performance.\\
+    \taction{Dance} gives you access to physical performances focused on your opponents, causing injury, reducing their ability to fight, and generally making their job harder. Through this action you can use any known \tperformance{Dance}-type known performance.\\
 
     \crystal{level}{12pt} & %
-    \taction{Sing} gives you access to magical performances focused on your allies, increasing their fighting skills, protecting them and turning you into a powerful support to your teammates. By declaring this action, you can use any known \tperformance{Song}-type performance.\\
+    \taction{Sing} gives you access to magical performances focused on your allies, increasing their fighting skills, protecting them and turning you into a powerful support to your teammates. Through this action, you can use any known \tperformance{Song}-type performance.\\
 
     \crystal{level}{12pt} & %
-    \taction{Mimic} have performances that allow you to emulate your allies and opponents, being the most unpredictable of the three actions. The power of a mime is the power of his opponents and teammates, and he becomes stronger according to the challenges it faces. By declaring this action, you can use any known \tperformance{Mimicry}-type performance.\\
+    \taction{Mimic} performances allow you to emulate your allies and opponents, the most unpredictable of the arts. The power of a mime is the power of his opponents and teammates, and they become stronger as their challenges grow. Through this action, you can use any known \tperformance{Mimicry}-type performance.\\
   \end{jobchoice}\pc
 
   \begin{jobchoice}
     \crystal{air}{12pt} & %
-    \tspec{Juggler}: Requires Air level 3. Choose one of the following weapon types: Staves, Heavy Weapons, Katanas, Polearms, or Wands. You may equip it. Also, you gain the \actype[ranged=true] \taction{Throw}. You throw your weapon, even if it seems impossible! Perform a weapon attack with a weapon equipped or in your inventory. During this attack, the weapon uses your Air as its Offensive Stat, instead of the weapon's Offensive Stat, and deals 150\% damage. After the attack, the weapon is lost until the end of combat. In case of a critical hit, this Ability deals double weapon damage, rather than 150\%.\\
+    \tspec{Juggler}: Requires Air level 3. Gain the ability to use one of these weapon types: Staves, Heavy Weapons, Katanas, Polearms, or Wands. Gain the \actype[ranged=true] \taction{Throw}: You throw your weapon, even if it seems impossible! Perform a weapon attack with your equipped weapon or one from your inventory \review{Is !Draw required?} with Air as its offensive element, and deal 150\% damage (200\% on critical hit). The weapon is lost until the end of combat.\\
 
     \crystal{fire}{12pt} & %
-    \tspec{Illusionist}: Requires Fire level 5. Your MP multiplier becomes 1 if not greater. In addition, you gain access to one of the following Spell groups: \tspellgroup{Images}, \tspellgroup{Transform}, \tspellgroup{Strengthen}, \tspellgroup{Flight}, \tspellgroup{Weaken}, or \tspellgroup{Purify}.\\
+    \tspec{Illusionist}: Requires Fire level 5. Your MP multiplier becomes 1x if not greater. In addition, you gain one of the following Spell groups: \tspellgroup{Images}, \tspellgroup{Transform}, \tspellgroup{Strengthen}, \tspellgroup{Flight}, \tspellgroup{Weaken}, or \tspellgroup{Purify}.\\
 
     \crystal{earth}{12pt}
     \crystal{air}{12pt} & %
-    \tspec{Legendary Tale}: Requires Earth and Air level 3. You gain the free \actype{reaciton=true, free=true} \taction{Legend}: Once per round, when an ally is successful in an action, you can roll 1d10. If you roll a 1, the ally's action fails. If you roll a 9 or 10, the ally's action becomes a critical hit.\\
+    \tspec{Legendary Tale}: Requires Earth and Air level 3. You gain the free \actype{reaciton=true, free=true} \taction{Legend}: Once per round, when an ally is successful at an action, you can roll 1d10. If you roll a 1, the ally's action fails. If you roll a 9 or 10, the ally's action becomes a critical hit.\\
   \end{jobchoice}
 \end{ffminipage}
 
@@ -60,7 +65,7 @@ For these free souls, life is a stage, and their art can wield supernatural effe
     \tspec{Eclectic Artist}: Requires Fire level 8 and Water level 10. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use first level performances of the chosen type even without the required action.\\
 
     \crystal{earth}{12pt} & %
-    \tspec{Phlegm}: Requires Earth level 12. Whenever you are hit by an action which inflicts a negative status, its effects and duration don't start until the start of the next round. This Specialty does not affect damage taken.\\
+    \tspec{Phlegm}: Requires Earth level 12. Whenever you are hit by an action that inflicts a negative status, its effects and duration don't begin until the start of the next round. This Specialty does not affect damage taken.\\
 
     \crystal{air}{12pt}
     \crystal{water}{12pt} & %
@@ -73,48 +78,50 @@ For these free souls, life is a stage, and their art can wield supernatural effe
   \tability{Fame}: Core Ability acquired at level 24. You learn third level performances.\pc
 
   \begin{jobchoice}
-    \crystal{fire}{12pt}
-    \crystal{water}{12pt} & %
-    \tspec{Narcissism}: Requires Fire and Water level 10. You become immune to the \tstatus{Charm}, \tstatus{Confuse} and \tstatus{Sleep} statuses.\\
-
     \crystal{earth}{12pt}
     \crystal{air}{12pt}
     \crystal{water}{12pt} & %
     \tspec{Perfectionism}: Requires Earth, Air and Water level 9. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use second level performances of the chosen type even without the required action.\\
 
+    \crystal{fire}{12pt}
+    \crystal{water}{12pt} & %
+    \tspec{Narcissism}: Requires Fire and Water level 10. You become immune to \tstatus{Charm}, \tstatus{Confuse} and \tstatus{Sleep}.\\
+
     \crystal{earth}{12pt}
     \crystal{air}{12pt} & %
-    \tspec{Undue Criticism}: Requires Earth and Air level 7. You gain the magical \actype{} \taction{Hater}. When used, it allows you to show all conceivable defects of your target. Perform a Water vs Fire attack, difficulty 40. If you are successful, inflict the \tstatus{Berserk} status until the end of the next round.\\
+    \tspec{Undue Criticism}: Requires Earth and Air level 7. You gain the \actype{magical=true} \taction{Hater}: Shame your target into a rage. Perform a Water vs Fire attack, difficulty 40 to inflict the \tstatus{Berserk} status until the end of the next round.\\
   \end{jobchoice}
 \end{ffminipage}
 
 
 \begin{ffminipage}
   \tability{Protagonist}: Core Ability acquired at level 42. You learn fourth level performances.\pc
+
   \begin{jobchoice}
     \crystal{fire}{12pt} \crystal{water}{12pt} & %
     \tspec{Multitalented}: Requires Fire level 10 and Water level 13. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use third level performances of the chosen type even without the required action. \\
 
     \crystal{earth}{12pt} \crystal{air}{12pt} & %
-    \tspec{Encouragement}: Requires Earth and Air level 10 and Water level 12. You gain the \actype[reaction=true] \taction{!Do Over}: Use this action after an ally rolls an attack. Your ally may re-roll the attack. \\
+    \tspec{Encouragement}: Requires Earth and Air level 10 and Water level 12. You gain the \actype[reaction=true] \taction{!Do Over}: Use this \actype[reaction=true] after an ally rolls an attack. Your ally may re-roll the attack. \\
 
     \crystal{fire}{12pt} & %
-    \tspec{Arcane Heart}: Requires Fire level 14. Your MP multiplier becomes 2x if not greater. In addition, you gain access to one of the following Spell groups: \tspellgroup{Shield}, \tspellgroup{Armor}, \tspellgroup{Regeneration} or \tspellgroup{Divination}. \\
+    \tspec{Arcane Heart}: Requires Fire level 14. Your MP multiplier becomes 2x if not greater. In addition, you gain one of the following Spell groups: \tspellgroup{Shield}, \tspellgroup{Armor}, \tspellgroup{Regeneration} or \tspellgroup{Divination}. \\
   \end{jobchoice}
 \end{ffminipage}
 
 
 \begin{ffminipage}
   \tability{Stardom}: Core Ability acquired at level 60. You learn fifth level performances.\pc
+
   \begin{jobchoice}
     \crystal{water}{12pt} & %
     \tspec{Artistic Mastery}: Requires Water level 20. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use fourth level performances of the chosen type even without the required action. \\
 
     \crystal{earth}{12pt} & %
-    \tspec{Powerful Chord}: Requires Earth level 20. Whenever you perform the \taction{Attack} action, you can choose whether it will be physical or magical, regardless of the equipped weapon. In addition, add twice your Earth level to your weapon's damage. \\
+    \tspec{Powerful Chord}: Requires Earth level 20. Whenever you  \taction{Attack}, you can choose whether it will be physical or magical, regardless of the equipped weapon. In addition, add twice your Earth level to your weapon's damage. \review{When using this attack or permanantly?} \\
 
     \crystal{air}{12pt} & %
-    \tspec{Dedicated Fans}: Requires Air level 20. When you suffer damage or an attack, you may, as reaction, force an ally to use a reaction he could use if he had suffered the damage or attack. Spend your initiative die in place of theirs. Also, your allies may use their reactions when you suffer damage or an attack, as if the damage or the attack had affected that ally, spending their own die. In both cases, if the ally's reaction fails, you suffer the attack's effects normally. \\
+    \tspec{Dedicated Fans}: Requires Air level 20. When you suffer damage or an attack, you may, as a reaction, force an ally to use a reaction he could use if he had suffered the damage or attack. Spend your initiative die in place of theirs. Furthermore, your allies may use their reactions when you suffer damage or an attack, as if the damage or the attack had affected that ally, spending their own die. In both cases, if the ally's reaction fails, you suffer the attack's effects normally. \\
   \end{jobchoice}
 \end{ffminipage}
 
