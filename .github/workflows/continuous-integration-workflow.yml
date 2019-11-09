@@ -1,5 +1,7 @@
 name: Build revised.pdf document
-on: [push]
+on:
+  pull_request:
+    types: [review_requested, reopened]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
