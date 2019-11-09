@@ -352,7 +352,7 @@
 	\end{tabular*}\\[2mm]
 }
 
-% Define oure options for the below
+% Define our options for the below
 \krddefinekeys{jobdesc}[jd@]{%
   cmd/name/invalid;
 }
@@ -374,11 +374,181 @@
 	\end{minipage}
 	\jobimage{\jd@name}
 }
+
 % Display the quirk image, possibly the shadow
 \newcommand{\quirkimage}[1]{
 	\parbox[right]{0.15\textwidth}{
 		\adjincludegraphics[width=0.15\textwidth]{#1}
 	}
+}
+
+% Armor table
+\krddefinekeys{tabarm}[ta@]{%
+	cmd/label/undefined;
+}
+\krdpresetkeys{tabarm}{
+	label=undefined
+}
+
+\krddefinekeys{tabarmrow}[tar@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/arm/-;
+	cmd/marm/-;
+	cmd/effect/None;
+}
+\krdpresetkeys{tabarmrow}{
+	name=UNDEFINED,mlevel=-,cost=-,arm=-,marm=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabarm}[1][]{%
+	\krdsetkeys{tabarm}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\ta@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrrrrp{0.35\textwidth}}
+        		\toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{ARM}} & \multicolumn{1}{c}{\textbf{MARM}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabarmrow}[1][]{%
+  \krdsetkeys{tabarmrow}{#1}\tar@name & %
+  \krdsetkeys{tabarmrow}{#1}\tar@mlevel & %
+  \krdsetkeys{tabarmrow}{#1}\tar@cost & %
+  \krdsetkeys{tabarmrow}{#1}\tar@arm & %
+  \krdsetkeys{tabarmrow}{#1}\tar@marm & %
+  \krdsetkeys{tabarmrow}{#1}\tar@effect \\
+}
+
+% Weapon table
+\krddefinekeys{tabwpn}[tw@]{%
+	cmd/label/undefined;
+	cmd/roll/UNDEF;
+	cmd/type/UNDEF;
+	cmd/range/UNDEF;
+	cmd/element/UNDEF;
+}
+\krdpresetkeys{tabwpn}{
+	label=undefined,roll=UNDEF,type=UNDEF,range=UNDEF,element=UNDEF
+}
+
+\krddefinekeys{tabwpnrow}[twr@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/damage/-;
+	cmd/effect/None;
+}
+\krdpresetkeys{tabwpnrow}{
+	name=UNDEFINED,mlevel=-,cost=-,damage=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabwpn}[1][]{%
+	\krdsetkeys{tabwpn}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\tw@label}
+	    \rowcolors{1}{}{gray!20}
+		\begin{tabular}{lrrrp{0.4\textwidth}}
+				\toprule
+				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{Damage}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabwpnrow}[1][]{%
+  \krdsetkeys{tabwpnrow}{#1}\twr@name & %
+  \krdsetkeys{tabwpnrow}{#1}\twr@mlevel & %
+  \krdsetkeys{tabwpnrow}{#1}\twr@cost & %
+  \krdsetkeys{tabwpnrow}{#1}\twr@damage & %
+  \krdsetkeys{tabwpnrow}{#1}\twr@effect \\
+}
+
+% Accessory table
+\krddefinekeys{tabacc}[tc@]{%
+	cmd/label/undefined;
+}
+\krdpresetkeys{tabacc}{
+	label=undefined
+}
+
+\krddefinekeys{tabaccrow}[tcr@]{%
+	cmd/name/UNDEFINED;
+	cmd/mlevel/1;
+	cmd/cost/-;
+	cmd/effect/UNDEFINED;
+}
+\krdpresetkeys{tabaccrow}{
+	name=UNDEFINED,mlevel=-,cost=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabacc}[1][]{%
+	\krdsetkeys{tabacc}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\tc@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrrp{0.35\textwidth}}
+        		\toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabaccrow}[1][]{%
+  \krdsetkeys{tabaccrow}{#1}\tcr@name & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@mlevel & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@cost & %
+  \krdsetkeys{tabaccrow}{#1}\tcr@effect \\
+}
+
+% Item table
+\krddefinekeys{tabitem}[ti@]{%
+	cmd/label/undefined;
+}
+\krdpresetkeys{tabitem}{
+	label=undefined
+}
+
+\krddefinekeys{tabitemrow}[tir@]{%
+	cmd/name/UNDEFINED;
+	cmd/cost/-;
+	cmd/effect/UNDEFINED;
+}
+\krdpresetkeys{tabitemrow}{
+	name=UNDEFINED,cost=-,effect=UNDEFINED
+}
+
+\newenvironment*{tabitem}[1][]{%
+	\krdsetkeys{tabitem}{#1}%
+	\begin{table}[h]
+		\centering
+		\label{tab:\ti@label}
+	    \rowcolors{1}{gray!20}{}
+		\begin{tabular}{lrp{0.5\textwidth}}
+        		\toprule
+        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+}{
+			\bottomrule
+		\end{tabular}
+	\end{table}
+}
+
+\newcommand*{\tabitemrow}[1][]{%
+  \krdsetkeys{tabitemrow}{#1}\tir@name & %
+  \krdsetkeys{tabitemrow}{#1}\tir@cost & %
+  \krdsetkeys{tabitemrow}{#1}\tir@effect \\
 }
 
 % Column centered Boco, inherit existing columns
