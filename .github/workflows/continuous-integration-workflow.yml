@@ -1,7 +1,5 @@
 name: Build revised.pdf document
-on:
-  pull_request:
-    types: [review_requested, reopened]
+on: [push]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -15,5 +13,3 @@ jobs:
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
           extra_packages: "mwe"
-      - name: LaTeX linter (chktex)
-        uses: j2kun/chktex-action@v1.0.0
