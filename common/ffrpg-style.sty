@@ -28,7 +28,7 @@
 
 % Stolen from https://tex.stackexchange.com/a/62623
 \newlist{commalist}{description*}{4}
-\setlist[commalist]{itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
+\setlist[commalist]{mode=unboxed,itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
 
 
 % configure page geometry
@@ -226,25 +226,26 @@
 \krdpresetkeys{abilitylede}{
 	name=\review{invalid},level=\review{invalid}
 }
-\newcommand*{\abilitylede}[1][]{%
-	\crystal{level}{12pt} & %
+\newcommand*{\abilitylede}[1][]{
 	\krdsetkeys{abilitylede}{#1}%
-	\tability{\al@name}: Core ability acquired at \ordinalnum{\al@level} level. %
+	\tability{\al@name}: Core ability acquired at \ordinalnum{\al@level} level.%
 }
 
 \krddefinekeys{speclede}[sl@]{
 	bool/isaction;
 	cmd/name;
+	cmd/level;
 	cmd/earth;
 	cmd/air;
 	cmd/fire;
 	cmd/water;
 }
 \krdpresetkeys{speclede}{
-	isatcion=false;name=\review{invalid};earth=;air=;fire=;water=
+	isaction=false,name=\review{invalid};earth=;air=;fire=;water=
 }
 \newcommand*{\speclede}[1][]{%
 	\krdsetkeys{speclede}{#1}%
+	\ifdefvoid{\sl@level}{}{\crystal{level}{12pt}}%
 	\ifdefvoid{\sl@earth}{}{\crystal{earth}{12pt}}%
 	\ifdefvoid{\sl@air}{}{\crystal{air}{12pt}}%
 	\ifdefvoid{\sl@fire}{}{\crystal{fire}{12pt}}%
@@ -252,17 +253,13 @@
 	& 
 	\krdsetkeys{speclede}{#1} %
 	\ifsl@isaction%
-		\taction{\sl@name}%
+		\taction{\sl@name}:
 	\else%
-		\tspec{\sl@name}%
+		\tspec{\sl@name}:
 	\fi%
-	Requires %
-	\begin{commalist}
-		\ifdefvoid{\sl@earth}{}{Earth level \sl@earth}
-		\ifdefvoid{\sl@air}{}{Air level \sl@air}
-		\ifdefvoid{\sl@fire}{}{Fire level \sl@fire}
-		\ifdefvoid{\sl@water}{}{Water level \sl@water}
-	\end{commalist}.%
+	\ifblank{\sl@earth\sl@air\sl@fire\sl@water}{}{%
+		Requires \begin{commalist}\ifdefvoid{\sl@earth}{}{\item Earth level \sl@earth}\ifdefvoid{\sl@air}{}{\item Air level \sl@air}\ifdefvoid{\sl@fire}{}{\item Fire level \sl@fire}\ifdefvoid{\sl@water}{}{\item Water level \sl@water}\end{commalist}.%
+	}%
 }
 
 
