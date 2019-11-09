@@ -15,3 +15,5 @@ jobs:
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
           extra_packages: "mwe"
+      - name: LaTeX linter (chktex)
+        uses: j2kun/chktex-action@v1.0.0
