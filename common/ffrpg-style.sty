@@ -1,7 +1,7 @@
 \ProvidesPackage{ffrpg-style}
 
 \RequirePackage{geometry}
-\RequirePackage[table,xcdraw,svgnames]{xcolor}
+\RequirePackage[table,xcdraw,svgnames,dvipsnames]{xcolor}
 \RequirePackage{fontspec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
@@ -9,7 +9,8 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
-\RequirePackage{hyperref}
+\RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,ocgcolorlinks]{hyperref}
+\RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
@@ -18,9 +19,12 @@
 \RequirePackage{fmtcount}
 \RequirePackage{calc}
 \RequirePackage{csquotes}
+\RequirePackage{etoolbox}
 
 % We'll need @ for keyval templates in here
 \makeatletter
+
+\bookmarksetup{}
 
 % configure page geometry
 \geometry{
@@ -72,6 +76,51 @@
 \newcommand{\crystal}[2]{
   \adjincludegraphics[valign=M,height=#2]{../img/common/crystal#1.pdf}
 }
+
+% Element Roll -- will have crystal icons later
+
+\krddefinekeys{roll}[rv@]{
+	choice/off/invalid/
+		invalid.do=\def\rv@off{INVALID},
+		earth.do=\def\rv@off{Earth},
+		air.do=\def\rv@off{Air},
+		fire.do=\def\rv@off{Fire},
+		water.do=\def\rv@off{Water};
+	choice/def/invalid/
+		invalid.do=\def\rv@def{INVALID},
+		earth.do=\def\rv@def{Earth},
+		air.do=\def\rv@def{Air},
+		fire.do=\def\rv@def{Fire},
+		water.do=\def\rv@def{Water};
+	cmd/diff/;
+}
+\krdpresetkeys{roll}{off=invalid,def=invalid,diff=}
+
+\newcommand{\roll}[1][]{
+ 	\krdsetkeys{roll}{#1}%
+  \rv@off{} vs \rv@def{}\ifdefvoid{\rv@diff}{}{ (difficulty \rv@diff)}
+}
+
+\newcommand{\eve}[1]{\roll[off=earth,def=earth,diff=#1]}
+\newcommand{\eva}[1]{\roll[off=earth,def=air,diff=#1]}
+\newcommand{\evf}[1]{\roll[off=earth,def=fire,diff=#1]}
+\newcommand{\evw}[1]{\roll[off=earth,def=water,diff=#1]}
+
+\newcommand{\ave}[1]{\roll[off=air,def=earth,diff=#1]}
+\newcommand{\ava}[1]{\roll[off=air,def=air,diff=#1]}
+\newcommand{\avf}[1]{\roll[off=air,def=fire,diff=#1]}
+\newcommand{\avw}[1]{\roll[off=air,def=water,diff=#1]}
+
+\newcommand{\fve}[1]{\roll[off=fire,def=earth,diff=#1]}
+\newcommand{\fva}[1]{\roll[off=fire,def=air,diff=#1]}
+\newcommand{\fvf}[1]{\roll[off=fire,def=fire,diff=#1]}
+\newcommand{\fvw}[1]{\roll[off=fire,def=water,diff=#1]}
+
+\newcommand{\wve}[1]{\roll[off=water,def=earth,diff=#1]}
+\newcommand{\wva}[1]{\roll[off=water,def=air,diff=#1]}
+\newcommand{\wvf}[1]{\roll[off=water,def=fire,diff=#1]}
+\newcommand{\wvw}[1]{\roll[off=water,def=water,diff=#1]}
+
 
 % Types of terms
 % Magic system
@@ -162,6 +211,8 @@
 } {
   \end{tabular}
 }
+
+
 
 \krddefinekeys{actype}[ac@]{
 	choice/slow/quick/
