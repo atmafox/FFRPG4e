@@ -13,3 +13,9 @@ jobs:
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
           extra_packages: "mwe"
+      - name: Actions for Discord
+        env: 
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.0.2
+        with:
+          args: ${{ github.event.pusher.name }} has pushed ${{ github.event.ref }} at ${{ github.event.compare }}
