@@ -11,4 +11,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_FFTT }}
         uses: Ilshidur/action-discord@0.0.2
         with:
-          args: PR \#${{ github.event.number}} from ${{ github.actor }} is pending at ${{ github.event.pull_request }}
+          args: PR ${{ github.event.number}} from ${{ github.actor }} is pending at ${{ github.event.pull_request }}
