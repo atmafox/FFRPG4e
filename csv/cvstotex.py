@@ -1,13 +1,15 @@
 import csv
 import os
 
+header = "% Auto-generated file, see cvstotex.py\n"
+
 def parse_csv(templatefn, inputfn):
 
   with open(templatefn) as inf:
     outfn_prefix, template = (x.strip() for x in inf.readlines())
   with open(inputfn) as inf:
     csvf = csv.reader(inf)
-    output_lines = ["% Auto-generated file, see cvstotex.py"]
+    output_lines = [header]
     current_file = None
     next(csvf)
     for row in csvf:
@@ -18,7 +20,7 @@ def parse_csv(templatefn, inputfn):
         if current_file is not None:
           with open(outfn_prefix + current_file + '.tex', 'w') as outf:
             outf.writelines('\n'.join(output_lines))
-        output_lines = []
+        output_lines = [header]
         current_file = row[0]
         continue
 
