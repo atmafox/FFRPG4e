@@ -1,13 +1,13 @@
 \begin{jobdesc}[name=sjob-berserker]
-    Through offensive maneuvers, a Berserker believes that the best defense is a good offense and try to cause as much damage as quickly as possible. Water is an important Stat to this class. Be a Berserker if you want to increase your ability to cause physical damage as soon as possible; after all, dead enemies don’t fight. \pc
+    A Berserker believes that the best defense is a good offense and try to cause as much damage as quickly as possible through offensive maneuvers. Water is an important Stat to this class. Be a Berserker if you want to increase your ability to cause physical damage as soon as possible; after all, dead enemies don’t fight. \pc
 
-    \textbf{Representatives}: Monk Job (FFV, FFT), Cyan Garamonde (FFVI), Berserker Job (FFV), Viking Job (FFIII) \pc
+   \textbf{Representatives}: Monk Job (FFV, FFT), Cyan Garamonde (FFVI), Berserker Job (FFV), Viking Job (FFIII) \pc
 \end{jobdesc}
 
 \begin{ffminipage}
 {\centering \textbf{Abilities}\par }
 
-\noindent\tability{Counter Attack}: Core Ability acquired at level 1. After suffering the damage of a \tatk{physical} attack, you can discard any initiative die to perform the \taction{Attack} action against the character who attacked you. \taction{Attack} actions made with Counter Attack have 0 difficulty. \pc
+\noindent\tability{Counter Attack}: Core Ability acquired at level 1. After suffering the damage of a \tatk{physical} attack, you can perform the \taction{Attack} action as an interrupt against the character who attacked you. \taction{Attack} actions made with Counter Attack have 0 difficulty. \pc
 
 \begin{jobchoice}
 \crystal{air}{12pt} \crystal{fire}{12pt} & %
@@ -15,29 +15,29 @@
 \crystal{earth}{12pt} \crystal{water}{12pt} & %
 \tspec{Riposte}: Requires Earth level 6 and Water level 4. After receiving a \tatk{physical} attack, you may use your Counter Attack even if the attack fails for any reason. \\
 \crystal{earth}{12pt} \crystal{air}{12pt} & %
-\tspec{Kharmic Strike}: Requires Earth and Air level 5. During your Counter Attack, you ignore the target’s \tstatus{Flight} status. Increase the difficulty of reactions to your Counter Attack by 30. \\
+\tspec{Kharmic Strike}: Requires Earth and Air level 5. During your Counter Attack, you ignore the target’s positive statuses. Increase the difficulty of reactions to your Counter Attack by 30. \\
 \end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Provoke}: Core Ability acquired at level 19. You gain the Quick \tatk{magical} action \taction{Provoke}. Insult your opponent, causing him to attack you or lose focus. Make a Water vs Fire attack, difficulty 20. If successful, until the end of the next round, if the targeted enemy doesn’t include you as a target in any of his attacks, you may perform the \taction{Attack} action against him as a free action after the enemy’s action. You may add your Air level to your ARM and your Water level to your MARM. \pc
+\noindent\tability{Provoke}: Core Ability acquired at level 19. You gain the Quick \tatk{magical} action \taction{Provoke}. Insult your opponent, causing him to attack you or lose focus. Make a Water vs Fire attack, difficulty 20. If successful, until the end of the next round, every time the targeted enemy target one of your allies and doesn’t target you with his actions, you may perform the \taction{Attack} action against him as a free action after the enemy’s action. You may add your Air level to your ARM and your Water level to your MARM. \pc
 
 \begin{jobchoice}
 \crystal{earth}{12pt} & %
 \tspec{Ignore the Pain}: Requires Earth level 16. Increase your ARM by 50\% against attacks made by enemies under the effect of the \taction{Provoke} action. \\
 \crystal{fire}{12pt} & %
-\tspec{Howl}: Requires Fire level 10. You gain the Ranged Quick \tatk{magical} action \taction{Howl}. Roaring to intimidate your opponents, you make them more vulnerable to magical effects. Perform a Water vs Water attack, difficulty 40. This action causes the \tstatus{Weaken (Mental)} status on a target until the end of the next round. \\
+\tspec{Howl}: Requires Fire level 10. You gain the Ranged Quick \tatk{magical} action \taction{Howl}. Roaring to intimidate your opponents, you make them more vulnerable to magical effects. Perform a Water vs Water attack, difficulty 70, against all enemies. This action causes the \tstatus{Weaken (Mental)} status on to enemies hit until the end of the next round. \\ 
 \crystal{earth}{12pt} \crystal{fire}{12pt} & %
-\tspec{Sovereign Mind}: Requires Earth level 9 and Fire level 7. When performing a Counter Attack or \taction{Hamedo}, instead of the \taction{Attack} action, you may use any of your actions that that can target the opponent, provided the action is not Slow. \\
+\tspec{Sovereign Mind}: Requires Earth level 9 and Fire level 7. When performing a Counter Attack or \taction{Hamedo}, instead of the \taction{Attack} action, you may use any of your actions with zero charge time that that can target the opponent. \\
 \end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Fury}: Core Ability acquired at level 35. While your current HP is 25\% of your max HP or less, you gain the \tstatus{Strengthen (Physical)} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. In addition, you gain the \tspell{Dispel} Spell at level 40. \pc
+\noindent\tability{Fury}: Core Ability acquired at level 35. While your current HP is 25\% of your max HP or less, choose and gain the \tstatus{Strengthen (Physical)} or \tstatus{Strengthen (Magical)} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. In addition, you gain the \tspell{Dispel} Spell at level 40. \pc
 
 \begin{jobchoice}
 \crystal{water}{12pt} & %
-\tspec{Bloodlust}: Requires Water level 12. While your current HP is 25\% of your max HP or less, your allies gain the \tstatus{Strengthen (Physical)} status. Your allies lose this status if your current HP is more than 25\% of your max HP for any reason. \\
+\tspec{Bloodlust}: Requires Water level 12. While your current HP is 25\% of your max HP or less, \tability{Fury}grants its effects to all your allies. Your allies lose the status if your current HP is more than 25\% of your max HP for any reason. \\
 \crystal{air}{12pt} \crystal{water}{12pt} & %
 \tspec{Critical Comeback}: Requires Air level 14 and Water level 12. Whenever you suffer a critical hit, gain an extra initiative die with the value 10. \\
 \end{jobchoice}
