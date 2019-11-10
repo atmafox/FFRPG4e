@@ -1,0 +1,14 @@
+name: PR_Review
+on:
+  pull_request:
+    types: [review_requested, reopened]
+jobs:
+  notify_discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Actions for Discord
+        env: 
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_FFTT }}
+        uses: Ilshidur/action-discord@0.0.2
+        with:
+          args: ${{ github.actor }} has requsted review on ${{ github.event.html_url }}
