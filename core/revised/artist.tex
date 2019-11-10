@@ -1,10 +1,10 @@
 \begin{jobdesc}[name=pjob-artist]
-  For these free souls, all life is a stage on which they weave magic from the arts of dance and song and mimicry. Their main Stat is Water, but an Artist can find all four Stats useful. Their abilities vary greatly, each specializing in one of the three arts.\pc
+  For these free souls, all life is a stage on which they weave magic from the arts of dance, song and mimicry. Their main Stat is Water, but an Artist can find all four Stats useful. Their abilities vary greatly, each specializing in one of the three arts.\pc
 
   \textbf{Representatives}: Edward Chris van Muir (FFIV), Bard Job (FFIII, FFV, FFXI, FFT), Penelo (FFTA2), Dancer Job (FFV, FFT, FFXI), Songstress Dressphere (FFX-2), Gogo (FFVI), Mime Job (FFV, FFT).\pc
 
-  \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpb=balls,mpc=1x,armor=Medium,
-    weapons=Claws / Gloves\\Light Swords / Knives\\Instruments\\Throwing Weapons]
+  \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=0x,mpb=1x,mpc=2x,armor=Medium,
+    weapons=Claws / Gloves \\ Light Swords / Knives \\ Instruments \\ Throwing Weapons]
 
 \end{jobdesc}
 
@@ -12,7 +12,7 @@
 \begin{ffminipage}
   {\centering \textbf{Abilities} \par{}}
 
-  \tability{Strength of Character}: Core ability acquired at level 1. You are an artist and gain the multipliers and equipment listed above\pc
+  \tability{Strength of Character}: Core ability acquired at level 1. You are an artist and gain the multipliers and equipment listed above. \pc
 
   \begin{jobchoice}
     \crystal{air}{12pt} & %
@@ -43,14 +43,14 @@
 
   \begin{jobchoice}
     \crystal{air}{12pt} & %
-    \tspec{Juggler}: Requires Air level 3. Gain the ability to use one of these weapon types: Staves, Heavy Weapons, Katanas, Polearms, or Wands. Gain the \actype[ranged=true] \taction{Throw}: You throw your weapon, even if it seems impossible! Perform a weapon attack with your equipped weapon or one from your inventory \review{Is \taction{Draw} required?} with Air as its offensive element, and deal 150\% damage (200\% on critical hit). The weapon is lost until the end of combat.\\
+    \tspec{Juggler}: Requires Air level 3. Gain the ability to use one of these weapon types: Staves, Heavy Weapons, Katanas, Polearms, or Wands. Gain the \actype[ranged=true] \taction{Throw}: You throw a weapon, even if it seems impossible! Choose your equipped weapon or \taction{Draw} a chosen weapon from your inventory, and perform an Air vs Air attack to deal 150\% weapon damage on a hit or 200\% on a critical hit. The weapon is lost until the end of combat.\\
 
     \crystal{fire}{12pt} & %
-    \tspec{Illusionist}: Requires Fire level 5. Your MP multiplier becomes 1x if not greater. In addition, you gain one of the following Spell groups: \tspellgroup{Images}, \tspellgroup{Transform}, \tspellgroup{Strengthen}, \tspellgroup{Flight}, \tspellgroup{Weaken}, or \tspellgroup{Purify}.\\
+    \tspec{Illusionist}: Requires Fire level 5. Increase your MP bonus multiplier at all levels by 1 if its level 1 value is zero. In addition, you gain one of the following Spell groups: \tspellgroup{Images}, \tspellgroup{Transform}, \tspellgroup{Strengthen}, \tspellgroup{Flight}, \tspellgroup{Weaken}, or \tspellgroup{Purify}.\\
 
     \crystal{earth}{12pt}
     \crystal{air}{12pt} & %
-    \tspec{Legendary Tale}: Requires Earth and Air level 3. You gain the free \actype{reaciton=true, free=true} \taction{Legend}: Once per round, when an ally is successful at an action, you can roll 1d10. If you roll a 1, the ally's action fails. If you roll a 9 or 10, the ally's action becomes a critical hit.\\
+    \tspec{Legendary Tale}: Requires Earth and Air level 3. You gain the free \actype{reaction=true, free=true} \taction{Legend}: Once per round, when an ally is successful at an action, you can roll 1d10. If you roll a 1 or 2, the ally's action fails. If you roll 7 or greater, the ally's action becomes a critical hit.\\
   \end{jobchoice}
 \end{ffminipage}
 
@@ -61,10 +61,10 @@
   \begin{jobchoice}
     \crystal{fire}{12pt}
     \crystal{water}{12pt} & %
-    \tspec{Eclectic Artist}: Requires Fire level 8 and Water level 10. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use first level performances of the chosen type even without the required action.\\
+    \tspec{Eclectic Artist}: Requires Fire level 8 and Water level 10. Choose one first level \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use it as if you had chosen it as your \tability{Artistic Niche}. \\
 
     \crystal{earth}{12pt} & %
-    \tspec{Phlegm}: Requires Earth level 12. Whenever you are hit by an action that inflicts a negative status, its effects and duration don't begin until the start of the next round. This Specialty does not affect damage taken.\\
+    \tspec{Phlegm}: Requires Earth level 12. Whenever you are hit by an action that inflicts a negative status, you may choose to have its effects and duration begin at the start of the next round. This Specialty does not affect damage taken.\\
 
     \crystal{air}{12pt}
     \crystal{water}{12pt} & %
@@ -80,7 +80,7 @@
     \crystal{earth}{12pt}
     \crystal{air}{12pt}
     \crystal{water}{12pt} & %
-    \tspec{Perfectionism}: Requires Earth, Air and Water level 9. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use second level performances of the chosen type even without the required action.\\
+    \tspec{Perfectionism}: Requires Earth, Air and Water level 9. Choose one second level \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use it as if you had chosen it as your \tability{Artistic Niche}. \\
 
     \crystal{fire}{12pt}
     \crystal{water}{12pt} & %
@@ -98,13 +98,13 @@
 
   \begin{jobchoice}
     \crystal{fire}{12pt} \crystal{water}{12pt} & %
-    \tspec{Multitalented}: Requires Fire level 10 and Water level 13. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use third level performances of the chosen type even without the required action. \\
+    \tspec{Multitalented}: Requires Fire level 10 and Water level 13. Choose one third level \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use it as if you had chosen it as your \tability{Artistic Niche}. \\
 
     \crystal{earth}{12pt} \crystal{air}{12pt} & %
     \tspec{Encouragement}: Requires Earth and Air level 10 and Water level 12. You gain the \actype[reaction=true] \taction{!Do Over}: Use this \actype[reaction=true] after an ally rolls an attack. Your ally may re-roll the attack. \\
 
     \crystal{fire}{12pt} & %
-    \tspec{Arcane Heart}: Requires Fire level 14. Your MP multiplier becomes 2x if not greater. In addition, you gain one of the following Spell groups: \tspellgroup{Shield}, \tspellgroup{Armor}, \tspellgroup{Regeneration} or \tspellgroup{Divination}. \\
+    \tspec{Arcane Heart}: Requires Fire level 14. Increase your MP bonus multiplier at all levels by 1 if its level 1 value is 1x or less. In addition, you gain one of the following Spell groups: \tspellgroup{Shield}, \tspellgroup{Armor}, \tspellgroup{Regeneration} or \tspellgroup{Divination}. \\
   \end{jobchoice}
 \end{ffminipage}
 
@@ -114,16 +114,12 @@
 
   \begin{jobchoice}
     \crystal{water}{12pt} & %
-    \tspec{Artistic Mastery}: Requires Water level 20. Choose \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use fourth level performances of the chosen type even without the required action. \\
+    \tspec{Artistic Mastery}: Requires Water level 20. Choose one fourth level \tperformance{Dance}, \tperformance{Song} or \tperformance{Mimicry}. You may use it as if you had chosen it as your \tability{Artistic Niche}. \\
 
     \crystal{earth}{12pt} & %
-    \tspec{Powerful Chord}: Requires Earth level 20. Whenever you  \taction{Attack}, you can choose whether it will be physical or magical, regardless of the equipped weapon. In addition, add twice your Earth level to your weapon's damage. \review{When using this attack or permanantly?} \\
+    \tspec{Powerful Chord}: Requires Earth level 20. Whenever you \taction{Attack}, you can choose whether it will be physical or magical, regardless of the equipped weapon. In addition, add twice your Earth level to your weapon's damage for all actions. \\
 
     \crystal{air}{12pt} & %
     \tspec{Dedicated Fans}: Requires Air level 20. When you suffer damage or an attack, you may, as a reaction, force an ally to use a reaction he could use if he had suffered the damage or attack. Spend your initiative die in place of theirs. Furthermore, your allies may use their reactions when you suffer damage or an attack, as if the damage or the attack had affected that ally, spending their own die. In both cases, if the ally's reaction fails, you suffer the attack's effects normally. \\
   \end{jobchoice}
 \end{ffminipage}
-
-
-
-
