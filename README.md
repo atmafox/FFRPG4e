@@ -1,4 +1,4 @@
-![](https://github.com/atmafox/FFRPG4e/workflows/Build%20revised.pdf%20document/badge.svg)
+![](https://github.com/atmafox/FFRPG4e/workflows/revised.pdf/badge.svg)
 # FFRPG4e
 This project is managed by Atmafox for Bruno Carvalho.  His website can be found at http://ffrpg4e.wikidot.com
 
