@@ -1,7 +1,7 @@
 name: PR_Review
 on:
   pull_request:
-    types: [review_requested, reopened]
+    types: [review_requested, reopened, opened, synchronize]
 jobs:
   notify_discord:
     runs-on: ubuntu-latest
@@ -11,4 +11,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_FFTT }}
         uses: Ilshidur/action-discord@0.0.2
         with:
-          args: ${{ github.actor }} has requsted review on ${{ github.event.html_url }}
+          args: PR \#${{ github.event.number}} from ${{ github.actor }} is pending at ${{ github.event.pull_request }}
