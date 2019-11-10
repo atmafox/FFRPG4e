@@ -1,0 +1,2 @@
+wpn-
+\tabwpnrow[name={0},mlevel={1},cost={2},damage={3},effect={4}]

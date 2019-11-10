@@ -1,0 +1,2 @@
+itm-
+\tabitmrow[name=%s,mlevel=%s,cost=%s,arm=%s,marm=%s,effect=%s]
