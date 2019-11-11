@@ -693,6 +693,10 @@
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
 
+% ToC customization
+\addtocontents{toc}{~\hfill\ferrum\protect\textbf{Page}\par\rmfamily}
+\addtocontents{toc}{\protect\thispagestyle{fancy}}
+
 % Return @ processing to normal
 \makeatother
 
