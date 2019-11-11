@@ -14,9 +14,8 @@
 \begin{document}
 % Stuff before main book
 \frontmatter
-\maketitle
 
-\addtocontents{toc}{\protect\thispagestyle{fancy}}
+\maketitle
 
 % Auto-generated ToC
 \tableofcontents
@@ -58,4 +57,11 @@ The crystals were born and the world was created.,author=Epilogue (FFV)]\label{c
 \styledchapter[title=Bestiary,quote=Chapter 9,author=Atma]\label{ch:bestiary}
 \include{revised/bestiary}
 
+% Tables go after this
+\appendix
+\addcontentsline{toc}{chapter}{\protect\textbf{Appendices}}
+
+\clearpage\input{revised/tab-xp}
+
+\clearpage\input{revised/tab-status}
 \end{document}
