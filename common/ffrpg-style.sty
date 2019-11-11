@@ -22,7 +22,6 @@
 \RequirePackage{etoolbox}
 \RequirePackage{wrapfig}
 
-
 % We'll need @ for keyval templates in here
 \makeatletter
 
@@ -31,7 +30,6 @@
 % Stolen from https://tex.stackexchange.com/a/62623
 \newlist{commalist}{description*}{4}
 \setlist[commalist]{mode=unboxed,itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
-
 
 % configure page geometry
 \geometry{
@@ -72,6 +70,9 @@
 % Colours for the two characters
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
 \definecolor{bocoblue}{cmyk}{0.95, 0.78, 0, 0.25}
+
+% Colour for zebra table
+\colorlet{zebragray}{gray!20}
 
 % This is for leaving temporary inline comments about game mechanics that need clarification and that sort of thing. It should stand out badly but not be hard to read. It should probably also flag a warning in the console every time it's used.
 \newcommand{\review}[1]{
@@ -331,7 +332,7 @@
 \newcommand*{\jobstats}[1][]{
 	\krdsetkeys{jobstats}{#1}%
   \begin{center}
-	\rowcolors{1}{gray!10}{}
+	\rowcolors{1}{zebragray}{}
 	\begin{tabular}{cp{10mm}p{10mm}p{10mm}p{10mm}}
 	  \toprule
 			Level & \js@lva & \js@lvb & \js@lvc & \js@lvd \\ \midrule
@@ -388,12 +389,12 @@
 	\krdsetkeys{mobstats}{#1}
 	\bgroup\ferrum\large\itshape \ms@name\egroup \pc
 
-	\rowcolors{1}{gray!10}{}%
+	\rowcolors{1}{zebragray}{}%
 	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
 		\toprule
 	% Icon stuff after hfill if we get there
 		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
-		\rowcolors{1}{}{gray!10}
+		\rowcolors{1}{}{zebragray}
 		{\centering %
 		\begin{tabular}{*{3}{r>{\raggedleft\arraybackslash}p{5\numwidth}}}
 			\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp \\
@@ -460,7 +461,7 @@
 	\begin{table}[h]
 		\centering
 		\label{tab:\ta@label}
-	    \rowcolors{1}{gray!20}{}
+	    \rowcolors{1}{zebragray}{}
 		\begin{tabular}{lrrrrp{0.35\textwidth}}
         		\toprule
         		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{ARM}} & \multicolumn{1}{c}{\textbf{MARM}} & \textbf{Effect} \\ \midrule
@@ -507,7 +508,7 @@
 	\begin{table}[h]
 		\centering
 		\label{tab:\tw@label}
-	    \rowcolors{1}{}{gray!20}
+	    \rowcolors{1}{}{zebragray}
 		\begin{tabular}{lrrrp{0.4\textwidth}}
 				\toprule
 				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
@@ -549,7 +550,7 @@
 	\begin{table}[h]
 		\centering
 		\label{tab:\tc@label}
-	    \rowcolors{1}{gray!20}{}
+	    \rowcolors{1}{zebragray}{}
 		\begin{tabular}{lrrp{0.35\textwidth}}
         		\toprule
         		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
@@ -588,7 +589,7 @@
 	\begin{table}[h]
 		\centering
 		\label{tab:\ti@label}
-	    \rowcolors{1}{gray!20}{}
+	    \rowcolors{1}{zebragray}{}
 		\begin{tabular}{lrp{0.5\textwidth}}
         		\toprule
         		\textbf{Name} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
