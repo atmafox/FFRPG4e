@@ -11,6 +11,7 @@
 \RequirePackage{placeins}
 \RequirePackage{xstring}
 \RequirePackage{numprint}
+\RequirePackage{collcell}
 \RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,ocgcolorlinks]{hyperref}
 \RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{booktabs}
@@ -29,8 +30,13 @@
 
 \bookmarksetup{}
 
-% Configure numprint separator
+% Configure numprint separator and create custom numprint macro
 \npthousandsep{,}
+\newcommand{\tabnumprint}[1]{\IfInteger{#1}{\numprint{#1}}{#1}}
+
+\newcolumntype{M}{>{\collectcell\tabnumprint}r<{\endcollectcell}}
+\newcolumntype{D}{>{\collectcell\tabnumprint}c<{\endcollectcell}}
+\newcolumntype{O}{>{\collectcell\tabnumprint}l<{\endcollectcell}}
 
 % Stolen from https://tex.stackexchange.com/a/62623
 \newlist{commalist}{description*}{4}
@@ -401,7 +407,7 @@
 		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
 		\rowcolors{1}{}{zebragray}
 		{\centering %
-		\begin{tabular}{*{3}{r>{\raggedleft\arraybackslash}p{5\numwidth}}}
+		\begin{tabular}{*{3}{r>{\collectcell\tabnumprint}p{5\numwidth}<{\endcollectcell}}}
 			\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp \\
 			\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp \\
 			\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init \\
@@ -463,8 +469,6 @@
 \krdpresetkeys{tabarmrow}{
 	name=UNDEFINED,mlevel=-,cost=-,arm=-,marm=-,effect=UNDEFINED
 }
-
-\newcommand{\tabnumprint}[1]{\IfInteger{#1}{\numprint{#1}}{#1}}
 
 \newenvironment*{tabarm}[1][]{%
 	\krdsetkeys{tabarm}{#1}%
@@ -534,7 +538,7 @@
   \krdsetkeys{tabwpnrow}{#1}\tabnumprint{\twr@mlevel} & %
   \krdsetkeys{tabwpnrow}{#1}\tabnumprint{\twr@cost} & %
   \krdsetkeys{tabwpnrow}{#1}\tabnumprint{\twr@damage} & %
-  \krdsetkeys{tabwpnrow}{#1}\tabnumprint{\twr@effect} \\
+  \krdsetkeys{tabwpnrow}{#1}\twr@effect \\
 }
 
 % Accessory table
