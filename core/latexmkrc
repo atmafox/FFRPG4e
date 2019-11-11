@@ -1,0 +1,4 @@
+@default_files = ('revised.tex');
+$clean_ext = "%A-compressed.pdf";
+$success_cmd = 'gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%R-compressed.pdf %D';
+$pdf_mode = 5;
