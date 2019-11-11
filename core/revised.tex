@@ -14,9 +14,11 @@
 \begin{document}
 % Stuff before main book
 \frontmatter
-\maketitle
 
+\addtocontents{toc}{~\hfill\ferrum\protect\textbf{Page}\par\rmfamily}
 \addtocontents{toc}{\protect\thispagestyle{fancy}}
+
+\maketitle
 
 % Auto-generated ToC
 \tableofcontents
@@ -60,7 +62,9 @@ The crystals were born and the world was created.,author=Epilogue (FFV)]\label{c
 
 % Tables go after this
 \appendix
-\include{revised/tab-xp}
+\addcontentsline{toc}{chapter}{\protect\textbf{Appendices}}
 
-\include{revised/tab-status}
+\clearpage\input{revised/tab-xp}
+
+\clearpage\input{revised/tab-status}
 \end{document}
