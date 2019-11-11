@@ -5,7 +5,7 @@
 \RequirePackage{fontspec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
-\RequirePackage{enumitem}
+\RequirePackage[inline]{enumitem}
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{placeins}
@@ -19,12 +19,17 @@
 \RequirePackage{fmtcount}
 \RequirePackage{calc}
 \RequirePackage{csquotes}
-\RequirePackage{etoolbox}
+\RequirePackage{etoolbox} % Comparisons and other usefuls
 
 % We'll need @ for keyval templates in here
 \makeatletter
 
 \bookmarksetup{}
+
+% Stolen from https://tex.stackexchange.com/a/62623
+\newlist{commalist}{description*}{4}
+\setlist[commalist]{mode=unboxed,itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
+
 
 % configure page geometry
 \geometry{
@@ -212,7 +217,53 @@
   \end{tabular}
 }
 
+% Beginnings of job choice rows
 
+\krddefinekeys{abilitylede}[al@]{
+	cmd/name;
+	cmd/level;
+}
+\krdpresetkeys{abilitylede}{
+	name=\review{invalid},level=\review{invalid}
+}
+\newcommand*{\abilitylede}[1][]{
+	\krdsetkeys{abilitylede}{#1}%
+	\tability{\al@name}: Core ability acquired at \ordinalnum{\al@level} level.%
+}
+
+\krddefinekeys{speclede}[sl@]{
+	bool/isaction;
+	cmd/name;
+	cmd/level;
+	cmd/earth;
+	cmd/air;
+	cmd/fire;
+	cmd/water;
+}
+\krdpresetkeys{speclede}{
+	isaction=false,name=\review{invalid};earth=;air=;fire=;water=
+}
+\newcommand*{\speclede}[1][]{%
+	\krdsetkeys{speclede}{#1}%
+	\ifdefvoid{\sl@level}{}{\crystal{level}{12pt}}%
+	\ifdefvoid{\sl@earth}{}{\crystal{earth}{12pt}}%
+	\ifdefvoid{\sl@air}{}{\crystal{air}{12pt}}%
+	\ifdefvoid{\sl@fire}{}{\crystal{fire}{12pt}}%
+	\ifdefvoid{\sl@water}{}{\crystal{water}{12pt}}%
+	& 
+	\krdsetkeys{speclede}{#1} %
+	\ifsl@isaction%
+		\taction{\sl@name}:
+	\else%
+		\tspec{\sl@name}:
+	\fi%
+	\ifblank{\sl@earth\sl@air\sl@fire\sl@water}{}{%
+		Requires \begin{commalist}\ifdefvoid{\sl@earth}{}{\item Earth level \sl@earth}\ifdefvoid{\sl@air}{}{\item Air level \sl@air}\ifdefvoid{\sl@fire}{}{\item Fire level \sl@fire}\ifdefvoid{\sl@water}{}{\item Water level \sl@water}\end{commalist}.%
+	}%
+}
+
+
+% Action Type Macro
 
 \krddefinekeys{actype}[ac@]{
 	choice/slow/quick/
