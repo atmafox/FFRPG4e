@@ -4,12 +4,6 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Actions for Discord
-        env: 
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_FFTT }}
-        uses: Ilshidur/action-discord@0.0.2
-        with:
-          args: ${{ github.event.pusher.name }} has pushed ${{ github.event.ref }} at ${{ github.event.compare }}
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
