@@ -16,9 +16,11 @@
 \crystal{earth}{12pt} & %
 \tspec{Brawler}: Requires Earth level 3. Whenever you use the \taction{Attack} action while equipped with \tequip{Claws / Gloves}, you may re-roll the attack once. \\
 \crystal{air}{12pt} & %
-\tspec{Drunken Dodge}: Requires Air level 3. Whenever an enemy attack or spell against you fails (because it missed or because you successfully avoided it), you may lower the value of one of your initiative dice by 1, to a minimum of the current phase. \\
+\tspec{Drunken Dance}: Requires Air level 3. Whenever you perform a physical action, reduce your next action's charge time by 2, to a minimum of zero, if it is magical. Whenever you perform a magical action, reduce your next action's charge time by 2, to a minimum of zero, if it is physical. \\
+\crystal{fire}{12pt} & %
+\tspec{Spirit Power}: Requires Fire level 3. Whenever one of your abilities’ effects change based on your character level, consider it as being four levels higher than it is. Reduce all Stat level of your Specialties’ (both earned and unearned) requirements by one. \\
 \crystal{water}{12pt} & %
-\tspec{Elemental Arts}: Requires Water level 3. Your MP bonus becomes equal to your level (if not already higher). In addition, you gain access to one of the following Spell groups: \tspellgroup{Gravity}, \tspellgroup{Healing}, \tspellgroup{Poison}, or \tspellgroup{Purify} \\
+\tspec{Elemental Arts}: Requires Water level 3. Increase your MP bonus multiplier at all levels by 1 if its level 1 value is zero. In addition, you gain access to one of the following Spell groups: \tspellgroup{Gravity}, \tspellgroup{Healing}, \tspellgroup{Poison}, or \tspellgroup{Purify}. \\
 \end{jobchoice}
 \end{ffminipage}
 
@@ -27,91 +29,92 @@
 
 \begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
-\taction{Katon} is a Ranged Slow (3) \tatk{magical} action. Using it, you invoke elemental spirits. Do a Fire vs Fire attack, difficulty 40. If successful, deal 4x Fire level \telem{Fire}-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Sleep} status until the end of the next round. \\
+\taction{Katon} is a Ranged Slow (3) \tatk{magical} action. Using it, you invoke elemental spirits. Do a Fire vs Fire attack, difficulty 40. If successful, deal 4x Fire level Fire-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Curse} status until the end of the next round. At level 20 or greater, critical hits also inflict the \tstatus{Sleep} status until the end of the next round. \\
 \crystal{level}{12pt} & %
-\taction{Suiton} is a Ranged Slow (3) \tatk{magical} action. Using it, you invoke elemental spirits. Do a Fire vs Water attack, difficulty 40. If successful, deal 4x Fire level \telem{Water}-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Weaken (Mental)} status until the end of the next round. \\
+\taction{Suiton} is a Ranged Slow (3) \tatk{magical} action. Using it, you invoke elemental spirits. Do a Fire vs Water attack, difficulty 40. If successful, deal 4x Fire level Water-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Weaken (Mental)} status until the end of the next round. At level 20 or greater, critical hits also inflict the \tstatus{Mute} status until the end of the next round. \\
 \crystal{level}{12pt} & %
-\taction{Doton} is a Ranged Slow (3) \tatk{magical} action. Using it, you invoke elemental spirits. Do a Fire vs Earth attack, difficulty 40. If successful, deal 4x Fire level \telem{Earth}-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Poison} status until the end of the next round. \\
+\taction{Doton} is a Ranged Slow (3) \tatk{magical} action.  Using it, you invoke elemental spirits. Do a Fire vs Earth attack, difficulty 40. If successful, deal 4x Fire level Earth-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Poison} status until the end of the next round. At level 20 or greater, critical hits also inflict the \tstatus{Virus} status until the end of the next round. \\
 \crystal{level}{12pt} & %
-\taction{Fuuton} is a Ranged Slow (3) magical action. Using it, you invoke elemental spirits. Do a Fire vs Air attack, difficulty 40. If successful, deal 4x Fire level \telem{Air}-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Blind} status until the end of the next round. \\
+\taction{Fuuton} is a Ranged Slow (3) magical action. Using it, you invoke elemental spirits. Do a Fire vs Air attack, difficulty 40. If successful, deal 4x Fire level Air-elemental damage on a target. This ability can achieve critical hits; in this case, besides the damage, the target receives the \tstatus{Blind} status until the end of the next round. At level 20 or greater, critical hits also inflict the \tstatus{Confuse} status until the end of the next round. \\
 \end{jobchoice} \pc
 
 \begin{jobchoice}
 \crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Elan}: Requires Air level 4 and Fire level 7. Your Jutsu targets a group instead of just one target. \\
+\tspec{Elan}: Requires Air level 4 and Fire level 6. Your Jutsu targets a group instead of just one target. \\
 \crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Vengeful Spirits}: Requires Fire level 7 and Water level 4. Whenever your Jutsu are successful, consider that they had a critical hit. \\
+\tspec{Vengeful Spirits}: Requires Fire level 6 and Water level 4. Whenever your Jutsu are successful, consider that they had a critical hit. \\
 \crystal{earth}{12pt} \crystal{fire}{12pt} & %
-\tspec{Lightning Jutsu}: Requires Earth level 4 and Fire level 7. You gain the reaction \taction{Raiton}. Use it you are hit by a damaging action. You conjure the spirits defensively to interfere with it. Perform a Fire vs Fire attack, difficulty 20. The action causes no effect if either you have the \taction{Katon} Jutsu and the action's damage is \telem{Water} or \telem{Ice}-elemental; or you have the \taction{Suiton} Jutsu and the action's damage is \telem{Fire} or \telem{Light}-elemental; or you have the \taction{Doton} Jutsu and the action's damage is \telem{Air} or \telem{Lightning}-elemental; or you have the \taction{Fuuton} Jutsu and the action's damage is \telem{Earth} or \telem{Shadow}-elemental. \\
+\tspec{Lightning Jutsu}: Requires Earth level 4 and Fire level 6. You gain the \actype[reaction=true] \taction{Raiton}. Use it when you are hit by a magical action or Spell. You conjure the spirits defensively to interfere with it. Perform a Fire vs Fire attack, difficulty 40. A successful reaction means you ignore the action's damage. You may also use this reaction to negate all effects of the magical action or Spell, when you or an ally is hit by a magical action or Spell that deals elemental damage opposed to one of your earned Jutsu, according to the table below. \\
+\multicolumn{2}{c}{
+    \rowcolors{1}{gray!10}{}
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Jutsu} & \textbf{Opposing Elements} \\ \midrule
+        \taction{Katon} & \telem{Ice} or \telem{Water} \\
+        \taction{Suiton} & \telem{Fire} or \telem{Light} \\
+        \taction{Doton} & \telem{Air} or \telem{Lightning} \\
+        \taction{Fuuton} & \telem{Earth} or \telem{Shadow} \\ \bottomrule
+    \end{tabular} }
 \end{jobchoice}
+
 \end{ffminipage}
 
 \begin{ffminipage}
-    \noindent\tability{Serenity}: Core Ability acquired at level 15. You gain resistance to \tstatus{Mental} type statuses. \pc
+    \noindent\tability{Punch Rush}: Core Ability acquired at level 15. You gain the Slow (3) action !Punch Rush. Perform a weapon attack, difficulty 30, dealing weapon damage and ignoring half of the target's Armor or Magical Armor. Reduce by 10 the difficulty if your weapon deals physical damage. Reduce by 10 the difficulty if your weapon is not Ranged. \taction{Punch Rush} attacks with \tequip{Claws/Gloves} ignores the target's Armor. \pc
 
     \begin{jobchoice}
     \crystal{fire}{12pt} & %
-    \tspec{Jutsu Acolyte}: Requires Fire level 6. You gain one of the following Jutsu: \taction{Katon}, \taction{Suiton}, taction{Doton}, or \taction{Fuuton}. \\
+    \tspec{Jutsu Acolyte}: Requires Fire level 7. You gain one of the following Jutsu: \taction{Katon}, \taction{Suiton}, taction{Doton}, or \taction{Fuuton}. \\
     \crystal{air}{12pt} & %
-    \tspec{Flurry of Blows}: Requires Air level 8. You gain the Quick \tatk{physical} action \taction{Punch Rush}. It can be used only if you’re equipped with \tequip{Claws / Gloves} and can perform two actions in the same phase. Attacking your opponent with superhuman speed, you spend all initiative dice needed to perform two actions and strike an Earth vs Air attack, difficulty 40. This attack deals 300\% weapon damage in one target. \\
+    \tspec{Zen Awareness}: Requires Air level 8. You may use reactions while charging Slow actions as an interrupt. \\
     \crystal{earth}{12pt} & %
-    \tspec{Swivel Kick}: Requires Earth level 8. You gain the Quick action \taction{Kick}. When using it, attack all opponents with your weapon. After reducing your weapon damage by targets’ ARM or MARM as usual, reduce the damage by half. This action ignores the \tstatus{Protect} and
-    \tstatus{Elemental Resist} status effects on the targets. \\
+    \tspec{Flurry of Blows}: Requires Earth level 7. Your attacks hit when you roll doubles, even if the attack didn’t overcome the difficulty. Your \taction{Punch Rush} can critical hit, dealing double damage and inflicting the \tstatus{Weaken (Armor)} status effect until the end of the round. \\
     \end{jobchoice}
     \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Soul Volley}: Core Ability acquired at level 24. You gain one of the three following actions: \pc
+\noindent\tability{Zen Evasion}: Core Ability acquired at level 24. You gain the \actype[reaction=true] \taction{Zen Evasion}. Use it after you're hit with a Slow action. You ignore the action's effects on a successful Air vs Fire roll, difficulty 40. \pc
+
+\begin{jobchoice}
+\crystal{fire}{12pt} \crystal{water}{12pt} & %
+\tspec{Aura Bolt}:  Requires Fire and Water level 10. Choose and gain either \taction{Aura Bolt} or \taction{Dark Bolt}. Both are \textit{Ranged} Slow (4) magical actions. Release your inner Chi in a bolt of light or darkness to perform a Fire vs Water attack, difficulty 50. If successful, the target takes 14 x Fire level damage, and you may repeat the attack as an interrupt any number of times, each against a different target. \taction{Aura Bolt} deals \telem{Light}-elemental damage and \taction{Dark Bolt} deals \telem{Shadow}-elemental damage. At level 45 the damage increases to 16 x Fire level damage, at level 52 it increases to 20x Fire level damage, and at level 59 it increases to 22x Fire level damage. \\
+\crystal{earth}{12pt} \crystal{air}{12pt} \crystal{fire}{12pt} \crystal{water}{12pt} & %
+\tspec{Timeless Body}: Requires Earth, Air, Fire and Water level 8. You resist \tstatus{Mental}-type and \tstatus{Time}-type status effects. \\
+\crystal{earth}{12pt} & %
+\tspec{Suplex}: Requires Earth level 10. When using the \taction{Punch Rush} action, you may discard an extra initiative die to deal 300\% weapon damage on normal and critical hits. The damage is only 200\% weapon damage if you're equipped with any weapon other than \tequip{Claws/Gloves}. \\
+\end{jobchoice}
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Awaken Chakra}: Core Ability acquired at level 42. Choose one of the three options below: \pc
 
 \begin{jobchoice}[header=false]
 \crystal{level}{12pt} & %
-\taction{Aura Bolt} is a Ranged Slow (4) \tatk{magical} action. You release a wave of light against an opponent, performing a Fire vs Water attack, difficulty 50. If successful, the target takes 13x Fire level \telem{Light}-elemental damage. At level 50, the damage becomes 20 x Fire level. \\
+\textit{Balanced Chakras}: Whenever you use an action or reaction which Offensive Stat is Earth or Fire, you may use the highest of either Earth or Fire. \\
 \crystal{level}{12pt} & %
-\taction{Dark Bolt} is a Ranged Slow (4) \tatk{magical} action. You release a wave of darkness against an opponent, performing a Fire vs Water attack, difficulty 50. If successful, the target takes 13x Fire level \telem{Shadow}-elemental damage. At level 50, the damage becomes 20 x Fire level. \\
+\textit{Spiritual Chakras}: When using a Jutsu or Soul Volley, you may increase its charge time by 1 to increase the damage by 3x Fire level on a single target, or by 1x Fire level on all targets. \\
+\crystal{level}{12pt} & %
+\textit{Material Chakras}: You gain the Slow (2) action \taction{Kick}. When using it, attack all opponents with your weapon, dealing 100\% weapon damage. When equipped with \tequip{Claws/Gloves}, ignore the target's Protect status. \\
 \end{jobchoice}
 
 \begin{jobchoice}
 \crystal{earth}{12pt} \crystal{water}{12pt} & %
-\tspec{Awaken Chakra}: Requires Earth and Water level 10. You gain the Slow (5) \tatk{magical} action \taction{Chakra}. When using it, you release the healing power of your Chakra to end any negative statuses affecting you. However, you can’t use this Ability while under the effect of any \tstatus{Mental} type status. \\
+\tspec{Pressure Points}: Requires Earth level 6 and Water level 12. You gain the Slow (2) physical action \taction{Atemi}. This action allows you to deliver blows to the correct points to close the chakra of the target. Do an Earth vs Earth attack, difficulty 70. If successful, inflict the Immobilize status until the end of the next round. At level 50, reduce the difficulty to 50. You may spend 30 MP to make your \taction{Atemi} action targets all enemies instead of only one. \\
 \crystal{air}{12pt} \crystal{water}{12pt} & %
-\tspec{Pressure Points}: Requires Air level 6 and Water level 12. You gain the Slow (2) \tatk{physical} action \taction{Atemi}. This action allows you to deliver blows to the correct points to close the chakra of the target. Do an Earth vs Earth attack, difficulty 70. If successful, inflict the \tstatus{Immobilize} status until the end of the next round. \\
-\crystal{earth}{12pt} & %
-\tspec{Suplex}: Requires Earth level 13. If you hit the same opponent with the \taction{Attack} action twice in a phase with a \tequip{Claw / Glove} equipped, you inflict the \tstatus{Confuse} status until the end of the round. If you have the \tability{Flurry of Blows} ability, your \taction{Punch Rush} action inflicts the \tstatus{Confuse} status until the end of the round, in addition to damage. \\
+\tspec{Release Chakra}: Requires Air level 6 and Water level 12. You gain the Slow (5) magical action \taction{Chakra}. When using it, you release the healing power of your chakras to end any negative statuses affecting you. However, until level 50, you can’t use this Ability while under the effect of any \tstatus{Mental}-type or \tstatus{Time}-type negative statuses. You may spend any amount of MP to recover HP equal to double of that amount, in addition to its effects. \\
+\crystal{fire}{12pt} \crystal{water}{12pt} & %
+\tspec{Chi Blast}: Requires Fire level 6 and Water level 12. You gain the Slow (2) magical action \taction{Chi Blast}. This action allows you to directly attack the enemy's fighting spirit. Do an Fire vs Fire attack, difficulty 70. If successful, inflict the \tstatus{Disable} status until the end of the next round. At level 50, reduce the difficulty to 50. You may spend 30 MP to make your \taction{Chi Blast} action targets all enemies instead of only one. \\
 \end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Release Chakra}: Core Ability acquired at level 42. Choose one of the four advantages below: \pc
-
-\begin{jobchoice}[header=false]
-\crystal{level}{12pt} & %
-When using the \taction{Chakra} action, you may spend any amount of MP to recover HP equal to double of that amount, in addition to its effects. \\
-\crystal{level}{12pt} & %
-When you hit the \taction{Atemi} action, you may spend 40 MP to inflict the \tstatus{Disable} status to the target until the end of the next round, in addition to its effects. \\
-\crystal{level}{12pt} & %
-When using a Jutsu, you may spend 40 MP to increase the damage to 16x Fire level. \\
-\crystal{level}{12pt} & %
-Whenever you use a Slow (X) action without MP costs, you may spend MP equal to 15 times the X number to make it a Quick action instead. For example, it costs 60 MP to cast \taction{Aura Bolt} as Quick Action.
-\end{jobchoice}
-
-\begin{jobchoice}
-\crystal{earth}{12pt} \crystal{fire}{12pt} & %
-\tspec{Soul Explosion}: Requires Earth and Fire level 12. After using the \taction{Aura Bolt} or \taction{Dark Bolt} actions, you may discard any number of initiative dice regardless of their value, to immediately repeat the attack once per discarded die against a different target. \\
-\crystal{air}{12pt} & %
-\tspec{Zen Awareness}: Requires Air level 13. You may use reactions while preparing Slow actions. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} \crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Elemental Field}: Requires Earth, Air, Fire and Water level 8. After using a Jutsu, you and the target gain the \tstatus{Resist} status to until the end of the round. The element depends on the Jutsu used: \taction{Katon} confers resistance to \telem{Water}; \taction{Suiton} confers resistance to \telem{Fire}; \taction{Doton} gives \telem{Air} resistance; and \taction{Fuuton} gives resistance to \telem{Earth}. If you have the \tability{Elan} Ability, all combatants, allies and enemies, gain the \tstatus{Resist} status. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Timeless Body}: Core Ability acquired Base at level 60. You resist \tstatus{Time} type statuses. \pc
+\noindent\tability{Zen Mind}: Core Ability acquired Base at level 60. Your attacks and reactions against enemies suffering any negative status effects may be rerolled once. \pc
 
 \begin{jobchoice}
 \crystal{fire}{12pt} & %
 \tspec{Jutsu Master}: Requires Fire level 20. You gain two of the following actions: \taction{Katon}, \taction{Suiton}, \taction{Doton} or \taction{Fuuton}. You also gain the Ranged Slow (5) \tatk{magical} action \taction{Kuuton}. Using your mastery of the four elements, roll 1d100 and add your Fire value, comparing this result to all opponents’ stats. If the result is greater than Earth plus 20, the opponent takes 6x Fire level \telem{Earth}-elemental damage. If the result is greater than Air plus 20, the opponent takes 6x Fire level \telem{Air}-elemental damage. If the result is greater than Fire plus 20, the opponent takes 6x Fire level \telem{Fire}-elemental damage. If the result is greater than Water plus 20, the opponent takes 6x Fire level \telem{Water}-elemental damage. This attack always ignores targets’ MARM. \\
 \crystal{air}{12pt} \crystal{water}{12pt} & %
-\tspec{Elemental Union}: Requires Air and Water level 10. Increase your MP bonus by 1 times your level. You gain one of the following Spell groups: \tspellgroup{Mage Bane}, \tspellgroup{Regeneration}, \tspellgroup{Enchantment}, or \tspellgroup{Divination}. \\
+\tspec{Elemental Union}: Requires Air and Water level 10. Increase your MP bonus multiplier by 1 at all levels. You gain one of the following Spell groups: \tspellgroup{Mage Bane}, \tspellgroup{Regeneration}, \tspellgroup{Enchantment}, or \tspellgroup{Divination}. \\
 \crystal{earth}{12pt} & %
 \tspec{Phantom Rush}: Requires Earth level 20. You gain the Slow (6) \tatk{physical} action \taction{Phantom Rush}, a martial arts secret known as the supreme blow. Using it, do an Earth vs Air attack, difficulty 30. If successful, deal 33x Earth level \telem{Crush}-elemental damage on a target, ignoring its ARM. \\
 \end{jobchoice}

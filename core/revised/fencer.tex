@@ -1,21 +1,21 @@
 \begin{jobdesc}[name=sjob-fencer]
-    Offensive Job focused on fighting with two weapons to strike fast and often. Its main Stat is Air. Be a Dervish if you want to increase the amount and speed of your actions and be a great physical damage dealer. \pc
+    Defensive job that believes that the best way of not dying is being out of the way of attacks. Its main Stat is Air. Be a Fencer if you want to dodge the attacks of your opponents, especially their missiles, and manipulate the flow of actions in battle, thus increasing your and your allies’ survival. \pc
 
-    \textbf{Representatives}: Edward Geraldine “Edge” Eblan (FFIV), Clyde “Shadow” Arrowny (FFVI), Ninja Job (FFI, FFIII, FFV, FFXI, FFT, FFTA) \pc
+    \textbf{Representatives}: Fencer Job (FFTA) \pc
 \end{jobdesc}
 
 \begin{ffminipage}
 {\centering \textbf{Abilities}\par }
 
-\noindent\tability{Ambidexterity}: Core Ability acquired at level 1. You may equip Twin Weapons. \pc
+\noindent\tability{Block Projectiles}: Core Ability acquired at level 1. You may equip medium armor and gain the reaction\actype[reaction=true] \taction{Arrow Guard}. When you are hit by a Ranged attack, make an Air vs Air attack, difficulty 30. If successful, you don’t suffer the attack’s effects. This does not affect Spells. \pc
 
 \begin{jobchoice}
+\crystal{fire}{12pt} & %
+\tspec{Lightning Strike}: Requires Fire level 3. Opponents cannot use interrupt actions to react to your attacks. In addition, choose one: \tequip{Bows} or \tequip{Light Sword / Knives}. You may equip the chosen. \\
 \crystal{air}{12pt} & %
-\tspec{Quick Draw}: Requires level Air 3. Once per round as a free action, you can draw and switch weapons. \\
-\crystal{level}{12pt} & %
-\tspec{Killer's Garments}: Requires level 1. You may equip \tequip{medium armor}, \tequip{Bows}, and \tequip{Throwing Weapons}. \\
-\crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Deadly Dance}: Requires Air level 5 and Fire level 4. Whenever you hit the \taction{Attack} action, you may lower the value of one of your initiative dice by 1, to a minimum of the current phase. \\
+\tspec{Slim Target}: Requires Air level 4. Once per round, you can use any action or reaction as an interrupt. \\
+\crystal{earth}{12pt} & %
+\tspec{Surprise Assault}: Requires Earth level 3. Whenever you declare a Slow action, you may reduce its charge time to zero by increasing another of your initiative dice's value by action's charge time. This ability fails if it would increase a die to a value of 11 or greater. \\
 \end{jobchoice}
 \end{ffminipage}
 
@@ -25,36 +25,37 @@
 }
 \end{center}
 \begin{ffminipage}
-\noindent\tability{Critical Speed}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM. While your current HP is 25\% of your max HP or less, you gain the \tstatus{Haste} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. \pc
+\noindent\tability{Preemptive Attack}: Core Ability acquired at level 19. After rolling initiative, you may change one of your dice’s value to 1. You may add your Air level to your Armor and your Water level to your Magic Armor. \pc
 
 \begin{jobchoice}
-\crystal{earth}{12pt} \crystal{water}{12pt} & %
-\tspec{Blade Barrier}: Requires Earth and Water level 6. The best defense is a good offense. Add your Earth level to your ARM and your Water level to your MARM. \\
-\crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Danger Zone}: Requires Air and Fire level 6. At the beginning of each round, you may spend HP equal to 25\% of your max HP to receive the \tstatus{Haste} status during this round. \\
-\crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Two-Weapon Defense}: Requires Fire level 9 and Water level 5. You gain the reaction \taction{Double Parry}. Use when hit by a Melee \tatk{physical} attack. Do an (the greater of Air or Earth) vs Earth attack, difficulty 40. If successful, you ignore the attack’s effects. \\
+\crystal{fire}{12pt} & %
+\tspec{Magical Reflexes}:  Requires Fire level 8. You may use !Arrow Guard to avoid Spells. \\
+\crystal{earth}{12pt} \crystal{fire}{12pt} & %
+\tspec{Just a Scratch}: Requires Earth and Fire level 10. The first time in each round you suffer a critical hit, ignore the effects of critical hit (if any). The attack does its normal effects. You may still count as if it had been a critical hit for the purposes of other Abilities. \\
+\crystal{earth}{12pt} & %
+\tspec{Feign Weakness}: Requires Earth level 7. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may force the opponent to discard one initiative die and immediately repeat the attack against only you (even if the attack targets a Group, it will only target you when you use False Weakness). \\
 \end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Deadly Accuracy}: Core Ability acquired at level 35. After rolling an attack, you may reduce or increase the d100 result by 1. \pc
+\noindent\tability{Total Defense}: Core Ability acquired at level 35. You may delay any number of actions, instead of only one. \pc
 
 \begin{jobchoice}
-\crystal{air}{12pt} & %
-\tspec{Deep Cut}: Requires Air level 16. When you attain a critical hit with an action that deals damage, ignore the target’s ARM and MARM. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} \crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Zen Focus}: Requires Earth, Air, Fire and Water level 8. At the beginning of each round, you may choose one of your initiative die’s value instead of rolling it. \\
+\crystal{air}{12pt} \crystal{water}{12pt} & %
+\tspec{Impromptu Cover}: Requires Air and Water level 13. Increase by 30 the difficulty of all Group attacks that include you as its targets. \\
+\crystal{earth}{12pt} \crystal{fire}{12pt} & %
+\tspec{Blade Barrier}: Requires Earth and Fire level 13. Add your Earth level to your Armor and your Fire level to your Magic Armor. \\
 \end{jobchoice}
 \end{ffminipage}
 
 \begin{ffminipage}
-\noindent\tability{Fierce Assault}: Core Ability acquired at level 50. If you can act more than once on the same phase, you can perform these actions together. If you do and deal damage, you may add all damage dealt before reducing it by the target’s ARM or MARM. Regardless of how many attacks you do, reduce the ARM or MARM only once. \pc
+\noindent\tability{Air Dancer}: Core Ability acquired at level 50. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may perform the \taction{Bobbing} Ranged physical action as an interrupt. Roll Air vs Water, difficulty 40. If sucessful, the enemy loses its highest Initiative die and you gain it (with the same value). Treat this as a \tstatus{Weaken}-type status effect.  \pc
 
 \begin{jobchoice}
 \crystal{earth}{12pt} & %
-\tspec{Rain of Blows}: Requires level 18 in Earth. Once per round, after being successful with the \taction{Attack} action, you may repeat the action as a free action. \\
+\tspec{Water Dancer}: Requires Water level 18. Melee actions cannot target you unless you acted in the last 3 phases. \\
 \crystal{fire}{12pt} & %
-\tspec{Precise Hits}: Requires Fire level 18. Once per round, you may re-roll an attack when using a \tatk{physical} or \tatk{magical} action. \\
+\tspec{Fire Dancer}: Requires Air level 18. Reduce the difficulty of all actions and reactions you perform on the second or third phase by 5; on the fourth or fifth phase by 10; on the sixth or seventh phase by 15; on the eighth or ninth phase by 20 and on the tenth phase by 25. 
+\textit{(Using the scaling down optional rule, page~\pageref{optrule:scaling}, reduce the difficulty of actions and reactions on fourth, fifth and sixth phase by 1, on seventh, eighth or ninth by 2 and on tenth by 3)} \\
 \end{jobchoice}
 \end{ffminipage}
