@@ -6,5 +6,49 @@
 \begin{longtable}{lccp{0.45\textwidth}}
     \hline \textbf{Status} & \textbf{Group} & \textbf{Type} & \textbf{Effect} \\ \hline \endhead
     \tstatus{Berserk} & Negative & Mental & You may only perform standard actions.  You must always perform the \taction{Attack} action. \\
+    \tstatus{Charm} & Negative & Mental & You consider your allies as enemies and your enemies as allies.  This condition ends if you suffer damage. \\
+    \tstatus{Confuse} & Negative & Mental & You may only perform standard actions.  Whenever you use a standard action, roll 1d10: \newline \rowcolors{2}{}{gray!20} \begin{tabular}{|cp{0.3\textwidth}|} \hline \rowcolor{gray!20} \textbf{Roll} & \textbf{Effect} \\ \hline 1 & Act normally \\ 2 or 10 & No action \\ 3 or 9 & Attack randomy ally \\ 4 or 8 & Attack random enemy \\ 5 or 6 & Heal, protect, or otherwise assist random enemy \\ 7 & Heal, protect, or otherwise assist random ally \\ \hline \end{tabular} \\
+    \tstatus{Sleep} & Negative & Mental & You cannot perform actions.  This condition ends when you suffer damage. \\
+    \tstatus{Blink} & Positive & Illusion & You may force a reroll of an enemy attack targetted at you. \\
+    \tstatus{Vanish} & Positive & Illusion & Enemies may not target you with single-target actions. \\
+    \tstatus{Blind} & Negative & Seal & Increase the difficulty of your attacks by 25. \\
+    \tstatus{Disable} & Negative & Seal & You may only cast Spells or react. \\
+    \tstatus{Immobilize} & Negative & Seal & You may not perform reactions. \\
+    \tstatus{Mute} & Negative & Seal & You may not cast spells \\
+    \tstatus{Condemn} & Negative & Fatal & If this condition is not removed before it ends, reduce HP to 0. \\
+    \tstatus{Death} & Negative & Fatal & Reduce HP to 0. \\
+    \tstatus{Gravity} & Negative & Fatal & Reduce HP by a fixed amount, ignoring ARM and MARM. \\
+    \tstatus{Vulnerable:} \itshape{(Element)} & Negative & Elemental & Double suffered \itshape{(elemental)} damage. \\
+    \tstatus{Resist:} \itshape{(Element)} & Positive & Elemental & Halve suffered \itshape{(elemental)} damage. \\
+    \tstatus{Immune:} \itshape{(Element)} & Positive & Elemental & Ignore suffered \itshape{(elemental)} damage. \\
+    \tstatus{Absorb:} \itshape{(Element)} & Positive & Elemental & Heal \itshape{(elemental)} damage. \\
+    \tstatus{Meltdown} & Negative & Strength & Reduce ARM and MARM to 0. \\
+    \tstatus{Weaken: Armor} & Negative & Weaken & Reduce ARM by half. \\
+    \tstatus{Weaken: Magic} & Negative & Weaken & Deal 25\% less magical damage. \\
+    \tstatus{Weaken: Mental} & Negative & Weaken & Reduce MARM by half. \\
+    \tstatus{Weaken: Physical} & Negative & Weaken & Deal 25\% less physical damage. \\
+    \tstatus{Weaken: Speed} & Negative & Weaken & Increase each initiative die value by 1. \\
+    \tstatus{Regen} & Positive & Strengthen & At each round's end, heal HP equal to 10\% of your max HP. \\
+    \tstatus{Strengthen: Armor} & Positive & Strengthen & Increase ARM by half. \\
+    \tstatus{Strengthen: Magic} & Positive & Strengthen & Deal 25\% more magical damage. \\
+    \tstatus{Strengthen: Mental} & Positive & Strengthen & Increase MARM by half. \\
+    \tstatus{Strengthen: Physical} & Positive & Strengthen & Deal 25\% more physical damage. \\
+    \tstatus{Strengthen: Speed} & Positive & Strengthen & Reduce each initiative die value by 1. \\
+    \tstatus{Float} & Positive & Flight & Float about two feet off the ground, causing effects that depend on the ground to not affect you. \\
+    \tstatus{Flight} & Positive & Flight & Only Ranged attacks or Spells may hit you.  Your melee attacks may hit targets with any Flight status unless they specifically may not target Float status. \\
+    \tstatus{Slow} & Negative & Time & Roll one fewer initiative die. \\
+    \tstatus{Stop} & Negative & Time & You may not act. \\
+    \tstatus{Haste} & Positive & Time & Roll one extra initiative die. \\
+    \tstatus{Premonition} & Positive & Time & Once per round, you may reroll 1d100 roll. \\
+    \tstatus{Poison} & Negative & Toxic & At each round's end, lose HP equal to 10\% of max HP. \\
+    \tstatus{Virus} & Negative & Toxic & You may not be healed. \\
+    \tstatus{Protect} & Positive & Barrier & Reduce physical damage by half after deducting ARM. \\
+    \tstatus{Shell} & Positive & Barrier & Reduce magical damage by half after deducting MARM. \\
+    \tstatus{Wall} & Positive & Barrier & Reduce physical damage to 0. \\
+    \tstatus{Reflect} & Positive & Barrier & Reflect effects from a spell that targets you to its caster.  If a spell was already reflected, this has no effect. \\
+    \tstatus{Reraise} & Positive & Barrier & If you would be reduced to 0 HP instead heal to 10\% of max HP and end this effect. \\
+    \tstatus{Stone} & Negative & Transform & You may not act or suffer damage. \\
+    \tstatus{Toad} & Negative & Transform & Your attacks deal exactly 1 damage, ignoring ARM or MARM.  You can't cast Spells, except for the \tspell{Toad} spell. \\
+    \tstatus{Zombie} & Negative & Transform & Healing effects remove HP or MP rather than curing it.  Effects that damage you and heal the user instead damage the user and heal you. \\
 \end{longtable}
 \end{center}
