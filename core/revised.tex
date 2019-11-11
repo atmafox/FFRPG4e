@@ -14,9 +14,8 @@
 \begin{document}
 % Stuff before main book
 \frontmatter
-\maketitle
 
-\addtocontents{toc}{\protect\thispagestyle{fancy}}
+\maketitle
 
 % Auto-generated ToC
 \tableofcontents
@@ -39,14 +38,14 @@
 \styledchapter[title=Game Engine,quote=Chapter 3,author=Atma]\label{ch:engine}
 \include{revised/engine}
 
-\styledchapter[title=Character Options,quote=Don't blame us. Blame yourself or God,author=Delita Hyral (FFT)]\label{ch:characters}
+\styledchapter[title=Character Options,quote=Don't blame us. Blame yourself or God.,author=Delita Hyral (FFT)]\label{ch:characters}
 \include{revised/characters}
 
 \styledchapter[title=Jobs,quote=Then four spirits came together in this Void.
 The crystals were born and the world was created.,author=Epilogue (FFV)]\label{ch:jobs}
 \include{revised/jobs}
 
-\styledchapter[title=Magic,quote=Chapter 6,author=Atma]\label{ch:magic}
+\styledchapter[title=Magic,quote=I never knew weapons were used to hurt people. But we have magic. Why would we need weapons?,author=Black Mage No. 78 (FFIX),image=block-endofera]\label{ch:magic}
 \include{revised/spells}
 
 \styledchapter[title=Inventory,quote=Oh{,} really{,} don't you know? These days all it takes for your dreams to come true is money and power.,author=President Shinra (FFVII),image=block-shop]\label{ch:inventory}
@@ -55,7 +54,14 @@ The crystals were born and the world was created.,author=Epilogue (FFV)]\label{c
 \styledchapter[title=Game Master's Guide,quote=I've acquired the ultimate power! Observe... Such magnificent power! You're all nothing more than fleas compared to me now! Embrace your destruction... It is the fate of all things.,author=Kefka Palazzo (FFVI),image=block-landscape-dragon]\label{ch:gmguide} % chktex 11
 \include{revised/gmguide}
 
-\styledchapter[title=Bestiary,quote=Chapter 9,author=Atma]\label{ch:bestiary}
+\styledchapter[title=Bestiary,quote=It makes no sense. Why would an antlion try to harm us?,author=Edward (FFIV),image=block-behemoth]\label{ch:bestiary}
 \include{revised/bestiary}
 
+% Tables go after this
+\appendix
+\addcontentsline{toc}{chapter}{\protect\textbf{Appendices}}
+
+\clearpage\input{revised/tab-xp}
+
+\clearpage\input{revised/tab-status}
 \end{document}

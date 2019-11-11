@@ -1,0 +1,81 @@
+\begin{jobdesc}[name=sjob-wizard]
+    This arcane Job gives Spells to characters that usually do not possess magical abilities or strengthens the magicians granting them more options. Fire is the most important Stat. Be a Wizard if you want more versatility to choose various Spell effects. \pc
+
+    \textbf{Representatives}:  Garnet 'Dagger' Alexandros XVII (FFIX), Eiko Carol (FFIX), FuSoYa (FFIV), Sage Job (FFIII), Tellah (FFIV), Red Mage Job (FFI, FFIII, FFV, FFXI, FFTA) \pc
+\end{jobdesc}
+
+\begin{ffminipage}
+{\centering \textbf{Abilities}\par }
+
+\noindent\tability{Arcane Adept}: Core Ability acquired at level 1. Gain one of the following a Spell groups: \tspellgroup{Lightning}, \tspellgroup{Ice}, \tspellgroup{Fire}, \tspellgroup{Death}, \tspellgroup{Transform}, \tspellgroup{Poison}, \tspellgroup{Light}, \tspellgroup{Air}, \tspellgroup{Purify}, \tspellgroup{Healing}, \tspellgroup{Cosmic}, \tspellgroup{Teleport}, \tspellgroup{Gravity}, \tspellgroup{Slow}, \tspellgroup{Weaken}, \tspellgroup{Strengthen} or \tspellgroup{Flight}. In addition, if your MP bonus multiplier is lower than 1x at level 1, 2x at level 15 and 3x at level 30, increase it to these values. \pc
+
+\begin{jobchoice}
+\crystal{earth}{12pt} & %
+\tspec{Armored Mage}: Requires Earth level 3. You may equip Heavy Armor and Polearms. \\
+\crystal{water}{12pt} & %
+\tspec{Residual Energies}: Requires Water level 6. Whenever you use a spell, residual energies permeate the environment for a round. You may consume them when casting a Spell to reduce its cost by 25\%. Spells that consumed residual energies do not release residual energies. \\
+\crystal{air}{12pt} \crystal{water}{12pt} & %
+\tspec{Vital Sacrifice}: Requires Air level 6 and Water level 4. Once per round, when casting a Spell, you can spend HP equal to its MP cost to cast it. If you do that, and the Spell's effect heals a target, it deals \telem{Puncture}-elemental damage instead of healing. This ability can't be used with the Renew Spell. If the Spell’s cost is greater than your current MP, you can use this ability again in the same round. \\
+\crystal{fire}{12pt} & %
+\tspec{Late Bloomer}: Requires Fire level 3. Choose any spell group granted by \tability{Arcane Adept}. You gain it, but earn the spells 9 levels later than usual. \\
+\end{jobchoice}
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Counter Magic}: Core Ability acquired at level 19. You may add your Air level to your Armor and your Fire level to your Magic Armor. Choose either \textbf{Red Mage} or \textbf{Sage}. \pc
+
+\begin{jobchoice}[header=false]
+    \crystal{level}{12pt} & %
+    \textit{Red Mage}: After suffering the effects of a Spell or magical attack done by an enemy, you may perform the \taction{Attack} action as an interrupt against the enemy who hit you, with difficulty 0. \\
+    \crystal{level}{12pt} & %
+    \textit{Sage}: When a enemy casts a Spell, you may, as a reaction, cast the same Spell to have both spells do no effects. The difficulty of your Spell is 40, regardless of the original difficulty. \\
+\end{jobchoice}
+  
+\begin{jobchoice}
+\crystal{earth}{12pt} & %
+\tspec{Arcane Warrior}: Requires Earth level 10. Once per round, after casting a Spell, you may perform the \taction{Attack} action against one of the Spell’s targets as a free action. You can't use this ability if you cast the Spell as a free action. May only be picked by a \textit{Red Mage}. \\
+\crystal{water}{12pt} & %
+\tspec{Dispel Barriers}: Requires Water level 11. You gain the Ranged Slow (2) magical action \taction{Shieldbreak}. Firing pure magical energy waves, you destroy the defenses of allies and enemies. Make a Fire vs Water attack, difficulty 50. All affected combatants, allies and enemies, lose the \tstatus{Shell} and \tstatus{Reflect} statuses \\
+\crystal{air}{12pt} & %
+\tspec{Persistent Curses}: Requires Air level 10. When a status effect you inflicted with a Spell effect ends at the end of a round, you may repeat the Spell's attack roll. If you hit, extend its duration by one round. This ability may not extend Spell effects already extended by this ability. \\ 
+\crystal{fire}{12pt} & %
+\tspec{Encyclopedic Knowledge}: Requires Fire level 12. Choose and gain one Spell Group. Casting Spells from this Group is a Slow (2) action, unless when used as a reaction. May only be picked by a \textit{Sage}. \\
+\end{jobchoice}
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Silent Spell}: Core Ability acquired at level 35. Gain one benefit according to your level 19 choice: \pc
+
+\begin{jobchoice}[header=false]
+    \crystal{level}{12pt} & %
+    \textit{Red Mage}: At the start of the first phase of the first combat round, you may cast a Spell as a free action. This Spell's level may not be greater than half of your character level. \\
+    \crystal{level}{12pt} & %
+    \textit{Sage}: Once per round, you may cast Spells normally while \tstatus{Mute}. \\
+\end{jobchoice}
+
+\begin{jobchoice}
+\crystal{earth}{12pt} \crystal{air}{12pt} & %
+\tspec{Shape Elements}: Requires Earth and Air level 14. When casting a Spell that deals damage, you may pay 25\% extra MP to change its element to any other of your choice. Also, \textit{Sages} may trigger \tability{Counter Magic} by casting any spell from the same school (Black, Time or White) whose MP cost is equal or greater than the enemy's Spell (instead of the same Spell), and \textit{Red Mages} may \tability{Counter Magic} as a free action once per round. \\
+\crystal{fire}{12pt} \crystal{water}{12pt} & %
+\tspec{Force of Thought}: Requires Fire and Water level 14. Choose and gain a Spell group. \\
+\end{jobchoice}
+\end{ffminipage}
+
+\begin{ffminipage}
+\noindent\tability{Arcane Master}: Core Ability acquired at level 50. Choose one of the following options: \pc
+\begin{jobchoice}[header=false]
+    \crystal{level}{12pt} & %
+    \textit{Arcane Versatility}: Choose and gain one Spell Group. \\
+    \crystal{level}{12pt} & %
+    \textit{Spellblade Specialist}: Choose one or two of your Main Job Slow actions that does not cast a Spell. Once per round, after you perform it, you may cast a Spell as a free action on the same target(s). You may not cast a Group-target Spell after using a single-target Slow Action, or vice versa. May only be picked by a \textit{Red Mage}. \\
+    \crystal{level}{12pt} & %
+    \textit{Mage Specialist}: Choose one Specialty from Black Mage, Time Mage, Druid or White Mage. You gain that Specialty, provided you meet its requirements. May only be picked by a \textit{Sage}. \\
+\end{jobchoice}
+
+\begin{jobchoice}
+\crystal{air}{12pt} & %
+\tspec{Twincast}: Requires Air level 18. You gain the Slow (2) action \tability{W-Magic}. Using it, you cast two Spells with one action. \tability{W-Magic} may not be used to cast spells whose base MP costs, added, exceed 150. \\
+\crystal{level}{12pt} \crystal{water}{12pt} & %
+\tspec{Forbidden Arcana}: Requires Water level 18 and character level 64. Choose an Arcane Mysteries Specialty of any Mage Job. You gain this Ability, even if you do not meet the requirements. \\
+\end{jobchoice}
+\end{ffminipage}

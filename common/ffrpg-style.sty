@@ -12,7 +12,7 @@
 \RequirePackage{xstring}
 \RequirePackage{numprint}
 \RequirePackage{collcell}
-\RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,ocgcolorlinks]{hyperref}
+\RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,colorlinks,pdfa]{hyperref}
 \RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
@@ -24,6 +24,7 @@
 \RequirePackage{csquotes}
 \RequirePackage{etoolbox}
 \RequirePackage{wrapfig}
+\RequirePackage{longtable}
 
 % We'll need @ for keyval templates in here
 \makeatletter
@@ -705,6 +706,10 @@
 \titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+
+% ToC customization
+\addtocontents{toc}{~\hfill\ferrum\protect\textbf{Page}\par\rmfamily}
+\addtocontents{toc}{\protect\thispagestyle{fancy}}
 
 % Return @ processing to normal
 \makeatother
