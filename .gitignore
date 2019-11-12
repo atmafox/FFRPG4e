@@ -19,7 +19,10 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-*.pdf
+
+# Ignore PDFs generated from tex files, likely to be in these directories:
+core/**/*.pdf
+worldbooks/**/*.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
