@@ -11,7 +11,9 @@ def generate_entries():
     xp = 0
     entries = []
     while value <= 255:
-        entries.append((str(level),str(value),str(xp)))
+        entries.append(('\\numprint{{{}}}'.format(level),
+                        '\\numprint{{{}}}'.format(value),
+                        '\\numprint{{{}}}'.format(xp)))
         xp += 1 + 2 * level
         value += 1
         level = value // 10
