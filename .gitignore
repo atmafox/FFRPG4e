@@ -286,3 +286,6 @@ TSWLatexianTemp*
 
 # For the VIM users, swap files
 *.sw?
+
+# Krita
+.*-autosave.kra
