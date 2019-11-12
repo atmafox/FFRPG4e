@@ -12,6 +12,7 @@
 \RequirePackage{xstring}
 \RequirePackage{numprint}
 \RequirePackage{collcell}
+%\RequirePackage[all]{nowidow}
 \RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,colorlinks,pdfa]{hyperref}
 \RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{booktabs}
@@ -637,7 +638,7 @@
 
 % Column centered Boco, inherit existing columns
 \newenvironment{boco}{
- 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-\columnsep}
 	 \par\medskip
 	 \yumin
 	 \begin{center}
@@ -665,7 +666,7 @@
 
 % Column centered Mog, inherit existing columns
 \newenvironment{mog}{
- 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-0.5\columnsep}
+ 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-\columnsep}
 	 \par\medskip
 	 \arabtype
 	 \begin{center}
