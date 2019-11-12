@@ -1,11 +1,19 @@
 \section{Experience Table}\label{sec:app-tab-xp}
 \markboth{Experience Table}{}
 
-\begin{center}
-\rowcolors{1}{zebragray}{} % TODO: Move to zebragray after merge a-zebrastd
-\begin{longtable}{DDD|DDD|DDD}
-    \hline Level & Value & Total XP & Level & Value & Total XP & Level & Value & Total XP \\ \hline \endhead%
-    0 & 0 & 0 & 3 & 33 & 111 & 6 & 66 & 438 \\
-    0 & 1 & 1 & 3 & 34 & 118 & 6 & 67 & 451 \\
+\rowcolors{1}{zebragray}{}\label{tab:app-xp}
+\begin{longtable}[c]{ccc|ccc|ccc}
+    \toprule%
+    Level & Value & Total XP & Level & Value & Total XP & Level & Value & Total XP \\
+    \midrule%
+  \endhead%
+    \toprule%
+    Level & Value & Total XP & Level & Value & Total XP & Level & Value & Total XP \\
+    \midrule%
+  \endfirsthead%
+    \bottomrule%
+  \endfoot%
+    \bottomrule%
+  \endlastfoot%
+    \input{revised/generated/xp-table}
 \end{longtable}
-\end{center}
