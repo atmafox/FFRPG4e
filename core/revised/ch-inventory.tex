@@ -70,12 +70,7 @@ Armors are the main defensive equipment. Although some specific armor can empowe
 This armor is commonly used by Mages and Rune Knightss. Its main purpose is to protect against magical damage, leaving it relatively ineffective against physical damage.
 
 \begin{tabarm}[label=inv-larm]
-    \tabarmrow[name=Cotton Robe,mlevel=1,cost=100,arm=0,marm=3,effect=None]
-    \tabarmrow[name=Snow Cape,mlevel=1,cost=142,arm=0,marm=3,effect=Auto --- \tstatus{Resist (Ice)}]
-    \tabarmrow[name=Mistle Robe,mlevel=1,cost=143,arm=0,marm=3,effect=\tstatus{Sleep} Immunity]
-    \tabarmrow[name=Leather Robe,mlevel=10,cost=585,arm=2,marm=10,effect=None]
-    \tabarmrow[name=Temple Cloth,mlevel=10,cost=866,arm=2,marm=10,effect=Auto --- \tstatus{Resist (Shadow)}]
-    \tabarmrow[name=Robe of Lords,mlevel=64,cost=Artifact,arm=87,marm=179,effect=Add Twice Fire level to Spells' damage; Maximum MP + 20\%]
+    \input{revised/generated/arm-light}
 \end{tabarm}
 
 \clearpage
@@ -84,7 +79,7 @@ This armor is commonly used by Mages and Rune Knightss. Its main purpose is to p
 This armor type is common between many different Jobs.  It is balanced between physical and magic defenses, leaving no easily exploitable weakness.
 
 \begin{tabarm}[label=inv-marm]
-    \tabarmrow[name=Leather Outfit,mlevel=1,cost=84,arm=1,marm=1,effect=None]
+    \input{revised/generated/arm-medium}
 \end{tabarm}
 
 \clearpage
@@ -93,7 +88,7 @@ This armor type is common between many different Jobs.  It is balanced between p
 Favoring defense against physical damage, this type of armor is popular among Warriors and Adepts.  However, it does leave the wearer more vulnerable to magical damage.
 
 \begin{tabarm}[label=inv-harm]
-    \tabarmrow[name=Leather Plate,mlevel=1,cost=99,arm=3,marm=0,effect=None]
+    \input{revised/generated/arm-heavy}
 \end{tabarm}
 
 \clearpage
@@ -113,17 +108,48 @@ Many weapons also have special effects.  All effects that modify the weapon's at
     \adjincludegraphics[width=0.9\textwidth]{block-shopping}
 \end{center}
 \clearpage
-
 \subsubsection{Light Swords / Knives}
 
 Fast weapons that deal \telem{Puncture}-elemental damage.  Their Offensive and Deffensive Stats are Air.  Due to their weak damage, they are largely a defensive option.  While a character is equipped with one of these weapons, they may use the reaction \taction{Parry}.  It is used when they suffer a physical attack to make a roll Air vs Air at difficulty 40.  If successful, they don't suffer the attack's effects.  These weapons are always Melee.
 
 \begin{tabwpn}[label=inv-lsword,range=melee,type=physical,element=puncture,roll=airvair]
-    \tabwpnrow[name=Femme Fatale,mlevel=64,cost=Artifact,damage=16x,effect=\tstatus{Death} touch \newline \telem{Shadow}-elemental damage]
+    \input{revised/generated/wpn-light-swords}
 \end{tabwpn}
+\clearpage
+\subsubsection{Heavy Weapons \& Shields}
 
+One-handed swords, axes, hammers, maces and flails, used in conjunction with a reliable shield. Swords and axes deal Cut-elemental damage, while hammers, maces and flails deal Crush-elemental damage. It is considered a primarily defensive option as it doesn’t have high damage. Their Offensive and Defensive Stats are Earth. While you are equipped with these weapons, you can use the reaction \taction{Block}. Use when you are hit by a physical attack. Roll Earth vs Earth, difficulty 40. If successful you do not suffer the effects of the attack.
+
+\begin{tabwpn}[label=inv-hwpnshld,range=melee,type=physical,element=*,roll=earthvearth]
+    \input{revised/generated/wpn-weapons-with-shields}
+\end{tabwpn}
+\clearpage
+\subsubsection{Heavy Weapons}
+
+Two-handed swords, axes, sledgehammers, pickaxes, scythes and flails that deal physical damage. Swords, axes and scythes deal Cut-elemental damage, hammers and flails deal Crush-elemental damage, while pickaxes deal Puncture-elemental damage. These weapons are the Earth-based choice with the highest damage potential. Its Offensive and Defensive Stats are Earth. This weapon type is widely used by characters who favor offense over defense.
+
+\begin{tabwpn}[label=inv-hwpn,range=melee,type=physical,element=*,roll=earthvearth]
+    \input{revised/generated/wpn-heavy-weapons}
+\end{tabwpn}
 \clearpage
 
+\subsubsection{Polearms}
+
+Spears, glaives and other two-handed weapons that deal Puncture-elemental physical damage. Its Offensive Stat may be Earth or Air, and its Defensive Stat is Earth. Due to its versatility, you must choose whether to use Earth or Air as the Offensive Stat for each attack with this weapon type. They are a good option for characters that want to deal a good physical damage and need high levels in both Air and Earth, as the Warrior. 
+
+\begin{tabwpn}[label=inv-pole,range=melee,type=physical,element=puncture,roll=earthvearth]
+    \input{revised/generated/wpn-polearms}
+\end{tabwpn}
+\clearpage
+
+\subsubsection{Claws / Gloves}
+
+Claws and gloves are Monks’ signature weapon, but almost any character can fight well with them. They deal physical damage, with Gloves dealing Crush-elemental and Claws dealing Cut-elemental damage. Its Offensive Stat is Earth, and its Defensive Stat is Air. Its low cost and ease of use make this weapon a good option for characters that don’t want to worry too much about weapons, and its broad spectrum of effects mean that any character can benefit if you choose the right Claw or Glove. 
+
+\begin{tabwpn}[label=inv-claws,range=melee,type=physical,element=crush,roll=earthvair]
+    \input{revised/generated/wpn-claws-gloves}
+\end{tabwpn}
+\clearpage
 \subsection{Accessories}\label{subsec:inv-accessories}
 
 \begin{multicols}{2}
@@ -135,7 +161,7 @@ Although it may seem simple, equipping an accessory requires the character to sp
 \end{multicols}
 
 \begin{tabacc}[label=inv-acc1]
-    \tabaccrow[name=Nishijin Belt,mlevel=1,cost=500,effect=\tstatus{Sleep} Immunity]
+    \input{revised/generated/acc-accessories}
 \end{tabacc}
 
 \clearpage
@@ -180,7 +206,7 @@ Characters carrying more items than their carrying capacity suffer increased dif
 \subsection{Battle Items}\label{subsec:battleitems}
 
 \begin{tabitem}[label=inv-battles]
-    \tabitemrow[name=Arctic Wind,cost=100,effect=Cast the spell \tspell{Blizzard}]
+    \input{revised/generated/itm-battle}
 \end{tabitem}
 \vfill
 \begin{center}

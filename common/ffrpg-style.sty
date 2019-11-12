@@ -578,17 +578,14 @@
 
 \newenvironment*{tabacc}[1][]{%
 	\krdsetkeys{tabacc}{#1}%
-	\begin{table}[h]
-		\centering
-		\label{tab:\tc@label}
-	    \rowcolors{1}{zebragray}{}
-		\begin{tabular}{lrrp{0.35\textwidth}}
-        		\toprule
-        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+	\label{tab:\tc@label}
+    \rowcolors{1}{zebragray}{}
+	\begin{longtable}[c]{lrrp{0.35\textwidth}}
+		\toprule
+		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule \endhead
+		\bottomrule \endfoot
 }{
-			\bottomrule
-		\end{tabular}
-	\end{table}
+	\end{longtable}
 }
 
 \newcommand*{\tabaccrow}[1][]{%
@@ -617,17 +614,14 @@
 
 \newenvironment*{tabitem}[1][]{%
 	\krdsetkeys{tabitem}{#1}%
-	\begin{table}[h]
-		\centering
-		\label{tab:\ti@label}
-	    \rowcolors{1}{zebragray}{}
-		\begin{tabular}{lrp{0.5\textwidth}}
-        		\toprule
-        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule
+	\label{tab:\ti@label}
+    \rowcolors{1}{zebragray}{}
+	\begin{longtable}[c]{lrp{0.5\textwidth}}
+  		\toprule
+		\textbf{Name} & \multicolumn{1}{c}{\textbf{Cost}} & \textbf{Effect} \\ \midrule \endhead
+		\bottomrule \endfoot
 }{
-			\bottomrule
-		\end{tabular}
-	\end{table}
+	\end{longtable}
 }
 
 \newcommand*{\tabitemrow}[1][]{%
