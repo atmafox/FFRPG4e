@@ -21,7 +21,7 @@ def fix_csv(inputfn, outputfn):
           if not row[1].strip() and not row[2].strip():
             combined = True
             lastrow[0] += " " + row[0]
-            if row[3].strip():
+            if len(row) > 3 and row[3].strip():
               lastrow[3] += '\n'+row[3]
             if len(row) > 4 and row[4].strip():
               lastrow[4] += '\n'+row[4]
