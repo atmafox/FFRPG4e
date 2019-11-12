@@ -14,7 +14,7 @@ arm-
 % items
 items.csv
 itm-
-\tabitmrow[name={0},cost={1},effect={2}]
+\tabitemrow[name={0},cost={1},effect={2}]
 
 %weapons
 weapons.csv
