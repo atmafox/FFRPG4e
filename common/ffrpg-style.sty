@@ -54,9 +54,6 @@
   includefoot
 }
 
-% Get our common images added to the path
-\graphicspath{{../img/}}
-
 % Get our fonts set up, ferrum is missing styles so fake them
 \providefontfamily\ferrum{ferrum.otf}[
 	Path			= ../common/font/,
@@ -728,6 +725,7 @@
 % ToC customization
 \addtocontents{toc}{~\hfill\ferrum\protect\textbf{Page}\par\rmfamily}
 \addtocontents{toc}{\protect\thispagestyle{fancy}}
+\patchcmd\@dottedtocline{\hfil}{\hss}{}{}
 
 % Return @ processing to normal
 \makeatother
