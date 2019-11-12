@@ -1,6 +1,6 @@
-Name ,Cost (Gil),Effect
+"Name ",Cost (Gil),Effect
 ,,
-battle,,
+battle,,##############################################
 ,,
 Arctic Wind,100,Casts the Spell Blizzard.
 Bomb Fragment,100,Casts the Spell Fire.

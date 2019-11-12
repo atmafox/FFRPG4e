@@ -7,14 +7,14 @@ acc-
 \tabaccrow[name={0},mlevel={1},cost={2},effect={3}]
 
 % armor
-armor.csv
+armors.csv
 arm-
 \tabarmrow[name={0},mlevel={1},cost={2},arm={3},marm={4},effect={5}]
 
 % items
 items.csv
 itm-
-\tabitmrow[name={0},mlevel={1},cost={2},effect={3}]
+\tabitmrow[name={0},cost={1},effect={2}]
 
 %weapons
 weapons.csv
