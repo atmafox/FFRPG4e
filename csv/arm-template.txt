@@ -1,2 +1,0 @@
-arm-
-\tabarmrow[name=%s,mlevel=%s,cost=%s,arm=%s,marm=%s,effect=%s]
