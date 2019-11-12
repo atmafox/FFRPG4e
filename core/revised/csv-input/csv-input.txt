@@ -1,0 +1,22 @@
+% every three uncommented non-blank lines are a config group
+% the parser is dirt stupid
+
+% accessories
+accessories.csv
+acc-
+\tabaccrow[name={0},mlevel={1},cost={2},effect={3}]
+
+% armor
+armors.csv
+arm-
+\tabarmrow[name={0},mlevel={1},cost={2},arm={3},marm={4},effect={5}]
+
+% items
+items.csv
+itm-
+\tabitmrow[name={0},cost={1},effect={2}]
+
+%weapons
+weapons.csv
+wpn-
+\tabwpnrow[name={0},mlevel={1},cost={2},damage={3},effect={4}]
