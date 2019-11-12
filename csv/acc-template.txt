@@ -1,2 +1,0 @@
-acc-
-\tabaccrow[name=%s,mlevel=%s,cost=%s,effect=%s]
