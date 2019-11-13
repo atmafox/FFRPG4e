@@ -489,7 +489,7 @@
 
 \newenvironment*{tabarm}[1][]{%
 	\krdsetkeys{tabarm}{#1}%
-	\begin{table}[h]
+	\begin{table}[!htb]
 		\centering
 		\label{tab:\ta@label}
 	    \rowcolors{1}{zebragray}{}
@@ -536,13 +536,13 @@
 
 \newenvironment*{tabwpn}[1][]{%
 	\krdsetkeys{tabwpn}{#1}%
-	\begin{table}[h]
+	\begin{table}[!htb]
 		\centering
 		\label{tab:\tw@label}
 	    \rowcolors{1}{}{zebragray}
 		\begin{tabular}{lrrrp{0.4\textwidth}}
 				\toprule
-				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
+%				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
         		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{Damage}} & \textbf{Effect} \\ \midrule
 }{
 			\bottomrule
