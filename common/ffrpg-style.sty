@@ -185,7 +185,46 @@
 \newcommand{\toption}[1]{\textbf{#1}}
 
 % Status types 
-\newcommand{\tstatus}[1]{\textbf{#1}}
+\newcommand{\tstatus}[1]{%
+	\textbf{#1}%
+}
+\newcommand{\tvarstatus}[2]{%
+	\textbf{#1} \textit{(#2)}%
+}
+
+\newcommand{\tstatustype}[1]{#1}
+
+\newcommand{\teffect}[1]{#1}
+
+\newcommand{\tfxedamage}[1]{\teffect{Elemental Damage}: \telem{#1}}
+
+\newcommand{\tfxafocus}[1]{\teffect{Arcane Focus}: \tspell{#1}}
+\newcommand{\tfxsweave}[1]{\teffect{Spell Weave}: \tspell{#1}}
+\newcommand{\tfxdfocus}[2]{\tfxafocus{#1}\newline{}\tfxsweave{#2}}% dual focus
+\newcommand{\tfxcritspell}[1]{\teffect{Critical Spell}: \tspell{#1}}
+
+\newcommand{\tfxdestroyer}[1]{\teffect{Destroyer}: \tmtype{#1}}
+\newcommand{\tfxkiller}[1]{\teffect{Killer}: \tmtype{#1}}
+
+\newcommand{\tfxauto}[1]{\teffect{Auto}: \tstatus{#1}}
+\newcommand{\tfxsos}[1]{\teffect{SOS}: \tstatus{#1}}
+\newcommand{\tfximmunity}[1]{\teffect{Immunity}: \tstatus{#1}}
+\newcommand{\tfxresistance}[1]{\teffect{Resistance}: \tstatus{#1}}
+\newcommand{\tfxtouch}[1]{\teffect{Touch}: \tstatus{#1}}
+\newcommand{\tfxstrike}[1]{\teffect{Strike}: \tstatus{#1}}
+
+\newcommand{\tfxautov}[2]{\teffect{Auto}: \tvarstatus{#1}{#2}}
+\newcommand{\tfxsosv}[2]{\teffect{SOS}: \tvarstatus{#1}{#2}}
+\newcommand{\tfximmunityv}[2]{\teffect{Immunity}: \tvarstatus{#1}{#2}}
+\newcommand{\tfxresistancev}[2]{\teffect{Resistance}: \tvarstatus{#1}{#2}}
+\newcommand{\tfxtouchv}[2]{\teffect{Touch}: \tvarstatus{#1}{#2}}
+\newcommand{\tfxstrikev}[2]{\teffect{Strike}: \tvarstatus{#1}{#2}}
+
+
+\newcommand{\tfxtimmunity}[1]{\teffect{Immunity}: \tstatustype{#1}}
+\newcommand{\tfxtresistance}[1]{\teffect{Resistance}: \tstatustype{#1}}
+
+
 
 % mob ranks
 \newcommand{\tmob}[1]{\textbf{#1}}
@@ -299,6 +338,7 @@
 \krddefinekeys{actype}[ac@]{
 	choice/slow/quick/
 		quick.do=\def\ac@slow{Quick},
+		0.do=\def\ac@slow{Slow (0)},
 		1.do=\def\ac@slow{Slow (1)},
 		2.do=\def\ac@slow{Slow (2)},
 		3.do=\def\ac@slow{Slow (3)},
@@ -307,7 +347,8 @@
 		6.do=\def\ac@slow{Slow (6)},
 		7.do=\def\ac@slow{Slow (7)},
 		8.do=\def\ac@slow{Slow (8)},
-		9.do=\def\ac@slow{Slow (9)};
+		9.do=\def\ac@slow{Slow (9)},
+		n.do=\def\ac@slow{Slow (n)};
 	bool/reaction;
 	bool/magical;
 	bool/ranged;
