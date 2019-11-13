@@ -44,7 +44,7 @@ Regardless of how the Rogue earn this extra Gil, the group shall not be punished
 
 \begin{multicols}{2}
 
-Equipment is the main use for Gil. Each character can equip exactly one weapon and armor, plus two accessories. In the case of weapons and armor, they are divided into categories. \tequip{Light Armor}, \tequip{Medium Armor} and \tequip{Heavy Armor} are the available armors. Weapons can be classified as \tequip{Light Swords / Knives}, \tequip{Heavy Weapons \& Shield}, \tequip{Heavy Weapons}, \tequip{Polearms}, \tequip{Claws / Gloves}, \tequip{Twin Weapons}, \tequip{Bows}, \tequip{Throwing Weapons}, \tequip{Rifle / Crossbows}, \tequip{Staffs}, \tequip{Wands}, and \tequip{Instruments}.
+Equipment is the main use for Gil. Each character can equip exactly one weapon and armor, plus two accessories. In the case of weapons and armor, they are divided into categories. \tequip{Light Armor}, \tequip{Medium Armor} and \tequip{Heavy Armor} are the available armors. Weapons can be classified as \tequip{Light Swords / Knives}, \tequip{Heavy Weapons \& Shield}, \tequip{Heavy Weapons}, \tequip{Polearms}, \tequip{Claws / Gloves}, \tequip{Twin Blades}, \tequip{Bows}, \tequip{Throwing Weapons}, \tequip{Rifle / Crossbows}, \tequip{Staffs}, \tequip{Wands}, and \tequip{Instruments}.
 
 The character’s Abilities indicate which weapons and armor they may equip. If a character wishes to equip a weapon that they may not, it doesn’t add their Offensive Stat to any roll or attack; If a character wishes to equip an armor that they may not, they don’t consider their Defensive Stat in opponents’ rolls or attacks.
 
@@ -90,8 +90,9 @@ Favoring defense against physical damage, this type of armor is popular among Wa
 \begin{tabarm}[label=inv-harm]
     \input{revised/generated/arm-heavy}
 \end{tabarm}
-
+\footnotesize{Maximilian grants \tstatus{Immune}(\telem{Bio}, \telem{Light} and \telem{Shadow}) and \tstatus{Resist}(\telem{Cut}, \telem{Crush} and \telem{Puncture})} 
 \clearpage
+
 \subsection{Weapons}\label{subsec:inv-weapons}
 
 \begin{multicols}{2}
@@ -116,28 +117,32 @@ Fast weapons that deal \telem{Puncture}-elemental damage.  Their Offensive and D
     \input{revised/generated/wpn-light-swords}
 \end{tabwpn}
 \clearpage
-\subsubsection{Heavy Weapons \& Shields}
+
+\subsubsection{Weapons \& Shields}
 
 One-handed swords, axes, hammers, maces and flails, used in conjunction with a reliable shield. Swords and axes deal Cut-elemental damage, while hammers, maces and flails deal Crush-elemental damage. It is considered a primarily defensive option as it doesn’t have high damage. Their Offensive and Defensive Stats are Earth. While you are equipped with these weapons, you can use the reaction \taction{Block}. Use when you are hit by a physical attack. Roll Earth vs Earth, difficulty 40. If successful you do not suffer the effects of the attack.
 
-\begin{tabwpn}[label=inv-hwpnshld,range=melee,type=physical,element=*,roll=earthvearth]
+\begin{tabwpn}[label=inv-hwpnshld,range=melee,type=physical,element=crush / cut,roll=earthvearth]
     \input{revised/generated/wpn-weapons-with-shields}
 \end{tabwpn}
+\footnotesize{\textit{The suggested names exist for ease of reference. If, for example, you want to buy a mace that deals Crush-elemental damage equal to 13 x Earth level and is Piercing, nothing prevents you from renaming the Soul Saber as Soul Mace.}}
 \clearpage
+
 \subsubsection{Heavy Weapons}
 
 Two-handed swords, axes, sledgehammers, pickaxes, scythes and flails that deal physical damage. Swords, axes and scythes deal Cut-elemental damage, hammers and flails deal Crush-elemental damage, while pickaxes deal Puncture-elemental damage. These weapons are the Earth-based choice with the highest damage potential. Its Offensive and Defensive Stats are Earth. This weapon type is widely used by characters who favor offense over defense.
 
-\begin{tabwpn}[label=inv-hwpn,range=melee,type=physical,element=*,roll=earthvearth]
+\begin{tabwpn}[label=inv-hwpn,range=melee,type=physical,element=crush / cut / puncture,roll=earthvearth]
     \input{revised/generated/wpn-heavy-weapons}
 \end{tabwpn}
+\footnotesize{\textit{The suggested names exist for ease of reference. If, for example, you want to buy a pickax that deals Puncture-elemental damage equal to 10 x Earth level, with Slow Touch, nothing prevents you from renaming the Old Axe as Old Pick.}}
 \clearpage
 
 \subsubsection{Polearms}
 
-Spears, glaives and other two-handed weapons that deal Puncture-elemental physical damage. Its Offensive Stat may be Earth or Air, and its Defensive Stat is Earth. Due to its versatility, you must choose whether to use Earth or Air as the Offensive Stat for each attack with this weapon type. They are a good option for characters that want to deal a good physical damage and need high levels in both Air and Earth, as the Warrior. 
+Spears, glaives and other two-handed weapons that deal Puncture-elemental physical damage. You may either use its Offensive Stat as Earth and its Defensive Stat as Air or its Offensive Stat as Air and its Defensive Stat as Earth. Due to its versatility, you must choose whether to attack Earth vs Air or Air vs Earth for each attack with this weapon type. They are a good option for characters that want to be accurate without needing to swap weapons and need high levels in both Air and Earth, as the Warrior. 
 
-\begin{tabwpn}[label=inv-pole,range=melee,type=physical,element=puncture,roll=earthvearth]
+\begin{tabwpn}[label=inv-pole,range=melee,type=physical,element=puncture,roll=earthvair / airvearth]
     \input{revised/generated/wpn-polearms}
 \end{tabwpn}
 \clearpage
@@ -146,10 +151,97 @@ Spears, glaives and other two-handed weapons that deal Puncture-elemental physic
 
 Claws and gloves are Monks’ signature weapon, but almost any character can fight well with them. They deal physical damage, with Gloves dealing Crush-elemental and Claws dealing Cut-elemental damage. Its Offensive Stat is Earth, and its Defensive Stat is Air. Its low cost and ease of use make this weapon a good option for characters that don’t want to worry too much about weapons, and its broad spectrum of effects mean that any character can benefit if you choose the right Claw or Glove. 
 
-\begin{tabwpn}[label=inv-claws,range=melee,type=physical,element=crush,roll=earthvair]
+\begin{tabwpn}[label=inv-claws,range=melee,type=physical,element=crush / cut,roll=earthvair]
     \input{revised/generated/wpn-claws-gloves}
 \end{tabwpn}
+\footnotesize{\textit{The suggested names exist for ease of reference. If, for example, you want to buy claws that deal Cut-elemental damage equal to 5 x Earth level, with Sleep Touch, nothing prevents you from renaming the Magic Glove as Magic Claw.}}
 \clearpage
+
+\subsubsection{Katanas}
+
+Katanas are a special kind of swords. Unlike normal swords, they are wielded with more finesse, like light swords, and the spirits they contain within can be released for magical effects. Its Offensive stat is Air and its Defensive stat is Earth. Their damage is physical and Cut-elemental. 
+
+\begin{tabwpn}[label=inv-katanas,range=melee,type=physical,element=cut,roll=earthvair]
+    \input{revised/generated/wpn-katanas}
+\end{tabwpn}
+\footnotesize{When using the Genji Blade, reduce the charge time of your first Slow action each turn to zero.}
+\clearpage
+
+\subsubsection{Katanas}
+
+Katanas are a special kind of swords. Unlike normal swords, they are wielded with more finesse, like light swords, and the spirits they contain within can be released for magical effects. Its Offensive stat is Air and its Defensive stat is Earth. Their damage is physical and Cut-elemental.
+
+\begin{tabwpn}[label=inv-katanas,range=melee,type=physical,element=cut,roll=earthvair]
+    \input{revised/generated/wpn-katanas}
+\end{tabwpn}
+\clearpage
+
+\subsubsection{Bows}
+
+Archery is one of the main Ranged combat styles. They deal Puncture-elemental physical damage. Its Offensive and Defensive Stats are Air. Since its attacks are Ranged, it can be used to hit flying enemies. It is one of the weapons most commonly used by Archers due to its good damage and variety of effects.
+
+\begin{tabwpn}[label=inv-bows,range=ranged,type=physical,element=puncture,roll=airvair]
+    \input{revised/generated/wpn-bows}
+\end{tabwpn}
+\clearpage
+
+\subsubsection{Throwing Weapons}
+
+Darts, bombs, chakrams, shuriken and javelins that deal Puncture-elemental physical damage. Its Offensive Stat is Earth and its Defensive Stat is Air. Since its attacks are Ranged, it can be used to hit flying enemies. A throwing weapon's \textit{Status Touch}, \textit{Status Strike} and \textit{Critical Spell} abilities apply to all actions made with that weapon that requires a weapon attack, and \textit{Status Touch} and \textit{Status Strike} effects have their duration increased by one round.
+
+\begin{tabwpn}[label=inv-throwing-weapons,range=ranged,type=physical,element=puncture,roll=earthvair]
+    \input{revised/generated/wpn-throwing-weapons}
+\end{tabwpn}
+\footnotesize{When cast by Super Ball's Critical Spell effect, /textit{Black Hole}'s difficulty is 70.}
+\clearpage
+
+\subsubsection{Rifles / Crossbows}
+
+This weapon type can represent rifles, muskets, crossbows or a combination of them, depending on the world’s technology. They deal Puncture-elemental physical damage. Its Offensive Stat is Fire and its Defensive Stat is Air. Since its attacks are Ranged, it can be used to hit flying enemies. Archers, Rogues and Alchemists use this weapon type a lot due to its good damage and use of the Fire Stat to attack.
+
+\begin{tabwpn}[label=inv-rifles-crossbows,range=ranged,type=physical,element=puncture,roll=firevair]
+    \input{revised/generated/wpn-rifles-crossbows}
+\end{tabwpn}
+\clearpage
+
+\subsubsection{Wands}
+
+Weapons that attack using your magical energy. They deal Crush-elemental magical damage. Its Offensive and Defensive Stats are Fire. Since its attacks are Ranged, it can be used to hit flying enemies. They are quite popular among Black Mages. A striking wand feature is its ability to cast spells, granting the wielder more versatility and power.
+
+\begin{tabwpn}[label=inv-wands,range=ranged,type=magical,element=crush,roll=firevfire]
+    \input{revised/generated/wpn-wands}
+\end{tabwpn}
+\footnotesize{Each time Arc Arcana hits, inflict the \tstatus{Vulnerable} status to the target until the end of next round. Roll 1d10 to find which element it is: 1: \telem{Fire}; 2: \telem{Ice}; 3: \telem{Lightning}; 4: \telem{Earth}; 5: \telem{Air}; 6: \telem{Water}; 7:\telem{Bio}; 8: \telem{Light}; 9: \telem{Shadow}; 0: \telem{Cut}, \telem{Crush} and \telem{Puncture}}
+\clearpage
+
+\subsubsection{Staves}
+
+Two-handed weapons that attack using your magical energy. They deal Crush-elemental magical damage. Its Offensive Stat is Fire and its Defensive Stat is Water. They deal good damage and are popular among various characters who can’t use Spells offensively, like White Mages. Most staves can cast Spells, granting the wielder versatility and power.
+
+\begin{tabwpn}[label=inv-staves,range=melee,type=magical,element=crush,roll=firevwater]
+    \input{revised/generated/wpn-staves}
+\end{tabwpn}
+\clearpage
+
+\subsubsection{Instruments}
+
+Artists’ exclusive weapon type. They deal Cut-elemental magical damage. Its Offensive and Defensive Stats are Water. Being the only weapon able to attack using Water as Offensive Stat, they are highly valued by Artists, despite its low damage output. They are Ranged weapons, and therefore can hit flying enemies.
+
+\begin{tabwpn}[label=inv-instruments,range=ranged,type=magical,element=cut,roll=watervwater]
+    \input{revised/generated/wpn-instruments}
+\end{tabwpn}
+\footnotesize{\textit{Instruments can take many forms, by artist’s choice, like violins, flutes, drums, guitars, trumpets, among others. Replace [x] with the name of your instrument when buying this weapon. For example, you may have a Blood Flute; a Gold Harp; Dream Drums or even a Holy Violin.}}
+\clearpage
+
+\subsubsection{Twin Blades}
+
+Dervish’s exclusive weapon type, the ability to fight with two one-handed blades at the same time involves much more than just training. When attacking with them, you deal Cut-elemental physical damage. These weapons are the Air - based choice with the highest damage potential. Its Offensive and Defensive Stats are Air. It is very difficult to defend against such weapons, and once per round, the attacker may roll a weapon attack twice and take the better result.
+
+\begin{tabwpn}[label=inv-twin-blades,range=melee,type=physical,element=cut,roll=airvair]
+    \input{revised/generated/wpn-twin-blades}
+\end{tabwpn}
+\clearpage
+
 \subsection{Accessories}\label{subsec:inv-accessories}
 
 \begin{multicols}{2}
