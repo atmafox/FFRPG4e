@@ -1,4 +1,38 @@
-"Name ",Cost (Gil),Effect
+Name ,Cost (Gil),Effect
+,,
+,,
+potions,,##############################################
+,,
+Tonic,25,Heals a target 25 HP
+Potion,50,Heals a target 50 HP
+Antidote,50,Removes all Toxic negative status effects from a target
+Eye Drops,50,Removes the Blind status effect from a target
+Tincture,75,Heals a target 30 MP
+Echo Screen,100,Removes the Mute status effect from a target
+Hi-Potion,150,Heals a target 125 HP
+Ether,150,Heals a target 60 MP
+Tranquilizer,150,Removes the Berserk status effect from a target
+Bandage,200,Removes a Seal status effect from a target
+Alarm Clock,200,Removes all Mental status effects from a target
+Maiden's Kiss,250,Removes the Toad status effect from a target
+Hyper Potion,300,Heals a target 250 HP
+Hi-Ether,325,Heals a target 150 MP
+Soft,400,Removes the Stone status effect from a target
+Mega Potion,500,Heals all characters in a group 100 HP each
+Phoenix Down,500,Restores a 0 HP target to 1 HP
+Holy Water,500,Removes the Zombie status effect from a target
+Chronos Tear,600,Removes all negative Time status effects from a target
+Hyper Ether,650,Heals a target 300 MP
+X - Potion,750,Heals a target 500 HP
+Ultra Potion,800,Heals all characters in a group 200 HP each
+X-Ether,1400,Heals a target 500 MP
+Remedy,1500,Removes all negative status effects from a target
+Phoenix Pinion,2800,Restores a 0 HP target to his Max HP
+Mega Phoenix,3500,Restore all 0 HP members of a group with to 1 HP
+Elixir,5000,Heals HP and MP equal to the target’s maximum values
+Phoenix Spirit,Rare,Restore all 0 HP members of a group to their max HP
+Megalixir,Rare,Each member of a group heals HP and MP equal to their maximum values
+,,
 ,,
 battle,,##############################################
 ,,
