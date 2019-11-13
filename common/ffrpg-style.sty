@@ -715,7 +715,13 @@
 \titleformat{\chapter}{\ferrum\huge\bfseries\itshape\centering}{\thechapter}{1em}{}
 \titleformat{\section}{\ferrum\LARGE\itshape\centering}{\thesection}{1em}{}
 \titleformat{\subsection}{\ferrum\Large\upshape\centering}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+\newcommand{\regularsubsubsection}{%
+	\titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}
+}
+\newcommand{\weapontypesubsubsection}{%
+	\titleformat{\subsubsection}{\ferrum\large\itshape}{\thesubsubsection}{1em}{}{\hfill TEST}
+}
+\regularsubsubsection%
 
 % ToC customization
 \addtocontents{toc}{~\hfill\ferrum\protect\textbf{Page}\par\rmfamily}
