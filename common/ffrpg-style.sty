@@ -78,6 +78,9 @@
 	BoldItalicFont = *-bolditalic,
 	]
 
+	% Thunk the missing characters through to mainfont
+	% So using ``, '', and \ldots will stay in the same font as currently
+	% but using the literal form below it will fall back
 	\newunicodechar{“}{{\rmfamily``}}
 	\newunicodechar{”}{{\rmfamily''}}
 	\newunicodechar{…}{{\rmfamily\ldots}}
