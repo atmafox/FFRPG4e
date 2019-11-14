@@ -13,6 +13,7 @@
 \RequirePackage{numprint}
 \RequirePackage{collcell}
 %\RequirePackage[all]{nowidow}
+\RequirePackage{newunicodechar}
 \RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,colorlinks,pdfa]{hyperref}
 \RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{booktabs}
@@ -76,6 +77,13 @@
 	ItalicFont = *-italic,
 	BoldItalicFont = *-bolditalic,
 	]
+
+	% Thunk the missing characters through to mainfont
+	% So using ``, '', and \ldots will stay in the same font as currently
+	% but using the literal form below it will fall back
+	\newunicodechar{“}{{\rmfamily``}}
+	\newunicodechar{”}{{\rmfamily''}}
+	\newunicodechar{…}{{\rmfamily\ldots}}
 
 % Colours for the two characters
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
