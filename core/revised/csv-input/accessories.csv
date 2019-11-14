@@ -63,8 +63,7 @@
 \tfximmunity{Sleep}
 \tfximmunity{Stone}"
 "Rosetta Ring",46,12000,"\tfxautov{Immune}{Fire}
-\tfximmunity{Condemn}
-"
+\tfximmunity{Condemn}"
 "Rubber Boots",46,10000,"\tfxautov{Immune}{Lightning}
 \tfximmunity{Stop}"
 "Scarab",46,9600,"\tfximmunity{Immobilize}
@@ -74,7 +73,7 @@
 \tfximmunity{Berserk}"
 "Star Armlet",46,9600,"\tfximmunity{Slow}
 \tfximmunity{Stop}"
-"Gold Hairpin",53,15000,Your Spells cost 25% less MP
+"Gold Hairpin",53,15000,-25% MP cost to all Spells
 "Japa Mala ",53,13000,"\tfxautov{Immune}{Bio}
 \tfximmunity{Poison}
 \tfximmunity{Virus}
