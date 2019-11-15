@@ -10,7 +10,7 @@ Silver Rapier,10,330,3 x,
 Scarlette,10,495,3 x,\tfxedamage{Fire}
 Magic Needle,10,482,3 x,\tfxsos{Strengthen: Magic}
 Estoc,19,750,5 x,
-Fleuret,19,1150,6 x,
+Fleuret,19,1150,5 x,Add Air level to damage
 Djinn Flyssa,19,1070,5 x,\tfxedamage{Air}
 Mythril Rapier,28,1500,8 x,
 Mail Breaker,28,2250,8 x,\teffect{Piercing}
@@ -45,7 +45,7 @@ Mind Flail,19,1157,5 x,\teffect{MP Drain}
 Ancient Sword,19,1077,5 x,\tfxedamage{Earth}
 Mythril Sword / Mythril Mace,28,1503,8 x,
 Watchful,28,2268,8 x,\tfxkiller{Beast}
-Regal Cutlass,28,2446,9 x,
+Regal Cutlass,28,2446,8 x,Add Earth level to damage
 Falchion / Triple Flail,37,3483,10 x,
 Blood Hammer,37,5484,10 x,\tability{Improved Critical}
 Demon Slicer,37,5170,10 x,\tfxkiller{Demon}
@@ -84,7 +84,7 @@ Old Axe,28,2620,10 x,\tfxtouch{Slow}
 Arcane Buster,28,2710,10 x,\teffect{Arcane Damage}
 War Scythe,37,3890,12 x,
 Viking Axe,37,5770,12 x,\tfxtouch{Berserk}
-Greatsword,37,6020,13 x,
+Greatsword,37,6020,12 x,Add Earth level to damage
 War Axe / War Maul,46,7902,15 x,
 Blood Axe,46,11810,15 x,\teffect{HP Drain}
 Golem Buster,46,9890,15 x,\tfxdestroyer{Construct}
@@ -137,10 +137,10 @@ Berserker Spear,55,Rare,16 x,Add twice Water level to damage
 claws-gloves,,,,##############################################
 ,,,,
 Leather Glove / Bronze Claws,1,55,2 x,
-Storm Claws,1,78,2 x,\tfxedamage{Lightning}
+Cursed Claws,1,78,2 x,\tfxtouch{Curse}
 Sonar,1,90,2 x,\teffect{Sensor}
 Metal Knuckle / Iron Claws,10,331,3 x,
-Dusk Knuckle,10,497,3 x,\tfxtouch{Poisoni}
+Dusk Knuckle,10,497,3 x,\tfxtouch{Poison}
 Mirage Claws,10,483,3 x,\tfxedamage{Earth}
 Mythril Glove / Mythril Claw,19,749,5 x,
 Scissor Fangs,19,1144,5 x,\teffect{HP Drain}
@@ -161,7 +161,7 @@ War Monger,46,9525,13 x,\tfxtouch{Disable}
 \tfxtouch{Meltdown}"
 "Colossus ",55,Rare,14 x,"\tfxedamage{Earth}
 \tfxtouch{Stone}"
-"Godhand ",64,Artifact,16 x,"\tfxafocus{Curse}
+"Godhand ",64,Artifact,16 x,"\tfxafocus{Hex}
 \tfxkiller{Demon}"
 "Tempest Claws ",64,Artifact,16 x,"\tfxauto{Haste}
 \teffect{Piercing}"
@@ -188,7 +188,7 @@ Bizen’s Pride,19,1406,6x,"\tfxsweave{Slow}
 \tfxtouch{Weaken: Speed}"
 Onikiri,28,1913,9x,
 Hibari,28,2597,9x,\tfxdfocus{Meteorite}{Comet}
-Ikuzatachi,28,2610,10x,
+Ikuzatachi,28,2610,9x,Add Air level to damage
 Kiyomori,37,4008,11x,
 Jyurokusakura,37,5970,11x,\teffect{Piercing}
 Muketsu,37,6042,11x,"\tfxsweave{Condemn}
@@ -259,11 +259,12 @@ Aero Bomb,28,2239,8 x,\tfxedamage{Air}
 Doom Darts,28,2447,8 x,\tfxcritspell{Condemn}
 Juji Shuriken,37,3479,10 x,
 Shadow Scroll,37,5485,10 x,\tfxedamage{Shadow}
-Mind Scroll,37,5136,10 x,\tfxsos{Premonition}
+Mind Scroll,37,5136,10 x,"\tfxsos{Premonition}
+\tfxtouch{Curse}"
 Manji Shuriken,46,6174,13 x,
 Burst Bomb,46,9001,13 x,\tfxedamage{Light}
 Stun Scroll,46,9525,13 x,\tfxtouch{Stop}
-"Koga Shuriken ",55,Rare,14 x,"\tfxcritspell{Curse}
+"Koga Shuriken ",55,Rare,14 x,"\tfxcritspell{Hex}
 \teffect{Piercing}"
 "Flaming Bomb ",55,Rare,14 x,"\tfxedamage{Fire}
 \teffect{MP Drain}"
@@ -283,7 +284,7 @@ Crossbow,1,70,3x,
 Dark Rifle,1,111,3x,\tfxtouch{Blind}
 Flamethrower,1,91,3x,\tfxedamage{Fire}
 Power Crossbow,10,413,5x,
-Silver Rifle,10,623,6x,
+Silver Rifle,10,623,5x,Add Fire level to damage
 Night Killer,10,599,5x,\tfxedamage{Shadow}
 Hunting Bow,19,1091,7x,
 Stone Gun,19,1521,7x,\tfxcritspell{Petrify}
@@ -397,7 +398,7 @@ Aqua [x],1,102,2 x,\tfxedamage{Water}
 Dream [x],1,107,2 x,\tfxtouch{Sleep}
 Silver [x],10,391,3 x,
 Rune [x],10,589,3 x,Add Fire level to damage
-Golem's [x],10,567,3 x,\tfxedamage{Earth}
+Golem's [x],10,567,3 x,\tfxtouch{Curse}
 Mythril [x],19,1031,5 x,
 Battle [x],19,1342,5 x,\tfxtouch{Mute}
 Blood [x],19,1313,5 x,\teffect{HP Drain}
@@ -430,7 +431,7 @@ twin-blades,,,,##############################################
 ,,,,
 Case of Rapiers,1,70,3 x,
 Light Knives,1,92,3 x,\tfxedamage{Light}
-Baselard,1,108,3 x,\tfxtouch{Weaken: Armor}
+Baselard,1,108,3 x,\tfxtouch{Curse}
 Dual Scimitars,10,412,5 x,
 Kunais,10,620,5 x,Add Earth level to damage
 Storm Rapiers,10,595,5 x,\tfxauto{Float}
