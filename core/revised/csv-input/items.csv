@@ -8,7 +8,7 @@ Potion,50,\healhp{50}
 Hi-Potion,150,\healhp{125}
 Hyper Potion,300,\healhp{250}
 Mega Potion,500,\healhp{100} to each member of a party
-X - Potion,750,\healhp{500}
+X-Potion,750,\healhp{500}
 Ultra Potion,800,\healhp{200} to each member of a party
 Tincture,75,\healmp{30}
 Ether,150,\healmp{60}
