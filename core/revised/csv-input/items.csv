@@ -3,91 +3,91 @@ Name ,Cost (Gil),Effect
 ,,
 potions,,##############################################
 ,,
-Tonic,25,Heals a target 25 HP
-Potion,50,Heals a target 50 HP
-Antidote,50,Removes all Toxic negative status effects from a target
-Eye Drops,50,Removes the Blind status effect from a target
-Tincture,75,Heals a target 30 MP
-Echo Screen,100,Removes the Mute status effect from a target
-Hi-Potion,150,Heals a target 125 HP
-Ether,150,Heals a target 60 MP
-Tranquilizer,150,Removes the Berserk status effect from a target
-Bandage,200,Removes a Seal status effect from a target
-Alarm Clock,200,Removes all Mental status effects from a target
-Maiden's Kiss,250,Removes the Toad status effect from a target
-Hyper Potion,300,Heals a target 250 HP
-Hi-Ether,325,Heals a target 150 MP
-Soft,400,Removes the Stone status effect from a target
-Mega Potion,500,Heals all characters in a group 100 HP each
-Phoenix Down,500,Restores a 0 HP target to 1 HP
-Holy Water,500,Removes the Zombie status effect from a target
-Chronos Tear,600,Removes all negative Time status effects from a target
-Hyper Ether,650,Heals a target 300 MP
-X - Potion,750,Heals a target 500 HP
-Ultra Potion,800,Heals all characters in a group 200 HP each
-X-Ether,1400,Heals a target 500 MP
-Remedy,1500,Removes all negative status effects from a target
-Phoenix Pinion,2800,Restores a 0 HP target to his Max HP
-Mega Phoenix,3500,Restore all 0 HP members of a group with to 1 HP
-Elixir,5000,Heals HP and MP equal to the target’s maximum values
-Phoenix Spirit,Rare,Restore all 0 HP members of a group to their max HP
-Megalixir,Rare,Each member of a group heals HP and MP equal to their maximum values
+Tonic,25,\healhp{25}
+Potion,50,\healhp{50}
+Hi-Potion,150,\healhp{125}
+Hyper Potion,300,\healhp{250}
+Mega Potion,500,\healhp{100} to each member of a party
+X - Potion,750,\healhp{500}
+Ultra Potion,800,\healhp{200} to each member of a party
+Tincture,75,\healmp{30}
+Ether,150,\healmp{60}
+Hi-Ether,325,\healmp{150}
+Hyper Ether,650,\healmp{300}
+X-Ether,1400,\healmp{500}
+Elixir,5000,Refills HP and MP to their maximums\verify{This wording ok?}
+Megalixir,Rare,"Refills HP and MP to their maximums, to each member of a party"
+Antidote,50,Cures all \tstatustype{Toxic} effects
+Eye Drops,50,Cures \tstatus{Blind}
+Echo Screen,100,Cures \tstatus{Mute}
+Tranquilizer,150,Cures \tstatus{Berserk}
+Bandage,200,Cures one \tstatustype{Seal} effect
+Alarm Clock,200,Cures all \tstatustype{Mental} effects
+Maiden's Kiss,250,Cures \tstatus{Toad}
+Soft,400,Cures \tstatus{Stone}
+Holy Water,500,Cures \tstatus{Zombie}
+Chronos Tear,600,Cures all \tstatustype{Time} effects
+Remedy,1500,Cures all negative status effects
+Phoenix Down,500,Revives an unconcious character with 1 HP
+Phoenix Pinion,2800,Revives an unconcious character with maximum HP
+Mega Phoenix,3500,Revives any unconcious characters in a party with 1 HP
+Phoenix Spirit,Rare,Revives any unconcious characters in a party with maximum HP
 ,,
 ,,
 battle,,##############################################
 ,,
-Arctic Wind,100,Casts the Spell Blizzard.
-Bomb Fragment,100,Casts the Spell Fire.
-Electro Marble,100,Casts the Spell Thunder.
-Bird Feather,100,Casts the Spell Aero.
-Smoke Bomb,250,"Casts the Spell Escape, but only in battle."
-Fish Scale,260,Casts the Spell Water.
-Light Curtain,300,Casts the Spell Protect.
-Antarctic Wind,300,Casts the Spell Blizzara
-Bomb Core,300,Casts the Spell Fira.
-Lightning Marble,300,Casts the Spell Thundara.
-Shear Feather,300,Casts the Spell Aera.
-Graviball,350,Casts the Spell Gravity.
-Healing Spring,400,Casts the Spell Regen.
-Vampire Fang,480,Casts the Spell Drain.
-Lunar Curtain,500,Casts the Spell Shell.
-Warp Stone,500,"Casts the Spell Teleport, but only in battle."
-Stardust,620,Casts the Spell Comet.
-Deadly Waste,620,Casts the Spell Bio.
-Fish Fin,640,Casts the Spell Waterga.
-Earth Drum,680,Casts the Spell Quake.
-T / S Bomb,700,Casts the Spell Demi.
-Zombie Powder,840,Casts the Spell Zombie.
-Fire Gem,850,Casts the Spell Firaga.
-Ice Gem,850,Casts the Spell Blizzaga.
-Lightning Gem,850,Casts the Spell Thundaga.
-Windmill,850,Casts the Spell Aeraga.
-Light Hammer,1000,Casts the Spell Banishga.
-Speed Drink,1000,Casts the Spell Haste.
-Light Veil,1200,Casts the Spell Protectga.
-Mute Mask,1200,Casts the Spell Silence.
-Silver Hourglass,1200,Casts the Spell Slowga.
-Malboro Tentacle,1200,Casts the Spell Venom.
-Ghost Hand,1300,Casts the Spell Osmosis.
-Blue Stone,1320,Casts the Spell Storm.
-Brown Stone,1320,Casts the Spell Break.
-Black Stone,1320,Casts the Spell Scathe.
-Basilisk Claw,1350,Casts the Spell Stone.
-Candle of Life,1420,Casts the Spell Death.
-Purifying Salt,1450,Casts the Spell Dispel.
-Lunar Veil,1500,Casts the Spell Shellga.
-Shadow Gem,1500,Casts the Spell Quarter.
-War Gong,1500,Casts the Spell Berserk.
-Loco Weed,1500,Casts the Spell Confuse.
-Impaler,1520,Casts the Spell Toad.
-Green Stone,1850,Casts the Spell Virus.
-Soul Spring,1860,Casts the Spell Syphon.
-Blue Stone,2500,Casts the Spell Freeze.
-Red Stone,2250,Casts the Spell Meltdown.
-Yellow Stone,2000,Casts the Spell Overcharge.
-Star Curtain,3000,Casts the Spell Reflect.
-Dark Matter,4000,Casts the Spell Stop.
-Adamant Shard,Rare,Casts the Spell Wall.
-Hero Drink,Rare,"Casts the Spells Magic Up, Armor Up, Mental Up and Power Up on a target."
-Golden Hourglass,Rare,Casts the Spell Old.
-Meteor Stone,Rare,Casts the Spell Meteor.
+Arctic Wind,100,\tfxcast{Blizzard}
+Bomb Fragment,100,\tfxcast{Fire}
+Electro Marble,100,\tfxcast{Thunder}
+Bird Feather,100,\tfxcast{Aero}
+Smoke Bomb,250,"\tfxcast{Escape}, but only in battle"
+Fish Scale,260,\tfxcast{Water}
+Light Curtain,300,\tfxcast{Protect}
+Antarctic Wind,300,\tfxcast{Blizzara}
+Bomb Core,300,\tfxcast{Fira}
+Lightning Marble,300,\tfxcast{Thundara}
+Shear Feather,300,\tfxcast{Aera}
+Graviball,350,\tfxcast{Gravity}
+Healing Spring,400,\tfxcast{Regen}
+Vampire Fang,480,\tfxcast{Drain}
+Lunar Curtain,500,\tfxcast{Shell}
+Warp Stone,500,"\tfxcast{Teleport}, but only in battle"
+Stardust,620,\tfxcast{Comet}
+Deadly Waste,620,\tfxcast{Bio}
+Fish Fin,640,\tfxcast{Waterga}
+Earth Drum,680,\tfxcast{Quake}
+T / S Bomb,700,\tfxcast{Demi}
+Zombie Powder,840,\tfxcast{Zombie}
+Fire Gem,850,\tfxcast{Firaga}
+Ice Gem,850,\tfxcast{Blizzaga}
+Lightning Gem,850,\tfxcast{Thundaga}
+Windmill,850,\tfxcast{Aeraga}
+Light Hammer,1000,\tfxcast{Banishga}
+Speed Drink,1000,\tfxcast{Haste}
+Light Veil,1200,\tfxcast{Protectga}
+Mute Mask,1200,\tfxcast{Silence}
+Silver Hourglass,1200,\tfxcast{Slowga}
+Malboro Tentacle,1200,\tfxcast{Venom}
+Ghost Hand,1300,\tfxcast{Osmosis}
+Blue Stone,1320,\tfxcast{Storm}
+Brown Stone,1320,\tfxcast{Break}
+Black Stone,1320,\tfxcast{Scathe}
+Basilisk Claw,1350,\tfxcast{Stone}
+Candle of Life,1420,\tfxcast{Death}
+Purifying Salt,1450,\tfxcast{Dispel}
+Lunar Veil,1500,\tfxcast{Shellga}
+Shadow Gem,1500,\tfxcast{Quarter}
+War Gong,1500,\tfxcast{Berserk}
+Loco Weed,1500,\tfxcast{Confuse}
+Impaler,1520,\tfxcast{Toad}
+Green Stone,1850,\tfxcast{Virus}
+Soul Spring,1860,\tfxcast{Syphon}
+Blue Stone,2500,\tfxcast{Freeze}
+Red Stone,2250,\tfxcast{Meltdown}
+Yellow Stone,2000,\tfxcast{Overcharge}
+Star Curtain,3000,\tfxcast{Reflect}
+Dark Matter,4000,\tfxcast{Stop}
+Adamant Shard,Rare,\tfxcast{Wall}
+Hero Drink,Rare,"Casts all of \tspell{Magic Up}, \tspell{Armor Up}, \tspell{Mental Up}, and \tspell{Power Up} on the same target"
+Golden Hourglass,Rare,\tfxcast{Old}
+Meteor Stone,Rare,\tfxcast{Meteor}

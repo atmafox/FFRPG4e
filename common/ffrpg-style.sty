@@ -232,6 +232,31 @@
 \newcommand{\tfxtimmunity}[1]{\teffect{Immunity}: \tstatustype{#1}}
 \newcommand{\tfxtresistance}[1]{\teffect{Resistance}: \tstatustype{#1}}
 
+% Guuuh I don't feel like learning a new package just to make this work
+% right now -wvr
+\krddefinekeys{tfximmunityk}[ik@]{
+	cmd/a;cmd/b;cmd/c;cmd/d;cmd/e;cmd/f;cmd/g;cmd/h
+}
+
+\krdpresetkeys{tfximmunityk}{a=,b=,c=,d=,e=,f=,g=,h=}
+
+\newcommand*{\tfximmunityk}[1][]{\teffect{Immunity}:%
+	\krdsetkeys{tfximmunityk}{#1}%
+	\ifdefvoid{\ik@a}{}{\tstatus{\ik@a}}%
+	\ifdefvoid{\ik@b}{}{, \tstatus{\ik@b}}%
+	\ifdefvoid{\ik@c}{}{, \tstatus{\ik@c}}%
+	\ifdefvoid{\ik@d}{}{, \tstatus{\ik@d}}%
+	\ifdefvoid{\ik@e}{}{, \tstatus{\ik@e}}%
+	\ifdefvoid{\ik@f}{}{, \tstatus{\ik@f}}%
+	\ifdefvoid{\ik@g}{}{, \tstatus{\ik@g}}%
+	\ifdefvoid{\ik@h}{}{, \tstatus{\ik@h}}%
+}
+
+\newcommand{\tfxcast}[1]{Casts \tspell{#1}}
+\newcommand{\healhp}[1]{Heals #1 HP}
+\newcommand{\healmp}[1]{Restores #1 MP}
+
+
 
 
 % mob ranks
