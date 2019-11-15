@@ -761,7 +761,7 @@
 	 \medskip}
 
 % Get all our header/footers done
-\pagestyle{fancy}
+\pagestyle{fancy}{%
   \fancyhf{}
   \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
@@ -771,6 +771,10 @@
 	\ffcrystal[type=fire] \hspace{\stretch{1}} %
 	\ffcrystal[type=water]
   }
+  \fancyhead[R]{%
+	\textbf{PRERELEASE 2019-11-15}
+  }
+}
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
@@ -782,8 +786,11 @@
 	{\ferrum Chapter \thechapter } \hspace{\stretch{1}} %
 	\ffcrystal[type=fire] \hspace{\stretch{1}} %
 	\ffcrystal[type=water] \hspace{\stretch{1}}
-	}
   }
+  \fancyhead[R]{%
+	\textbf{PRERELEASE 2019-11-15}
+  }
+}
 
 % Alright, let's set appropriate section layouts
 \titleformat{\chapter}{\ferrum\huge\bfseries\itshape\centering}{\thechapter}{1em}{}
