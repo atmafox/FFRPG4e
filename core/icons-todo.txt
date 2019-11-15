@@ -1,0 +1,52 @@
+
+weapon classes:
+
+light sword / knife
+heavy / shield
+heavy
+
+
+polearms
+claw / glove
+katana
+bow
+throwing
+rifle/xbow
+wand
+staff
+instrument
+twin blades
+
+light
+medium
+heavy armor
+
+healing item (heal / magic / cure / revive?)
+battle item <magicite?>
+
+actions:
+
+standard
+slow
+reaction
+free
+
+magic
+physical
+ranged
+melee
+
+cut - puncture - crush
+earth - air - fire - water
+ice - lighting - bio - light - shadow
+
+Magic:
+
+black: elemental transmutation worldly expert mysteries
+White: Heavenly protective psychic
+Time: Astral subtle void inspiration Time
+Blue: initiate alcolyte master ancient ??
+
+
+roll x v y 16 color variant or something
+
