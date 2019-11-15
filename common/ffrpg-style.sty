@@ -113,7 +113,10 @@
 % Created a new macro for namespace and to not break stuff
 \newrobustcmd{\ffcrystal}[1][]{
 	\krdsetkeys{ffcrystal}{#1}%
-	\adjincludegraphics[valign=M,height=\ffc@height]{../img/common/crystal\ffc@type}
+    \begingroup%
+    \setbox0=\hbox{%
+		\adjincludegraphics[valign=M,height=\ffc@height]{../img/common/crystal\ffc@type}%
+	}\parbox{\wd0}{\box0}\endgroup%
 }
 
 % I want to make this verify the input, but for now... this works
@@ -761,16 +764,20 @@
 	 \medskip}
 
 % Get all our header/footers done
-\pagestyle{fancy}
+\pagestyle{fancy}{%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyhf{}
-  \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
   \fancyfoot[C]{%
 	\ffcrystal[type=earth] \hspace{\stretch{1}} %
 	\ffcrystal[type=air] \hspace{\stretch{1}} %
-	{\ferrum \leftmark\ - Page \thepage } \hspace{\stretch{1}} %
+	{\ferrum \nouppercase{\leftmark}\ - Page \thepage } \hspace{\stretch{1}} %
 	\ffcrystal[type=fire] \hspace{\stretch{1}} %
 	\ffcrystal[type=water]
   }
+  \fancyhead[R]{%
+	\textbf{PRERELEASE 2019-11-15}
+  }
+}
 
 % And headers/footers for the chapter pages
 \fancypagestyle{plain}{%
@@ -782,8 +789,11 @@
 	{\ferrum Chapter \thechapter } \hspace{\stretch{1}} %
 	\ffcrystal[type=fire] \hspace{\stretch{1}} %
 	\ffcrystal[type=water] \hspace{\stretch{1}}
-	}
   }
+  \fancyhead[R]{%
+	\textbf{PRERELEASE 2019-11-15}
+  }
+}
 
 % Alright, let's set appropriate section layouts
 \titleformat{\chapter}{\ferrum\huge\bfseries\itshape\centering}{\thechapter}{1em}{}
