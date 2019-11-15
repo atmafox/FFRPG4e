@@ -1,108 +1,90 @@
-"Name ",Min level,Cost (Gil),Effect
-"",,,
-"accessories",,,##############################################
-"",,,
-"Nishijin Belt",1,500,\tfximmunity{Sleep}
-"Silver Spectacles",1,450,\tfximmunity{Blind}
-"Star Pendant",1,600,\tfximmunity{Poison}
-"Aqua Ring",10,1000,\tfxautov{Resist}{Water}
-"Barrier Ring",10,800,\tfxsos{Shell}
-"Desert Ring",10,1000,\tfxautov{Resist}{Earth}
-"Guard Ring",10,800,\tfxsos{Protect}
-"Jackboots",10,600,\tfximmunity{Immobilize}
-"Sash",10,600,\tfximmunity{Slow}
-"Angel Wings",18,1800,\tfxauto{Float}
-"Defense Ring",18,1500,"\tfximmunity{Sleep}
-\tfximmunity{Condemn}"
-"Fairy Ring",18,1250,"\tfximmunity{Blind}
-\tfximmunity{Poison}"
-"Gold Choker",18,1250,\tfxautov{Resist}{Air}
-"Leather Gorget",18,1400,\tfxsos{Strengthen: Magic}
-"Princess Ring",18,1600,"\tfxsos{Shell}
+"Name ",Min level,Cost (Gil),Effects
+,,,
+accessories,,,##############################################
+,,,
+Nishijin Belt,1,500,\tfximmunity{Sleep}
+Silver Spectacles,1,450,\tfximmunity{Blind}
+Star Pendant,1,600,\tfximmunity{Poison}
+Aqua Ring,10,1000,\tfxautov{Resist}{Water}
+Barrier Ring,10,800,\tfxsos{Shell}
+Desert Ring,10,1000,\tfxautov{Resist}{Earth}
+Guard Ring,10,800,\tfxsos{Protect}
+Jackboots,10,600,\tfximmunity{Immobilize}
+Sash,10,600,\tfximmunity{Slow}
+Angel Wings,18,1800,\tfxauto{Float}
+Defense Ring,18,1500,"\tfximmunityk[a=Sleep, b=Condemn]"
+Fairy Ring,18,1250,"\tfximmunityk[a=Blind,b=Poison]"
+Gold Choker,18,1250,\tfxautov{Resist}{Air}
+Leather Gorget,18,1400,\tfxsos{Strengthen: Magic}
+Princess Ring,18,1600,"\tfxsos{Shell}
 \tfxsos{Protect}"
-"Star Bangle",18,1800,\tfxsos{Regen}
-"Steel Gorget",18,1400,\tfxsos{Strengthen: Pyhsical}
-"Bead Brooch",25,3250,"\tfximmunity{Blind}
+Star Bangle,18,1800,\tfxsos{Regen}
+Steel Gorget,18,1400,\tfxsos{Strengthen: Pyhsical}
+Bead Brooch,25,3250,"\tfximmunity{Blind}
 \tfximmunity{Mute}"
-"Black Belt",25,1600,\tfximmunity{Disable}
-"Bowline Sash",25,2000,\tfximmunity{Confuse}
-"Coral Ring",25,2500,tfxautov{Immune}{Lightning}
-"Crystal Ball",25,3400,\tfxauto{Premonition}
-"Echo Bangle",25,1600,\tfximmunity{Mute}
-"Holy Mirror",25,3400,\tfxauto{Blink}
-"Magic Bangle",25,2700,+10% max MP
-"Orrachea Armlet",25,2700,+10% max HP
-"Protect Ring",25,3250,\tfxauto{Protect}
-"Reflect Ring",25,3500,\tfxauto{Reflect}
-"Ring Shell",25,3250,\tfxauto{Shell}
-"Water Ring",25,2500,\tfxautov{Immune}{Water}
-"Amulet",32,4400,"\tfximmunity{Blind}
-\tfximmunity{Poison}
-\tfximmunity{Zombie}"
-"Blizzard Ring",32,3300,\tfxautov{Immune}{Ice}
-"Fire Ring",32,3300,\tfxautov{Immune}{Fire}
-"Gravity Ring",32,3600,\tfximmunity{Gravity}
-"Magic Ring",32,4400,"\tfximmunity{Mute}
-\tfximmunity{Berserk}"
-"Phantom Ring",32,5200,\tfximmunity{Weaken}
-"Rebirth Ring",32,5500,\tfxauto{Reraise}
-"Wing Boots",32,4700,\tfxauto{Flight}
-"Cerulean Ring",39,5400,\tfxautov{Absorb}{Water}
-"Flame Ring",39,8000,\tfxautov{Absorb}{Fire}
-"Ice Ring",39,8000,\tfxautov{Absorb}{Ice}
-"Jade Armlet",39,7600,"\tfximmunity{Stone}
-\tfximmunity{Slow}"
-"Ochre Ring",39,8000,\tfxautov{Absorb}{Lightning}
-"Force Belt",46,10400,+10% max HP and MP
+Black Belt,25,1600,\tfximmunity{Disable}
+Bowline Sash,25,2000,\tfximmunity{Confuse}
+Coral Ring,25,2500,tfxautov{Immune}{Lightning}
+Crystal Ball,25,3400,\tfxauto{Premonition}
+Echo Bangle,25,1600,\tfximmunity{Mute}
+Holy Mirror,25,3400,\tfxauto{Blink}
+Magic Bangle,25,2700,+10% max MP
+Orrachea Armlet,25,2700,+10% max HP
+Protect Ring,25,3250,\tfxauto{Protect}
+Reflect Ring,25,3500,\tfxauto{Reflect}
+Ring Shell,25,3250,\tfxauto{Shell}
+Water Ring,25,2500,\tfxautov{Immune}{Water}
+Amulet,32,4400,"\tfximmunityk[a=Blind,b=Poison,c=Zombie]"
+Blizzard Ring,32,3300,\tfxautov{Immune}{Ice}
+Fire Ring,32,3300,\tfxautov{Immune}{Fire}
+Gravity Ring,32,3600,\tfximmunity{Gravity}
+Magic Ring,32,4400,"\tfximmunityk[a=Mute,b=Berserk]"
+Phantom Ring,32,5200,\tfximmunity{Weaken}
+Rebirth Ring,32,5500,\tfxauto{Reraise}
+Wing Boots,32,4700,\tfxauto{Flight}
+Cerulean Ring,39,5400,\tfxautov{Absorb}{Water}
+Flame Ring,39,8000,\tfxautov{Absorb}{Fire}
+Ice Ring,39,8000,\tfxautov{Absorb}{Ice}
+Jade Armlet,39,7600,"\tfximmunityk[a=Slow,b=Stone]"
+Ochre Ring,39,8000,\tfxautov{Absorb}{Lightning}
+Force Belt,46,10400,+10% max HP and MP
 "Gauss Buckle ",46,12000,"\tfxautov{Immunity}{Bio}
-\tfximmunity{Poison}
-\tfximmunity{Virus}"
-"Guard Bracelet",46,12000,"\tfxauto{Protect}
+\tfximmunityk[a=Poison,b=Virus]"
+Guard Bracelet,46,12000,"\tfxauto{Protect}
 \tfxauto{Shell}"
-"Jeweled Ring",46,10000,"\tfximmunity{Blind}
-\tfximmunity{Sleep}
-\tfximmunity{Stone}"
-"Rosetta Ring",46,12000,"\tfxautov{Immune}{Fire}
+Jeweled Ring,46,10000,"\tfximmunityk[a=Blind,b=Sleep,c=Stone]"
+Rosetta Ring,46,12000,"\tfxautov{Immune}{Fire}
 \tfximmunity{Condemn}"
-"Rubber Boots",46,10000,"\tfxautov{Immune}{Lightning}
+Rubber Boots,46,10000,"\tfxautov{Immune}{Lightning}
 \tfximmunity{Stop}"
-"Scarab",46,9600,"\tfximmunity{Immobilize}
-\tfximmunity{Disable}
-\tfximmunity{Toad}"
-"Snow Ring",46,12000,"\tfxautov{Immune}{Ice}
+Scarab,46,9600,"\tfximmunityk[a=Immobilize,b=Disable,c=Toad]"
+Snow Ring,46,12000,"\tfxautov{Immune}{Ice}
 \tfximmunity{Berserk}"
-"Star Armlet",46,9600,"\tfximmunity{Slow}
-\tfximmunity{Stop}"
-"Gold Hairpin",53,15000,-25% MP cost to all Spells
+Star Armlet,46,9600,"\tfximmunityk[a=Slow,b=Stop]"
+Gold Hairpin,53,15000,-25% MP cost to all Spells
 "Japa Mala ",53,13000,"\tfxautov{Immune}{Bio}
-\tfximmunity{Poison}
-\tfximmunity{Virus}
-\tfximmunity{Zombie}"
+\tfximmunityk[a=Poison,b=Virus,c=Zombie]"
 "Nu Khai Armlet ",53,13000,"\tfxautov{Resist}{Shadow}
-\tfximmunity{Confuse}
-\tfximmunity{Charm}"
-"Peach Ring",53,15000,"\tfximmunity{Berserk}
-\tfximmunity{Confuse}
-\tfximmunity{Charm}"
+\tfximmunityk[a=Confuse,b=Charm]"
+Peach Ring,53,15000,"\tfximmunityk[a=Berserk,b=Confuse,c=Charm]"
 "Poison Ring ",53,13000,"\tfxautov{Immune}{Bio}
-\tfximmunity{Poison}
-\tfximmunity{Virus}"
-"Safety Bit",53,20000,\tfxtimmunity{Fatal}
-"White Cape",53,13500,\tfxtimmunity{Transformation}
-"Aegis Ring",60,Rare,\tfxautov{Resist}{All but cut/puncture/crush}
-"Angel Ring",60,Rare,"\tfxautov{Immune}{Shadow}
+\tfximmunityk[a=Poison,b=Virus]"
+Safety Bit,53,20000,\tfxtimmunity{Fatal}
+White Cape,53,13500,\tfxtimmunity{Transformation}
+Aegis Ring,60,Rare,"\tfxauto{Resist}: \telem{Earth}, \telem{Air}, \telem{Fire}, \telem{Water}, \telem{Electricity}, \telem{Ice}, \telem{Bio}, \telem{Light}, \telem{Shadow}"
+Angel Ring,60,Rare,"\tfxautov{Immune}{Shadow}
 \tfxauto{Reraise}
 \tfxtimmunity{Fatal}"
-"Berserker Ring",60,Rare,"\tfxautov{Absorb}{Fire}
+Berserker Ring,60,Rare,"\tfxautov{Absorb}{Fire}
 \tfxautov{Immune}{Light}
 \tfxauto{Berserk}"
-"Hermes Sandals",60,Rare,\tfxauto{Haste}
-"Mindu Jewel",60,Rare,"\tfxauto{Blink}
-\tfximmunity{Blind, Toad, Poison, Mute, Confuse, Stone}"
-"Power Belt",60,Rare,+25% max HP
-"Sorcery Bangle",60,Rare,+25% max MP
-"Crystal Orb",67,Artifact,+50% max MP
-"Economizer",67,Artifact,-50% MP cost to all Spells
-"Invisibility Cloak",67,Artifact,\tfxauto{Vanish}
-"Muscle Belt",67,Artifact,+50% max HP
-"Ribbon",67,Artifact,\tfximmunity{ALL}
+Hermes Sandals,60,Rare,\tfxauto{Haste}
+Mindu Jewel,60,Rare,"\tfxauto{Blink}
+\tfximmunityk[a=Blind, b=Toad, c=Poison, d=Mute, e=Confuse, f=Stone]"
+Power Belt,60,Rare,+25% max HP
+Sorcery Bangle,60,Rare,+25% max MP
+Crystal Orb,67,Artifact,+50% max MP
+Economizer,67,Artifact,-50% MP cost to all Spells
+Invisibility Cloak,67,Artifact,\tfxauto{Vanish}
+Muscle Belt,67,Artifact,+50% max HP
+Ribbon,67,Artifact,\tfximmunity{ALL}
