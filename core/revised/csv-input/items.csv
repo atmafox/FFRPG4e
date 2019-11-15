@@ -28,10 +28,10 @@ Soft,400,Cures \tstatus{Stone}
 Holy Water,500,Cures \tstatus{Zombie}
 Chronos Tear,600,Cures all \tstatustype{Time} effects
 Remedy,1500,Cures all negative status effects
-Phoenix Down,500,Revives an unconcious character with 1 HP
-Phoenix Pinion,2800,Revives an unconcious character with maximum HP
-Mega Phoenix,3500,Revives any unconcious characters in a party with 1 HP
-Phoenix Spirit,Rare,Revives any unconcious characters in a party with maximum HP
+Phoenix Down,500,Revives an unconscious character with 1 HP
+Phoenix Pinion,2800,Revives an unconscious character with maximum HP
+Mega Phoenix,3500,Revives any unconscious characters in a party with 1 HP
+Phoenix Spirit,Rare,Revives any unconscious characters in a party with maximum HP
 ,,
 ,,
 battle,,##############################################
