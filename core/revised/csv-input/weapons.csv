@@ -422,7 +422,7 @@ Ignores Magic Armor"
 Add Fire level to damage"
 "Apollo's [x] ",64,Artifact,16 x,"\tfxauto{Haste}
 \tfxsos{Strengthen: Mental}"
-Crystal [x],64,Artifact,16 x,-10 difficulty of all Abilities \review{Actions?} and Spells
+Crystal [x],64,Artifact,16 x,-10 difficulty of all Abilities and Spells
 "Loki's [x] ",64,Artifact,16 x,"\tfxafocus{Charm}
 \tfxafocus{Toad}"
 ,,,,
