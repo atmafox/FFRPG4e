@@ -58,7 +58,7 @@
 \tfxautov{Immune}{Shadow}"
 "Reaper Cloak",55,Rare,97,97,\tfxtimmunity{Fatal}
 "Braver Vest ",64,Artifact,119,119,"\tfxauto{Strengthen: Speed}
-\tfxtimmunity{Weaken} \review{Is this meant to be weaken type immunity?}"
+\tfxtimmunity{Weaken}"
 "Snow Muffler",64,Artifact,119,119,"\tfxautov{Absorb}{Fire}
 \tfxautov{Abosrb}{Lightning}
 \tfxautov{Absorb}{Ice}"
