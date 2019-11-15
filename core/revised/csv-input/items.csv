@@ -15,7 +15,7 @@ Ether,150,\healmp{60}
 Hi-Ether,325,\healmp{150}
 Hyper Ether,650,\healmp{300}
 X-Ether,1400,\healmp{500}
-Elixir,5000,Refills HP and MP to their maximums\verify{This wording ok?}
+Elixir,5000,Refills HP and MP to their maximums\review{This wording ok?}
 Megalixir,Rare,"Refills HP and MP to their maximums, to each member of a party"
 Antidote,50,Cures all \tstatustype{Toxic} effects
 Eye Drops,50,Cures \tstatus{Blind}

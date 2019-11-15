@@ -3,85 +3,92 @@
 "light",,,,,##############################################
 "",,,,,
 "Cotton Robe",1,100,0,3,
-"Snow Cape",1,142,0,3,Auto – Resist (Ice)
-"Mistle Robe",1,143,0,3,Sleep Immunity
+"Snow Cape",1,142,0,3,\tfxautov{Resist}{Ice}
+"Mistle Robe",1,143,0,3,\tfximmunity{Sleep}
 "Leather Robe",10,585,2,10,
-"Temple Cloth",10,866,2,10,Auto – Resist (Shadow)
-"Thunder Robe",10,867,2,10,Mute Immunity
+"Temple Cloth",10,866,2,10,\tfxautov{Resist}{Shadow}
+"Thunder Robe",10,867,2,10,\tfximmunity{Mute}
 "Linen Robe",19,1552,3,15,
-"Mist Silk Robe",19,2046,3,15,Auto – Immune (Light)
-"Red Robe",19,2046,7,26,SOS- Mute
+"Mist Silk Robe",19,2046,3,15,\tfxautov{Immune}{Light}
+"Red Robe",19,2046,7,26,\tfxsos{Mute}
 "Silk Robe",28,2678,13,36,
-"Magician Robe",28,3797,13,36,Add Fire level to Spells’ damage
-"Silver Coat",28,3787,13,36,Auto – Resist (Crush)
+"Magician Robe",28,3797,13,36,Add Fire level to all Spells’ damage
+"Silver Coat",28,3787,13,36,\tfxautov{Resist}{Crush}
 "Poet Robe",37,5547,28,65,
-"Karate Robe",37,8391,28,65,Decrease by 10 reactions’ difficulty
-"Peace Cape ",37,8368,28,65,"Auto – Protect
-Auto – Weaken (Physical)"
+"Karate Robe",37,8391,28,65,-10 difficulty to all reactions
+"Peace Cape ",37,8368,28,65,"\tfxauto{Protect}
+\tfxauto{Weaken}{Physical}"
 "Scholar Coat",46,11220,41,90,
-"Aqua Robe",46,15422,41,90,Fatal Immune
-"Priest's Robe",46,15424,23,90,SOS- Wall
-"Tao Robe",55,Rare,59,127,Auto–Strengthen (Mental) Auto–Strengthen (Magic)
-"Glutton's Coat ",55,Rare,59,127,"Auto – Absorb (Bio)
-Toxic Immune"
-"Angel Robe ",55,Rare,59,127,"Auto – Reraise
-Gravity Immune"
-"Element Robe",64,Artifact,87,179,"Auto – Immune (Fire, Ice, Air, Lightning, Earth and Water)"
-"Protect Cape",64,Artifact,107,189,Transformation Immune
-"Robe of Lords ",64,Artifact,87,179,Add twice Fire level to Spells’ damage; Maximum MP + 20%
+"Aqua Robe",46,15422,41,90,\tfxtimmunity{Fatal}
+"Priest's Robe",46,15424,23,90,\tfxsos{Wall}
+"Tao Robe",55,Rare,59,127,"\tfxauto{Strengthen: Mental}
+\tfxauto{Strengthen: Magic}"
+"Glutton's Coat ",55,Rare,59,127,"\tfxautov{Absorb}{Bio}
+\tfxtimmunity{Toxic}"
+"Angel Robe ",55,Rare,59,127,"\tfxauto{Reraise}
+\tfximmunity{Gravity}"
+"Element Robe",64,Artifact,87,179,"\tfxauto{Immune} (\telem{Earth}, \telem{Air}, \telem{Fire}, \telem{Water}, \telem{Lightning}, \telem{Ice}"
+"Protect Cape",64,Artifact,107,189,\tfxtimmunity{Transformation}
+"Robe of Lords ",64,Artifact,87,179,"Add twice Fire level to all Spells’ damage
++20% Maximum MP"
 "",,,,,
 "medium",,,,,##############################################
 "",,,,,
 "Leather Outfit",1,84,1,1,
-"Storm Jerkin",1,121,1,1,Auto – Resist (Lightning)
-"Training Suit",1,121,1,1,Blind Immunity
+"Storm Jerkin",1,121,1,1,\tfxautov{Resist}{Lightning}
+"Training Suit",1,121,1,1,\tfximmunity{Blind}
 "Bronze Vest",10,500,5,5,
-"Nomad's Tunic",10,730,5,5,Auto – Resist (Earth)
-"Red Jacket",10,732,5,5,Slow Immunity
+"Nomad's Tunic",10,730,5,5,\tfxautov{Resist}{Earth}
+"Red Jacket",10,732,5,5,\tfximmunity{Slow}
 "Chain Vest",19,1316,7,7,
-"Power Sash",19,1752,7,7,Weaken (Physical) Immunity
-"Survival Vest",19,1742,7,7,Weaken (Magic) Immunity
+"Power Sash",19,1752,7,7,\tfximmunity{Weaken: Physical}
+"Survival Vest",19,1742,7,7,\tfximmunity{Weaken: Magic}
 "Ring Mail",28,2269,21,21,
-"Chocobo Costume",28,3201,21,21,"Add Air level your actions’ damage, except Spells and !Attack"
-"Padded Shirt",28,3224,21,21,Auto - Resist (Cut)
+"Chocobo Costume",28,3201,21,21,"Add Air level your actions’ damage, except Spells and \taction{Attack}"
+"Padded Shirt",28,3224,21,21,\tfxautov{Resist}{Cut}
 "Mythril Vest",37,4675,42,42,
-"Scorpion Harness",37,7082,42,42,Decrease by 10 physical actions’ difficulty
-"Mirage Vest",37,7147,42,42,Auto – Blink
+"Scorpion Harness",37,7082,42,42,-10 difficulty to all physical actions
+"Mirage Vest",37,7147,42,42,\tfxauto{Blink}
 "Brigandine",46,9563,60,60,
-"Judge Coat",46,13098,60,60,Time Immune
-"Ninja Gear",46,13055,55,55,SOS – Vanish
-"Platinum Vest ",55,Rare,87,87,"Meltdown Immune
-Auto – Immune (Earth)"
-"Behemoth Suit",55,Rare,87,87,Auto – Immune (Light and Shadow)
-"Reaper Cloak",55,Rare,97,97,Fatal Immune
-"Braver Vest ",64,Artifact,119,119,"Weakness Immune
-Auto – Strengthen (Speed)"
-"Snow Muffler",64,Artifact,119,119,"Auto - Absorb (Fire, Ice and Lightning)"
-"Wygar ",64,Artifact,129,129,Maximum HP + 20%
+"Judge Coat",46,13098,60,60,\tfximmunity{Time}
+"Ninja Gear",46,13055,55,55,\tfxsos{Vanish}
+"Platinum Vest ",55,Rare,87,87,"\tfxauto{Immune}{Earth}
+\tfximmunity{Meltdown}"
+"Behemoth Suit",55,Rare,87,87,"\tfxautov{Immune}{Light}
+\tfxautov{Immune}{Shadow}"
+"Reaper Cloak",55,Rare,97,97,\tfxtimmunity{Fatal}
+"Braver Vest ",64,Artifact,119,119,"\tfxauto{Strengthen: Speed}
+\tfxtimmunity{Weaken} \review{Is this meant to be weaken type immunity?}"
+"Snow Muffler",64,Artifact,119,119,"\tfxautov{Absorb}{Fire}
+\tfxautov{Abosrb}{Lightning}
+\tfxautov{Absorb}{Ice}"
+"Wygar ",64,Artifact,129,129,+20% Maximum HP
 "",,,,,
 "heavy",,,,,##############################################
 "",,,,,
 "Leather Plate",1,99,3,0,
-"Fire Armor",1,141,3,0,Auto – Resist (Fire)
-"Cobra Cuirass",1,141,3,0,Poison Immunity
+"Fire Armor",1,141,3,0,\tfxautov{Resist}{Fire}
+"Cobra Cuirass",1,141,3,0,\tfximmunity{Poison}
 "Bronze Armor",10,583,10,2,
-"Blue Plate",10,860,10,2,Auto - Resist (Water)
-"Bone Plate",10,865,10,2,Disabled Immunity
+"Blue Plate",10,860,10,2,\tfxautov{Resist}{Water}
+"Bone Plate",10,865,10,2,\tfximmunity{Disabled}
 "Plate Mail",19,1555,15,3,
-"Storm Plate",19,2047,15,3,Auto - Immune (Air)
-"Viking Armor",19,2060,26,7,SOS – Berserk
+"Storm Plate",19,2047,15,3,\tfxautov{Immune}{Air}
+"Viking Armor",19,2060,26,7,\tfxsos{Berserk}
 "Silver Mail",28,2667,36,13,
-"Soldier's Armor",28,3801,36,13,Add Earth level to !Attack action’s damage
-"Carapace Mail",28,3777,36,13,Auto - Resist (Puncture)
+"Soldier's Armor",28,3801,36,13,Add Earth level to \taction{Attack} damage
+"Carapace Mail",28,3777,36,13,\tfxautov{Resist}{Puncture}
 "Mythril Armor",37,5549,65,28,
-"Force Armor",37,8382,65,28,Decrease by 10 magical actions and Spell’s difficulty
-"Shell Mail",37,8334,65,28,Auto – Shell
+"Force Armor",37,8382,65,28,-10 difficulty to all Spells and magical actions
+"Shell Mail",37,8334,65,28,\tfxauto{Shell}
 "Gold Armor",46,11261,90,41,
-"Aurora Mail",46,15418,90,41,Seal Immune
-"Reflect Plate",46,15459,90,23,SOS – Reflect
-"Platinum Armor",55,Rare,127,59,Auto - Strengthen (Armor) Auto - Strengthen (Physical)
-"Carabini Mail",55,Rare,127,59,"At the beginning of each round, choose one: Immune (Cut, Crush or Puncture)"
-"Dragon Mail ",55,Rare,127,59,"Maximum HP + 10%
-Add Earth level to !Attack action’s damage"
-"Aegis Armor",64,Artifact,179,87,Auto - Float; Mental Immune
-"Genji Armor",64,Artifact,189,107,All Negative Status Resist
+"Aurora Mail",46,15418,90,41,\tfxtimmunity{Seal}
+"Reflect Plate",46,15459,90,23,\tfxsos{Reflect}
+"Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen:Physical}
+\tfxauto{Strengthen:Armor}"
+"Carabini Mail",55,Rare,127,59,"At the beginning of each round, choose one: \tvarstatus{Immune}{Cut}, \tvarstatus{Immune}{Crush}, or \tvarstatus{Immune}{Puncture}"
+"Dragon Mail ",55,Rare,127,59,"Add Earth level \taction{Attack} damage
++10% Maximum HP"
+"Aegis Armor",64,Artifact,179,87,"\tfxauto{Float}
+\tfxtimmunity{Mental}"
+"Genji Armor",64,Artifact,189,107,\tfxresistance{All}
