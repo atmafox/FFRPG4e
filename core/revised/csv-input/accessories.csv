@@ -24,7 +24,7 @@ Bead Brooch,25,3250,"\tfximmunity{Blind}
 \tfximmunity{Mute}"
 Black Belt,25,1600,\tfximmunity{Disable}
 Bowline Sash,25,2000,\tfximmunity{Confuse}
-Coral Ring,25,2500,tfxautov{Immune}{Lightning}
+Coral Ring,25,2500,\tfxautov{Immune}{Lightning}
 Crystal Ball,25,3400,\tfxauto{Premonition}
 Echo Bangle,25,1600,\tfximmunity{Mute}
 Holy Mirror,25,3400,\tfxauto{Blink}
