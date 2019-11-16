@@ -27,7 +27,7 @@
 \tfxtimmunity{Toxic}"
 "Angel Robe ",55,Rare,59,127,"\tfxauto{Reraise}
 \tfximmunity{Gravity}"
-"Element Robe",64,Artifact,87,179,"\tfxauto{Immune} (\telem{Earth}, \telem{Air}, \telem{Fire}, \telem{Water}, \telem{Lightning}, \telem{Ice}"
+"Element Robe",64,Artifact,87,179,"\tfxauto{Immune} (\telem{Earth}, \telem{Air}, \telem{Fire}, \telem{Water}, \telem{Lightning}, \telem{Ice})"
 "Protect Cape",64,Artifact,107,189,\tfxtimmunity{Transformation}
 "Robe of Lords ",64,Artifact,87,179,"Add twice Fire level to all Spells’ damage
 +20% Maximum MP"
@@ -91,4 +91,6 @@
 +10% Maximum HP"
 "Aegis Armor",64,Artifact,179,87,"\tfxauto{Float}
 \tfxtimmunity{Mental}"
-"Genji Armor",64,Artifact,189,107,\tfxresistance{All}
+"Genji Armor",64,Artifact,189,107,\tfxtresistance{All Negative}
+Maximillian,64,Artifact,179,87,"\tfxauto{Immune}: \telem{Light}, \telem{Shadow}, \telem{Bio}
+\tfxauto{Resist}: \telem{Cut}, \telem{Crush}, \telem{Puncture}"
