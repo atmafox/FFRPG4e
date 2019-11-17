@@ -97,6 +97,11 @@
 	\bgroup\color{red}\textbf{((#1))}\egroup
 }
 
+% For prerelease dates
+
+\def\datestamp{\leavevmode\hbox{\the\year-\twodigits\month-\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
 % Macro for the crystal images
 \krddefinekeys{ffcrystal}[ffc@]{
 	choice/type/invalid/
@@ -775,7 +780,7 @@
 	\ffcrystal[type=water]
   }
   \fancyhead[R]{%
-	\textbf{PRERELEASE 2019-11-15}
+	\textbf{PRERELEASE \datestamp}
   }
 }
 
@@ -791,7 +796,7 @@
 	\ffcrystal[type=water] \hspace{\stretch{1}}
   }
   \fancyhead[R]{%
-	\textbf{PRERELEASE 2019-11-15}
+	\textbf{PRERELEASE \datestamp}
   }
 }
 
