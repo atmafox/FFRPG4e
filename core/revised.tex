@@ -1,6 +1,7 @@
 \documentclass[11pt]{book}
 \usepackage{import}
 \usepackage{metalogo}
+\usepackage{tocloft}
 
 % Get standard imports/etc for FFRPG4e documents
 \import{../common/}{common}
@@ -12,15 +13,15 @@
 \version{4.0.0 Prerelease \datestamp} % chktex 8
 \titleimage{cover-swordguy}
 
+\robustify{\cftsecfont}
+\robustify{\cftchapfont}
+
 \begin{document}
 % Stuff before main book
-\frontmatter
-
+\frontmatter\addtocontents{toc}{\protect\renewcommand{\cftsecfont}{\protect\itshape}} %chktex 6
 \maketitle
-
 % Auto-generated ToC
 \tableofcontents
-
 % This is to make PDFs generate right
 \setcounter{tocdepth}{3}
 
@@ -28,7 +29,8 @@
 \include{revised/author}\label{ch:author}
 
 % Main book chapters
-\mainmatter\styledchapter[title=Introduction,quote={I've been here since the beginning and I still don't know what the hell's goin' on},author=Barret Wallace (FFVII),image=block-city-garden,width=0.38]\label{ch:introduction}
+\mainmatter\addtocontents{toc}{\protect\renewcommand{\cftsecfont}{\protect\normalfont}}
+\styledchapter[title=Introduction,quote={I've been here since the beginning and I still don't know what the hell's goin' on},author=Barret Wallace (FFVII),image=block-city-garden,width=0.38]\label{ch:introduction}
 \include{revised/introduction}
 
 %\styledchapter
@@ -58,8 +60,9 @@ The crystals were born and the world was created.,author=Epilogue (FFV),image=bl
 \include{revised/bestiary}
 
 % Tables go after this
-\appendix
-\addcontentsline{toc}{chapter}{\protect\textbf{Appendices}}
+\appendix\addtocontents{toc}{\protect\renewcommand{\cftchapfont}{\protect\itshape\bfseries}} %chktex 6
+\addtocontents{toc}{\protect\renewcommand{\cftsecfont}{\protect\itshape}} %chktex 6
+\addcontentsline{toc}{chapter}{Appendices}
 
 \clearpage\input{revised/tab-xp}
 
