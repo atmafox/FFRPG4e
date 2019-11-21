@@ -3,6 +3,7 @@
 \ProvidesPackage{ffrpg-title}[2019/10/31 v4.0.0a common title page for FFRPG material]
 
 \RequirePackage{ffrpg-style}
+\RequirePackage{metalogo}
 
 % Add new commands to get info to the title page
 \newcommand*{\edition}[1]{\gdef\@edition{#1}}
@@ -32,6 +33,20 @@
   \vfill
 
   {\centering\includegraphics[width=0.9\textwidth]{\@titleimage}}
+  % Let's create a copyright page
+  \clearpage
+  \markboth{Copyright}{}
+  \normalsize\rmfamily\mdseries\upshape\raggedright
+  \vspace{\stretch{1}}
+  All Square-Enix concepts, artwork, and other items \textcopyright~Square-Enix. \\
+  \vspace{\stretch{1}}
+  The use of copyrighted materials in this book makes no claim to ownership or other rights on the materials.  All materials from Square-Enix are used without permission.  Other materials are used with permission of their creators and will be noted in this section at a later time. \\
+  \vspace{\stretch{1}}
+  Book layout by Atma Yhhsom'aa and Weaver. \\
+  \vspace{\stretch{1}}
+  Rendered to PDF by \XeLaTeX, compressed using GNU GhostScript. \\
+  \vfill
+  \url{http://ffrpg4e.wikidot.com/}
   \end{titlepage}
 }
 
