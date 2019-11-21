@@ -279,8 +279,9 @@ TSWLatexianTemp*
 .~lock.*
 
 # Vscode Projects
-*.code-workspace
-/.vscode
+# Looks like including these is preferred
+#*.code-workspace
+#/.vscode
 
 # Mac stuff
 .DS_Store

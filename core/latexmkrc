@@ -2,5 +2,5 @@
 $clean_ext = "%A-compressed.pdf";
 $success_cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%R-compressed.pdf %D";
 $pdf_mode = 5;
-$xelatex = 'xelatex -synctex=1 -interaction=nonstopmodei -file-line-error';
+$xelatex = 'xelatex -synctex=1 -interaction=nonstopmode -file-line-error';
 $pdf_viewer = 'mimeopen';

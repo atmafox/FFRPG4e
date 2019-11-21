@@ -1,0 +1,60 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Core final build",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/core"
+            },
+            "command": "latexmk",
+            "problemMatcher": {
+                "owner": "latex",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):([0-9]+): (.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "message": 3
+                }
+            }
+        },
+        {
+            "label": "Core clean",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/core"
+            },
+            "args": [
+                "-C"
+            ],
+            "command": "latexmk",
+            "problemMatcher": []
+        },
+        {
+            "label": "Core compress",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/core"
+            },
+            "args": [
+                "-sDEVICE=pdfwrite",
+                "-dCompatibilityLevel=1.5",
+                "-dNOPAUSE",
+                "-dQUIET",
+                "-dBATCH",
+                "-sOutputFile=revised-compressed.pdf",
+                "revised.pdf"
+            ],
+            "command": "gs",
+            "dependsOn": [
+                "Core final build"
+            ]
+        }
+    ]
+}
