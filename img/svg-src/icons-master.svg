@@ -147,8 +147,8 @@
      showgrid="false"
      inkscape:current-layer="layer4"
      inkscape:document-units="px"
-     inkscape:cy="67.47442"
-     inkscape:cx="22.978231"
+     inkscape:cy="81.364017"
+     inkscape:cx="61.490297"
      inkscape:zoom="3.959798"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -164,45 +164,45 @@
        type="xygrid" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide859"
        orientation="0,1"
        position="0,128" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide861"
-       orientation="-1,0"
+       orientation="1,0"
        position="128,128" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide863"
        orientation="0,1"
        position="128,0" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide865"
-       orientation="-1,0"
+       orientation="1,0"
        position="0,0" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide867"
        orientation="0,1"
        position="290.71428,64" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="false"
+       inkscape:locked="true"
        inkscape:label=""
        id="guide869"
-       orientation="-1,0"
+       orientation="1,0"
        position="64,303" />
   </sodipodi:namedview>
   <metadata
@@ -283,6 +283,12 @@
        d="m -38.63846,389.3883 a 9.0913725,9.0913725 0 0 1 -9.091372,9.09138 9.0913725,9.0913725 0 0 1 -9.091373,-9.09138 9.0913725,9.0913725 0 0 1 9.091373,-9.09137 9.0913725,9.0913725 0 0 1 9.091372,9.09137"
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="circle2495-7" />
+    <circle
+       r="9.0913725"
+       cy="449.23984"
+       cx="-48.234783"
+       id="circle4766"
+       style="opacity:1;fill:#a920ba;fill-opacity:0.57661288;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round" />
   </g>
   <g
      transform="translate(0,-372)"
