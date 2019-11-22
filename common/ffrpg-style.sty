@@ -769,6 +769,24 @@
 	 \end{multicols}
 	 \medskip}
 
+% New job table format
+\newenvironment{tabjob}{
+	\begin{longtable}[c]{@{}rp{0.85\textwidth}@{}}
+		\multicolumn{2}{c}{\textbf{Abilities}} \\ \midrule \endfirsthead%
+		\bottomrule \endlastfoot%
+} {
+	\end{longtable}
+	\clearpage
+}
+
+% Commands for the tabjob table format
+\newcommand{\tabjobspec}{\multicolumn{2}{l}{\textbf{Specialties:}} \tabularnewline \nopagebreak}
+\newcommand{\tabjobsep}{%
+	\addlinespace[6pt]
+	\midrule
+	\\[-6pt]%
+}
+
 % Change layout of headrule
 \setlength{\headheight}{14pt}
 \renewcommand{\headrule}{}
