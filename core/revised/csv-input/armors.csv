@@ -2,14 +2,14 @@
 "",,,,,
 "light",,,,,##############################################
 "",,,,,
-"Cotton Robe",1,100,0,3,
-"Snow Cape",1,142,0,3,\tfxautov{Resist}{Ice}
-"Mistle Robe",1,143,0,3,\tfximmunity{Sleep}
+"Cotton Robe",1,100,1,4,
+"Snow Cape",1,142,1,4,\tfxautov{Resist}{Ice}
+"Mistle Robe",1,143,1,4,\tfximmunity{Sleep}
 "Leather Robe",10,585,2,10,
 "Temple Cloth",10,866,2,10,\tfxautov{Resist}{Shadow}
 "Thunder Robe",10,867,2,10,\tfximmunity{Mute}
-"Linen Robe",19,1552,3,15,
-"Mist Silk Robe",19,2046,3,15,\tfxautov{Immune}{Light}
+"Linen Robe",19,1552,5,19,
+"Mist Silk Robe",19,2046,5,19,\tfxautov{Immune}{Light}
 "Red Robe",19,2046,7,26,\tfxsos{Mute}
 "Silk Robe",28,2678,13,36,
 "Magician Robe",28,3797,13,36,Add Fire level to all Spells’ damage
@@ -34,15 +34,15 @@
 "",,,,,
 "medium",,,,,##############################################
 "",,,,,
-"Leather Outfit",1,84,1,1,
-"Storm Jerkin",1,121,1,1,\tfxautov{Resist}{Lightning}
-"Training Suit",1,121,1,1,\tfximmunity{Blind}
+"Leather Outfit",1,84,2,2,
+"Storm Jerkin",1,121,2,2,\tfxautov{Resist}{Lightning}
+"Training Suit",1,121,2,2,\tfximmunity{Blind}
 "Bronze Vest",10,500,5,5,
 "Nomad's Tunic",10,730,5,5,\tfxautov{Resist}{Earth}
 "Red Jacket",10,732,5,5,\tfximmunity{Slow}
-"Chain Vest",19,1316,7,7,
-"Power Sash",19,1752,7,7,\tfximmunity{Weaken: Physical}
-"Survival Vest",19,1742,7,7,\tfximmunity{Weaken: Magic}
+"Chain Vest",19,1316,10,10,
+"Power Sash",19,1752,10,10,\tfximmunity{Weaken: Physical}
+"Survival Vest",19,1742,10,10,\tfximmunity{Weaken: Magic}
 "Ring Mail",28,2269,21,21,
 "Chocobo Costume",28,3201,21,21,"Add Air level your actions’ damage, except Spells and \taction{Attack}"
 "Padded Shirt",28,3224,21,21,\tfxautov{Resist}{Cut}
@@ -66,14 +66,14 @@
 "",,,,,
 "heavy",,,,,##############################################
 "",,,,,
-"Leather Plate",1,99,3,0,
-"Fire Armor",1,141,3,0,\tfxautov{Resist}{Fire}
-"Cobra Cuirass",1,141,3,0,\tfximmunity{Poison}
+"Leather Plate",1,99,4,1,
+"Fire Armor",1,141,4,1,\tfxautov{Resist}{Fire}
+"Cobra Cuirass",1,141,4,1,\tfximmunity{Poison}
 "Bronze Armor",10,583,10,2,
 "Blue Plate",10,860,10,2,\tfxautov{Resist}{Water}
 "Bone Plate",10,865,10,2,\tfximmunity{Disabled}
-"Plate Mail",19,1555,15,3,
-"Storm Plate",19,2047,15,3,\tfxautov{Immune}{Air}
+"Plate Mail",19,1555,19,5,
+"Storm Plate",19,2047,19,5,\tfxautov{Immune}{Air}
 "Viking Armor",19,2060,26,7,\tfxsos{Berserk}
 "Silver Mail",28,2667,36,13,
 "Soldier's Armor",28,3801,36,13,Add Earth level to \taction{Attack} damage
