@@ -4,53 +4,37 @@
     \textbf{Representatives}: Fencer Job (FFTA) \pc%
 \end{jobdesc}
 
-\begin{ffminipage}
-{\centering \textbf{Abilities}\par }
-
-\noindent\tability{Block Projectiles}: Core Ability acquired at level 1. You may equip medium armor and gain the reaction\actype[reaction=true] \taction{Arrow Guard}. When you are hit by a Ranged attack, make an Air vs Air attack, difficulty 30. If successful, you don’t suffer the attack’s effects. This does not affect Spells. \pc%
-
-\begin{jobchoice}
-\crystal{fire}{12pt} & %
-\tspec{Lightning Strike}: Requires Fire level 3. Opponents cannot use interrupt actions to react to your attacks. In addition, choose one: \tequip{Bows} or \tequip{Light Sword / Knives}. You may equip the chosen. \\
-\crystal{air}{12pt} & %
-\tspec{Slim Target}: Requires Air level 4. Once per round, you can use any action or reaction as an interrupt. \\
-\crystal{earth}{12pt} & %
-\tspec{Surprise Assault}: Requires Earth level 3. Whenever you declare a Slow action, you may reduce its charge time to zero by increasing another of your initiative dice's value by action's charge time. This ability fails if it would increase a die to a value of 11 or greater. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Preemptive Attack}: Core Ability acquired at level 19. After rolling initiative, you may change one of your dice’s value to 1. You may add your Air level to your Armor and your Water level to your Magic Armor. \pc%
-
-\begin{jobchoice}
-\crystal{fire}{12pt} & %
-\tspec{Magical Reflexes}:  Requires Fire level 8. You may use \taction{Arrow Guard} to avoid Spells. \\
-\crystal{earth}{12pt} \crystal{fire}{12pt} & %
-\tspec{Just a Scratch}: Requires Earth and Fire level 10. The first time in each round you suffer a critical hit, ignore the effects of critical hit (if any). The attack does its normal effects. You may still count as if it had been a critical hit for the purposes of other Abilities. \\
-\crystal{earth}{12pt} & %
-\tspec{Feign Weakness}: Requires Earth level 7. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may force the opponent to discard one initiative die and immediately repeat the attack against only you (even if the attack targets a Group, it will only target you when you use False Weakness). \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Total Defense}: Core Ability acquired at level 35. You may delay any number of actions, instead of only one. \pc%
-
-\begin{jobchoice}
-\crystal{air}{12pt} \crystal{water}{12pt} & %
-\tspec{Impromptu Cover}: Requires Air and Water level 13. Increase by 30 the difficulty of all Group attacks that include you as its targets. \\
-\crystal{earth}{12pt} \crystal{fire}{12pt} & %
-\tspec{Blade Barrier}: Requires Earth and Fire level 13. Add your Earth level to your Armor and your Fire level to your Magic Armor. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Air Dancer}: Core Ability acquired at level 50. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may perform the \taction{Bobbing} Ranged physical action as an interrupt. Roll Air vs Water, difficulty 40. If sucessful, the enemy loses its highest Initiative die and you gain it (with the same value). Treat this as a \tstatus{Weaken}-type status effect.  \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Water Dancer}: Requires Water level 18. Melee actions cannot target you unless you acted in the last 3 phases. \\
-\crystal{fire}{12pt} & %
-\tspec{Fire Dancer}: Requires Air level 18. Reduce the difficulty of all actions and reactions you perform on the second or third phase by 5; on the fourth or fifth phase by 10; on the sixth or seventh phase by 15; on the eighth or ninth phase by 20 and on the tenth phase by 25. 
-\textit{(Using the scaling down optional rule, page~\pageref{optrule:scaling}, reduce the difficulty of actions and reactions on fourth, fifth and sixth phase by 1, on seventh, eighth or ninth by 2 and on tenth by 3)} \\
-\end{jobchoice}
-\end{ffminipage}
+\begin{tabjob}
+    \multicolumn{2}{p{\textwidth}}{\tability{Block Projectiles}: Core Ability acquired at level 1. You may equip medium armor and gain the reaction\actype[reaction=true] \taction{Arrow Guard}. When you are hit by a Ranged attack, make an Air vs Air attack, difficulty 30. If successful, you don’t suffer the attack’s effects. This does not affect Spells.} \\
+    \tabjobspec{}
+    \crystal{fire}{12pt} & %
+    \tspec{Lightning Strike}: Requires Fire level 3. Opponents cannot use interrupt actions to react to your attacks. In addition, choose one: \tequip{Bows} or \tequip{Light Sword / Knives}. You may equip the chosen. \\
+    \crystal{air}{12pt} & %
+    \tspec{Slim Target}: Requires Air level 4. Once per round, you can use any action or reaction as an interrupt. \\
+    \crystal{earth}{12pt} & %
+    \tspec{Surprise Assault}: Requires Earth level 3. Whenever you declare a Slow action, you may reduce its charge time to zero by increasing another of your initiative dice's value by action's charge time. This ability fails if it would increase a die to a value of 11 or greater. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Preemptive Attack}: Core Ability acquired at level 19. After rolling initiative, you may change one of your dice’s value to 1. You may add your Air level to your Armor and your Water level to your Magic Armor.} \\
+    \tabjobspec{}
+    \crystal{fire}{12pt} & %
+    \tspec{Magical Reflexes}:  Requires Fire level 8. You may use \taction{Arrow Guard} to avoid Spells. \\
+    \crystal{earth}{12pt} \crystal{fire}{12pt} & %
+    \tspec{Just a Scratch}: Requires Earth and Fire level 10. The first time in each round you suffer a critical hit, ignore the effects of critical hit (if any). The attack does its normal effects. You may still count as if it had been a critical hit for the purposes of other Abilities. \\
+    \crystal{earth}{12pt} & %
+    \tspec{Feign Weakness}: Requires Earth level 7. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may force the opponent to discard one initiative die and immediately repeat the attack against only you (even if the attack targets a Group, it will only target you when you use False Weakness). \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Total Defense}: Core Ability acquired at level 35. You may delay any number of actions, instead of only one.} \\
+    \tabjobspec{}
+    \crystal{air}{12pt} \crystal{water}{12pt} & %
+    \tspec{Impromptu Cover}: Requires Air and Water level 13. Increase by 30 the difficulty of all Group attacks that include you as its targets. \\
+    \crystal{earth}{12pt} \crystal{fire}{12pt} & %
+    \tspec{Blade Barrier}: Requires Earth and Fire level 13. Add your Earth level to your Armor and your Fire level to your Magic Armor. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Air Dancer}: Core Ability acquired at level 50. Whenever an opponent misses an attack against you or you avoid its effects by reacting, you may perform the \taction{Bobbing} Ranged physical action as an interrupt. Roll Air vs Water, difficulty 40. If sucessful, the enemy loses its highest Initiative die and you gain it (with the same value). Treat this as a \tstatus{Weaken}-type status effect.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} & %
+    \tspec{Water Dancer}: Requires Water level 18. Melee actions cannot target you unless you acted in the last 3 phases. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Fire Dancer}: Requires Air level 18. Reduce the difficulty of all actions and reactions you perform on the second or third phase by 5; on the fourth or fifth phase by 10; on the sixth or seventh phase by 15; on the eighth or ninth phase by 20 and on the tenth phase by 25. 
+    \textit{(Using the scaling down optional rule, page~\pageref{optrule:scaling}, reduce the difficulty of actions and reactions on fourth, fifth and sixth phase by 1, on seventh, eighth or ninth by 2 and on tenth by 3)} \\
+\end{tabjob}
