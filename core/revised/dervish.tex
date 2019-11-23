@@ -4,52 +4,36 @@
     \textbf{Representatives}: Edward Geraldine ``Edge'' Eblan (FFIV), Clyde ``Shadow'' Arrowny (FFVI), Ninja Job (FFI, FFIII, FFV, FFXI, FFT, FFTA) \pc%
 \end{jobdesc}
 
-\begin{ffminipage}
-{\centering \textbf{Abilities}\par }
-
-\noindent\tability{Ambidexterity}: Core Ability acquired at level 1. You may equip Twin Blades. \pc%
-
-\begin{jobchoice}
-\crystal{air}{12pt} & %
-\tspec{Quick Draw}: Requires level Air 3. Once per round as a free action, you can draw and switch weapons. \\
-\crystal{level}{12pt} & %
-\tspec{Killer's Garments}: Requires level 1. You may equip \tequip{medium armor}, \tequip{Bows}, and \tequip{Throwing Weapons}. \\
-\crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Deadly Dance}: Requires Air level 5 and Fire level 4. Whenever you hit the \taction{Attack} action, you may lower the value of one of your initiative dice by 1, to a minimum of the current phase. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Critical Speed}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM.\@{}While your current HP is 25\% of your max HP or less, you gain the \tstatus{Haste} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} \crystal{water}{12pt} & %
-\tspec{Zen Focus}: Requires Earth and Water level 7. At the beginning of each round, you may roll one fewer initiative dice to gain one extra die in a phase you have no initiative dice (you choose which phase after all enemies have rolled initiative). \\
-\crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Danger Zone}: Requires Air and Fire level 6. At the beginning of each round, you may spend HP equal to 25\% of your max HP to receive the \tstatus{Haste} status during this round. \\
-\crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Two-Weapon Defense}: Requires Fire level 9 and Water level 5. You gain the reaction \taction{Double Parry}. Use when hit by a Melee \tatk{physical} attack. Do an (the greater of Air or Earth) vs Earth attack, difficulty 40. If successful, you ignore the attack’s effects. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Deadly Accuracy}: Core Ability acquired at level 35. After rolling an attack, you may reduce or increase the d100 result by 1. \pc%
-
-\begin{jobchoice}
-\crystal{air}{12pt} & %
-\tspec{Deep Cut}: Requires Air level 15. When you attain a critical hit with an action that deals damage, ignore the target’s ARM and MARM.\@{}\\
-\crystal{water}{12pt} & %
-\tspec{Lethal Precision}: Requires Water level 16. If you discard an initiative dice after rolling an attack that may not have critical hits, you deal double damage in case of a critical hit. This ability may not be used with Spells. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Fierce Assault}: Core Ability acquired at level 50. After you deal physical damage to a target, your subsequent physical attacks against that target in this phase ignore Armor. After you deal magical damage to a target, your subsequent magical attacks against that target in this phase ignore Magic Armor. \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Rain of Blows}: Requires level 18 in Earth. Once per round, after being successful with the \taction{Attack} action, you may repeat the action as a free action. \\
-\crystal{fire}{12pt} & %
-\tspec{Precise Hits}: Requires Fire level 18. Once per round, you may re-roll an attack when using a \tatk{physical} or \tatk{magical} action. \\
-\end{jobchoice}
-\end{ffminipage}
+\begin{tabjob}
+    \multicolumn{2}{p{\textwidth}}{\tability{Ambidexterity}: Core Ability acquired at level 1. You may equip Twin Blades.} \\
+    \tabjobspec{}
+    \crystal{air}{12pt} & %
+    \tspec{Quick Draw}: Requires level Air 3. Once per round as a free action, you can draw and switch weapons. \\
+    \crystal{level}{12pt} & %
+    \tspec{Killer's Garments}: Requires level 1. You may equip \tequip{medium armor}, \tequip{Bows}, and \tequip{Throwing Weapons}. \\
+    \crystal{air}{12pt} \crystal{fire}{12pt} & %
+    \tspec{Deadly Dance}: Requires Air level 5 and Fire level 4. Whenever you hit the \taction{Attack} action, you may lower the value of one of your initiative dice by 1, to a minimum of the current phase. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Critical Speed}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM.\@{}While your current HP is 25\% of your max HP or less, you gain the \tstatus{Haste} status. You lose this status if your current HP is more than 25\% of your max HP for any reason.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} \crystal{water}{12pt} & %
+    \tspec{Zen Focus}: Requires Earth and Water level 7. At the beginning of each round, you may roll one fewer initiative dice to gain one extra die in a phase you have no initiative dice (you choose which phase after all enemies have rolled initiative). \\
+    \crystal{air}{12pt} \crystal{fire}{12pt} & %
+    \tspec{Danger Zone}: Requires Air and Fire level 6. At the beginning of each round, you may spend HP equal to 25\% of your max HP to receive the \tstatus{Haste} status during this round. \\
+    \crystal{fire}{12pt} \crystal{water}{12pt} & %
+    \tspec{Two-Weapon Defense}: Requires Fire level 9 and Water level 5. You gain the reaction \taction{Double Parry}. Use when hit by a Melee \tatk{physical} attack. Do an (the greater of Air or Earth) vs Earth attack, difficulty 40. If successful, you ignore the attack’s effects. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Deadly Accuracy}: Core Ability acquired at level 35. After rolling an attack, you may reduce or increase the d100 result by 1.} \\
+    \tabjobspec{}
+    \crystal{air}{12pt} & %
+    \tspec{Deep Cut}: Requires Air level 15. When you attain a critical hit with an action that deals damage, ignore the target’s ARM and MARM.\@{}\\
+    \crystal{water}{12pt} & %
+    \tspec{Lethal Precision}: Requires Water level 16. If you discard an initiative dice after rolling an attack that may not have critical hits, you deal double damage in case of a critical hit. This ability may not be used with Spells. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Fierce Assault}: Core Ability acquired at level 50. After you deal physical damage to a target, your subsequent physical attacks against that target in this phase ignore Armor. After you deal magical damage to a target, your subsequent magical attacks against that target in this phase ignore Magic Armor.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} & %
+    \tspec{Rain of Blows}: Requires level 18 in Earth. Once per round, after being successful with the \taction{Attack} action, you may repeat the action as a free action. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Precise Hits}: Requires Fire level 18. Once per round, you may re-roll an attack when using a \tatk{physical} or \tatk{magical} action. \\
+\end{tabjob}

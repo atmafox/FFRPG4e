@@ -6,57 +6,41 @@
     \jobstats[hpa=5x,hpb=6x,hpc=7x,hpd=8x,mpa=0x,mpc=1x,armor=Heavy,weapons=Light Sword/ Knives \\ Claws / Gloves \\ Weapon \& Shield \\ Heavy Weapon \\ Katanas \\ Polearms]
 \end{jobdesc}
 
-\begin{ffminipage}
-{\centering \textbf{Abilities}\par }
+\begin{tabjob}
+    \multicolumn{2}{p{\textwidth}}{\tability{Master of Arms}: Core ability acquired at level 1. You are a warrior, and gain the multipliers and equipment choices above.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} & %
+    \tspec{Critical Force}: Requires Earth level 5. Whenever you use an ability that requires an weapon attack and has no special effects on critical hits, you may choose to deal twice weapon damage on critical hits (instead of the ability's damage) and all equipment effects. \\
+    \crystal{earth}{12pt} \crystal{air}{12pt} & %
+    \tspec{Adroit}: Requires Earth and Air level 3. Whenever you use a Warrior ability other than a weapon attack, you can choose to use either Earth or Air as Offensive Stat. Whenever you acquire an ability that gives you the choice between two Break actions, you gain both Break actions. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Arc}: Requires Fire level 3. You may add Ranged to your \taction{Attack} actions. You may charge a Slow (1) action (or increase the Slow (X) rating by 1) to add Ranged to any Warrior abilities which require an weapon attack. \\
+    \crystal{water}{12pt} & %
+    \tspec{Armored Agility}: Requires Water level 3. Once per turn, you may reroll the \taction{Dodge}, \taction{Block} or \taction{Parry} reactions. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Power Attack}: Core Ability acquired at level 1. You earn one of the three actions below:} \\
+    \crystal{level}{12pt} & %
+    \taction{Jump} is a Quick action. Using it, you jump an incredible height and gain the \tstatus{Flight} status. In your next action, you dive on a target, discarding the initiative die and attacking with your weapon. If you hit, inflict 150\% weapon damage. After the attack, you lose the \tstatus{Flight} status. Deal twice weapon damage instead of 150\% if you wield a Polearm. \\
+    \crystal{level}{12pt} & %
+    \taction{Mighty Strike} is a Quick action. Attacking with all your might, without preparation or any worry about accuracy, you deliver a devastating attack. Perform an attack with your weapon but increasing the difficulty by 30. Your attack does twice weapon damage, plus all the equipment effects as usual. \\
+    \crystal{level}{12pt} & %
+    \taction{Minus Strike} is a Slow (1) physical action. When using it, focus your ki energy to perform an Earth vs Earth attack, difficulty 40, against a target. If successful, this action causes \telem{Cut}-elemental damage equal to the lowest between 10 times your Armor value or (your max HP \(minus\) your current HP). Don’t add the singles digit to damage. This action ignores the \tstatus{Strengthen (Physical)} status and may not deal over 999 damage. \\
+    \tabjobspec{}
+    \crystal{air}{12pt} & %
+    \tspec{Shield Break}: Requires Air level 7. Choose and gain one Break action: 
 
-\tability{Master of Arms}: Core ability acquired at level 1. You are a warrior, and gain the multipliers and equipment choices above. \pc%
+    \taction{Armor Break}, a Quick physical action that weakens the resistance of the target. Perform an Air vs Earth attack, difficulty 50, to inflict the \tstatus{Weaken (Armor)} status on the target until the end of round; or 
 
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Critical Force}: Requires Earth level 5. Whenever you use an ability that requires an weapon attack and has no special effects on critical hits, you may choose to deal twice weapon damage on critical hits (instead of the ability's damage) and all equipment effects. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} & %
-\tspec{Adroit}: Requires Earth and Air level 3. Whenever you use a Warrior ability other than a weapon attack, you can choose to use either Earth or Air as Offensive Stat. Whenever you acquire an ability that gives you the choice between two Break actions, you gain both Break actions. \\
-\crystal{fire}{12pt} & %
-\tspec{Arc}: Requires Fire level 3. You may add Ranged to your \taction{Attack} actions. You may charge a Slow (1) action (or increase the Slow (X) rating by 1) to add Ranged to any Warrior abilities which require an weapon attack. \\
-\crystal{water}{12pt} & %
-\tspec{Armored Agility}: Requires Water level 3. Once per turn, you may reroll the \taction{Dodge}, \taction{Block} or \taction{Parry} reactions. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Power Attack}: Core Ability acquired at level 1. You earn one of the three actions below: \pc%
-
-\begin{jobchoice}[header=false]
-\crystal{level}{12pt} & %
-\taction{Jump} is a Quick action. Using it, you jump an incredible height and gain the \tstatus{Flight} status. In your next action, you dive on a target, discarding the initiative die and attacking with your weapon. If you hit, inflict 150\% weapon damage. After the attack, you lose the \tstatus{Flight} status. Deal twice weapon damage instead of 150\% if you wield a Polearm. \\
-\crystal{level}{12pt} & %
-\taction{Mighty Strike} is a Quick action. Attacking with all your might, without preparation or any worry about accuracy, you deliver a devastating attack. Perform an attack with your weapon but increasing the difficulty by 30. Your attack does twice weapon damage, plus all the equipment effects as usual. \\
-\crystal{level}{12pt} & %
-\taction{Minus Strike} is a Slow (1) physical action. When using it, focus your ki energy to perform an Earth vs Earth attack, difficulty 40, against a target. If successful, this action causes \telem{Cut}-elemental damage equal to the lowest between 10 times your Armor value or (your max HP \(minus\) your current HP). Don’t add the singles digit to damage. This action ignores the \tstatus{Strengthen (Physical)} status and may not deal over 999 damage. \\
-\end{jobchoice} \pc%
-
-\begin{jobchoice}
-\crystal{air}{12pt} & %
-\tspec{Shield Break}: Requires Air level 7. Choose and gain one Break action: 
-
-\taction{Armor Break}, a Quick physical action that weakens the resistance of the target. Perform an Air vs Earth attack, difficulty 50, to inflict the \tstatus{Weaken (Armor)} status on the target until the end of round; or 
-
-\taction{Mental Break}, a Quick physical action that weakens the spirit of the target. Perform an Air vs Water attack, difficulty 50, to inflict the \tstatus{Weaken (Mental)} status on the target until the end of round. \\
-\crystal{water}{12pt} & %
-\tspec{Dirty Fighting}: Requires Water level 5. You gain Quick action \taction{Dirty Fighting} You throw sand in the eyes of the opponent, attack their genitals or distract them in any way. Perform an weapon attack to deal half weapon damage, and until the end of next round, the target cannot use any reactions unless he uses an Interrupt action to do so. \\
-\crystal{fire}{12pt} & %
-\tspec{Pommel Strike}: You gain the Quick action \taction{Pommel Strike}. You attack your opponent with your weapon’s hilt at a time and place where he doesn’t expect. Do an attack roll with your weapon, dealing no damage. If the target is charging a Slow action, he loses it. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} & %
-\tspec{Weapon Specialist}: Requires Earth and Air level 5. Reduce by 10 the difficulty of \taction{Mighty Strike}. In addition, your \taction{Jump} attacks deal twice weapon damage, regardless of the equipped weapon. You may use your Magical Armor instead of Armor value to determine \taction{Minus Strike} and \taction{Dragon Breath}'s damage. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Blacksmith}: Core Ability acquired at level 15. Whenever you or an ally buy a weapon or armor without Equipment Effects, you may destroy a weapon or armor of the same Armor type or Weapon Group to give the new weapon or armor one of the destroyed's Equipment Effects. You may destroy two identical weapons or armors to use this ability either to enhance a weapon or armor with Equipment Effects or to give the ability from a different Armor type or Weapon Group. This ability may not give weapon abilities to armor, give armor abilities to weapons, nor create weapons or armors with more than 2 Equipment Effects, or 3 Equipment Effects if one of them is \textbf{Spell Weave}. \pc%
-\end{ffminipage}
-
-\begin{ffminipage}
-    \begin{jobchoice}
+    \taction{Mental Break}, a Quick physical action that weakens the spirit of the target. Perform an Air vs Water attack, difficulty 50, to inflict the \tstatus{Weaken (Mental)} status on the target until the end of round. \\
+    \crystal{water}{12pt} & %
+    \tspec{Dirty Fighting}: Requires Water level 5. You gain Quick action \taction{Dirty Fighting} You throw sand in the eyes of the opponent, attack their genitals or distract them in any way. Perform an weapon attack to deal half weapon damage, and until the end of next round, the target cannot use any reactions unless he uses an Interrupt action to do so. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Pommel Strike}: You gain the Quick action \taction{Pommel Strike}. You attack your opponent with your weapon’s hilt at a time and place where he doesn’t expect. Do an attack roll with your weapon, dealing no damage. If the target is charging a Slow action, he loses it. \\
+    \crystal{earth}{12pt} \crystal{air}{12pt} & %
+    \tspec{Weapon Specialist}: Requires Earth and Air level 5. Reduce by 10 the difficulty of \taction{Mighty Strike}. In addition, your \taction{Jump} attacks deal twice weapon damage, regardless of the equipped weapon. You may use your Magical Armor instead of Armor value to determine \taction{Minus Strike} and \taction{Dragon Breath}'s damage. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Blacksmith}: Core Ability acquired at level 15. Whenever you or an ally buy a weapon or armor without Equipment Effects, you may destroy a weapon or armor of the same Armor type or Weapon Group to give the new weapon or armor one of the destroyed's Equipment Effects. You may destroy two identical weapons or armors to use this ability either to enhance a weapon or armor with Equipment Effects or to give the ability from a different Armor type or Weapon Group. This ability may not give weapon abilities to armor, give armor abilities to weapons, nor create weapons or armors with more than 2 Equipment Effects, or 3 Equipment Effects if one of them is \textbf{Spell Weave}.} \\
+    \tabjobspec{}
     \crystal{earth}{12pt} & %
     \tspec{Weapon Break}: Requires Earth level 7. Choose and gain one Break action: 
     
@@ -69,55 +53,37 @@
     \tspec{Quadra Slam}: Requires Earth level 6 and Water level 8. You gain the Slow (4) physical action \taction{Quadra Slam}. When using it, you move with incredible speed, striking four consecutive attacks with your weapon with just one action. You may split the attacks between any number of enemies. Each deal half weapon damage and the first and second strike each target receives ignores its Armor. \\
     \crystal{earth}{12pt} \crystal{air}{12pt} & %
     \tspec{Guardbreak}: Requires Air level 6 and Fire level 8. You gain the Quick physical action \taction{Guardbreak}.You deal a sudden strike to the opponent, disrupting its defensive stance. Perform an weapon attack to deal half weapon damage, and if the target is delaying any actions, it loses the delayed initiative dice. \taction{Guardbreak} may also be used as an interrupt. \\
-\end{jobchoice}
-\end{ffminipage}
-    
-\begin{ffminipage}
-\noindent\tability{Double Cut}: Core Ability acquired at level 24. You gain the Slow (5) action \taction{Double Cut}. With it, do two attacks with your weapon in quick succession at the same target, dealing weapon damage and effects. This ability may achieve critical hits, causing double damage. You may substitute one or both attacks for a Break action. \pc%
-            
-\begin{jobchoice}
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Double Cut}: Core Ability acquired at level 24. You gain the Slow (5) action \taction{Double Cut}. With it, do two attacks with your weapon in quick succession at the same target, dealing weapon damage and effects. This ability may achieve critical hits, causing double damage. You may substitute one or both attacks for a Break action.} \\
+    \tabjobspec{}    
     \crystal{earth}{12pt} \crystal{fire}{12pt} & %
     \tspec{Slash All}: Requires Earth and Fire level 11. \taction{Slash-All} is a Slow (2) action. Moving with speed, you can unleash an attack with your weapon against all enemies. Each enemy takes damage equal to your weapon damage, plus all equipment effects. \\
     \crystal{air}{12pt} \crystal{water}{12pt} & %
     \tspec{Blade Beam}: Requires Air and Water level 11. \taction{Blade Beam} is a Ranged Slow (2) action. You shoot a wave of ki energy at a target, performing an attack with your weapon that deals half weapon damage, Puncture-elemental. If it succeeds, you deal Puncture-elemental damage to all other enemies, equal to the original target' Armor value. All damage dealt by this attack, both by the first and secondary strikes, ignores Armor and the \tstatus{Protect} status. \\
     \crystal{fire}{12pt} \crystal{water}{12pt} & %
     \tspec{Mastery of Destruction}: Requires Fire and Water level 10. You may increase the charge time by 3 when performing one of your known Break actions to target all enemies, or to increase the duration of the \tstatus{Weaken} status inflicted by one round. \\
-\end{jobchoice}
-\end{ffminipage}
-
-        
-\begin{ffminipage}
-\noindent\tability{Dragon Power}: Core Ability acquired at level 42. Choose one of the following abilities: \pc%
-
-\begin{jobchoice}[header=false]
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Dragon Power}: Core Ability acquired at level 42. Choose one of the following abilities:} \\
     \crystal{level}{12pt} & %
     \tspec{Dragon Horn} After you perform \taction{!Jump}'s attack, you may, as an interrupt, use an action to repeat the attack against the same target. This second attack happens before you lose the Flight Status. \\
     \crystal{level}{12pt} & %
     \tspec{Dragon Breath} You gain the Slow (3) physical action \taction{Dragon Breath}. This action allows you to use the weakness of your enemy against itself. If you have success in an Air vs Air attack, difficulty 40, the target is dealt \telem{Crush}-elemental damage equal to the lowest between 10 times your Armor value or (target’s max HP – target’s current HP). Don’t add the singles digit to damage. This action ignores the \tstatus{Strengthen (Physical)} status and may not deal over 999 damage. \\
     \crystal{level}{12pt} & %
     \tspec{Dragon Scales} After you sucessfully perform a reaction against a physical action, the enemy that performed the action loses HP equal to your Armor value. After you sucessfully perform a reaction against a Spell or magical action, the enemy that performed the action loses HP equal to your Magical Armor value. In any case, ignore the enemy's Armor, Magical Armor and all status effects. \\
-\end{jobchoice} \pc%
-                        
-\begin{jobchoice}
+    \tabjobspec{}
     \crystal{earth}{12pt} & %
     \tspec{Lethal Blow}: Requires Earth level 16. When using \taction{Dragon Breath} or \taction{Minus Strike}, reduce the damage by the target's Armor before applying 999 damage limit, instead of after. Your \taction{Dragon Scales} always use the highest between Armor or Magical Armor everytime it is triggered. You may perform a \taction{Attack} action as an interrupt after using \tspec{Dragon Horn}. \\
     \crystal{air}{12pt} & %
     \tspec{Dragon Blood}: Requires Air level 16. Whenever an enemy attack reduces your HP to 25\% of its maximum value or less, you may use a \taction{Power Attack} ability as a free action. \\
     \crystal{fire}{12pt} \crystal{water}{12pt} & %
     \tspec{Mastery of Destruction}: Requires Fire and Water level 12. Your \taction{Armor Break} and \taction{Mental Break} inflict \tstatus{Meltdown} until the end of next round on enemies with \tstatus{Weaken: Armor} or \tstatus{Weaken: Mental} statuses. Your \taction{Power Break} inflict \tstatus{Disable} until the end of next round on enemies with \tstatus{Weaken: Physical} or \tstatus{Weaken: Magic} statuses. Your \taction{Magic Break} inflict \tstatus{Mute} until the end of next round on enemies with \tstatus{Weaken: Physical} or \tstatus{Weaken: Magic} statuses. These durations may not be enhanced by \tspec{Mastery of Destruction}. \\
-\end{jobchoice}
-        \end{ffminipage}
-            
-        \begin{ffminipage}
-            \noindent\tability{Unbreakable}: Core Ability acquired at level 60. You become immune to \tstatus{Weaken}-type status effects. \pc%
-                
-            \begin{jobchoice}
-            \crystal{air}{12pt} & %
-            \tspec{Finishing Touch}: Requires Air level 20. You gain the Slow (5) action \taction{Finishing Touch}. Make two weapon attacks, difficulty 70, against the target. If both attacks are successful, inflict the \tstatus{Stone} status. If the target is immune to \tstatus{Stone} or if only one attack is successful, you deal double weapon damage. If the enemy is not immune to \tstatus{Fatal}-type statuses and one or both blows land a critical hit, reduce your opponent to 0 HP.\@{}Treat this last effect as a \tstatus{Fatal}-type status. \\
-            \crystal{fire}{12pt} & %
-            \tspec{Shock}: Requires Fire level 20. You gain the Ranged Slow (5) physical action \taction{Shock}. This action releases a burst of Ki that affects all your enemies. Perform an Earth vs Fire attack, difficulty 40. Each affected opponent suffers twice weapon damage. \\
-            \crystal{water}{12pt} & %
-            \tspec{Iaijutsu}: Requires Water level 20. You gain the Slow (5) physical action \taction{Cleave}. You go through your opponents with a sharp blow. Make an Air vs Earth attack, difficulty 70, against all your enemies. Instantly reduce to 0 HP all affected opponents. This effect counts as a \tstatus{Fatal}-type status. All enemies left alive (either immune to \tstatus{Fatal} or due to a failed attack) suffer half weapon damage. \\
-            \end{jobchoice}
-            \end{ffminipage}
-    
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Unbreakable}: Core Ability acquired at level 60. You become immune to \tstatus{Weaken}-type status effects.} \\
+    \tabjobspec{}
+    \crystal{air}{12pt} & %
+    \tspec{Finishing Touch}: Requires Air level 20. You gain the Slow (5) action \taction{Finishing Touch}. Make two weapon attacks, difficulty 70, against the target. If both attacks are successful, inflict the \tstatus{Stone} status. If the target is immune to \tstatus{Stone} or if only one attack is successful, you deal double weapon damage. If the enemy is not immune to \tstatus{Fatal}-type statuses and one or both blows land a critical hit, reduce your opponent to 0 HP.\@{}Treat this last effect as a \tstatus{Fatal}-type status. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Shock}: Requires Fire level 20. You gain the Ranged Slow (5) physical action \taction{Shock}. This action releases a burst of Ki that affects all your enemies. Perform an Earth vs Fire attack, difficulty 40. Each affected opponent suffers twice weapon damage. \\
+    \crystal{water}{12pt} & %
+    \tspec{Iaijutsu}: Requires Water level 20. You gain the Slow (5) physical action \taction{Cleave}. You go through your opponents with a sharp blow. Make an Air vs Earth attack, difficulty 70, against all your enemies. Instantly reduce to 0 HP all affected opponents. This effect counts as a \tstatus{Fatal}-type status. All enemies left alive (either immune to \tstatus{Fatal} or due to a failed attack) suffer half weapon damage. \\
+\end{tabjob}

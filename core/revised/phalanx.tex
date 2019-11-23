@@ -4,61 +4,42 @@
     \textbf{Representatives}: Auron (FFX), Samurai Job (FFV, FFX-2, FFXI, FFT) \pc%
 \end{jobdesc}
 
-\begin{ffminipage}
-{\centering \textbf{Abilities}\par }
-
-\noindent\tability{Impenetrable}: Core Ability acquired Base at level 1. You may equip \tequip{heavy armor} and gain the \actype[reaction=true] \taction{Third Eye}. When you are hit by a Melee attack, perform an Earth vs Air attack, difficulty 40. If you are successful, the attack fails. This does not affect Spells. \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Martial Training}: Requires Earth level 2. Choose two types of weapons other than \tequip{Twin Blades} or \tequip{Instruments}. You may equip the selected weapons. \\
-\crystal{air}{12pt} & %
-\tspec{Huge Target}: Requires Air level 4. During any round in which you succeed with \taction{Third Eye}, all enemies add 20 to the difficulty of all attacks and spells that does not target you. This ability have no effects while there are two or more characters with this ability in the same party and does not stack with itself. \\
-\crystal{fire}{12pt} & %
-\tspec{Willpower}: Requires Fire level 5. Increase your HP bonus multiplier at all levels by 1 if its level 1 value is 4x or lower. Use the greater between Earth and Fire Values to calculate your HP.\@{}\\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Tireless}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM.\@{}While your current HP is 25\% of your max HP or less, you gain the \tstatus{Protect} status. You lose this status if your current HP is more than 25\% of your max HP for any reason. \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Inspiring Courage}: Requires Earth level 8. While your current HP is 25\% of your max HP or less, your allies gain the \tstatus{Protect} status. Your allies lose this status if your current HP is more than 25\% of your max HP for any reason. \\
-\crystal{water}{12pt} & %
-\tspec{Preventive Defense}: Requires Water level 9. Your \tability{Tireless} ability activate when your current HP is 50\% of maximum, instead of 25\%. \\
-\crystal{air}{12pt} \crystal{fire}{12pt} & %
-\tspec{Testudo Formation}: Requires Fire and Air level 7. You gain the free \actype[reaction=true] \taction{Testudo}. Use it whenever an enemy performs an attack against one of your allies that does not target you. Roll Earth vs highest Stat, diff 40, to negate the action. You may only use this reaction once per enemy attack and only if no enemy used a Melee attack on you this round. \\
-\crystal{earth}{12pt} & %
-\tspec{Shield Wall}: Requires Earth level 9. You gain the \actype[reaction=true] \taction{Shield Wall}. When you and at least one ally is targetted by an action that deals physical damage, perform an Earth vs Fire roll, difficulty 0, to redirect all attacks to you. You may, as a free action, use another reaction once per attack that hits you. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Unshakable}: Choose one of the following options: \pc%
-
-\begin{jobchoice}[header=false]
-\crystal{level}{12pt} & %
-Each time you're hit with a physical attack, the enemy that performed the action takes physical \telem{Puncture}-elemental damage equal to your HP bonus multiplier times your Earth level.  \\
-\crystal{level}{12pt} & %
-Increase your HP bonus multiplier at all levels by 1 if its level 1 value is 5x or lower. \\
-\end{jobchoice} 
-
-\begin{jobchoice}
-\crystal{fire}{12pt} \crystal{water}{12pt} & %
-\tspec{Runic Shield}: Requires Fire and Water level 12. You may use \taction{Third Eye} against Spells. You may use \taction{Shield Wall} against magical damage attacks if you have it. \\
-\crystal{earth}{12pt} \crystal{air}{12pt} & %
-\tspec{Armor Specialist}: Requires Earth and Air level 13. While you wear heavy armor, you gain Auto-\tstatus{Strenghten: Armor} and your \taction{Third Eye}'s difficulty is 0 against physical attacks. While you wear light armor, you gain Auto-\tstatus{Strenghten: Mental} and your \taction{Third Eye}'s difficulty is 0 against magical attacks. While you wear medium armor, you may once per phase use any reaction as an interrupt. \\
-\end{jobchoice}
-\end{ffminipage}
-
-\begin{ffminipage}
-\noindent\tability{Indestructible}: Core Ability acquired at level 50. Whenever any effect gives you \tstatus{Barrier}-type positive status, increase by a round its duration. \pc%
-
-\begin{jobchoice}
-\crystal{earth}{12pt} & %
-\tspec{Scream}: Requires Earth level 18. You gain the reaction \taction{Scream}. Use it when you suffer an attack that inflicts a negative status effect. Perform a Water vs (the greater between Air or Fire) attack, difficulty 40. If successful, the attack doesn’t inflict any negative status and, if the attack did damage, you recover HP equal to twice the damage dealt after reducing by your ARM or MARM.\@{}\\
-\crystal{water}{12pt} & %
-\tspec{Uncontrollable}: Requires Water level 18. You gain the Slow (4) \tatk{physical} action \taction{Meatbone Slash}. Putting all your weight behind the strike, you perform a weapon attack. If successful, the target takes damage equal to your current HP, or 999, whichever is less. This attack ignores the Armor of any targets that did not attacked you this round. \\
-\end{jobchoice}
-\end{ffminipage}
+\begin{tabjob}
+    \multicolumn{2}{p{\textwidth}}{\tability{Impenetrable}: Core Ability acquired Base at level 1. You may equip \tequip{heavy armor} and gain the \actype[reaction=true] \taction{Third Eye}. When you are hit by a Melee attack, perform an Earth vs Air attack, difficulty 40. If you are successful, the attack fails. This does not affect Spells.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} & %
+    \tspec{Martial Training}: Requires Earth level 2. Choose two types of weapons other than \tequip{Twin Blades} or \tequip{Instruments}. You may equip the selected weapons. \\
+    \crystal{air}{12pt} & %
+    \tspec{Huge Target}: Requires Air level 4. During any round in which you succeed with \taction{Third Eye}, all enemies add 20 to the difficulty of all attacks and spells that does not target you. This ability have no effects while there are two or more characters with this ability in the same party and does not stack with itself. \\
+    \crystal{fire}{12pt} & %
+    \tspec{Willpower}: Requires Fire level 5. Increase your HP bonus multiplier at all levels by 1 if its level 1 value is 4x or lower. Use the greater between Earth and Fire Values to calculate your HP.\@{}\\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Tireless}: Core Ability acquired at level 19. You may add your Air level to your ARM and your Fire level to your MARM.\@{}While your current HP is 25\% of your max HP or less, you gain the \tstatus{Protect} status. You lose this status if your current HP is more than 25\% of your max HP for any reason.} \\
+    \tabjobspec{}
+    \crystal{earth}{12pt} & %
+    \tspec{Inspiring Courage}: Requires Earth level 8. While your current HP is 25\% of your max HP or less, your allies gain the \tstatus{Protect} status. Your allies lose this status if your current HP is more than 25\% of your max HP for any reason. \\
+    \crystal{water}{12pt} & %
+    \tspec{Preventive Defense}: Requires Water level 9. Your \tability{Tireless} ability activate when your current HP is 50\% of maximum, instead of 25\%. \\
+    \crystal{air}{12pt} \crystal{fire}{12pt} & %
+    \tspec{Testudo Formation}: Requires Fire and Air level 7. You gain the free \actype[reaction=true] \taction{Testudo}. Use it whenever an enemy performs an attack against one of your allies that does not target you. Roll Earth vs highest Stat, diff 40, to negate the action. You may only use this reaction once per enemy attack and only if no enemy used a Melee attack on you this round. \\
+    \crystal{earth}{12pt} & %
+    \tspec{Shield Wall}: Requires Earth level 9. You gain the \actype[reaction=true] \taction{Shield Wall}. When you and at least one ally is targetted by an action that deals physical damage, perform an Earth vs Fire roll, difficulty 0, to redirect all attacks to you. You may, as a free action, use another reaction once per attack that hits you. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Unshakable}: Choose one of the following options:} \\
+    \crystal{level}{12pt} & %
+    Each time you're hit with a physical attack, the enemy that performed the action takes physical \telem{Puncture}-elemental damage equal to your HP bonus multiplier times your Earth level.  \\
+    \crystal{level}{12pt} & %
+    Increase your HP bonus multiplier at all levels by 1 if its level 1 value is 5x or lower. \\
+    \\
+    \tabjobspec{}
+    \crystal{fire}{12pt} \crystal{water}{12pt} & %
+    \tspec{Runic Shield}: Requires Fire and Water level 12. You may use \taction{Third Eye} against Spells. You may use \taction{Shield Wall} against magical damage attacks if you have it. \\
+    \crystal{earth}{12pt} \crystal{air}{12pt} & %
+    \tspec{Armor Specialist}: Requires Earth and Air level 13. While you wear heavy armor, you gain Auto-\tstatus{Strenghten: Armor} and your \taction{Third Eye}'s difficulty is 0 against physical attacks. While you wear light armor, you gain Auto-\tstatus{Strenghten: Mental} and your \taction{Third Eye}'s difficulty is 0 against magical attacks. While you wear medium armor, you may once per phase use any reaction as an interrupt. \\
+    \tabjobsep%
+    \multicolumn{2}{p{\textwidth}}{\tability{Indestructible}: Core Ability acquired at level 50. Whenever any effect gives you \tstatus{Barrier}-type positive status, increase by a round its duration.} \\
+    \crystal{earth}{12pt} & %
+    \tspec{Scream}: Requires Earth level 18. You gain the reaction \taction{Scream}. Use it when you suffer an attack that inflicts a negative status effect. Perform a Water vs (the greater between Air or Fire) attack, difficulty 40. If successful, the attack doesn’t inflict any negative status and, if the attack did damage, you recover HP equal to twice the damage dealt after reducing by your ARM or MARM.\@{}\\
+    \crystal{water}{12pt} & %
+    \tspec{Uncontrollable}: Requires Water level 18. You gain the Slow (4) \tatk{physical} action \taction{Meatbone Slash}. Putting all your weight behind the strike, you perform a weapon attack. If successful, the target takes damage equal to your current HP, or 999, whichever is less. This attack ignores the Armor of any targets that did not attacked you this round. \\
+\end{tabjob}
