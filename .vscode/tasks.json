@@ -54,7 +54,8 @@
             "command": "gs",
             "dependsOn": [
                 "Core final build"
-            ]
+            ],
+            "problemMatcher": []
         }
     ]
 }

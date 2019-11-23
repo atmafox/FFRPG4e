@@ -25,13 +25,23 @@
 \RequirePackage{wrapfig}
 \RequirePackage{longtable}
 \RequirePackage{tikz}
-\RequirePackage[pdfversion=1.5,colorlinks=true,linkcolor=NavyBlue,bookmarksopen=true,colorlinks,pdfa]{hyperref}
+\RequirePackage[pdfversion=1.7,linkcolor=NavyBlue,bookmarksopen=true,colorlinks]{hyperref}
 \RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{url}
 
 % We'll need @ for keyval templates in here
 \makeatletter
 
+\hypersetup{
+	pdfpagelayout=TwoColumnRight,
+	pdfduplex=DuplexFlipLongEdge,
+	pdfversion=1.7,
+	linkcolor=NavyBlue,
+	bookmarksopen=true,
+	colorlinks,
+	pdftitle={FFRPG4e Remastered},
+	pdfsubject={Final Fantasy RPG}
+}
 \bookmarksetup{}
 
 % Configure numprint separator and create custom numprint macro
