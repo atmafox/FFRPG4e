@@ -44,7 +44,7 @@
             },
             "args": [
                 "-sDEVICE=pdfwrite",
-                "-dCompatibilityLevel=1.5",
+                "-dCompatibilityLevel=1.7",
                 "-dNOPAUSE",
                 "-dQUIET",
                 "-dBATCH",
@@ -54,7 +54,20 @@
             "command": "gs",
             "dependsOn": [
                 "Core final build"
-            ]
+            ],
+            "problemMatcher": {
+                "owner": "latex",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):([0-9]+): (.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "message": 3
+                }
+            }
         }
     ]
 }
