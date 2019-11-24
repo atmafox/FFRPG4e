@@ -20,21 +20,32 @@ def generate_entries():
     return entries
 
 
-
-
-
-def make_tablerows(outputfn):
+def make_tablerows(outputfn, perpage):
     entries = generate_entries()
 
-    # All this mess is splitting it into 3 vert columns 
+    # Rows per page -> entries per page - probably should do better
+    perpage *= 3
 
     while(len(entries) % 3 != 0):
         entries.append(("","",""))
 
+    output_lines = []
+
+    while entries:
+        output_lines += one_page(entries[:perpage])
+        entries = entries[perpage:]
+
+    with open(outputfn,'w') as outf:
+        outf.writelines(output_lines)
+
+def one_page(entries):
+
+    # All this mess is splitting it into 3 vert columns 
+
     n = len(entries)
     n1 = n//3
     n2 = n//3 * 2
-    
+
     col1 = entries[:n1]
     col2 = entries[n1:n2]
     col3 = entries[n2:]
@@ -43,17 +54,15 @@ def make_tablerows(outputfn):
 
     for a,b,c in zip(col1,col2,col3):
         output_lines.append(' & '.join(a + b + c) + ' \\\\\n')
-    
-    with open(outputfn,'w') as outf:
-        outf.writelines(output_lines)
+    return output_lines
 
 
 
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) > 1:
-        outputfn = sys.argv[1]
-    else:
-        outputfn = '../core/revised/generated/xp-table.tex'
-    make_tablerows(outputfn)
+    # Should probably actually use optparser for this ...
+    perpage = int(sys.argv[1]) if len(sys.argv) > 1 else 46
+    outputfn = sys.argv[2] if len(sys.argv) > 2 else '../core/revised/generated/xp-table.tex'
+    
+    make_tablerows(outputfn,perpage)
