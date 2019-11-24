@@ -283,6 +283,9 @@ TSWLatexianTemp*
 #*.code-workspace
 #/.vscode
 
+# This directory is specific to python formatting and refactoring tools
+/.vscode/.ropeproject
+
 # Mac stuff
 .DS_Store
 
