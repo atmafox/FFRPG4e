@@ -8,16 +8,16 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="icon-polearm-b.svg"
+   sodipodi:docname="wpn-polearm.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    id="svg4689"
    version="1.1"
    viewBox="0 0 128 128"
    height="128"
    width="128"
-   inkscape:export-filename="wpn-polearm-b.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-filename="wpn-polearm.png"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192">
   <defs
      id="defs4683">
     <inkscape:path-effect
@@ -218,8 +218,8 @@
      showgrid="false"
      inkscape:current-layer="layer4"
      inkscape:document-units="px"
-     inkscape:cy="73.996698"
-     inkscape:cx="62.871864"
+     inkscape:cy="70.284387"
+     inkscape:cx="58.894388"
      inkscape:zoom="5.6568542"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -240,42 +240,42 @@
        type="xygrid" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide859"
        orientation="0,1"
        position="0,128" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide861"
        orientation="1,0"
        position="128,128" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide863"
        orientation="0,1"
        position="128,0" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide865"
        orientation="1,0"
        position="0,0" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide867"
        orientation="0,1"
        position="290.71428,64" />
     <sodipodi:guide
        inkscape:color="rgb(0,0,0)"
-       inkscape:locked="true"
+       inkscape:locked="false"
        inkscape:label=""
        id="guide869"
        orientation="1,0"
@@ -299,7 +299,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <dc:creator>
           <cc:Agent>
             <dc:title>Weaver</dc:title>

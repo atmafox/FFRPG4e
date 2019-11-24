@@ -8,10 +8,10 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:export-ydpi="96"
-   inkscape:export-xdpi="96"
-   inkscape:export-filename="wpn-lightsword-black.png"
-   sodipodi:docname="wpn-lightsword-2.svg"
+   inkscape:export-ydpi="192"
+   inkscape:export-xdpi="192"
+   inkscape:export-filename="wpn-lightsword.png"
+   sodipodi:docname="wpn-lightsword.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    id="svg4689"
    version="1.1"
@@ -321,8 +321,8 @@
      showgrid="false"
      inkscape:current-layer="layer4"
      inkscape:document-units="px"
-     inkscape:cy="63.086306"
-     inkscape:cx="66.097394"
+     inkscape:cy="61.987016"
+     inkscape:cx="68.857471"
      inkscape:zoom="3.7700483"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -389,7 +389,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <dc:creator>
           <cc:Agent>
             <dc:title>Weaver</dc:title>
