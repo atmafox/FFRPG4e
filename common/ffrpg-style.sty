@@ -12,8 +12,6 @@
 \RequirePackage{xstring}
 \RequirePackage{numprint}
 \RequirePackage{collcell}
-%\RequirePackage[all]{nowidow}
-\RequirePackage{newunicodechar}
 \RequirePackage{booktabs}
 \RequirePackage{adjustbox}
 \RequirePackage{indentfirst}
@@ -25,7 +23,6 @@
 \RequirePackage{wrapfig}
 \RequirePackage{longtable}
 \RequirePackage[pdfversion=1.7]{hyperref}
-\RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{url}
 
 % We'll need @ for keyval templates in here
@@ -39,9 +36,10 @@
 	colorlinks,
 	pdftitle={FFRPG4e Remastered},
 	pdfsubject={Final Fantasy RPG},
-	pdfcreator={XeLaTeX with hyperref}
+    pdfcreator={XeLaTeX with hyperref},
+    bookmarksopen=true,
+    bookmarksopenlevel=2
 }
-\bookmarksetup{}
 
 % Configure numprint separator and create custom numprint macro
 \npthousandsep{,}
@@ -308,8 +306,8 @@
 %}
 
 % parskip standard sizes
-\newcommand{\pc}{\parskip 10pt}
-\newcommand{\pw}{\parskip 15pt}
+\newcommand{\pc}{\medbreak}
+\newcommand{\pw}{\bigbreak}
 
 % Also, let's make define a nice minipage wrapper
 \newenvironment{ffminipage}{%
@@ -501,27 +499,22 @@
 	earth=-,air=-,fire=-,water=-,hp=-,mp=-,arm=-,marm=-
 }
 
-\newlength{\numwidth}
-\settowidth{\numwidth}{0}
-
 \newcommand{\mobstatrow}[1]{#1 \\}
 
 \newenvironment*{mobstats}[1][] {%
-	\krdsetkeys{mobstats}{#1}
-	\bgroup\ferrum\large\itshape \ms@name\egroup \pc
-
+	\krdsetkeys{mobstats}{#1}%
+	\bgroup\ferrum\large\itshape \ms@name\egroup \pc%
 	\rowcolors{1}{zebragray}{}%
-	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
-		\toprule
+	\begin{tabular*}{\textwidth}{@{}>{\columncolor{white}[0pt][\tabcolsep]}p{\textwidth-\tabcolsep}@{\kern\tabcolsep}}%
+		\toprule%
 	% Icon stuff after hfill if we get there
-		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
-		\rowcolors{1}{}{zebragray}
-		{\centering %
-		\begin{tabular}{*{3}{r>{\collectcell\tabnumprint}p{5\numwidth}<{\endcollectcell}}}
-			\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp \\
-			\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp \\
-			\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init \\
-		\end{tabular} } \\ \midrule
+		\mobstatrow{\ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule%
+		\rowcolors{1}{}{zebragray}%
+		\begin{tabular*}{\hsize}{@{\kern\tabcolsep}*{3}{rp{.135\hsize}}}
+			\textbf{Earth}: & \tabnumprint{\ms@earth} & \textbf{Air}: & \tabnumprint{\ms@air} & \textbf{HP}: & \tabnumprint{\ms@hp} \\
+			\textbf{Fire}: & \tabnumprint{\ms@fire} & \textbf{Water}: & \tabnumprint{\ms@water} & \textbf{MP}: & \tabnumprint{\ms@mp} \\
+			\textbf{ARM}: & \tabnumprint{\ms@arm} & \textbf{MARM}: & \tabnumprint{\ms@marm} & \textbf{Init}: & \tabnumprint{\ms@init} \\
+		\end{tabular*} \\ \midrule
 } {
 	\bottomrule
 	\end{tabular*}\\[2mm]
