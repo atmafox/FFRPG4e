@@ -23,7 +23,6 @@
 \RequirePackage{wrapfig}
 \RequirePackage{longtable}
 \RequirePackage[pdfversion=1.7]{hyperref}
-\RequirePackage[open,openlevel=2,atend]{bookmark}
 \RequirePackage{url}
 
 % We'll need @ for keyval templates in here
@@ -37,9 +36,10 @@
 	colorlinks,
 	pdftitle={FFRPG4e Remastered},
 	pdfsubject={Final Fantasy RPG},
-	pdfcreator={XeLaTeX with hyperref}
+    pdfcreator={XeLaTeX with hyperref},
+    bookmarksopen=true,
+    bookmarksopenlevel=2
 }
-\bookmarksetup{}
 
 % Configure numprint separator and create custom numprint macro
 \npthousandsep{,}
