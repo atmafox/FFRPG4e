@@ -57,7 +57,7 @@
 
 % configure page geometry
 \geometry{
-  letterpaper,
+  a4paper,
   top=0.65in,
   left=0.5in,
   right=0.5in,
@@ -507,21 +507,19 @@
 \newcommand{\mobstatrow}[1]{#1 \\}
 
 \newenvironment*{mobstats}[1][] {%
-	\krdsetkeys{mobstats}{#1}
-	\bgroup\ferrum\large\itshape \ms@name\egroup \pc
-
+	\krdsetkeys{mobstats}{#1}%
+	\bgroup\ferrum\large\itshape \ms@name\egroup \pc%
 	\rowcolors{1}{zebragray}{}%
-	\begin{tabular*}{\textwidth}{p{\textwidth-2\tabcolsep}}
-		\toprule
+	\begin{tabular*}{\textwidth}{@{}>{\columncolor{white}[0pt][\tabcolsep]}p{\textwidth-\tabcolsep}@{\kern\tabcolsep}}%
+		\toprule%
 	% Icon stuff after hfill if we get there
-		\mobstatrow{ \ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule
-		\rowcolors{1}{}{zebragray}
-		{\centering %
-		\begin{tabular}{*{3}{r>{\collectcell\tabnumprint}p{5\numwidth}<{\endcollectcell}}}
+		\mobstatrow{\ordinalnum{\ms@level{}} Level \ms@rank{} \ms@type{} \hfill} \midrule%
+		\rowcolors{1}{}{zebragray}%
+		\begin{tabular*}{\hsize}{@{\kern\tabcolsep}*{3}{r>{\collectcell\tabnumprint}p{5.4\numwidth}<{\endcollectcell}}}
 			\textbf{Earth}: & \ms@earth & \textbf{Air}: & \ms@air & \textbf{HP}: & \ms@hp \\
 			\textbf{Fire}: & \ms@fire & \textbf{Water}: & \ms@water & \textbf{MP}: & \ms@mp \\
 			\textbf{ARM}: & \ms@arm & \textbf{MARM}: & \ms@marm & \textbf{Init}: & \ms@init \\
-		\end{tabular} } \\ \midrule
+		\end{tabular*} \\ \midrule
 } {
 	\bottomrule
 	\end{tabular*}\\[2mm]
