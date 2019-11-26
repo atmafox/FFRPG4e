@@ -67,7 +67,7 @@
 }
 
 % Get our fonts set up, ferrum is missing styles so fake them
-\providefontfamily\ferrum{ferrum.otf}[
+\providefontfamily\ferrum{ferrum.ttf}[
 	Path			= ../common/font/,
 	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
@@ -79,7 +79,7 @@
 	Path			= ../common/font/,
 	AutoFakeSlant	= 0.2,
 	AutoFakeBold	= 1.5 ]
-\setmainfont{caladea}[
+\setromanfont{caladea}[
 	Path = ../common/font/,
 	Extension = .ttf,
 	UprightFont = *-regular,
@@ -88,12 +88,13 @@
 	BoldItalicFont = *-bolditalic,
 	]
 
+	% Decided to just fix the fonts, don't need this.
 	% Thunk the missing characters through to mainfont
 	% So using ``, '', and \ldots will stay in the same font as currently
 	% but using the literal form below it will fall back
-	\newunicodechar{“}{{\rmfamily``}}
-	\newunicodechar{”}{{\rmfamily''}}
-	\newunicodechar{…}{{\rmfamily\ldots}}
+	%\newunicodechar{“}{{\rmfamily``}}
+	%\newunicodechar{”}{{\rmfamily''}}
+	%\newunicodechar{…}{{\rmfamily\ldots}}
 
 % Colours for the two characters
 \definecolor{mogred}{cmyk}{0, 0.78, 0.93, 0.55}
