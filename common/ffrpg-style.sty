@@ -310,6 +310,7 @@
 \newcommand{\pw}{\bigbreak}
 
 % Also, let's make define a nice minipage wrapper
+% I don't think we use this anywhere anymore - Bruno
 \newenvironment{ffminipage}{%
   \noindent\begin{minipage}{\textwidth}%
 }{%
@@ -324,6 +325,7 @@
 }
 
 % for all choices
+% this seems useless after we redid the job formatting - Bruno
 \krddefinekeys{jobchoice}[jc@]{bool/header;cmd/text;}
 \krdpresetkeys{jobchoice}{header=true,text=Specialties}
 
@@ -384,6 +386,7 @@
 
 
 % Action Type Macro
+% There aren't any Slow reactions, so using "Quick reaction" is meaningless - Bruno 
 
 \krddefinekeys{actype}[ac@]{
 	choice/slow/quick/
