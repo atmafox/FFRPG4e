@@ -342,16 +342,18 @@
 
 % Beginnings of job choice rows
 
-\krddefinekeys{abilitylede}[al@]{
+\krddefinekeys{ability}[ab@]{
 	cmd/name;
 	cmd/level;
+	cmd/desc;
 }
-\krdpresetkeys{abilitylede}{
-	name=\review{invalid},level=\review{invalid}
+\krdpresetkeys{ability}{
+	name=\review{invalid},level=\review{invalid},desc=\review{no description}
 }
-\newcommand*{\abilitylede}[1][]{
-	\krdsetkeys{abilitylede}{#1}%
-	\tability{\al@name}: Core ability acquired at \ordinalnum{\al@level} level.%
+\newcommand{\ability}[1]{%
+	\multicolumn{2}{p{\textwidth}}{%
+	\krdsetkeys{ability}{#1}%
+	\tability{\ab@name}: Core ability acquired at \ordinalnum{\ab@level} level. \ab@desc} \tabularnewline %
 }
 
 \krddefinekeys{speclede}[sl@]{
@@ -366,7 +368,7 @@
 \krdpresetkeys{speclede}{
 	isaction=false,name=\review{invalid};earth=;air=;fire=;water=
 }
-\newcommand*{\speclede}[1][]{%
+\newcommand*{\speclede}[1]{%
 	\krdsetkeys{speclede}{#1}%
 	\ifdefvoid{\sl@level}{}{\ffcrystal[type=level,height=12pt]}%
 	\ifdefvoid{\sl@earth}{}{\ffcrystal[type=earth,height=12pt]}%
