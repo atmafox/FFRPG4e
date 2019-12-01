@@ -613,18 +613,30 @@
 
 \newenvironment*{tabwpn}[1][]{%
 	\krdsetkeys{tabwpn}{#1}%
-	\begin{table}[!htb]
-		\centering
-		\label{tab:\tw@label}
-	    \rowcolors{1}{}{zebragray}
-		\begin{tabular}{lrrrp{0.4\textwidth}}
-				\toprule
-%				\multicolumn{5}{l}{\tw@range \hspace{\stretch{1}} \tw@type \hspace{\stretch{1}} \tw@element \hfill \tw@roll} \\ \toprule
-        		\textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{Damage}} & \textbf{Effect} \\ \midrule
+	\centering
+	\label{tab:\tw@label}
+	    \rowcolors{1}{zebragray}{}
+		\begin{longtable}{lrrrp{0.4\textwidth}}
+			\toprule
+			\multicolumn{5}{c}{%
+				\includegraphics[width=12mm]{../img/common/icon-blank}
+				\includegraphics[width=12mm]{../img/common/wpn-bow}
+				\includegraphics[width=12mm]{../img/common/icon-blank}
+				\includegraphics[width=12mm]{../img/common/wpn-clawglove}
+				\includegraphics[width=12mm]{../img/common/icon-blank}
+				\includegraphics[width=12mm]{../img/common/wpn-cross-rifle}
+				\includegraphics[width=12mm]{../img/common/wpn-polearm}
+				\includegraphics[width=12mm]{../img/common/icon-blank}
+				\includegraphics[width=12mm]{../img/common/wpn-twin}
+				\includegraphics[width=12mm]{../img/common/wpn-withshield}
+				\includegraphics[width=12mm]{../img/common/wpn-katana}
+				\includegraphics[width=12mm]{../img/common/icon-blank}
+			} \\ \toprule 
+       		\rowcolor{zebragray} \textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{Damage}} & \textbf{Effect} \\ \midrule \endfirsthead
+       		\rowcolor{zebragray} \textbf{Name} & \multicolumn{1}{c}{\textbf{Level}} & \multicolumn{1}{c}{\textbf{Cost}} & \multicolumn{1}{c}{\textbf{Damage}} & \textbf{Effect} \\ \midrule \endhead
 }{
-			\bottomrule
-		\end{tabular}
-	\end{table}
+		\bottomrule
+	\end{longtable}
 }
 
 \newcommand*{\tabwpnrow}[1][]{%
