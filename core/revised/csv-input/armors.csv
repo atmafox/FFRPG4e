@@ -87,7 +87,7 @@
 "Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen:Physical}
 \tfxauto{Strengthen:Armor}"
 "Carabini Mail",55,Rare,127,59,"At the beginning of each round, choose one: \tvarstatus{Immune}{Cut}, \tvarstatus{Immune}{Crush}, or \tvarstatus{Immune}{Puncture}"
-"Dragon Mail ",55,Rare,127,59,"Add Earth level \taction{Attack} damage
+"Dragon Mail ",55,Rare,127,59,"Add Earth level to \taction{Attack} damage
 +10% Maximum HP"
 "Aegis Armor",64,Artifact,179,87,"\tfxauto{Float}
 \tfxtimmunity{Mental}"
