@@ -303,7 +303,7 @@ Arbalest,46,9878,15x,\teffect{Piercing}
 Coffinmaker,55,Rare,17x,Add twice Water level to damage
 "Elementbane ",55,Rare,17x,"\tfxdestroyer{Elemental}
 \teffect{Piercing}"
-"Gastraphetes ",64,Artifact,19x,"\tfxauto{blink}
+"Gastraphetes ",64,Artifact,19x,"\tfxauto{Blink}
 \tfxauto{Premonition}
 \teffect{Sensor}"
 "Death Penalty ",64,Artifact,20x,"\tfxcritspell{Meltdown}
