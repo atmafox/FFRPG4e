@@ -11,8 +11,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="900"
-   height="300"
-   viewBox="0 0 900 300"
+   height="435"
+   viewBox="0 0 900 435"
    version="1.1"
    id="svg4689"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -312,11 +312,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="276.98871"
-     inkscape:cy="134.23884"
+     inkscape:zoom="0.7"
+     inkscape:cx="319.90473"
+     inkscape:cy="226.038"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="px"
      showborder="true"
@@ -397,9 +397,8 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-364.70831)"
-     style="display:none;opacity:1"
-     sodipodi:insensitive="true">
+     transform="translate(0,-229.70831)"
+     style="display:none;opacity:1">
     <rect
        style="opacity:0.98999999;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#030300;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect833"
@@ -421,7 +420,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer6"
-     inkscape:label="Background 1">
+     inkscape:label="Background 1"
+     transform="translate(0,135)">
     <g
        id="g937-8"
        transform="matrix(3.0720955,0,0,3.0555703,-756.70431,-382.82969)"
@@ -516,7 +516,7 @@
     <g
        id="g1134"
        style="fill:#8f8f8f;fill-opacity:1"
-       transform="rotate(30,-257.89313,1297.1604)">
+       transform="rotate(30,-209.37648,1284.1604)">
       <path
          inkscape:original-d="m -287.16326,-301.46358 c 28.50058,47.53099 51.86858,76.31939 94.6866,108.40854 l 1.78571,291.072752 c -37.90828,23.480048 -64.72205,57.050558 -100.0189,94.661598"
          inkscape:path-effect="#path-effect1104"
@@ -574,19 +574,17 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Base"
-     transform="translate(0,-200)"
      style="display:inline"
-     sodipodi:insensitive="true" />
+     transform="translate(0,-65)" />
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Detail"
-     transform="translate(0,-200)"
      style="display:inline"
-     sodipodi:insensitive="true">
+     transform="translate(0,-65)">
     <g
        id="g920"
-       transform="translate(8.3337585)">
+       transform="translate(8.3337585,-26)">
       <circle
          clip-path="url(#clipPath890)"
          r="26.294641"
@@ -603,17 +601,17 @@
     </g>
     <path
        style="display:inline;fill:#000000;fill-opacity:1"
-       d="m 45.314729,399.29695 v -6.5 h 145.500001 145.5 v 6.5 6.5 h -145.5 -145.500001 z"
+       d="m 45.314729,373.29695 v -6.5 h 145.500001 145.5 v 6.5 6.5 h -145.5 -145.500001 z"
        id="path902"
        inkscape:connector-curvature="0" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1"
-       d="m 442.31473,399.29695 v -6.5 h 206.5 206.5 v 6.5 6.5 h -206.5 -206.5 z"
+       d="m 442.31473,373.29695 v -6.5 h 206.5 206.5 v 6.5 6.5 h -206.5 -206.5 z"
        id="path900"
        inkscape:connector-curvature="0" />
     <g
        id="g937"
-       transform="matrix(0.43725501,0,0,0.44174176,49.353004,407.12643)"
+       transform="matrix(0.43725501,0,0,0.44174176,808.48264,381.12643)"
        style="stroke-width:2.27535081">
       <g
          style="opacity:1;stroke-width:2.27535081"
@@ -707,52 +705,59 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Extra"
-     transform="translate(0,-200)" />
+     transform="translate(0,-65)" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Text"
-     transform="translate(0,-200)">
+     transform="translate(0,-65)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;line-height:125%;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:12.06000042px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="45.307453"
-       y="376.07141"
+       y="350.07141"
        id="text826"><tspan
          sodipodi:role="line"
          id="tspan828"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:12.21000004px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
          x="45.307453"
-         y="376.07141"
+         y="350.07141"
          dx="0">FINAL</tspan></text>
     <g
        aria-label="FANTASY"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;line-height:125%;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="text832">
+       id="text832"
+       transform="translate(0,-26)">
       <path
          d="m 447.90942,231.07141 q 0,-5 -5.625,-5 v -4.0625 h 47.8125 v 51.25 h -4.375 q -2.1875,-24.375 -6.875,-33.28125 -4.6875,-8.90625 -14.0625,-9.21875 v 53.125 q 8.4375,2.8125 8.75,-23.4375 l 4.375,0.3125 v 64.0625 h -4.375 q 0,-25.3125 -8.75,-27.1875 v 66.5625 q 0,9.0625 4.375,6.875 l 0.3125,4.6875 h -26.25 l -0.3125,-4.6875 q 5.3125,1.875 5,-6.5625 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path958" />
+         id="path958"
+         inkscape:connector-curvature="0" />
       <path
          d="m 536.39692,348.57141 z m -13.59375,-15 h 6.09375 l -3.125,-50.625 z m 4.84375,42.5 v -2.1875 q 3.75,-3.75 2.5,-26.875 h -7.8125 q -1.875,23.125 2.1875,26.875 v 2.1875 h -20.3125 v -2.1875 q 2.5,-0.3125 4.21875,-2.03125 1.71875,-1.71875 10.46875,-149.84375 h 16.25 q 11.5625,148.125 12.8125,149.84375 1.25,1.71875 3.75,2.03125 v 2.1875 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path960" />
+         id="path960"
+         inkscape:connector-curvature="0" />
       <path
          d="m 570.82192,232.63391 q 0.9375,-5.625 -5,-6.875 v -4.0625 h 22.1875 l 12.1875,87.1875 v -77.5 q 0,-4.6875 -3.75,-5.3125 v -4.375 h 19.0625 v 4.0625 q -4.0625,0.9375 -3.75,13.125 v 136.875 h -14.6875 l -15,-98.125 v 87.8125 q -0.9375,6.875 4.6875,6.5625 v 3.75 h -21.25 l 0.3125,-3.4375 q 5.3125,-0.625 5,-7.1875 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path962" />
+         id="path962"
+         inkscape:connector-curvature="0" />
       <path
          d="m 632.74692,221.07141 h 43.75 v 55.3125 h -5.3125 q -1.5625,-33.4375 -8.75,-39.6875 v 128.125 q 0,7.5 6.875,9.375 v 2.1875 h -29.0625 v -2.1875 q 7.5,-1.875 6.875,-9.6875 v -127.8125 q -7.8125,5.9375 -10,39.6875 h -4.375 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path964" />
+         id="path964"
+         inkscape:connector-curvature="0" />
       <path
          d="m 724.35942,348.57141 z m -13.59375,-15 h 6.09375 l -3.125,-50.625 z m 4.84375,42.5 v -2.1875 q 3.75,-3.75 2.5,-26.875 h -7.8125 q -1.875,23.125 2.1875,26.875 v 2.1875 h -20.3125 v -2.1875 q 2.5,-0.3125 4.21875,-2.03125 1.71875,-1.71875 10.46875,-149.84375 h 16.25 q 11.5625,148.125 12.8125,149.84375 1.25,1.71875 3.75,2.03125 v 2.1875 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path966" />
+         id="path966"
+         inkscape:connector-curvature="0" />
       <path
          d="m 753.78442,321.69641 16.875,-8.75 q -3.125,48.75 1.71875,51.25 4.84375,2.5 5.46875,-2.5 2.8125,-18.75 0,-37.8125 -0.9375,-9.6875 -3.75,-13.75 -17.5,-27.1875 -20,-40.625 l -0.3125,-30.9375 q 3.4375,-16.25 18.75,-16.25 17.1875,0.3125 18.125,21.875 l 0.9375,20 -15.625,10 q 0.3125,-18.75 0,-35 0,-7.8125 -3.59375,-7.96875 -3.59375,-0.15625 -3.59375,7.34375 l 0.3125,31.25 q 15.9375,25.625 21.5625,39.375 5.625,13.75 4.0625,39.375 -1.5625,28.4375 -20.3125,28.125 -18.125,-0.9375 -20.625,-25.07812 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         id="path968" />
+         id="path968"
+         inkscape:connector-curvature="0" />
       <path
          d="m 833.20941,224.19641 v 3.75 c -4.16667,-1.04167 -5.52083,5.26042 -4.0625,18.90625 1.45833,13.64583 1.97917,25.15625 3.16964,31.85268 2.91667,-20.625 6.77828,-34.97768 7.29911,-40.91518 0.52083,-5.9375 -0.78125,-9.21875 -3.90625,-9.84375 v -3.75 h 19.6875 v 4.0625 c -3.33333,0.20833 -5,1.66667 -5,4.375 l -14.375,84.0625 v 46.25 c -0.20833,5.20833 1.35417,8.02083 4.6875,8.4375 v 4.0625 h -22.5 v -4.375 c 2.91667,-0.20833 4.375,-2.91667 4.375,-8.125 v -51.875 l -8.39101,-78.74777 c -0.18382,-1.72514 -2.28679,-4.09664 -3.79649,-4.68973 l -0.3125,-3.4375 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:7.55000019px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
@@ -764,29 +769,30 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:125%;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:3.59999919px;word-spacing:-8.19999981px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="363.74643"
-       y="410.09644"
+       y="384.09644"
        id="text836"><tspan
          sodipodi:role="line"
          id="tspan834"
          x="363.74643"
-         y="410.09644">IV ED.</tspan></text>
+         y="384.09644">IV ED.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160px;line-height:125%;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:28.65999985px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="744.00879"
-       y="475.06128"
+       x="45.396389"
+       y="449.06128"
        id="text840"><tspan
          sodipodi:role="line"
          id="tspan838"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;font-family:'Final Fantasy';-inkscape-font-specification:'Final Fantasy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:28.65999985px;writing-mode:lr-tb;direction:ltr;text-anchor:start"
-         x="744.00879"
-         y="475.06128">RPG</tspan></text>
+         x="45.396389"
+         y="449.06128">RPG</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="hid"
-     style="display:none">
+     style="display:none"
+     transform="translate(0,135)">
     <text
        transform="translate(0,-200)"
        xml:space="preserve"
