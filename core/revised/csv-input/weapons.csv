@@ -341,7 +341,7 @@ Archmage Rod,46,9326,13 x,-10 difficulty to all Spells cast
 \tfxcritspell{Venom}"
 "Faith Rod ",55,Rare,14 x,"\tfxedamage{Fire}
 \tfxdestroyer{Undead}"
-Power Rod,55,Rare,14 x,"\tfxauto{Strengthen:Magic}
+Power Rod,55,Rare,14 x,"\tfxauto{Strengthen: Magic}
 \teffect{Piercing}"
 Rod of Roses,64,Artifact,16 x,"\tfxedamage{Shadow}
 \tfxstrike{Virus}"

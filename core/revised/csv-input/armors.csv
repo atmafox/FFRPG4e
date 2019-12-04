@@ -17,7 +17,7 @@
 "Poet Robe",37,5547,28,65,
 "Karate Robe",37,8391,28,65,-10 difficulty to all reactions
 "Peace Cape ",37,8368,28,65,"\tfxauto{Protect}
-\tfxauto{Weaken}{Physical}"
+\tfxautov{Weaken}{Physical}"
 "Scholar Coat",46,11220,41,90,
 "Aqua Robe",46,15422,41,90,\tfxtimmunity{Fatal}
 "Priest's Robe",46,15424,23,90,\tfxsos{Wall}
@@ -52,7 +52,7 @@
 "Brigandine",46,9563,60,60,
 "Judge Coat",46,13098,60,60,\tfximmunity{Time}
 "Ninja Gear",46,13055,55,55,\tfxsos{Vanish}
-"Platinum Vest ",55,Rare,87,87,"\tfxauto{Immune}{Earth}
+"Platinum Vest ",55,Rare,87,87,"\tfxautov{Immune}{Earth}
 \tfximmunity{Meltdown}"
 "Behemoth Suit",55,Rare,87,87,"\tfxautov{Immune}{Light}
 \tfxautov{Immune}{Shadow}"
@@ -84,8 +84,8 @@
 "Gold Armor",46,11261,90,41,
 "Aurora Mail",46,15418,90,41,\tfxtimmunity{Seal}
 "Reflect Plate",46,15459,90,23,\tfxsos{Reflect}
-"Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen:Physical}
-\tfxauto{Strengthen:Armor}"
+"Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen: Physical}
+\tfxauto{Strengthen: Armor}"
 "Carabini Mail",55,Rare,127,59,"At the beginning of each round, choose one: \tvarstatus{Immune}{Cut}, \tvarstatus{Immune}{Crush}, or \tvarstatus{Immune}{Puncture}"
 "Dragon Mail ",55,Rare,127,59,"Add Earth level to \taction{Attack} damage
 +10% Maximum HP"
