@@ -23,6 +23,7 @@
 \RequirePackage{wrapfig}
 \RequirePackage{longtable}
 \RequirePackage[pdfversion=1.7]{hyperref}
+\RequirePackage[open,level=3,atend]{bookmark}
 \RequirePackage{url}
 
 % We'll need @ for keyval templates in here
@@ -720,60 +721,70 @@
 }
 
 % Column centered Boco, inherit existing columns
-\newenvironment{boco}{
- 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-\columnsep}
-	 \par\medskip
-	 \yumin
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/boco}
-	 \end{center}
-	 \bgroup\color{bocoblue}\small%
-	}
-	{\egroup
-	 \end{minipage}
-	 \medskip}
+\newenvironment{boco}{%
+	\noindent\begin{minipage}[t]{\columnwidth}
+	\par\medskip
+	\begin{center}
+		\includegraphics[width=0.1\textwidth]{../img/common/boco}
+	\end{center}
+	\bgroup\color{bocoblue}\yumin\small%
+		\begin{spacing}{1.1}
+} {%
+		\end{spacing}
+	\egroup
+	\end{minipage}
+	\medskip
+}
 
 % Used for page centered Boco but two column text
 \newenvironment{multiboco}{
-	 \par\medskip
-	 \yumin
-	 \begin{center}
-	 \includegraphics[width=0.075\textwidth]{../img/common/boco}
-	 \end{center}
-	 \begin{multicols}{2}
-	 \bgroup\color{bocoblue}\small%
-	}
-	{\egroup
-	 \end{multicols}
-	 \medskip}
+	\par\medskip
+	\begin{center}
+	\includegraphics[width=0.075\textwidth]{../img/common/boco}
+	\end{center}
+	\begin{multicols}{2}
+		\bgroup\color{bocoblue}\yumin\small%
+			\begin{spacing}{1.1}
+} {
+			\end{spacing}
+		\egroup
+	\end{multicols}
+	\medskip
+}
 
 % Column centered Mog, inherit existing columns
 \newenvironment{mog}{
- 	 \noindent\begin{minipage}[t]{\dimexpr 0.5\textwidth-\columnsep}
-	 \par\medskip
-	 \arabtype
-	 \begin{center}
-	 \includegraphics[width=0.1\textwidth]{../img/common/mog}
-	 \end{center}
-	 \bgroup\color{mogred}\Large%
-	}
-	{\egroup
-	 \end{minipage}
-	 \medskip}
+	\noindent\begin{minipage}[t]{\columnwidth}
+    \raggedbottom%
+    \raggedcolumns%
+	\par\medskip%
+	\begin{center}
+	    \includegraphics[width=0.1\textwidth]{../img/common/mog}
+	\end{center}%
+	\bgroup\color{mogred}\arabtype\Large%
+		\begin{spacing}{0.8}
+} {%
+		\end{spacing}
+	\egroup%
+	\end{minipage}
+    \medskip%
+}
 
 % Page centered mog, two column text
 \newenvironment{multimog}{
-	 \par\medskip
-	 \arabtype
-	 \begin{center}
-	 \includegraphics[width=0.075\textwidth]{../img/common/mog}
-	 \end{center}
-	 \begin{multicols}{2}
-	 \bgroup\color{mogred}\Large%
-	}
-	{\egroup
-	 \end{multicols}
-	 \medskip}
+	\par\medskip
+	\begin{center}
+		\includegraphics[width=0.075\textwidth]{../img/common/mog}
+	\end{center}
+	\begin{multicols}{2}
+		\bgroup\color{mogred}\arabtype\Large%
+			\begin{spacing}{0.8}
+} {
+			\end{spacing}
+		\egroup
+	\end{multicols}
+	\medskip
+}
 
 % New job table format
 \newenvironment{tabjob}{
