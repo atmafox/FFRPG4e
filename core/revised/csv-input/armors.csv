@@ -17,7 +17,7 @@
 "Poet Robe",37,5547,28,65,
 "Karate Robe",37,8391,28,65,-10 difficulty to all reactions
 "Peace Cape ",37,8368,28,65,"\tfxauto{Protect}
-\tfxauto{Weaken}{Physical}"
+\tfxautov{Weaken}{Physical}"
 "Scholar Coat",46,11220,41,90,
 "Aqua Robe",46,15422,41,90,\tfxtimmunity{Fatal}
 "Priest's Robe",46,15424,23,90,\tfxsos{Wall}
@@ -52,7 +52,7 @@
 "Brigandine",46,9563,60,60,
 "Judge Coat",46,13098,60,60,\tfximmunity{Time}
 "Ninja Gear",46,13055,55,55,\tfxsos{Vanish}
-"Platinum Vest ",55,Rare,87,87,"\tfxauto{Immune}{Earth}
+"Platinum Vest ",55,Rare,87,87,"\tfxautov{Immune}{Earth}
 \tfximmunity{Meltdown}"
 "Behemoth Suit",55,Rare,87,87,"\tfxautov{Immune}{Light}
 \tfxautov{Immune}{Shadow}"
