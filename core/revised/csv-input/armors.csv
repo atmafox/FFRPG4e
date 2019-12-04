@@ -84,8 +84,8 @@
 "Gold Armor",46,11261,90,41,
 "Aurora Mail",46,15418,90,41,\tfxtimmunity{Seal}
 "Reflect Plate",46,15459,90,23,\tfxsos{Reflect}
-"Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen:Physical}
-\tfxauto{Strengthen:Armor}"
+"Platinum Armor",55,Rare,127,59,"\tfxauto{Strengthen: Physical}
+\tfxauto{Strengthen: Armor}"
 "Carabini Mail",55,Rare,127,59,"At the beginning of each round, choose one: \tvarstatus{Immune}{Cut}, \tvarstatus{Immune}{Crush}, or \tvarstatus{Immune}{Puncture}"
 "Dragon Mail ",55,Rare,127,59,"Add Earth level to \taction{Attack} damage
 +10% Maximum HP"
