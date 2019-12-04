@@ -17,7 +17,7 @@
 "Poet Robe",37,5547,28,65,
 "Karate Robe",37,8391,28,65,-10 difficulty to all reactions
 "Peace Cape ",37,8368,28,65,"\tfxauto{Protect}
-\tfxautov{Weaken}{Physical}"
+\tfxautov{Weaken }{Physical}"
 "Scholar Coat",46,11220,41,90,
 "Aqua Robe",46,15422,41,90,\tfxtimmunity{Fatal}
 "Priest's Robe",46,15424,23,90,\tfxsos{Wall}
