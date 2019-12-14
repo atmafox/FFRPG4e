@@ -25,6 +25,7 @@
 \RequirePackage[pdfversion=1.7]{hyperref}
 \RequirePackage[open,level=3,atend]{bookmark}
 \RequirePackage{url}
+\RequirePackage{options}
 
 % We'll need @ for keyval templates in here
 \makeatletter
@@ -106,6 +107,8 @@
 \newcommand{\review}[1]{
 	\bgroup\color{red}\textbf{((#1))}\egroup
 }
+\newcommand{\error}{\review{XXX ERROR XXX}}
+\newcommand{\missing}{\review{XXX MISSING PARAMATER XXX}}
 
 % For prerelease dates
 
@@ -342,48 +345,48 @@
 
 % Beginnings of job choice rows
 
-\krddefinekeys{ability}[ab@]{
-	cmd/name;
-	cmd/level;
-	cmd/desc;
-}
-\krdpresetkeys{ability}{
-	name=\review{invalid},level=\review{invalid},desc=\review{no description}
-}
-\newcommand{\ability}[1]{%
-	\multicolumn{2}{p{\textwidth}}{%
-	\krdsetkeys{ability}{#1}%
-	\tability{\ab@name}: Core ability acquired at \ordinalnum{\ab@level} level. \ab@desc} \tabularnewline %
+\options{
+	/ff/aby/.new family,
+	/ff/aby/name/.new value = [\missing],
+	/ff/aby/level/.new value,
+	/ff/aby/desc/.new value,
 }
 
-\krddefinekeys{speclede}[sl@]{
-	bool/isaction;
-	cmd/name;
-	cmd/level;
-	cmd/earth;
-	cmd/air;
-	cmd/fire;
-	cmd/water;
+\newcommand{\ability}[1]{%
+	\multicolumn{2}{p{\textwidth}}{%
+		\options{/ff/aby,#1}%
+		\option{/ff/aby/name}: Core ability acquired at \ordinalnum{\option{/ff/aby/level}} level.%
+		\option{/ff/aby/desc}%
+	} %
 }
-\krdpresetkeys{speclede}{
-	isaction=false,name=\review{invalid};earth=;air=;fire=;water=
+
+
+\options{
+	/ff/spc/isaction/.new toggle,
+	/ff/spc/name/.new value = [\missing],
+	/ff/spc/level/.new value,
+	/ff/spc/earth/.new value,
+	/ff/spc/air/.new value,
+	/ff/spc/fire/.new value,
+	/ff/spc/water/.new value,
 }
+
 \newcommand*{\speclede}[1]{%
-	\krdsetkeys{speclede}{#1}%
-	\ifdefvoid{\sl@level}{}{\ffcrystal[type=level,height=12pt]}%
-	\ifdefvoid{\sl@earth}{}{\ffcrystal[type=earth,height=12pt]}%
-	\ifdefvoid{\sl@air}{}{\ffcrystal[type=air,height=12pt]}%
-	\ifdefvoid{\sl@fire}{}{\ffcrystal[type=fire,height=12pt]}%
-	\ifdefvoid{\sl@water}{}{\ffcrystal[type=water,height=12pt]}%
+	\options{/ff/spc,#1}%
+	\ifoptionvoid{/ff/spc/level}{}{\ffcrystal[type=level,height=12pt]}%
+	\ifoptionvoid{/ff/spc/earth}{}{\ffcrystal[type=earth,height=12pt]}%
+	\ifoptionvoid{/ff/spc/air}{}{\ffcrystal[type=air,height=12pt]}%
+	\ifoptionvoid{/ff/spc/fire}{}{\ffcrystal[type=fire,height=12pt]}%
+	\ifoptionvoid{/ff/spc/water}{}{\ffcrystal[type=water,height=12pt]}%
 	& 
 	\krdsetkeys{speclede}{#1} %
 	\ifsl@isaction%
-		\taction{\sl@name}:
+		\taction{\option{/ff/spc/name}}:
 	\else%
-		\tspec{\sl@name}:
+		\tspec{\option{/ff/spc/name}}:
 	\fi%
-	\ifblank{\sl@earth\sl@air\sl@fire\sl@water}{}{%
-		Requires \begin{commalist}\ifdefvoid{\sl@earth}{}{\item Earth level \sl@earth}\ifdefvoid{\sl@air}{}{\item Air level \sl@air}\ifdefvoid{\sl@fire}{}{\item Fire level \sl@fire}\ifdefvoid{\sl@water}{}{\item Water level \sl@water}\end{commalist}.%
+	\ifblank{\option{/ff/spc/earth} \option{/ff/spc/air} \option{/ff/spc/fire} \option{/ff/spc/water}}{}{%
+		Requires \begin{commalist}\ifdefvoid{/ff/spc/earth}{}{\item Earth level \option{/ff/spc/earth}}\ifdefvoid{/ff/spc/air}{}{\item Air level \option{/ff/spc/air}}\ifdefvoid{/ff/spc/fire}{}{\item Fire level \option{/ff/spc/fire}}\ifdefvoid{/ff/spc/water}{}{\item Water level \option{/ff/spc/water}}\end{commalist}.%
 	}%
 }
 
@@ -412,26 +415,32 @@
 }
 \krdpresetkeys{actype}{reaction=false,magical=false,ranged=false,free=false,slow=quick}
 
-\newcommand*{\actype}[1][]{
-	\krdsetkeys{actype}{#1}%
+
+\options{
+	/ff/act/.new family,
+	/ff/act/ranged/.new toggle,
+	/ff/act/magical/.new toggle,
+	/ff/act/reaction/.new toggle,
+	/ff/act/free/.new toggle,
+	/ff/act/slow/.new num = [1] 1
+}
+
+\newcommand*{\actype}[1][]{%
+	\options{/ff/act,#1}%
 	\textit{%
-		\ifac@ranged%
-			Ranged
-		\fi%
-		\ifac@magical%
-			Magical
-		\fi%
-		\ifac@free%
-			Free
-		\else%
-		\ac@slow{}
-		\fi%
+		\iftoggle{/ff/act/ranged}{Ranged }{}%
+		\iftoggle{/ff/act/magical}{Magical }{}%
+		\iftoggle{/ff/act/free}{Free}{%
+			\iftoggle{/ff/act/reaction}{}{%
+				\ifnum\option{/ff/act/slow}=1%
+					Quick%
+				\else%
+					Slow (\option{/ff/act/slow})%
+				\fi%
+			}%
+		}
 	}%
-	\ifac@reaction%
-		reaction%
-	\else%
-		action%
-	\fi%
+	\iftoggle{/ff/act/reaction}{reaction}{action}%
 }
 
 \krddefinekeys{jobstats}[js@]{%
