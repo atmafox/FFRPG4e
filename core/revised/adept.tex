@@ -1,77 +1,100 @@
 \begin{jobdesc}[name=pjob-adept]
-    A mystic who uses his own vital energy to trigger magical effects. Several Adept actions require you to spend HP based on your maximum or current HP\@. In these cases, you lose current hit points equal to the value listed in ability, but it does not diminish your maximum HP\@. Its main Stats are Fire and Earth. All Adept’s abilities deal damage based on weapon damage, so equipping a strong weapon is a must. \pc%
+    A mystic who uses his own vital energy to trigger magical effects. Several Adept actions require you to spend HP based on your maximum or current HP\@. In these cases, you lose current hit points equal to the value listed in ability, but it does not diminish your maximum HP\@. Its main Stats are Fire and Earth. All Adept’s abilities deal damage based on weapon damage, so equipping a strong weapon is a must.\pc%
 
-    \textbf{Representatives}: General Beatrix (FFIX), Agrias Oaks (FFT), Goffard Gafgarion (FFT), Dark Knight Job (FFX-2, FFXI), Fell Knight Job (FFT), Mystic Knight Job (FFV), Adelbert Steiner (FFIX), Warrior Dressphere (FFX-2) \pc%
+    \textbf{Representatives}:
+    General Beatrix (FFIX),
+    Agrias Oaks (FFT),
+    Goffard Gafgarion (FFT),
+    Dark Knight Job (FFX-2, FFXI),
+    Fell Knight Job (FFT),
+    Mystic Knight Job (FFV),
+    Adelbert Steiner (FFIX),
+    Warrior Dressphere (FFX-2)%
+    \pc%
 
-    \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=1x,mpb=2x,mpc=3x,armor=Heavy,weapons=Claws/Gloves \\ Weapons \& Shield \\ Heavy Weapons \\ Katanas \\  Wands \\ Staves ]
+    \jobstats[hpa=4x,hpb=5x,hpc=6x,hpd=7x,mpa=1x,mpb=2x,mpc=3x,armor=Heavy,
+    weapons=Claws/Gloves \\ Weapon \& Shield \\ Heavy Weapons \\ Katanas \\  Wands \\ Staves ]
 \end{jobdesc}
 
 \begin{tabjob}
-    \multicolumn{2}{p{\textwidth}}{\tability{Martial Discipline}: Core Ability acquired at level 1. You are an adept, and gain the multipliers and equipment choices above. Whenever you use an Adept ability, you may spend 10\%, 20\% or 30\% of your current HP to decrease the charge time by 2, 4 or 6, respectively. This can reduce the charge time to a minimum of 0. The action modified by this ability becomes a magical action.} \\
+    \ability{name=Martial Discipline,level=1,desc={You are an adept, and gain the multipliers and equipment choices above. Whenever you use an Adept ability, you may spend 10\%, 20\% or 30\% of your current HP to decrease the charge time by 2, 4 or 6, respectively. This can reduce the charge time to a minimum of 0. The action modified by this ability becomes a magical action.}}\\
     \tabjobspec{}
-    \crystal{fire}{12pt} & %
-    \tspec{Arcane Connection}: Requires Fire level 3. You gain one of the following Spell groups: \tspellgroup{Fire}, \tspellgroup{Ice}, \tspellgroup{Lightning}, \tspellgroup{Light} or \tspellgroup{Cosmic}. \\
-    \crystal{water}{12pt} & %
-    \tspec{Spirit Strength}: Requires Water level 3. Whenever you need to spend HP to use an action, you may spend an equal amount of MP to prevent the HP loss. \\
-    \crystal{earth}{12pt} & %
-    \tspec{Arcane Fury}: Requires Earth level 3. While your current MP is greater than zero and you have the \tstatus{Berserk} status, your \taction{Attack} action deal 150\% weapon damage. \\
+
+        \speclede{fire=3, name=Arcane Connection} You gain one of the following Spell groups: \tspellgroup{Fire}, \tspellgroup{Ice}, \tspellgroup{Lightning}, \tspellgroup{Light}, or \tspellgroup{Cosmic}. \\
+
+        \speclede{water=3, name=Spirit Strength} Whenever you need to spend HP to use an action, you may spend an equal amount of MP to prevent the HP loss. \\
+
+        \speclede{earth=3, name=Arcane Fury} While your current MP is greater than zero and you have the \tstatus{Berserk} status, your \taction{Attack} action deals 150\% weapon damage. \\
+
     \tabjobsep%
-    \multicolumn{2}{p{\textwidth}}{\tability{Arcane Discipline}: Core Ability acquired at level 1. You earn one of the three following actions:} \\
-    \crystal{level}{12pt} & %
-    \taction{Elemental Strike} is a Slow (1) \tatk{magical} action. To use it, choose \telem{Fire}, \telem{Lightning}, or \telem{Ice}. You concentrate the chosen element and strike a weapon attack causing normal damage, using the chosen element. \\
-    \crystal{level}{12pt} & %
-    \taction{Holy Strike} is a Slow (4) action. Using your own vital energy as sacred power, you attack with the force of \telem{Light}. Do a weapon attack dealing 150\% weapon damage, \telem{Light}-elemental. \\
-    \crystal{level}{12pt} & %
-    \taction{Shadow Strike} is a Slow (4) action. Sacrificing your own life force to profane powers, you use the forces of \telem{Shadow} to attack. Do a weapon attack dealing 150\% weapon damage, \telem{Shadow}-elemental. \\
+
+    \ability{level=1,name=Arcane Discipline, desc={You earn one of the three following actions:}}\\
+
+        \speclede{level=1, action={slow=1,magical=true}, name=Elemental Strike} Choose \telem{Fire}, \telem{Lightning}, or \telem{Ice}. You concentrate the chosen element and strike a weapon attack causing normal damage, using the chosen element. \\
+
+        \speclede{level=1, action={slow=4}, name=Holy Strike} Using your own vital energy as sacred power, you attack with the force of \telem{Light}. Do a weapon attack dealing 150\% weapon damage, \telem{Light}-elemental. \\
+
+        \speclede{level=1, action={slow=4}, name=Shadow Strike} Sacrificing your own life force to profane powers, you use the forces of \telem{Shadow} to attack. Do a weapon attack dealing 150\% weapon damage, \telem{Shadow}-elemental. \\
+    
     \tabjobspec{}
-    \crystal{air}{12pt} \crystal{water}{12pt} & %
-    \tspec{Dualism}: Requires Air and Water level 5. You gain one of the following actions: \taction{Elemental Strike}, \taction{Holy Strike} or \taction{Shadow Strike}. \\
-    \crystal{earth}{12pt} \crystal{air}{12pt} & %
-    \tspec{Will Shield}: Requires Earth level 6 and Air level 4. You gain the reaction \taction{Will Shield}. You can use this reaction whenever you suffer damage. Conjuring up a protective magical shield, you avoid injuries. Perform a Water vs (the greater of Earth or Fire) attack, difficulty 30. If successful, negate all effects of the attack and spend MP equal 10\% of your maximum MP\@. If you do not have enough MP to spend, this ability fails. \\
-    \crystal{fire}{12pt} & %
-    \tspec{Quick Channeling}: Requires Fire level 7. When using an ability, you may reduce its charge time by 1, to a minimum of 0. \\
+    
+        \speclede{air=5, water=5, name=Dualism} You gain one of the following actions: \taction{Elemental Strike}, \taction{Holy Strike}, or \taction{Shadow Strike}. \\
+
+        \speclede{earth=6, air=4, name=Will Shield, action={reaction=true}} You can use this reaction whenever you suffer damage. Conjuring up a protective magical shield, you avoid injuries. Perform a Water vs (the greater of Earth or Fire) attack, difficulty 30. If successful, negate all effects of the attack and spend MP equal 10\% of your maximum MP\@. If you do not have enough MP to spend, this ability fails. \\
+
+        \speclede{fire=7, name=Quick Channeling} When using an ability, you may reduce its charge time by 1, to a minimum of 0. \\
+
     \tabjobsep%
-    \multicolumn{2}{p{\textwidth}}{\tability{Blade Magic}: Core Ability acquired at level 15. You gain one of the three following actions:} \\
-    \crystal{level}{12pt} & %
-    \taction{Snake Fang} is a Ranged Slow (2) \tatk{magical} action. You create a snake-shaped wave of energy. The snake then attacks a target of your choice, a Fire vs Earth attack, difficulty 40. If successful, the target suffers \telem{Bio}-elemental weapon damage, and the \tstatus{Poison} status until the end of next round. \\
-    \crystal{level}{12pt} & %
-    \taction{Hallowed Bolt} is a Ranged Slow (2) \tatk{magical} action. You create a luminous energy sphere, then send that ball spiraling against a target of your choice, a Fire vs Fire attack, difficulty 40. If successful, the target suffers \telem{Lightning}-elemental weapon damage, and the \tstatus{Curse} status until the end the next round. \\
-    \crystal{level}{12pt} & %
-    \taction{Black Sky} is a Ranged Slow (2) \tatk{magical} action. You invoke a black energy beam from the sky. The lightning strikes a target of your choice, a Fire vs Air attack, difficulty 40. If successful, the target suffers \telem{Shadow}-elemental weapon damage, and the \tstatus{Blind} status until the end of next round. \\
-    \tabjobspec{}
-    \crystal{air}{12pt} \crystal{fire}{12pt} & %
-    \tspec{Shadow Blade}: Requires Air level 6 and Fire level 9. You earn the Slow (2) \tatk{magical} action \taction{Shadow Blade}. Conjuring a tornado of souls, perform a weapon attack against all other combatants, enemies and allies. You deal 150\% weapon damage, \telem{Shadow}-elemental, to all characters hit. \\
-    \crystal{earth}{12pt} \crystal{air}{12pt} & %
-    \tspec{Stasis Strike}: Requires Earth level 9 and Air level 6. You gain the Ranged Slow (5) action \taction{Stasis Strike}. You summon a lightning bolt from heavens. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Light}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Immobilize} status until the end of your next round on the target. \\
-    \crystal{air}{12pt} \crystal{water}{12pt} & %
-    \tspec{Fury Brand}: Requires Air level 6 and Water level 9. You gain the Slow (5) \tatk{magical} action \taction{Fury Brand}. Create a rune of fury in your weapon and strike. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Fire}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Mute} status until the end of your next round on the target. \\
+
+    \ability{level=15, name=Blade Magic, desc={You gain one of the three following actions:}}\\
+
+        \speclede{level=15, name=Snake Fang, action={ranged=true,slow=2,magical=true}} You create a snake-shaped wave of energy. The snake then attacks a target of your choice, a Fire vs Earth attack, difficulty 40. If successful, the target suffers \telem{Bio}-elemental weapon damage and the \tstatus{Poison} status until the end of next round. \\
+      
+        \speclede{level=15, name=Hallowed Bolt, action={ranged=true,slow=2,magical=true}} You create a luminous energy sphere, then send that ball spiraling against a target of your choice, a Fire vs Fire attack, difficulty 40. If successful, the target suffers \telem{Lightning}-elemental weapon damage and the \tstatus{Curse} status until the end the next round. \\
+
+        \speclede{level=15, name=Black Sky, action={ranged=true,slow=2,magical=true}} You invoke a black energy beam from the sky. The lightning strikes a target of your choice, a Fire vs Air attack, difficulty 40. If successful, the target suffers \telem{Shadow}-elemental weapon damage and the \tstatus{Blind} status until the end of next round. \\
+
+    \tabjobspec{}%
+
+        \speclede{air=6, fire=9, name=Shadow Blade, action={slow=2,magical=true}} Conjuring a tornado of souls, perform a weapon attack against all other combatants, enemies and allies. You deal 150\% weapon damage, \telem{Shadow}-elemental, to all characters hit. \\
+       
+        \speclede{earth=9, air=6, name=Stasis Strike, action={ranged=true,slow=5}} You summon a lightning bolt from heavens. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Light}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Immobilize} status until the end of your next round on the target. \\
+
+        \speclede{air=6, water=9, name=Fury Brand, action={slow=5, magical=true}} Create a rune of fury in your weapon and strike. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Fire}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Mute} status until the end of your next round on the target. \\
+
     \tabjobsep%
-    \multicolumn{2}{p{\textwidth}}{\tability{Elemental Soul}: Core Ability acquired at level 24. Select an element other than \telem{Cut}, \telem{Crush} or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, choose one of the following actions to augment: Reduce \taction{Will Shield}'s difficulty to 10, \taction{Stasis Strike} may inflict \tstatus{Stop} instead of \tstatus{Immobilize}, \taction{Fury Brand} may inflict \tstatus{Berserk} instead of \tstatus{Mute} or \taction{Cleansing Strike} may inflict \tstatus{Toad} instead of \tstatus{Disable}.} \\
+
+    \ability{level=24, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, choose one of the following actions to augment: Reduce \taction{Will Shield}'s difficulty to 10, \taction{Stasis Strike} may inflict \tstatus{Stop} instead of \tstatus{Immobilize}, \taction{Fury Brand} may inflict \tstatus{Berserk} instead of \tstatus{Mute}, or \taction{Cleansing Strike} may inflict \tstatus{Toad} instead of \tstatus{Disable}.}}\\
     \tabjobspec{}
-    \crystal{fire}{12pt} & %
-    \tspec{Night Sword}: Requires Fire level 10. You gain the Slow (2) action \taction{Night Sword.} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you heal HP equal to the damage dealt, after reducing by ARM or MARM\@. \\
-    \crystal{earth}{12pt} & %
-    \tspec{Light's Judgement}: Requires Earth level 10. You gain the Slow (5) action \taction{Cleansing Strike}. This action creates an arcane seal in the air, and then you attack a target with your weapon, destroying the seal and dealing 150\% weapon damage, \telem{Ice}-elemental. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Disable} status until the end of your next round on the target. \\
-    \crystal{water}{12pt} & %
-    \tspec{Reckless Sacrifice}: Requires Water level 10. When using an Adept \tatk{action} that inflicts a negative status on a single target, you can choose to automatically hit without performing an attack roll. If you do, you inflict the status on the target and on yourself for the same duration. \\
+
+        \speclede{fire=10, name=Night Sword, action={slow=2}} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you heal HP equal to the damage dealt, after reducing by ARM or MARM\@. \\
+
+        \speclede{earth=10, name=Light's Judgement} You gain the \actype{slow=2} \taction{Cleansing Strike}. This action creates an arcane seal in the air, and then you attack a target with your weapon, destroying the seal and dealing 150\% weapon damage, \telem{Ice}-elemental. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Disable} status until the end of your next round on the target. \\
+
+        \speclede{water=10, name=Reckless Sacrifice} When using an Adept \tatk{action} that inflicts a negative status on a single target, you can choose to automatically hit without performing an attack roll. If you do, you inflict the status on the target and on yourself for the same duration. \\
+
     \tabjobsep%
-    \multicolumn{2}{p{\textwidth}}{\tability{Arcane Shock}: Core Ability acquired at level 42. You gain the Ranged Slow (3) \tatk{magical} action \taction{Demi Shock}. Concentrating the arcane forces, you try to break the enemy. Do a Fire vs Earth attack, difficulty 40. If successful, the target loses 50\% of their current HP\@. This counts as a \tstatus{Gravity}-type status effect.} \\
+
+    \ability{level=42, name=Arcane Shock, desc={You gain the \actype{ranged=true,slow=3,magical=true} \taction{Demi Shock}. Concentrating the arcane forces, you try to break the enemy. Do a Fire vs Earth attack, difficulty 40. If successful, the target loses 50\% of their current HP\@. This counts as a \tstatus{Gravity}-type status effect.}}\\
     \tabjobspec{}
-    \crystal{earth}{12pt} \crystal{water}{12pt} & %
-    \tspec{Mana Safe}: Requires Earth level 8 and Water level 10. You can spend any amount of MP and an action to heal the same amount of MP to an ally. Any ally can spend any amount of MP and an action to heal on you half that amount of MP\@. \\
-    \crystal{earth}{12pt} \crystal{fire}{12pt} & %
-    \tspec{Dark Pact}: Requires Earth and Fire level 11. Whenever you spend HP to use a Quick Adept action that deals \telem{Shadow}-elemental damage, you may spend extra 10\% of your max HP to deal extra 50\% weapon damage. You must declare this Ability before rolling the attack, spending the extra HP regardless of hitting or missing. \\
-    \crystal{air}{12pt} \crystal{fire}{12pt} & %
-    \tspec{Elemental Overload}: Requires Air level 7 and Fire level 12. Whenever you spend HP to use a Quick Adept action that deals \telem{Fire}-, \telem{Ice}- or \telem{Lightning}-elemental damage, you may spend extra 10\% of your max HP to attack all opponents, rather than just one target. \\
+
+        \speclede{earth=8, water=10, name=Mana Safe} You can spend any amount of MP and an action to heal the same amount of MP to an ally. Any ally can spend any amount of MP and an action to heal on you half that amount of MP\@. \\
+
+        \speclede{earth=11, fire=11, name=Dark Pact} Whenever you spend HP to use a Quick Adept action that deals \telem{Shadow}-elemental damage, you may spend extra 10\% of your max HP to deal extra 50\% weapon damage. You must declare this Ability before rolling the attack, spending the extra HP regardless of hitting or missing. \\
+
+        \speclede{air=7, fire=12, name=Elemental Overload} Whenever you spend HP to use a Quick Adept action that deals \telem{Fire}-, \telem{Ice}-, or \telem{Lightning}-elemental damage, you may spend extra 10\% of your max HP to attack all opponents, rather than just one target. \\
+
     \tabjobsep%
-    \multicolumn{2}{p{\textwidth}}{\tability{Staggering Blow}: Core Ability acquired at level 60. Whenever one of your abilities damage a charging target, the target loses the Slow action.} \\
+
+    \ability{level=60, name=Staggering Blow, desc={Core Ability acquired at level 60. Whenever one of your abilities damage a charging target, the target loses the Slow action.}} \\
     \tabjobspec{}
-    \crystal{earth}{12pt} & %
-    \tspec{Shellburst Stab}: Requires Earth level 20. You gain the Ranged Slow (6) \tatk{magical} action \taction{Shellburst Stab}. You overload the target with magical energy. Perform an Earth vs Water attack, difficulty 40, to deal \telem{Puncture}-elemental damage equal to the lesser between the target's current MP or 999. \\
-    \crystal{air}{12pt} & %
-    \tspec{Soul Eater}: Requires Air level 20. You gain the Ranged Slow (6) action \taction{Soul Eater}. Opening a portal to the underworld, you try to drag their opponents into eternal sleep. Do a weapon attack against all enemies, difficulty 50. All opponents hit are reduced to 0 HP\@. Treat this as a \tstatus{Fatal} type status. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Shadow}-elemental. \\
-    \crystal{water}{12pt} & %
-    \tspec{Divine Ruination}: Requires Water level 20. You gain the Ranged Slow (6) action \taction{Divine Ruination}. You show the light of glory to your opponents, who are tempted to follow you. Do a weapon attack against all enemies, difficulty 50. All opponents hit receive the \tstatus{Charm} status. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Light}-elemental. \\
+
+        \speclede{earth=20, name=Shellburst Stab, action={ranged=true, slow=6, magical=true}} You overload the target with magical energy. Perform an Earth vs Water attack, difficulty 40, to deal \telem{Puncture}-elemental damage equal to the lesser between the target's current MP or 999. \\
+
+        \speclede{air=20, name=Soul Eater, action={ranged=true, slow=6}} Opening a portal to the underworld, you try to drag their opponents into eternal sleep. Do a weapon attack against all enemies, difficulty 50. All opponents hit are reduced to 0 HP\@. Treat this as a \tstatus{Fatal} type status. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Shadow}-elemental. \\
+        
+        \speclede{water=20, name=Divine Retribution, action={ranged=true, slow=6}} You show the light of glory to your opponents, who are tempted to follow you. Do a weapon attack against all enemies, difficulty 50. All opponents hit receive the \tstatus{Charm} status until end of next round. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Light}-elemental. \\
+
 \end{tabjob}
 \vspace{\stretch{1}}
 \begin{center}
