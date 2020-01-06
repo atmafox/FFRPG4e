@@ -51,7 +51,7 @@ Blood Hammer,37,5484,10 x,\tability{Improved Critical}
 Demon Slicer,37,5170,10 x,\tfxkiller{Demon}
 Scimitar / War Hammer,46,6203,13 x,
 Cold Steel,46,9022,13 x,\tfxtouch{Slow}
-Soul Saber,46,9587,13 x,\teffect{Ability}
+Soul Saber,46,9587,13 x,\teffect{Piercing}
 "Enhancer ",55,Rare,14 x,"\tfxauto{Strengthen: Magic}
 \tfxauto{Strengthen: Physical}"
 Mage Killer,55,Rare,14 x,"\tfxauto{Shell}
