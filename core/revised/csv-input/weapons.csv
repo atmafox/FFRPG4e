@@ -364,7 +364,7 @@ Cedar Staff,10,413,4 x,
 "Aqua Staff ",10,599,4 x,"\tfxsweave{Water}
 \tfxedamage{Water}"
 Mythril Staff,19,1091,6 x,
-"Thunder Staff ",19,1421,6 x,\tfxdfocus{Tunder}{Thundara}
+"Thunder Staff ",19,1421,6 x,\tfxdfocus{Thunder}{Thundara}
 "Storm Staff ",19,1390,6 x,\tfxdfocus{Aero}{Aera}
 Gold Staff,28,1890,9 x,
 "Rock Staff ",28,2629,9 x,\tfxdfocus{Magnitude}{Quake}
