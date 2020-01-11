@@ -25,6 +25,10 @@
 \RequirePackage[pdfversion=1.7]{hyperref}
 \RequirePackage[open,level=3,atend]{bookmark}
 \RequirePackage{url}
+\RequirePackage{options}
+\RequirePackage{xparse}
+\RequirePackage{xspace}
+\RequirePackage{environ}
 
 % We'll need @ for keyval templates in here
 \makeatletter
@@ -51,8 +55,33 @@
 \newcolumntype{O}{>{\collectcell\tabnumprint}l<{\endcollectcell}}
 
 % Stolen from https://tex.stackexchange.com/a/62623
-\newlist{commalist}{description*}{4}
-\setlist[commalist]{mode=unboxed,itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
+%\newlist{commalist}{description*}{4}
+%\setlist[commalist]{mode=unboxed,itemjoin={{,}},itemjoin*={{, and}},afterlabel=\unskip{{~}}}
+%\setlist[commalist]{mode=unboxed,itemjoin={{,}},afterlabel=\unskip{{~}}}
+
+\protected\def\comma{} % Probably should have something better here x.x
+
+% Better comma list https://tex.stackexchange.com/a/62620
+\ExplSyntaxOn
+\NewEnviron{commalist}[1][\space]{\spence_comma_list:x \BODY #1}
+\seq_new:N \l_spence_items_seq
+\cs_new_protected:Npn \spence_comma_list:n #1
+ {
+  \seq_set_split:Nnn \l_spence_items_seq { \comma } { #1 }
+  \seq_pop_left:NN \l_spence_items_seq \l_tmpa_tl % we have an empty element at the beginning
+  \seq_use:Nnnn \l_spence_items_seq { ~ and ~ } { , ~ } { , ~ and ~ }
+ }
+\cs_generate_variant:Nn \spence_comma_list:n { V , x , o }
+\ExplSyntaxOff
+
+
+% Some stupid stuff to make \notblank expand its argument.
+% Ref: https://tex.stackexchange.com/questions/269498/expanding-code-in-etoolboxs-ifblank
+% Doesn't work,? probably delete
+\newcommand{\eisblank}[3]{%
+  \protected@edef\@tempa{#1}%
+  \expandafter\isblank\expandafter{\@tempa}{#2}{#3}%
+}
 
 % configure page geometry
 \geometry{
@@ -106,6 +135,8 @@
 \newcommand{\review}[1]{
 	\bgroup\color{red}\textbf{((#1))}\egroup
 }
+\newcommand{\error}{\review{XXX ERROR XXX}}
+\newcommand{\missing}{\review{XXX MISSING PARAMATER XXX}}
 
 % For prerelease dates
 
@@ -342,47 +373,57 @@
 
 % Beginnings of job choice rows
 
-\krddefinekeys{abilitylede}[al@]{
-	cmd/name;
-	cmd/level;
-}
-\krdpresetkeys{abilitylede}{
-	name=\review{invalid},level=\review{invalid}
-}
-\newcommand*{\abilitylede}[1][]{
-	\krdsetkeys{abilitylede}{#1}%
-	\tability{\al@name}: Core ability acquired at \ordinalnum{\al@level} level.%
+\options{
+	/ff/aby/.new family,
+	/ff/aby/name/.new value = [\missing],
+	/ff/aby/level/.new value = [\missing],
+	/ff/aby/desc/.new value = [\missing],
 }
 
-\krddefinekeys{speclede}[sl@]{
-	bool/isaction;
-	cmd/name;
-	cmd/level;
-	cmd/earth;
-	cmd/air;
-	cmd/fire;
-	cmd/water;
+\newcommand{\ability}[1]{%
+	\multicolumn{2}{p{\textwidth}}{%
+		\options{/ff/aby,#1}%
+		\tability{\option{/ff/aby/name}}: Core ability acquired at \ordinalnum{\option{/ff/aby/level}} level.%
+		\option{/ff/aby/desc}%
+	} %
 }
-\krdpresetkeys{speclede}{
-	isaction=false,name=\review{invalid};earth=;air=;fire=;water=
+
+
+\options{
+	/ff/spc/.new family,
+	/ff/spc/actionx/.new value,
+	/ff/spc/action/.new cmd = {\optionsalso{/ff/spc/actionx = \actype{#1}}},
+	/ff/spc/name/.new value = [\missing],
+	/ff/spc/level/.new value,
+	/ff/spc/earth/.new value,
+	/ff/spc/air/.new value,
+	/ff/spc/fire/.new value,
+	/ff/spc/water/.new value,
 }
-\newcommand*{\speclede}[1][]{%
-	\krdsetkeys{speclede}{#1}%
-	\ifdefvoid{\sl@level}{}{\ffcrystal[type=level,height=12pt]}%
-	\ifdefvoid{\sl@earth}{}{\ffcrystal[type=earth,height=12pt]}%
-	\ifdefvoid{\sl@air}{}{\ffcrystal[type=air,height=12pt]}%
-	\ifdefvoid{\sl@fire}{}{\ffcrystal[type=fire,height=12pt]}%
-	\ifdefvoid{\sl@water}{}{\ffcrystal[type=water,height=12pt]}%
+
+\newcommand*{\speclede}[1]{%
+	\options{/ff/spc,#1}%
+	\ifoptionvoid{/ff/spc/level}{}{\ffcrystal[type=level,height=12pt]}%
+	\ifoptionvoid{/ff/spc/earth}{}{\ffcrystal[type=earth,height=12pt]}%
+	\ifoptionvoid{/ff/spc/air}{}{\ffcrystal[type=air,height=12pt]}%
+	\ifoptionvoid{/ff/spc/fire}{}{\ffcrystal[type=fire,height=12pt]}%
+	\ifoptionvoid{/ff/spc/water}{}{\ffcrystal[type=water,height=12pt]}%
 	& 
-	\krdsetkeys{speclede}{#1} %
-	\ifsl@isaction%
-		\taction{\sl@name}:
-	\else%
-		\tspec{\sl@name}:
-	\fi%
-	\ifblank{\sl@earth\sl@air\sl@fire\sl@water}{}{%
-		Requires \begin{commalist}\ifdefvoid{\sl@earth}{}{\item Earth level \sl@earth}\ifdefvoid{\sl@air}{}{\item Air level \sl@air}\ifdefvoid{\sl@fire}{}{\item Fire level \sl@fire}\ifdefvoid{\sl@water}{}{\item Water level \sl@water}\end{commalist}.%
-	}%
+	\options{/ff/spc,#1}%
+	\ifoptionvoid{/ff/spc/actionx}%
+		{\tspec{\option{/ff/spc/name}}: }%
+		{\taction{\option{/ff/spc/name}} is a \option{/ff/spc/actionx}}%
+		\edef\anyelements{\option{/ff/spc/earth}\option{/ff/spc/air}\option{/ff/spc/fire}\option{/ff/spc/water}}%
+		\expandafter\ifblank\expandafter{\anyelements}{}{%
+				\ifoptionvoid{/ff/spc/actionx}{Requires}{ requiring} %
+				\begin{commalist}[\relax]%
+					\ifoptionvoid{/ff/spc/earth}{}{\comma Earth level \option{/ff/spc/earth}}%
+					\ifoptionvoid{/ff/spc/air}{}{\comma Air level \option{/ff/spc/air}}%
+					\ifoptionvoid{/ff/spc/fire}{}{\comma Fire level \option{/ff/spc/fire}}%
+					\ifoptionvoid{/ff/spc/water}{}{\comma Water level \option{/ff/spc/water}}%
+				\end{commalist}%
+		}%
+		\ifoptionvoid{/ff/spc/actionx}{\@.}{:}%
 }
 
 
@@ -410,26 +451,32 @@
 }
 \krdpresetkeys{actype}{reaction=false,magical=false,ranged=false,free=false,slow=quick}
 
-\newcommand*{\actype}[1][]{
-	\krdsetkeys{actype}{#1}%
+
+\options{
+	/ff/act/.new family,
+	/ff/act/ranged/.new toggle,
+	/ff/act/magical/.new toggle,
+	/ff/act/reaction/.new toggle,
+	/ff/act/free/.new toggle,
+	/ff/act/slow/.new num = [1] 1
+}
+
+\newcommand*{\actype}[1]{%
+	\options{/ff/act,#1}%
 	\textit{%
-		\ifac@ranged%
-			Ranged
-		\fi%
-		\ifac@magical%
-			Magical
-		\fi%
-		\ifac@free%
-			Free
-		\else%
-		\ac@slow{}
-		\fi%
+		\iftoggle{/ff/act/ranged}{Ranged }{}%
+		\iftoggle{/ff/act/magical}{Magical }{}%
+		\iftoggle{/ff/act/free}{Free}{%
+			\iftoggle{/ff/act/reaction}{}{%
+				\ifnum\option{/ff/act/slow}=1%
+					Quick%
+				\else%
+					Slow (\option{/ff/act/slow})%
+				\fi%
+			}%
+		}
 	}%
-	\ifac@reaction%
-		reaction%
-	\else%
-		action%
-	\fi%
+	\iftoggle{/ff/act/reaction}{reaction}{action}%
 }
 
 \krddefinekeys{jobstats}[js@]{%
