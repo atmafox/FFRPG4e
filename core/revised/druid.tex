@@ -45,8 +45,23 @@
     \crystal{level}{12pt} & %
     \textit{Summoner}: You gain \taction{Call}, allowing them to obtain the help of Summoned Monsters they've obtained in their adventures. The complete rules for these are in the \nameref{sec:magic-summoned} section, starting at page~\pageref{sec:magic-summoned}. \\
     \tabjobspec{}
+    
     \crystal{air}{12pt} & %
-    \tspec{Air Gust}: Requires Air level 7. You gain the Ranged Slow (2) magical action \taction{Air Wave}. Using it, you perform an (Air or Fire) vs Water attack against a target, difficulty 40. If successful, choose one: You deal 10x Air level Air-elemental damage or grant the Float status to your group until the end of the round. At 30th level or greater, you may spend 30 MP when using this action to increase the damage to 15 x Air level or force the target to lose their highest initiative dice this round. No more than one initiative die can be lost this way by a target each round. Treat this as a \tstatus{Seal}-type status effect. \\
+    \tspec{Air Gust}: Requires Air level 7. You gain the Ranged Slow (2) magical action \taction{Air Wave}. Using it, you perform an (Air or Fire) vs Water attack against a target, difficulty 40. If successful, choose one: \\
+    \multicolumn{2}{c}{
+        \rowcolors{1}{zebragray}{}
+        \begin{tabular}{p{0.8\textwidth}}
+            \toprule
+            Deal 10x Air level Air-elemental damage\\
+            Grant \tstatus{Float} to your party until the end of the round\\
+            If 30th level or greater, spend 30 MP to deal 15x damage as above\\
+            If 30th level or greater, spend 30 MP to deal 10x damage as above and force the target to lose their highest initiative die\\
+            If 30th level or greater, spend 30 MP to Grant \tstatus{Float} as above and force the target to lose their highest initiative die\\ \midrule
+            Treat the loss of an initiative die as a \tstatus{Seal}-type status effect. Until the end of the round, the target cannot be affected by this again. \\ 
+            \bottomrule
+        \end{tabular}
+
+    } \\
     \crystal{water}{12pt} \crystal{air}{12pt} & %
     \tspec{Weak Point}: Requires Water and Air level 5. You gain the action \taction{Advice}. It allows you to choose an ally and point out the weaknesses of the enemy. Until the end of the next round, whenever the chosen ally performs an attack that can score critical hit, critical hits happen even if the attack didn’t overcome the difficulty. \\
     \crystal{earth}{12pt} \crystal{water}{12pt} & %
