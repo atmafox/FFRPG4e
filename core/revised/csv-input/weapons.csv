@@ -375,8 +375,8 @@ Add Earth level to damage"
 "Gravity Staff ",37,6119,11 x,"\tfxsweave{Quarter}
 Add Air level to damage"
 White Staff,46,7944,14 x,
-"Energy Staff ",46,10029,14 x,"\tfxsweave{Osmose}
-\tfxcritspell{Osmose}"
+"Energy Staff ",46,10029,14 x,"\tfxsweave{Osmosis}
+\tfxcritspell{Osmosis}"
 Dream Watcher,46,9878,14 x,-10 difficulty to all non-Spell magical attacks
 Holy Staff,55,Rare,16 x,"\tfxtouch{Berserk}
 \tfxcritspell{Banishga}"
