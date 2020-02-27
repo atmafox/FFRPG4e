@@ -346,7 +346,7 @@ Power Rod,55,Rare,14 x,"\tfxauto{Strengthen: Magic}
 Rod of Roses,64,Artifact,16 x,"\tfxedamage{Shadow}
 \tfxstrike{Virus}"
 Mace of Zeus,64,Artifact,16 x,+20 difficulty to all spells targeting you
-"Arc Arcana ",64,Artifact,16 x,"On hit inflict \tvarstatus{Vunlerable}{Element} until end of next round. For element roll 1d10:
+"Arc Arcana ",64,Artifact,16 x,"On hit inflict \tvarstatus{Vulnerable}{Element} until end of next round. For element roll 1d10:
 1: Fire; 2: Ice; 3: Lightning; 4: Earth; 5: Air; 6: Water; 7: Bio; 8: Light; 9: Shadow;
 0: Cut, Crush and Puncture."
 ,,,,
