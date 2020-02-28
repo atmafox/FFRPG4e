@@ -46,7 +46,7 @@
     
     \textit{Condemn}, acquired at level 37, costs 60 MP\@. Roll Fire vs Water, difficulty 70. If successful, inflict the \tstatus{Condemn} status on the target until the end of the next round.
     
-    \textit{Death}, acquired at level 55, costs 122 MP\@. Roll Fire vs Water, difficulty 70. If successful, the target is reduced to 0 HP\@. Treat this as a \tstatus{Fatal}–type status.
+    \textit{Death}, acquired at level 55, costs 122 MP\@. Roll Fire vs Water, difficulty 70. If successful, inflict the \tstatus{Death} status on the target\@.
 
     \hspace{\stretch{1}}\ffcrystal[type=level,height=8pt]\hspace{\stretch{1}}
 
@@ -108,15 +108,15 @@
     
     \textit{Rasp}, acquired at level 30, costs 42 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 14 x Fire level \telem{non}-elemental magical damage to a target. This Spell damages MP instead of HP\@. 
     
-    \textit{Osmosis}, acquired at level 50, costs 45 MP\@. Roll Fire vs Water, difficulty 50. If successful, deal 16 x Fire level \telem{non}-elemental magical damage to a target. This Spell damages MP instead of HP\@. The caster recovers MP equal to the damage dealt.
+    \textit{Osmosis}, acquired at level 50, costs 45 MP\@. Roll Fire vs Water, difficulty 50. If successful, deal 16 x Fire level \telem{non}-elemental magical damage to a target. This Spell damages MP instead of HP\@. The caster drains MP equal to the MP lost.
 
     \hspace{\stretch{1}}\ffcrystal[type=level,height=8pt]\hspace{\stretch{1}}
 
     \textbf{Drain Group}: Expert Spells whose main purpose is to recover the user's HP, through the ability to steal the target’s life. There are two Drain Spells:
     
-    \textit{Drain}, acquired at level 30, costs 42 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 14 x Fire level \telem{Puncture}-elemental magical damage to a target. 50\% of damage dealt is recovered in HP by the user.
+    \textit{Drain}, acquired at level 30, costs 42 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 14 x Fire level \telem{Puncture}-elemental magical damage to a target. Drain HP equal to half of damage dealt.
     
-    \textit{Syphon}, acquired at level 50, costs 90 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 20 x Fire level \telem{Puncture}-elemental magical damage to a target. 50\% of damage dealt is recovered in HP by the user.
+    \textit{Syphon}, acquired at level 50, costs 90 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 20 x Fire level \telem{Puncture}-elemental magical damage to a target.  Drain HP equal to half of damage dealt.
 
     \hspace{\stretch{1}}\ffcrystal[type=level,height=8pt]\hspace{\stretch{1}}
 
@@ -130,7 +130,7 @@
 
     \textbf{Black Mysteries}: Black magic arcane mysteries are the most destructive. All of them deal damage, being the most damaging spells available to any mage. Mysteries are not a Spell group and cannot be chosen as such.
     
-    \textit{Doomsday}, acquired at level 64, cost 160 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 28 x Fire level \telem{Shadow}-elemental magical damage to a group. Also, if your roll overcomes difficulty 70, the targets are reduced to 0 HP\@. Treat this as a \tstatus{Fatal}-type status.  This spell ignores \tstatus{Reflect}.
+    \textit{Doomsday}, acquired at level 64, cost 160 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 28 x Fire level \telem{Shadow}-elemental magical damage to a group. Also, if your roll overcomes difficulty 70, inflict the \tstatus{Death} status. This spell ignores \tstatus{Reflect}.
     
     \textit{Flare}, acquired at level 64, costs 150 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 35 x Fire level \telem{non}-elemental magical damage to a target. This spell ignores \tstatus{Reflect}, \tstatus{Shell} and the target’s Magic Armor.  
     
@@ -489,7 +489,7 @@ These more powerful spells begin to reveal the true power of Blue Mage. They are
     
     \textit{Rippler} costs 74 MP\@. Roll Fire vs Water, difficulty 40. If successful, you and the target exchange any status effects, keeping their respective durations. For example, a \tstatus{Blind} Druid use this spell on a \tstatus{Haste} and \tstatus{Immobilize} target becomes \tstatus{Haste} and \tstatus{Immobilize}, while the target becomes \tstatus{Blind}. This spell does not affect status effects that are caused by permanent effects, such as equipment with Auto-Status or SoS-Status or permanent Abilities.
     
-    \textit{Roulette} costs 70 MP\@. Pick a random combatant (ally, enemy or the caster). Roll Fire vs Water, difficulty 40. If successful, it is reduced to 0 HP\@. Treat this as a \tstatus{Fatal}-type status. This Spell ignores the \tstatus{Reflect} status.
+    \textit{Roulette} costs 70 MP\@. Pick a random combatant (ally, enemy or the caster). Roll Fire vs Water, difficulty 40. If successful, inflict the \tstatus{Death} status. This Spell ignores the \tstatus{Reflect} status.
     
 	\textit{Wall Change} costs 72 MP\@. Roll Fire vs Water, difficulty 70. If successful, grant the target the (Element) \tstatus{Resist} to all elements, except one random element. To find the random element, roll 1d10: 1: \telem{Fire}; 2: \telem{Ice}; 3: \telem{Lightning}; 4: \telem{Earth}; 5: \telem{Air}; 6: \telem{Water}; 7: \telem{Bio}; 8: \telem{Light}; 9: \telem{Shadow}; 0: \telem{Cut}, \telem{Crush} and \telem{Puncture}. It also receives the (Element) \tstatus{Vulnerable} to all elements it does not have resistance, immunity or absorption. The element to which the target is vulnerable randomly changes every five phases. This effect lasts this and the next two rounds.
     
@@ -517,13 +517,13 @@ These more powerful spells begin to reveal the true power of Blue Mage. They are
     
     \textit{Level 4 Flare} costs 145 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 33 x Fire level \telem{non}-elemental magical damage to all enemies whose level is a multiple of four. This Spell ignores the \tstatus{Shell} and \tstatus{Reflect} status effects.
     
-    \textit{Level 5 Death} costs 130 MP\@. Roll Fire vs Water, difficulty 30. All enemies hit whose level is a multiple of five are reduced to 0 HP\@. Treat this as a \tstatus{Fatal}-type status. This Spell ignores the \tstatus{Reflect} status.
+    \textit{Level 5 Death} costs 130 MP\@. Roll Fire vs Water, difficulty 30. Inflict the \tstatus{Death} status to all enemies hit whose level is a multiple of five. This Spell ignores the \tstatus{Reflect} status.
     
     \textit{Magic Breath} costs 120 MP\@. Roll Fire vs Water, difficulty 0, three times, against a group. Deal 8 x Fire level \telem{Fire}-elemental magical damage on each target hit by the first roll. Deal 8 x Fire level \telem{Ice}-elemental magical damage on each target hit by the second roll. Deal 8 x Fire level \telem{Lightning}-elemental magical damage on each target hit by the third roll. This Spell ignores the target’s Magic Armor.
     
     \textit{Mighty Guard} costs 140 MP\@. You and all your allies gain the \tstatus{Haste}, \tstatus{Protect}, and \tstatus{Shell} status effects during this and the next two rounds.
     
-    \textit{Shadow Flare} costs 161 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 33 x Fire level \telem{Shadow}-elemental magical damage to a target.
+    \textit{Shadow Flare} costs 161 MP\@. Roll Fire vs Water, difficulty 0. If successful, deal 35 x Fire level \telem{Shadow}-elemental magical damage to a target.
     
     \textit{Stone Breath} costs 115 MP\@. Roll Fire vs Water, difficulty 70, against a group. Inflict the \tstatus{Stone} status until the end of the next round on each target hit.
     
@@ -539,7 +539,7 @@ These more powerful spells begin to reveal the true power of Blue Mage. They are
 
     \textit{Astra}, acquired at level 30, costs 35 MP\@. Roll Fire vs Water, difficulty 0. If successful, the target becomes immune to all negative status effects until the end of the round.
     
-    \textit{Dispel}, acquired at level 40, costs 60 MP\@. Roll Fire vs Water, difficulty 40. If successful, the target loses all the positive status effects. If he has Auto-Status or SOS-Status, these effects are disabled until the end of the round. This spell ignores \tstatus{Reflect}.
+    \textit{Dispel}, acquired at level 40, costs 60 MP\@. Roll Fire vs Water, difficulty 40. If successful, the target loses all the positive status effects. If it has Auto-Status or SOS-Status, these effects are disabled until the end of the round. This spell ignores \tstatus{Reflect}.
     
     \textit{Astraga}, acquired at level 50, costs 85 MP\@. Roll Fire vs Water, difficulty 0. If successful, the group becomes immune to all negative status effects until the end of the round.
     
@@ -709,9 +709,9 @@ These more powerful spells begin to reveal the true power of Blue Mage. They are
     
     \textbf{Sylph} is a small group of six fairies with dragonfly wings who attack together.
     
-    \textit{Basic Call}: Minimum Level: \ordinalnum{24} MP Cost: 40. Roll Fire vs Water, difficulty 0. If successful, deal 12 x Fire level \telem{Puncture}-elemental magical damage to a target. You and your allies heal HP equal to the damage dealt, split evenly to all hurt characters in your group.
+    \textit{Basic Call}: Minimum Level: \ordinalnum{24} MP Cost: 40. Roll Fire vs Water, difficulty 0. If successful, deal 12 x Fire level \telem{Puncture}-elemental magical damage to a target. You and your allies drain HP equal to the HP lost, split evenly to all hurt characters in your group.
     
-    \textit{Greater Call}: Minimum level: \ordinalnum{54} MP Cost: 120. Roll Fire vs Water, difficulty 0. If successful, deal 22 x Fire level \telem{Puncture}-elemental magical damage to a target. You and your allies heal HP equal to the damage dealt, split evenly to all hurt characters in your group.
+    \textit{Greater Call}: Minimum level: \ordinalnum{54} MP Cost: 120. Roll Fire vs Water, difficulty 0. If successful, deal 22 x Fire level \telem{Puncture}-elemental magical damage to a target. You and your allies drain HP equal to the HP lost, split evenly to all hurt characters in your group.
     
     \textit{Summon}: Gain the \tstatus{Float} status until the end of the round.
 

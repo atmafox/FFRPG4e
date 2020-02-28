@@ -67,7 +67,7 @@
     \ability{level=24, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, choose one of the following actions to augment: Reduce \taction{Will Shield}'s difficulty to 10, \taction{Stasis Strike} may inflict \tstatus{Stop} instead of \tstatus{Immobilize}, \taction{Fury Brand} may inflict \tstatus{Berserk} instead of \tstatus{Mute}, or \taction{Cleansing Strike} may inflict \tstatus{Toad} instead of \tstatus{Disable}.}}\\
     \tabjobspec{}
 
-        \speclede{fire=10, name=Night Sword, action={slow=2}} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you heal HP equal to the damage dealt, after reducing by ARM or MARM\@. \\
+        \speclede{fire=10, name=Night Sword, action={slow=2}} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you drain HP equal to the HP lost\@. \\
 
         \speclede{earth=10, name=Light's Judgement} You gain the \actype{slow=2} \taction{Cleansing Strike}. This action creates an arcane seal in the air, and then you attack a target with your weapon, destroying the seal and dealing 150\% weapon damage, \telem{Ice}-elemental. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Disable} status until the end of your next round on the target. \\
 
@@ -91,7 +91,7 @@
 
         \speclede{earth=20, name=Shellburst Stab, action={ranged=true, slow=6, magical=true}} You overload the target with magical energy. Perform an Earth vs Water attack, difficulty 40, to deal \telem{Puncture}-elemental damage equal to the lesser between the target's current MP or 999. \\
 
-        \speclede{air=20, name=Soul Eater, action={ranged=true, slow=6}} Opening a portal to the underworld, you try to drag their opponents into eternal sleep. Do a weapon attack against all enemies, difficulty 50. All opponents hit are reduced to 0 HP\@. Treat this as a \tstatus{Fatal} type status. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Shadow}-elemental. \\
+        \speclede{air=20, name=Soul Eater, action={ranged=true, slow=6}} Opening a portal to the underworld, you try to drag their opponents into eternal sleep. Do a weapon attack against all enemies, difficulty 50, to inflict the \tstatus{Death} status effect. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Shadow}-elemental. \\
         
         \speclede{water=20, name=Divine Retribution, action={ranged=true, slow=6}} You show the light of glory to your opponents, who are tempted to follow you. Do a weapon attack against all enemies, difficulty 50. All opponents hit receive the \tstatus{Charm} status until end of next round. If any of the targets is immune to this effect, you deal 150\% weapon damage to it, \telem{Light}-elemental. \\
 
