@@ -1,192 +1,239 @@
 
 \section{Combat}\label{sec:combat}
 \begin{multicols}{2}
-Combat is the raison d’etre of many rules through this book. All rules regarding Jobs, Spells and Equipment are only tools to be used during tactical combat. The rules described below turn combative moments in a simulation that uses all the concepts discussed so far to present tactical challenges to the group. Each fight consists of rounds that follow until one side has fled, surrendered or been defeated.
+    Combat is the raison d’etre of most rules in this book. Jobs, spells, equipment-- nearly everything from here to the end exists to serve the combat engine. Combat occurs in a space where all combatants can reach each other without worrying about movement, with the one exception that flying characters can only be hit by other flyers or ranged attacks. Combat proceeds in a series of \newterm{rounds} until only one side remains capable of acting on the field. Each round is divided into ten \newterm{phases}, counting up from 1 to 10, in which individual actions take place. The order in which things happen is determined by initiative.
 
-\subsection{Initiative}\label{subsec:init}
-At the beginning of each round, each character involved in the fight will roll 3d10 and record the values. The die roll total is his initiative and the result of each dice means the character's actions. After the initiative roll, the round will continue for 10 phases, starting from phase 1 and ending in phase 10. The phases happen sequentially, in ascending order. In phase 1, all characters who had at least one result “1” in one of the initiative dice may take one action for each die that shows “1”.
+    \review{One thing to note is that I want to make it clear that we have a specific-overrides-general rule going on somewhere earlier in the book, so we don't have to keep putting "unless otherwise stated" and just trust that people aren't going to be potatos about this.}
 
-If more than one character acts in the same phase, the one with the highest total initiative acts first. If the characters have the same total initiative, the one with the greater Air Stat will act first. After acting, the character discards the current phase initiative die, reducing his initiative total. When there are no more characters able to act in phase 1, the round will move to phase 2 and so on. After phase 10 ends, the round ends and a new round begins.
+    \subsection{Initiative}\label{subsec:init}
 
-\begin{boco}
-    Optional Rule: \textbf{Team Initiative}\pc%
-    
-    Should you want a simpler way to track initiative, run each phase by having the all player characters do their actions first, then all enemies. Both the player characters and the enemies take actions in any desired order inside their team's turn. After all enemies have taken their action, move to the next phase. 
+        Each character has an \newterm{initiative}, which defaults to 3. This is the number of d10 that you roll for the character before each round begins. These d10 are your \newterm{action dice} and each represents a standard action you may take in the round. The sum of the numbers of your action dice when they are first rolled is your \newterm{phase speed}, which determines when you act in each phase.
+
+        In each phase, each character's action dice of the phase's number become \newterm{active} in turn and they may act once for each one. If multiple characters have dice in one phase, the highest phase speed goes first; in the event of a tie, the highest air stat goes first.
+
+        If an active action die is not used or delayed, it is lost at the end of the phase.
+
+        Certain effects may grant bonus action dice, or change the numbers on existing dice. Numbers lower than the current round become the current round, and numbers greater than 10 become 10.
+
+        \review{Wvr: Possible Rule, unsure} When such manipulation adds more action dice to the current phase, they happen at the end of the phase, after all of the existing dice have been used.
+
+        \review{Wvr: Suggesting New Rule} Each time a character's initiative is lowered, if they have unspent action dice in the current round they must choose one to discard. Each time a character's initiative is raised, if they have used fewer non-bonus dice this round than the new initiative, they roll a new die and add the current phase to its number.
+
+        \begin{boco}
+            Optional Rule: \textbf{Team Initiative}\pc%
+
+            To simplify the amount of data to track each phase, dispense with phase speed and tie breaking: let all of the players with dice in a phase act in whatever order they desire, and then take your actions for that phase in whatever order you desire.\pw%
+
+            \review{Wvr: Possible} Optional Rule: \textbf{Entering a Round Late}\pc%
+
+            At the GM's discresion, a character entering combat mid-round should roll less than their usual number of dice depending on how late they're entering, and add the current phase to each die rolled. It may simply be too hectic to enter properly until the next round begins, however.
+        \end{boco}
+
+    \subsection{Action Types}\label{subsec:actions}
+
+        \subsubsection{Standard Actions: Quick and Slow}
+            \newterm{Standard} actions are used when you have an active die, and use up that die as soon as you begin them. By default standard actions are \newterm{quick} and \newterm{resolve} as soon as you decide to use them. \newterm{Slow} actions resolve a set number of phases after they are started; a slow(N) action used on phase 1 will resolve on phase 1+N, before any other actions on that phase.
+            
+            A slow action's delay is called it's \newterm{charge time}, and a character preparing a slow action is said to be \newterm{charging}. While a character is charging they may not use any other actions and must delay or forfiet any other dice that become active before the slow action resolves. If the charge time stretches across rounds, it still takes places the same total number of phases later.
+
+            A slow action's charge time may not be reduced below 0, and a slow(0) action is identical to a quick action.
+
+            Targets are chosen when an action resolves. If there are no valid targets for a slow action to act upon at that point, or if the character decides at any point to abort the action, the action is forfieted and its die is not refunded.
+
+        \subsubsection{Free Actions}
+            \newterm{Free} actions cost no dice to play, but can only be activated in response to specific events or conditions, or as part of another action. Using a free action when its condition appears is not mandatory, and it may only be used once per instance of the condition.
+
+        \subsubsection{Reactions}
+            \newterm{Reactions} are also actions that can be executed in response to specific events or conditions, but which cost one action die to use. You can choose any of your action dice to discard when you use a reaction.
+
+            \review{Wvr: Making reactions easier as something to test with Sem's balance changes.}
+
+    \subsection{Action Options}
+        \subsubsection{Delaying Actions}
+            When an action die is active you can choose to \newterm{delay} it, and wait until later in the phase or a later phase to chose what action to use it for. You can delay until any point between two other actions in the round, you should state when or what you are waiting for but as your character is standing watching and ready, you can change this if needed.
+
+            You may only hold one action delayed at any time, further action dice will need to be used or forfieted if the delayed action is to be held past them.
+
+            Characters incapable of acting, whether due to charging or a debilitating status effect, will automatically delay one action and then forfeit all further ones.
+
+            You may not hold an action past the end of a round. \review{Wvr: Allowing slow actions to go to the next round freely but not this?}
+                
+        \subsubsection{Interrupting}
+            At any time, you may sacrifice \textit{two} of your action dice to perform any action as an interrupt. \review{Wvr: Not sure what to specifically say here}
+
+    \subsection{Action Attributes}
+        \subsubsection{Physical or Magical}
+            All actions are considered either \newterm{physical} or \newterm{magical}. For attacks, this determines whether the attack is affected by the target's phsyical or magical armor values; reactions and other conditions can make distinctions between them as well.
+
+            Most weapon-related actions take their type from the weapon used, but if an action lists physical or magical in its description that overrides the weapon. Weaponless actions default to physical.
+        
+        \subsubsection{Melee or Ranged}
+            All actions are also considered either \newterm{melee} or \newterm{ranged}. Ranged actions can hit floating or flying targets from the ground, melee cannot. As with physical and magical, the weapon property rules unless the action is specific, defaulting to melee.
+
+
+    \subsection{Attacks and Rolls in Combat}\label{subsec:attacks}
+        Aside from initiative, every roll in combat is listed as ``[Active Crystal] vs [Defending Crystal], difficulty [N]''. For exapmle, the common action \taction{Attack} takes its crystals from the weapon used, so a bow would be ``Air vs Air, difficulty 40''. To make this check, the action-using character rolls a d100 and adds his active crystal's value --- not its level. It succeeds if the result is greater than the defender's defending crystal value plus the difficulty. So in short:
+
+        Success = d100 + attacker active crystal value > difficulty + defender's defending crystal value
+
+        The defender can also opt to just let the action happen to themself willingly, in which case no roll is needed. This is considered standard for healing and support abilities, but a character can attempt to resist them if they so desire.
+
+        If the action targets a group of characters, you still only roll once. You then compare that value to the difficulty-boosted defense values of each target, effecting it if successful.
+
+        % TODO heal-hurt words
+        % TODO standard bonus name
+        \review{Move this bit to damage?}
+        If the action damages or restores HP or MP, add the digit in the one's place to the damage or restoration value. You may also roll a seperate d10 and add it to the value; this is much easier to set up in dice rolling software for example. Either way, this value is called the \newterm{standard bonus}.
+
+        \review{Do we really need to seperate the bonus from multi-roll effects?}
+
+        \subsubsection{Critical Hits}
+            Only actions that explicitly list critical hit effect can score them. A critcial hit happens when the roll result should is two identical numbers (100, 99, 88, etc.) and the attack is also successful.
+
+    \subsection{Basic Actions and Reactions}\label{subsec:basicactions}
+        All characters can perform the following actions, regardless of equipment, jobs, or abilities. 
+
+        % Actype is bugged for here right now
+        \subsubsection{\taction{Attack}}
+            Quick action. Attack with your equipped weapon, making a roll using its active and defensive crystals as specified for the weapon, difficulty 40. See \review{pageref} for weapon details. If unarmed, roll \eve{70}, and if successful inflict 1x Earth damage. This action causes double damage on critical hits, and activates weapon effects.
+
+        \subsubsection{\taction{Dodge}}
+            Reaction. When you've been hit by a physical attack, roll \ave{70} to negate the attack's effects.
+            % 40-60-80 with armors later
+
+        \subsubsection{\taction{Defend}}
+            Quick action. Brace for incoming damage. Reduces damage taken by 33\%. Lasts until next time you can act. Prevents reactions for this period.
+
+        \subsubsection{\taction{Cast}}
+            Quick magical action. If you know any spells, this is how you cast them. The spells specify their rolls and difficulties.
+
+        \subsubsection{\taction{Draw}}
+            Quick action. No roll needed. You take an item or weapon from your inventory and hold it. \review{Wvr: drawing again returns current item to inventory?}
+
+        \subsubsection{\taction{Item}}
+            Quick action. No roll needed. You use a held item or replace your equipped weapon with a held one; in the latter case the previously equipped weapon is atuomatically returned to the inventory. \review{Wvr: should they be able to juggle two weapons for the cost of not having a hand to draw items to?}
+
+        \subsubsection{\taction{Flee}}
+            Quick action. Roll \ava{40}, against the opponent with the highest Air stat. If successful, you exit the field of combat and can no longer act or be targeted.
+
+
+    \begin{center}
+        \adjincludegraphics[width=0.35\textwidth]{block-suplex-train}
+    \end{center}
+
+    \subsection{Damage, Types, and Armor}
+        Each amount of damage is of exactly one \newterm{damage type}. Characters and creatures may be resistant or vulerable to various damage types; they have no other effect on combat, and have no bearing on the physical or magical status of an attack.
+
+        There are three \newterm{martial} types: \telem{crush}, \telem{cut}, \telem{pierce}; these can represent most of the ways humans can harm each other with conventinal weapons. There are nine \newterm{elemental} types: \telem{fire}, \telem{ice}, \telem{lightning}, \telem{air}, \telem{earth}, \telem{water}, \telem{bio}, \telem{light}, and \telem{shadow};  these can represent damage caused by certain natural effects, exotic technology, and magic.
+
+        \newterm{Armor} is a straight reduction per instance of incoming damage: physical \newterm{armor value} is subracted if the damage is physcal and likewise for magical damage and magical armor value. These are abbreviated to \newterm{PAV} and \newterm{MAV}
+        \clearpage
+    \subsection{Damage Resolution}
+        Whenever a character receives damage, follow this procedure:
+
+        \begin{enumerate}
+            \item The \textbf{base damage} is the level of the relevant crystal level multiplied by the weapon, spell, or action's damage multiplier.
+
+            \item If there's a percentile \textbf{action modifier}, apply it.
+
+            \item \textbf{Strengthen and Weaken} statuses can add or remove another 25\% damage to physical or magical actions; apply this now.
+
+            \item \textbf{Add the standard damage bonus}.
+            \item \textbf{Reduce by target's PAV or MAV}.        
+            \item \textbf{Apply critcial hit effects}
+            \item \textbf{Apply target statuses} like \tstatus{shell} and \tstatus{protect}.
+            \item \textbf{Apply elemental resistances}, vulnerability, or absorb.
+            \item \textbf{Subtract damage from target health}, activating any effects that trigger as health falls past breakpoints.
+        \end{enumerate}
+        \review{Wvr: I'm splitting the old point 6 into several points, not sure this is the right order or if i'm missing anything}
+
+    \subsection{Healing and Death}\label{subsec:heal}
+        
+        Losing health doesn't cause any automatic penalties until you drop to 0 HP, which is as low as health is allowed to go. At 0 HP a character is considered \newterm{unconscious} and cannot act until they have been revived. Normal healing effects cannot heal an unconscious character, reviving effects do nothing to conscious characters.
+
+        After an undisturbed night's sleep, HP and MP values are reset to their maximum, even for unconscious characters.
+
+    \begin{boco}
+        Dealing damage is the most time-consuming part of combat. Some tips to help it not become a slog:
+
+        Pre-calculate damage for your common actions. Along with listing the multipliers and such list the final damage values: \taction{!Attack}: 42 Crushing; \taction{!Jump}: 84 Crushing; and so on. When you get hit by a strengthen or weaken effect figure it into likely actions right away. Try to get this ready while other players are making their actions. 
+
+        Try to cancel opposite modifiers, even if the numbers aren't exactly equal. A \taction{Mighty Blow} or Critical Hit against an enemy with Protect deals normal weapon damage, as does \taction{Guardbreak} on a Vulnerable enemy, and so on. Speed trumps perfect accuracy when working by hand.
+
+        And for working by hand, remember that 50\% is one half, and 25\% is half of a half. 10\% is the number with the one's place lopped off. Round down your calculations to speed them. To find a quarter of 138, for example, halve it first (69) then halve it again (34). 150\% is one plus half; 125\% is one plus a quarter; and 75\% is one minus a quarter.
+
     \end{boco}
-    
 
-\subsection{Action Types}\label{subsec:actions}
-\subsubsection{Standard Action}
-A standard action takes place along the lines described above. The player uses an initiative die with value equal to the current phase to act.
 
-\subsubsection{Interrupt Action}
-This action occurs when the character can't or does not want to spend a initiative dice representing the current phase. Any character may perform any action or reaction at any phase by spending \textbf{two} initiative die of any value. Some abilities allow the character to perform actions “as an interrupt” by spending one initiative dice of any value in specific situations.
 
-\subsubsection{Delayed Action}
-In this case, the character chooses not to act at this phase even having an initiative die with the correct value. He may then postpone the action to a later phase. The delayed dice’s result is counted for the initiative total at its original value. A character may not delay more than one action at the same time.
+    %{\centering%
+    %\adjincludegraphics[width=0.2\textwidth,center]{block-magic-whale}%
+    %}
 
-\subsubsection{Free Action}
-The free action occurs without the character spending an initiative dice. It occurs at specific times determined by the rule that creates it. An example of free action is talking.
-
-\subsection{Speeds}\label{subsec:speeds}
-\subsubsection{Quick Action}
-A Quick action occurs when the character acts. The character discards the initiative dice and its effects are immediate. An action with charge time of zero is a quick action.
-
-\subsubsection{Slow Action}
-A Slow (X) action implies that the character must charge before performing. He declares the action as usual, and then spends (X) phases charging their action. Only after this time has elapsed, the action’s effects will happen. During this charging time, he may not react or do any other actions, but may delay their actions. If he needs to delay more than one action, as he may not delay more than one action, the extra actions are lost. All actions with a charge time of 1 or greater are Slow actions. Some effects may increase or decrease the charge time of your actions, changing the number of phases you need to charge the Slow action.
-
-In addition, if the Slow action require you to prepare your action beyond phase 10, you lose all non-delayed initiative die this round and, in the next round, roll one fewer initiative dice. At the phase when you finish the preparation, the action’s effects happen as usual. For example, a character initiates a Slow (7) action in phase 6. In the next round, he rolls one fewer initiative dice and in Phase 3, the action’s effects happen.
-
-\subsubsection{Reaction}
-Reactions occur when the character uses specific abilities. They interrupt other actions and must be resolved before the first action’s effects are applied. To use a reaction, the character can spend an initiative dice with the current phase’s value, use a delayed action or even perform an interruption. Some reactions are free actions. A character may wait to see if an action is successful or not before declaring his reaction.
-
-\subsection{Attacks and Rolls in Combat}\label{subsec:attacks}
-All rolls in combat (Reactions, Spells, other attacks, etc.) have the following characteristics: One Offensive Stat, one Defensive Stat and a difficulty. For example, the \taction{Attack} action using a Bow is an Air (Offensive stat) vs Air (Defensive stat) attack, difficulty 40. The roll is as follows: The player will roll 1d100 and add his Offensive Stat’s value. He will be successful if the result is higher than difficulty + the target’s Defensive Stat’s value. If target choose to not resist the action, it is always successful, unless the action says otherwise.
-
-If the attack is against a group (be it ally’s or enemy’s), the player must perform only one roll. After adding the d100 roll to Offensive Stat’s value, it should compare it separately with the sum of difficulty + Defensive Stat’s value of each target and may be successful against only part of the opponents.
-
-If the attack deals damage or recovers HP or MP, the d100’s unit digit will be added to the damage dealt or value healed, unless the attack says otherwise. Finally, if a character re-rolls an attack, either because he can re-roll one of his attacks, or because the target can force his opponent to re-roll his attacks, the character can look at the results and choose the best (or be forced to choose the worst).
-
-Each attack, except Spells, may be Ranged or Melee. All Ranged attacks are noted as such; every non-Ranged attack is Melee. Flying enemies may not be hit by Melee attacks, unless the attacker is also Flying. Spells and Reactions are neither Ranged nor Melee and may target Flying enemies normally.
-
-\subsection{Basic Actions and Reactions}\label{subsec:basicactions}
-All characters can perform the following actions, regardless of equipment, Job or Abilities.
-
-\subsubsection{\taction{Attack}}
-Quick action. If the character is unarmed, perform an Earth vs Earth attack, difficulty 70. The damage is physical, \telem{Crush}-elemental, equal to Earth level. If it is equipped with a weapon, use the weapon’s Offensive and Defensive Stats, difficulty 40, and deal weapon damage. The Wealth and Items section, below, has more details about the weapons between pages 94 to 107. This action may score critical hits, dealing double damage.
-
-\subsubsection{\taction{Dodge}}
-Reaction. Use when suffering a physical attack. Roll Air vs Earth, difficulty 70. If successful, you don’t suffer the attack’s effects.
-
-\subsubsection{\taction{Draw}}
-Quick action. No roll needed. You draw and ready a weapon or inventory item to use it.
-
-\subsubsection{\taction{Item}}
-Quick action. No roll needed. You use a drawn item or replace the equipped weapon with a drawn weapon. In this case, the exchanged weapon is stored in your inventory as a free action.
-
-\subsubsection{\taction{Flee}}
-Quick action. Roll Air vs Air, difficulty 40. If successful, you run away from combat. Use the opponent with the highest Air Stat as the target of this action.
-
-\subsection{Critical Hits}
-Only actions that explicitly mention their critical hit effect can score them. To score a critical hit, the roll result should be two identical numbers (100, 99, 88, 77, 66, 55, etc.) and the attack must be successful. If an action does not state that it might achieve critical hits, rolling identical numbers does no extra effect.
-
-\begin{center}
-    \adjincludegraphics[width=0.35\textwidth]{block-suplex-train}
-\end{center}
-
-\subsection{Elements and Damage}
-All damage has one element. However, by itself, the element does not influence the damage, unless the character who receives the damage absorbs, or is resistant, immune or vulnerable to elemental damage. The element list is: CRUSH, PUNCTURE, CUT, FIRE, ICE, LIGHTNING, AIR, EARTH, WATER, BIO, LIGHT and SHADOW\@. %
-
-Regardless of the damage dealt, the attack roll’s d100’s singles digit adds to damage, assuming 0 as 10. If, for example, a character uses an attack that deals 20 damage and rolls 63 on the attack, hitting its target, it will deal 23 damage.
-
-Unless the attack says otherwise, all damage is reduced by the target's ARM, if the attack is physical, or the target’s MARM, if the attack is magical. The damage suffered after reducing by Armor or Magic Armor, if any, is deducted from the target’s current HP\@. There is no penalty for having current HP lower than max HP, unless current HP is 0. In this case, the character falls unconscious and may not perform actions while his HP is lower than 1. Lastly, remember to always round down.
-
-Various effects may change the damage dealt. When in doubt, follow the sequence below:
-\begin{enumerate}
-\item \textbf{Calculate Base Damage}
-
-Base damage is calculated by multiplying the damage factor by the relevant Stat Level.
-
-\item \textbf{Apply Action Modifiers}
-
-Some actions do 150\%, 200\%, 75\% or any other modifier to the Base damage. Multiply this modifier to the Base Damage.
-
-\item \textbf{Account for Strengthen and Weaken}
-
-Strengthen (Physical or Magic) may increase the damage by 25\%. Weaken (Physical or Magic) may decrease the damage by 25\%.
-
-\item \textbf{Add the roll's singles digit}
-
-Add the roll's singles digit to the damage, assuming 0 as 10.
-
-\item \textbf{Reduce by target's ARM or MARM}
-
-Reduce the damage dealt by the enemy's ARM, if physical, or MARM, if magical.
-
-\item \textbf{Apply target's Modifiers}
-
-Critical Hits and modifiers like the Shell and Protect status, any elemental weakness or resistance, or even some Action modifiers must be applied after accounting the enemy's defense.
-\end{enumerate}
-
-\begin{boco}
-Dealing damage is the most time-consuming part of combat. If a group does not address this problem, it may turn combat into a tedious math exercise. Some tips to speed it up:
-
-First, do steps 1 to 3 before you even land a blow. Having your damage pre-calculated works wonders to speed up combat. Instead of writing your damage as \taction{Jump}, (200\%) 5x Earth, note it as \taction{Jump}, 80 damage. Also, account for Strengthen and Weaken as soon as you receive the status, not when you decide to attack. Try to do your math while the other players are describing their actions.
-
-Second, remember that 50\% is one half, and 25\% is half of a half. 10\% is the number, ignoring the unit digit. Round down your calculations to speed them. To find a quarter of 138, for example, halve it first (69) then halve it again (34). 150\% is one plus half; 125\% is one plus a quarter; and 75\% is one minus a quarter.
-
-Lastly, try to cancel opposite modifiers, even if the numbers aren't exactly equal. A \taction{Mighty Blow} or Critical Hit against an enemy with Protect deals normal weapon damage; If you use \taction{Guardbreak} on a Vulnerable enemy, it also deals normal weapon damage; and so on. Keep in mind that speed trumps math accuracy.
-\end{boco}
-
-\subsection{Healing}\label{subsec:heal}
-After an undisturbed night's sleep, restore your current HP and MP values to max value. This happens even to unconscious characters. In other moments, healing provided by any effects doesn’t affect unconscious characters, unless its description specifically says that the effect affects targets with zero HP\@. Similarly, an effect that specifically targets zero HP characters doesn’t have any effects on a character with current HP equal to 1 or more.\\*
-%{\centering%
-%\adjincludegraphics[width=0.2\textwidth,center]{block-magic-whale}%
-%}
 \end{multicols}
 
-\begin{multiboco}
-Optional Rule: \textbf{Quick Combat Variant}\pc%
-
-Tactical Combat, as presented in this chapter, is a deep strategical endeavor that tries to mimic the video game's combat systems. However, there are lots of examples where the group does not want to spend so much time and effort to use these rules. Maybe the game is not focused on combat, or maybe there will be so much combat that using the full rules will grind things to a halt. Maybe the game will be played on a slower medium, like Play-by-Post, where even the simplest tactical combats might take weeks to happen.
-
-In this case, you might want to use this variant rule. If you wish to use it, ignore most of the Character Options chapter: you'll have no need for Jobs, Abilities, Spells, Equipment or Status Effects. Your characters might have a Job or two, but only for flavor.
-
-First, add the following Skills to the Skill list:
-
-\tskill{Fencing (Earth)}: Melee fighting ability. Including both attacking with melee weapons and defending against them. May be used in situations where you must attack with a melee weapon or defend yourself from enemies attacking in close range.
-
-\tskill{Marksmanship (Air)}: Ranged fighting ability. Including both attacking with ranged weapons and defending against them. May be used in situations where you must attack with a ranged weapon or defend yourself from enemies attacking with missiles.
-
-\tskill{Spellcraft (Fire)}: Magical prowess. Ability to use magic to enforce your will. May be used in situations where you want to cast spells and use your magical power to harm or heal.
-
-\tskill{Spell Resistance (Water)}: Magical defense. Ability to overcome enemy magic. May be used in situations where you want to dispel enemy magic or simply resist its effects. Also used to counterspell.
-
-Second, instead of gaining one Skill point per three character levels, you earn one Skill point for each character level. You still may not spend more Skill points in all Skills related to a Stat than levels you have in that Stat.
-
-Third, each time you re-roll a Challenge due to using a Skill, you “spend” that Skill level. This represents physical, mental and emotional fatigue. Your “spent” Skill levels return once you have the time to rest 8 hours.
-
-Lastly, there are no specific Combat rules. To resolve combats, use Challenges appropriate to the action at hand, using these new Skills or the core Skills, as situation demands. Unlike the tactical combat rules, Destiny Points and Quirks may be used during combat in this variant, as it is handled by normal Challenge rules.
-\end{multiboco}
-
 \begin{multimog}
-Later in his adventures, JBMog, now a \ordinalnum{30} level character, was in a dungeon with his friends Rob, a \ordinalnum{28} level Warrior/Rune Knight and Nyarly, a \ordinalnum{31} level Adept/Wizard. After an unfortunate failed Challenge roll, they fell into a trap, activating an iron Golem guardian. \\
-\textbf{GM}: \enquote{Start of Round 1. The creature rolls 1, 3 and 6 as initiative. Roll your initiative!} \\
-\textbf{JB}: \enquote{5, 6 and 9. I use my Preemptive Strike to change the 9 to 1. My initiatives are 1, 5 and 6!} \\
-\textbf{Rob}: \enquote{3, 3, and 8. And Nyarly rolled 4, 5, and 10} \\
-\textbf{GM}: \enquote{Phase 1. You're first JB, then Golem acts.} \\
-\textbf{JB}: \enquote{I'll strike the golem with my lance. I rolled a 61, plus my Air is 148 total. It hits?} \\
-\textbf{GM}: \enquote{You try to attack him with your polearm, but the heavy armor of the golem deflects it (The attack targets Earth plus diff 40. His value is 112, so he needed to overcome 152 to hit). He ignores your attacks while he prepares his own. He starts charging a Slow axe attack against Nyarly. We begin Phase 2, and his attack is finished. I roll a 34 (plus his 112 Earth totals 145) for a total 114 damage (110 damage plus 34's singles digit).} \\
-\textbf{Nyarly}: \enquote{Yikes! I will use an interrupt action and react to use \taction{Will Shield}. I spend the 4 and 10 dice. I rolled a 69, for a total of 149. I made it? (The GM nods, as his \taction{Will Shield} have 30 difficulty and the Golem's Earth value is 112, and 149 is greater than 142.) Nyarly creates a magical shield that blocks the blow and spends 14 MP (10\% of his 143 MP).} \\
-\textbf{Rob}: \enquote{Seems no one got actions in Phase 2, so I'm acting at phase 3. Seems that his weak spot is Air, so my first action is to draw my Meteo Knuckle. My second action (Rob can act before the golem since his initiative total is 11 and the Golem's is 9) is to use \taction{Item} to stash my Old Axe and equip the gloves.} \\
-\textbf{GM}: \enquote{The Golem starts to leak out a strange gas. It attacks all characters, rusting your equipment! Whoever got Water lower than 43 is hit with the Weaken (Armor) status until the end of the next round.} (The GM rolled a 31. 31 plus the Golem's Fire value is 113, and the attack had diff 70 and targeted the group) \\
-\textbf{JB}: \enquote{I think the only one hit was Rob (Rob nods). My turn now, right? (Nyarly's initiative total is 5, while JB's is 11) I'll use \taction{Advice} on Rob. I want him to crit with that knuckle!} \\
-\textbf{Nyarly}: \enquote{So, now it is my turn. I'll spend 60 HP to unleash a \taction{Fury Brand}. Rolled 90 for a total of 181 vs Water+30. If it hits, that's 131 Fire damage and maybe Berserk.} \\
-\textbf{GM}: \enquote{Yeah, that hits. Your staff burns with your magical fire when you sacrifice your lifeforce to summon a cleansing flame. Your strike hits true, dealing 101 damage (that's 131 minus the 30 MARM), but the creature seems to be immune to your mental effect. In the golem's turn at phase 6, he delays his action.} \\
-\textbf{JB}: \enquote{I'll charge Geomancy. No actions until phase 8? Ok. Let me roll for Geomancy! Hm\ldots{}\ 75? What’s the Major effect for Underground? Ah, Cave In. I'll spend the 35 MP to increase the damage. (JB rolls a 51 and hits) That's 101 damage (100 damage plus 51's singles digit)! Take that!} \\
-\textbf{GM}: \enquote{Rocks fall, and the Golem receives 71 damage from the cave in, but he's still rocking!} \\
-\textbf{Rob}: \enquote{Phase 8? At last! I'll attack him\ldots{}\ Oh, only 11\ldots{}\ I miss\ldots{}\ No, wait, I crit due to JB!\@{}Thanks! I'll do-} \\
-\textbf{GM}: \enquote{Actually the Golem reacts with his delayed action. He rolls a 17 to block and\ldots{}\ (checks Rob's Earth value of 111) fails. Your critical does only 19 damage due to the golem's heavy armor but roll for Meteorite!} \\
-\textbf{Rob}: \enquote{08 and 66. That's two hits? Nice! The meteors fall dealing 48 and 46 damage, ignoring his MARM\@. That was a nice crit! I did what, 130 damage?} \\
-\textbf{GM}: \enquote{113. (The Golem still have 115 HP) So the round ends. Roll your initiative for the second round!} \\ 
+    Later in his adventures, JBMog, now a \ordinalnum{30} level character, was in a dungeon with his friends Rob, a \ordinalnum{28} level Warrior/Rune Knight and Nyarly, a \ordinalnum{31} level Adept/Wizard. After an unfortunate failed challenge roll, they fell into a trap, activating an iron Golem guardian. \\
+    \textbf{GM}: \enquote{Start of Round 1. The creature rolls 1, 3 and 6 as initiative. Roll your initiative!} \\
+    \textbf{JB}: \enquote{5, 6 and 9. I use my Preemptive Strike to change the 9 to 1. My initiatives are 1, 5 and 6!} \\
+    \textbf{Rob}: \enquote{3, 3, and 8. And Nyarly rolled 4, 5, and 10} \\
+    \textbf{GM}: \enquote{Phase 1. You're first JB, then Golem acts.} \\
+    \textbf{JB}: \enquote{I'll strike the golem with my lance. I rolled a 61, plus my Air is 148 total. It hits?} \\
+    \textbf{GM}: \enquote{You try to attack him with your polearm, but the heavy armor of the golem deflects it (The attack targets Earth plus diff 40. His value is 112, so he needed to overcome 152 to hit). He ignores your attacks while he prepares his own. He starts charging a Slow axe attack against Nyarly. We begin Phase 2, and his attack is finished. I roll a 34 (plus his 112 Earth totals 145) for a total 114 damage (110 damage plus 34's singles digit).} \\
+    \textbf{Nyarly}: \enquote{Yikes! I will use an interrupt action and react to use \taction{Will Shield}. I spend the 4 and 10 dice. I rolled a 69, for a total of 149. I made it? (The GM nods, as his \taction{Will Shield} have 30 difficulty and the Golem's Earth value is 112, and 149 is greater than 142.) Nyarly creates a magical shield that blocks the blow and spends 14 MP (10\% of his 143 MP).} \\
+    \textbf{Rob}: \enquote{Seems no one got actions in Phase 2, so I'm acting at phase 3. Seems that his weak spot is Air, so my first action is to draw my Meteo Knuckle. My second action (Rob can act before the golem since his initiative total is 11 and the Golem's is 9) is to use \taction{Item} to stash my Old Axe and equip the gloves.} \\
+    \textbf{GM}: \enquote{The Golem starts to leak out a strange gas. It attacks all characters, rusting your equipment! Whoever got Water lower than 43 is hit with the Weaken (Armor) status until the end of the next round.} (The GM rolled a 31. 31 plus the Golem's Fire value is 113, and the attack had diff 70 and targeted the group) \\
+    \textbf{JB}: \enquote{I think the only one hit was Rob (Rob nods). My turn now, right? (Nyarly's initiative total is 5, while JB's is 11) I'll use \taction{Advice} on Rob. I want him to crit with that knuckle!} \\
+    \textbf{Nyarly}: \enquote{So, now it is my turn. I'll spend 60 HP to unleash a \taction{Fury Brand}. Rolled 90 for a total of 181 vs Water+30. If it hits, that's 131 Fire damage and maybe Berserk.} \\
+    \textbf{GM}: \enquote{Yeah, that hits. Your staff burns with your magical fire when you sacrifice your lifeforce to summon a cleansing flame. Your strike hits true, dealing 101 damage (that's 131 minus the 30 MARM), but the creature seems to be immune to your mental effect. In the golem's turn at phase 6, he delays his action.} \\
+    \textbf{JB}: \enquote{I'll charge Geomancy. No actions until phase 8? Ok. Let me roll for Geomancy! Hm\ldots{}\ 75? What’s the Major effect for Underground? Ah, Cave In. I'll spend the 35 MP to increase the damage. (JB rolls a 51 and hits) That's 101 damage (100 damage plus 51's singles digit)! Take that!} \\
+    \textbf{GM}: \enquote{Rocks fall, and the Golem receives 71 damage from the cave in, but he's still rocking!} \\
+    \textbf{Rob}: \enquote{Phase 8? At last! I'll attack him\ldots{}\ Oh, only 11\ldots{}\ I miss\ldots{}\ No, wait, I crit due to JB!\@{}Thanks! I'll do-} \\
+    \textbf{GM}: \enquote{Actually the Golem reacts with his delayed action. He rolls a 17 to block and\ldots{}\ (checks Rob's Earth value of 111) fails. Your critical does only 19 damage due to the golem's heavy armor but roll for Meteorite!} \\
+    \textbf{Rob}: \enquote{08 and 66. That's two hits? Nice! The meteors fall dealing 48 and 46 damage, ignoring his MARM\@. That was a nice crit! I did what, 130 damage?} \\
+    \textbf{GM}: \enquote{113. (The Golem still have 115 HP) So the round ends. Roll your initiative for the second round!} \\ 
 \end{multimog}
 
 \begin{multiboco}
-Optional Rule: \textbf{Scaling down the Numbers}\label{optrule:scaling}\pc%
+    Optional Rule: \textbf{Quick Combat Variant}\pc%
 
-The FFRPG 4th edition kept the d100 mechanic from earlier iterations of the Returner’s games. However, the dice used increases the burden of an already-crunchy game. This optional rule revamps the whole game engine with lower numbers, and generally speeds up play, easing the math burden.
+    The combat engine presented in this chapter tries to mimic the video games' combat systems. It does, however, take time and effort to play this way, and this may not suit all groups or situations. Maybe the game is not focused on combat, or maybe there will be so much combat that using the full rules will grind things to a halt. Maybe the game will be played on a slower medium, like Play-by-Post, where even the simplest tactical combats might take weeks to happen.
 
-To use it, remove all references to Stat Values, keeping only Stat Levels. Anything in the book that references Stat Values uses Stat Levels instead. At creation you have 20 XP\@. A Stat level of 1 costs 1, 2 costs 4, 3 costs 9, 4 costs 16, 5 costs 25, and so on. You just keep any XP you don't spend (so a 3 2 2 1 character starts with 2 XP leftover).
+    For these cases, you might want to use these simplified rules. You'll be ignoring most of the rest of the book except for flavor: there will be no mechanical need for job abilities, spells, equipment, or status effects. 
 
-Character’s HP and MP are calculated by adding the Job bonuses to either 10 times your Earth Level (HP) or 10 times your Water Level (MP).
+    First, add the following skills to the skill list:
 
-Challenges use a d10 instead of a d100, with difficulties ranging from 1 to 9. Skills work as usual, and Destiny Points adds 2 or 4 to a dice, instead of 20 or 40. When rolling Challenges, you can just roll all die at once and pick the best result.
+    \tskill{Fencing (Earth)}: Melee fighting ability, offensive and defensive. May be used when you attack unarmed or with a melee weapon, or defend yourself from enemies attacking up close.
 
-Combat also uses a d10 instead of d100. Divide all difficulties by ten, rounding down if necessary. \taction{Attack} Actions, for example are Stat vs. Stat, difficulty 4. When calculating damage, instead of adding the 1's digit die, you just add 5 damage.
+    \tskill{Marksmanship (Air)}: Ranged fighting ability, offensive and defensive. May be used when you attack with a ranged weapon, or defend yourself from enemies attacking with missiles.
 
-When you roll a natural 10, on an attack able to critical hit, roll again. If the second roll is a hit, the attack is a crit.
+    \tskill{Spellcraft (Fire)}: Magical prowess. May be used when you want to cast spells, use your magical power to harm or heal, or otherwise enforce your will on the world.
 
-Abilities like Time Mage’s Wild Magic also just roll a d10. Dervish's Deadly Accuracy is essentially tripling your critical hit rate, so they can threaten a critical on an 8, 9, or 10, and then resolve the confirmation roll as other classes would. The Rogue’s Dice deals damage equal to 10 times the d10 results. The Berserker’s Unwavering Fury Ability can increase or decrease the confirmation roll’s value by 1.
+    \tskill{Spell Resistance (Water)}: Magical defense. May be used to counterspell, to resist magic once it has been cast, and to dispel persistent magic in the world. 
 
-This option swaps granularity for speed, reducing the mental load on the GM and the players. It is recommended to use it if you don’t mind losing the granularity of the d100 and/or the nostalgic experience of using d100, especially if you do not have access or do not want to use computer aid during the game.
+    Second, instead of gaining one skill point per three character levels, you earn one skill point for each character level. The sum of a crystal's skills must still not exceed its level.
+
+    Third, each time you re-roll a challenge by using a skill, you ``spend'' that skill level. This represents physical, mental and emotional fatigue. Your ``spent'' skill levels return after an undisturbed night's sleep. You can always make one attempt at any skill.
+
+    Lastly, there are no specific Combat rules. To resolve combats, pose challenges appropriate to the fight at hand using the new skills or the others, as appropriate. Like the rest of the challenge system, Destiny Points and Quirks may be used during combat.
+\end{multiboco}
+
+\begin{multiboco}
+    Optional Rule: \textbf{Scaling down the Numbers}\label{optrule:scaling}\pc%
+
+    The FFRPG 4th edition kept the d100 mechanic from earlier iterations of the Returner’s games. However, the large die can increase the burden of an already-crunchy game. This optional rule revamps the whole game engine with lower numbers, and generally speeds up play by easing the math burden, by making every roll in the game a d10 roll.
+
+    To use it, remove all references to crystal values, keeping only crystal levels. Anything in the book that references crystal values uses cry instead. At creation you have 20 XP\@. Getting to a crystal level requries the square of that level; at leavel 4 you will have spent 16 XP and need to reach 25 XP for level 5.
+
+    Characters' HP and MP are calculated by adding the Job bonuses to either 10 times your Earth Level (HP) or 10 times your Water Level (MP).
+
+    Challenges use difficulties ranging from 1 to 9, with destiny points adding 2 or 4 to the roll result. Simplier dice make it easier to roll all at once and pick the best.
+
+    For combat, divide all difficulties by ten, rounding down. For example, \taction{Attack} is crystal vs. crystal, difficulty 4. For the standard bonus, roll an extra d10, or just use 5 every time for speed.
+
+    When you roll a natural 10 on an action able to critical hit, roll again. If the second roll is a hit, the attack is a crit.
+
+    Abilities like Time Mage’s Wild Magic also just roll a d10. Dervish's Deadly Accuracy is essentially tripling your critical hit rate, so they can threaten a critical on an 8, 9, or 10, and then resolve the confirmation roll as other classes would. The Rogue’s Dice deals damage equal to 10 times the d10 results. The Berserker’s Unwavering Fury Ability can increase or decrease the confirmation roll’s value by 1.
+
+    This option swaps granularity for speed, reducing the mental load on the GM and the players. It is recommended to use it if you don’t mind losing the granularity of the d100 and/or the nostalgic experience of using d100, especially if you do not have access or do not want to use computer aid during the game.
 \end{multiboco}
