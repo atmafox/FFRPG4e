@@ -7,9 +7,9 @@
 
     \subsection{Initiative}\label{subsec:init}
 
-        Each character has an \newterm{initiative}, which defaults to 3. This is the number of d10 that you roll for the character before each round begins. These d10 are your \newterm{action dice} and each represents a standard action you may take in the round. The sum of the numbers of your action dice when they are first rolled is your \newterm{phase speed}, which determines when you act in each phase.
+        Each character has an \newterm{initiative}, which defaults to 3. This is the number of d10 that you roll for the character before each round begins. These d10 are your \newterm{action dice} and each represents an action you may take in the round. The sum of the numbers of your action dice when they are first rolled is your \newterm{phase speed}, which determines when you act in each phase.
 
-        In each phase, each character's action dice of the phase's number become \newterm{active} in turn and they may act once for each one. If multiple characters have dice in one phase, the highest phase speed goes first; in the event of a tie, the highest air stat goes first.
+        In each phase, players may act once for each action die they have that matches the phase number, and they take their \newterm{phase turns} in order of highest phase speed first, or highest air stat if there's a tie. When it's your turn in a phase, you use all of your dice for that phase at once. 
 
         If an active action die is not used or delayed, it is lost at the end of the phase.
 
@@ -31,36 +31,40 @@
 
     \subsection{Action Types}\label{subsec:actions}
 
-        \subsubsection{Standard Actions: Quick and Slow}
-            \newterm{Standard} actions are used when you have an active die, and use up that die as soon as you begin them. By default standard actions are \newterm{quick} and \newterm{resolve} as soon as you decide to use them. \newterm{Slow} actions resolve a set number of phases after they are started; a slow(N) action used on phase 1 will resolve on phase 1+N, before any other actions on that phase.
+        \subsubsection{Abilities}
+            \newterm{Abilities} are actions are used when it is your turn. They use up the current die that is making it your turn.
+        
+        \subsubsection{Reactions}
+            \newterm{Reactions} are acitons that are executed to a speific \newterm{trigger}. For example, the common action \taction{Dodge} triggers when you are hit by an attack. They require a die and use up the next one you have, either a held one or the next lowest number one. They may only be used once per triggering event, and using them when triggered is not mandatory.
+
+        \subsubsection{Interrupts}
+            Once per round, you may spend a destiny point use any ability \textit{right now}, or use a reaction reaction that has been triggered without expending a die for it. This doesn't bypass charge times for slow actions, however.
+
+    \subsection{Action Modifiers}
+        \subsubsection{Free Actions}
+            \newterm{Free} actions are actions which cost no dice to use. They may have other restrictions on when they may be used, such as being a reaction or being used for free as part of another action.
+
+        \subsubsection{Continuous Actions}
+            \newterm{Continuous} actions cause an effect that lasts until the next time you can act. For example, \taction{Defend} is a continuous action that reduces incoming damage until your next turn. You can't use reactions while executing a continuous action.
+
+        \subsubsection{Slow acitons}
+            By default, actions are \newterm{quick} and \newterm{resolve} as soon as you decide to use them. \newterm{Slow} actions resolve a set number of phases after they are started; a slow(N) action used on phase 1 will resolve on phase 1+N, before any other actions on that phase.
             
-            A slow action's delay is called it's \newterm{charge time}, and a character preparing a slow action is said to be \newterm{charging}. While a character is charging they may not use any other actions and must delay or forfiet any other dice that become active before the slow action resolves. If the charge time stretches across rounds, it still takes places the same total number of phases later.
+            A slow action's delay is called it's \newterm{charge time}, and a character preparing a slow action is said to be \newterm{charging}. While a character is charging they may not use any other actions or reacitons, and if it becomes their turn before the charging is complete they must delay or forfiet any that turn's dice. If the charge time stretches across rounds, it still takes places the same total number of phases later.
 
             A slow action's charge time may not be reduced below 0, and a slow(0) action is identical to a quick action.
 
             Targets are chosen when an action resolves. If there are no valid targets for a slow action to act upon at that point, or if the character decides at any point to abort the action, the action is forfieted and its die is not refunded.
 
-        \subsubsection{Free Actions}
-            \newterm{Free} actions cost no dice to play, but can only be activated in response to specific events or conditions, or as part of another action. Using a free action when its condition appears is not mandatory, and it may only be used once per instance of the condition.
+        \subsubsection{Held Actions}
+            When it is your turn you may choose \newterm{hold} your action and wait until later in the phase or a later phase to chose what action to use it for. You can delay until any point between two other actions in the round; you should state when or what you are waiting for but as your character is standing watching and ready, you can change this if needed.
 
-        \subsubsection{Reactions}
-            \newterm{Reactions} are also actions that can be executed in response to specific events or conditions, but which cost one action die to use. You can choose any of your action dice to discard when you use a reaction.
+            You may only hold one action at any time, further action dice will need to be used or forfieted if the action is to be held past them.
 
-            \review{Wvr: Making reactions easier as something to test with Sem's balance changes.}
+            Characters incapable of acting, whether due to charging or a debilitating status effect, will automatically hold one action and then forfeit all further ones.
 
-    \subsection{Action Options}
-        \subsubsection{Delaying Actions}
-            When an action die is active you can choose to \newterm{delay} it, and wait until later in the phase or a later phase to chose what action to use it for. You can delay until any point between two other actions in the round, you should state when or what you are waiting for but as your character is standing watching and ready, you can change this if needed.
-
-            You may only hold one action delayed at any time, further action dice will need to be used or forfieted if the delayed action is to be held past them.
-
-            Characters incapable of acting, whether due to charging or a debilitating status effect, will automatically delay one action and then forfeit all further ones.
-
-            You may not hold an action past the end of a round. \review{Wvr: Allowing slow actions to go to the next round freely but not this?}
+            You may not hold an action past the end of a round.
                 
-        \subsubsection{Interrupting}
-            At any time, you may sacrifice \textit{two} of your action dice to perform any action as an interrupt. \review{Wvr: Not sure what to specifically say here}
-
     \subsection{Action Attributes}
         \subsubsection{Physical or Magical}
             All actions are considered either \newterm{physical} or \newterm{magical}. For attacks, this determines whether the attack is affected by the target's phsyical or magical armor values; reactions and other conditions can make distinctions between them as well.
@@ -70,6 +74,8 @@
         \subsubsection{Melee or Ranged}
             All actions are also considered either \newterm{melee} or \newterm{ranged}. Ranged actions can hit floating or flying targets from the ground, melee cannot. As with physical and magical, the weapon property rules unless the action is specific, defaulting to melee.
 
+    \subsection{Non-actions}
+        Not everything a character can do is described by actions. Talking and gesturing, for example, are explicitly not actions. You should attmept to respect the story behind the combat in your non-acitons, however; a round is a fairly short amount of time, so leasurely discussion is out of place here, as is sipping a cup of tea while holding a greatsword ready. These things are ultimately left to the GM's discresion.
 
     \subsection{Attacks and Rolls in Combat}\label{subsec:attacks}
         Aside from initiative, every roll in combat is listed as ``[Active Crystal] vs [Defending Crystal], difficulty [N]''. For exapmle, the common action \taction{Attack} takes its crystals from the weapon used, so a bow would be ``Air vs Air, difficulty 40''. To make this check, the action-using character rolls a d100 and adds his active crystal's value --- not its level. It succeeds if the result is greater than the defender's defending crystal value plus the difficulty. So in short:
@@ -83,7 +89,7 @@
         % TODO heal-hurt words
         % TODO standard bonus name
         \review{Move this bit to damage?}
-        If the action damages or restores HP or MP, add the digit in the one's place to the damage or restoration value. You may also roll a seperate d10 and add it to the value; this is much easier to set up in dice rolling software for example. Either way, this value is called the \newterm{standard bonus}.
+        If the action damages or restores HP or MP, add the digit in the one's place to the damage or restoration value. You may also roll a seperate d10 and add it to the value; this is much easier to set up in dice rolling software for example. Either way, this value is called the \newterm{roll bonus}.
 
         \review{Do we really need to seperate the bonus from multi-roll effects?}
 
@@ -95,27 +101,26 @@
 
         % Actype is bugged for here right now
         \subsubsection{\taction{Attack}}
-            Quick action. Attack with your equipped weapon, making a roll using its active and defensive crystals as specified for the weapon, difficulty 40. See \review{pageref} for weapon details. If unarmed, roll \eve{70}, and if successful inflict 1x Earth damage. This action causes double damage on critical hits, and activates weapon effects.
+            Quick action. Attack with your equipped weapon, making a roll using its active and defensive crystals as specified for the weapon, difficulty 40. See \review{pageref} for weapon details. If unarmed, roll \eve{70}, and if successful inflict 1x Earth damage. This action causes double damage on critical hits and activates weapon effects.
 
         \subsubsection{\taction{Dodge}}
-            Reaction. When you've been hit by a physical attack, roll \ave{70} to negate the attack's effects.
+            Reaction. When you've been hit by a melee attack, roll \ave{50} to negate the attack's effects.
             % 40-60-80 with armors later
 
         \subsubsection{\taction{Defend}}
-            Quick action. Brace for incoming damage. Reduces damage taken by 33\%. Lasts until next time you can act. Prevents reactions for this period.
+            Continuous action. Brace for incoming damage. Reduces damage taken by 33\%.
 
         \subsubsection{\taction{Cast}}
             Quick magical action. If you know any spells, this is how you cast them. The spells specify their rolls and difficulties.
 
         \subsubsection{\taction{Draw}}
-            Quick action. No roll needed. You take an item or weapon from your inventory and hold it. \review{Wvr: drawing again returns current item to inventory?}
+            Quick action. No roll needed. You take an item or weapon from your inventory and hold it. If you're already holding an item, it returns to your inventory.
 
         \subsubsection{\taction{Item}}
-            Quick action. No roll needed. You use a held item or replace your equipped weapon with a held one; in the latter case the previously equipped weapon is atuomatically returned to the inventory. \review{Wvr: should they be able to juggle two weapons for the cost of not having a hand to draw items to?}
+            Quick action, free if used before any other action in a round. No roll needed. You use a held item or replace your equipped weapon with a held one; in the latter case the previously equipped weapon is atuomatically returned to the inventory.
 
-        \subsubsection{\taction{Flee}}
-            Quick action. Roll \ava{40}, against the opponent with the highest Air stat. If successful, you exit the field of combat and can no longer act or be targeted.
-
+    \subsection{Fleeing}
+        Fleeing from combat is a group decision, and as such it should be worked out between the group and GM as a whole. If a roll is called for, half or more of the party beating the \review{highest? average?} enemy air score is a starting point, but different environments may call for different crystals or be better solved with a group skill challenge. And of course, sometimes, there's nowhere to flee to.
 
     \begin{center}
         \adjincludegraphics[width=0.35\textwidth]{block-suplex-train}
@@ -138,7 +143,7 @@
 
             \item \textbf{Strengthen and Weaken} statuses can add or remove another 25\% damage to physical or magical actions; apply this now.
 
-            \item \textbf{Add the standard damage bonus}.
+            \item \textbf{Add the roll damage bonus}.
             \item \textbf{Reduce by target's PAV or MAV}.        
             \item \textbf{Apply critcial hit effects}
             \item \textbf{Apply target statuses} like \tstatus{shell} and \tstatus{protect}.
@@ -229,7 +234,7 @@
 
     Challenges use difficulties ranging from 1 to 9, with destiny points adding 2 or 4 to the roll result. Simplier dice make it easier to roll all at once and pick the best.
 
-    For combat, divide all difficulties by ten, rounding down. For example, \taction{Attack} is crystal vs. crystal, difficulty 4. For the standard bonus, roll an extra d10, or just use 5 every time for speed.
+    For combat, divide all difficulties by ten, rounding down. For example, \taction{Attack} is crystal vs. crystal, difficulty 4. For the roll bonus, roll an extra d10, or just use 5 every time for speed.
 
     When you roll a natural 10 on an action able to critical hit, roll again. If the second roll is a hit, the attack is a crit.
 
