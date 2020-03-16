@@ -294,7 +294,7 @@ Bow Gun,28,2629,10x,\tfxtouch{Disable}
 Gale Bow,28,2719,10x,Add Air level to damage
 Zamburak,37,3905,12x,
 Hydra,37,6109,12x,\tfxcritspell{Pain}
-Hellfire,37,5819,15x,\teffect{Pain}
+Hellfire,37,5819,15x,\teffect{Soul Eater}
 Marduk Bow,46,7944,15x,
 Shotgun,46,12855,13x,\taction{Attack} with this weapon targets group
 Arbalest,46,9878,15x,\teffect{Piercing}
