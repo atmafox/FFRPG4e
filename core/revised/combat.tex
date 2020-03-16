@@ -190,3 +190,27 @@ Abilities like Time Mage’s Wild Magic also just roll a d10. Dervish's Deadly A
 
 This option swaps granularity for speed, reducing the mental load on the GM and the players. It is recommended to use it if you don’t mind losing the granularity of the d100 and/or the nostalgic experience of using d100, especially if you do not have access or do not want to use computer aid during the game.
 \end{multiboco}
+
+\begin{multicols}{2}
+\subsection{Special Combat Rules}\label{misccombat}
+This section lists several miscellaneous rules that apply to combat encounters. They are corner cases that may not apply to every combat, but can clarify special situations.
+
+\textbf{Opposing Status Effects}: When a character is subject to multiple status effects with opposed effects, as for example having \tstatus{Curse} and \tstatus{Blink}, they cancel each other. Should their duration be different, the status that lasts longer reinstate its effects after the shorter status ends.
+
+\textbf{Multiple Elemental Status Effects}: When a character is subject to multiple instances of \tstatus{Vulnerable}, \tstatus{Resist}, \tstatus{Immune} and \tstatus{Absorb} status effects to the same element (say, a character with \tstatus{Immune:Ice} and \tstatus{Vulnerable:Ice}), follow the following order: Apply \tstatus{Immune}, then \tstatus{Absorb}. Should neither be present, apply \tstatus{Vulnerable} and/or \tstatus{Resist} (which are considered opposed, as per the \textbf{Opposing Status Effects} rule).  
+
+\textbf{Multiple Rerolls}: When multiple rerolls affect the same action, \enquote{positive} rerolls (roll twice and take best) and \enquote{negative} rerolls (roll twice and take worst) cancel themselves. Should there be any rerolls left after that, the character apply them as normal. 
+
+\textbf{Damage Dealt vs HP lost}: Some effects specify \newterm{damage dealt}. This is the damage before accounting for Armor or Magic Armor and before accounting for any effects on the target, but after the single's digit is added. Effects that specify \newterm{HP lost} (or \newterm{MP lost}) are applied to the actual HP (or MP) value the target lost with the final damage applied after all modifiers, and cannot be more than the amount of health the target actually loses to bring them to the minimum of zero.
+
+\textbf{Drain Effects}: Some effects \newterm{drain} HP and/or MP\@. Those effects heal up the user's HP (or MP) up to the target's HP or MP lost. For example, an effect that drains HP equal to half of damage dealt will heal the user an amount equal to half of damage dealt (before accounting ARM and any other effects on the target) or the actual HP lost by the target, whichever is lower. When a draining effect is used on a target with the Zombie status, its effects are reversed: the damage is dealt to the user, who loses HP (or MP) and the Zombie heals it.
+
+\textbf{Temporary vs Permanent Status Effects}: All \newterm{temporary} status effects are inflicted by an action or reaction. \newterm{Permanent} status effects are those granted by Auto-Status or SOS-Status.
+
+\textbf{Dropping Slow actions}: If, for any reason, a character do not wish to perform a Slow action after announcing it, it may choose to drop the action, and perform nothing. The character still charges the full charge time, but when the time comes to inflict its effects, the die is discarded with no further repercussions.
+
+\textbf{Special interactions with Slow actions}: When you get hit by an effect while charging a Slow action, several things can happen. Effects that change charge time (such as \tstatus{Weaken:Speed} and \tstatus{Strengthen:Speed}) can change the delivery phase; Effects that impede the character from acting stop the slow action outright without refunding the cost; \tstatus{Charm} effects means the character will change the target to fit its changed perspective on who's ally and enemy; \tstatus{Berserk} effects will turn the Slow action into an \taction{Attack} action; and lastly, \tstatus{Confuse} means the character uses the Slow action in random target(s).
+
+\textbf{Targets that can't act and initiative}: Targets that cannot act (such as characters with 0 HP and characters under effects such as \tstatus{Stone} or \tstatus{Stop}) still generate initiative as normal, but automatically discard each die once their time to act comes (with the exception of \tstatus{Sleep}, which allows the character to keep exactly 1 delayed die, even if you could otherwise delay more actions). Should their condition be healed mid-round, they can still act normally with any remaining dice. To avoid rolling unnecessary initiative dice, you may opt to roll them only when the character actually gets revived/healed and simply drop any dice that rolls up on an earlier phase.
+
+\end{multicols}
