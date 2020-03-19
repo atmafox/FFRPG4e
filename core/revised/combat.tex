@@ -26,7 +26,8 @@
 
             \review{Wvr: Possible} Optional Rule: \textbf{Entering a Round Late}\pc%
 
-            At the GM's discresion, a character entering combat mid-round should roll less than their usual number of dice depending on how late they're entering, and add the current phase to each die rolled. It may simply be too hectic to enter properly until the next round begins, however.
+            At the GM's discresion, a character entering combat mid-round should roll less than their usual number of dice depending on how late they're entering, and add the current phase to each die rolled. It may simply be too hectic to enter properly until the next round begins, however. \review{Bruno: It may be easier to just as normal and drop all dice that rolls lower than the current phase.}
+
         \end{boco}
 
     \subsection{Action Types}\label{subsec:actions}
@@ -38,7 +39,7 @@
             \newterm{Reactions} are acitons that are executed to a speific \newterm{trigger}. For example, the common action \taction{Dodge} triggers when you are hit by an attack. They require a die and use up the next one you have, either a held one or the next lowest number one. They may only be used once per triggering event, and using them when triggered is not mandatory.
 
         \subsubsection{Interrupts}
-            Once per round, you may spend a destiny point use any ability \textit{right now}, or use a reaction reaction that has been triggered without expending a die for it. This doesn't bypass charge times for slow actions, however.
+            Once per round, you may spend a destiny point use any ability \textit{right now}, or use a reaction that has been triggered without expending a die for it. This doesn't bypass charge times for slow actions, however.
 
     \subsection{Action Modifiers}
         \subsubsection{Free Actions}
@@ -54,12 +55,12 @@
 
             A slow action's charge time may not be reduced below 0, and a slow(0) action is identical to a quick action.
 
-            Targets are chosen when an action resolves. If there are no valid targets for a slow action to act upon at that point, or if the character decides at any point to abort the action, the action is forfieted and its die is not refunded.
+            Targets are chosen when an action resolves. If there are no valid targets for a slow action to act upon at that point, or if the character decides at any point to abort the action, the action is forfeited and its die is not refunded.
 
         \subsubsection{Held Actions}
-            When it is your turn you may choose \newterm{hold} your action and wait until later in the phase or a later phase to chose what action to use it for. You can delay until any point between two other actions in the round; you should state when or what you are waiting for but as your character is standing watching and ready, you can change this if needed.
+            When it is your turn you may choose \newterm{hold} your action and wait until later in the phase or a later phase to chose what action to use it for. You can delay until any point between two other actions in the round; you should state when or what you are waiting for \review{Bruno: There's no point on stating when/what you are waiting for. If it is only fluff, "you could state" works better than "you should state".} but as your character is standing watching and ready, you can change this if needed.
 
-            You may only hold one action at any time, further action dice will need to be used or forfieted if the action is to be held past them.
+            You may only hold one action at any time, further action dice will need to be used or forfeited if the action is to be held past them.
 
             Characters incapable of acting, whether due to charging or a debilitating status effect, will automatically hold one action and then forfeit all further ones.
 
@@ -72,13 +73,13 @@
             Most weapon-related actions take their type from the weapon used, but if an action lists physical or magical in its description that overrides the weapon. Weaponless actions default to physical.
         
         \subsubsection{Melee or Ranged}
-            All actions are also considered either \newterm{melee} or \newterm{ranged}. Ranged actions can hit floating or flying targets from the ground, melee cannot. As with physical and magical, the weapon property rules unless the action is specific, defaulting to melee.
+            All actions \review{Bruno: Reactions too? This makes you unable to Dodge a flying attacker. Maybe you should make all ABILITIES melee or ranged} are also considered either \newterm{melee} or \newterm{ranged}. Ranged actions can hit floating or flying targets from the ground, melee cannot \review{Bruno: It is intended to make Floating characters immune to melee? If so, either float and flight should become a single status or some other disctinction need to be made.}. As with physical and magical, the weapon property rules unless the action is specific, defaulting to melee.
 
     \subsection{Non-actions}
         Not everything a character can do is described by actions. Talking and gesturing, for example, are explicitly not actions. You should attmept to respect the story behind the combat in your non-acitons, however; a round is a fairly short amount of time, so leasurely discussion is out of place here, as is sipping a cup of tea while holding a greatsword ready. These things are ultimately left to the GM's discresion.
 
     \subsection{Attacks and Rolls in Combat}\label{subsec:attacks}
-        Aside from initiative, every roll in combat is listed as ``[Active Crystal] vs [Defending Crystal], difficulty [N]''. For exapmle, the common action \taction{Attack} takes its crystals from the weapon used, so a bow would be ``Air vs Air, difficulty 40''. To make this check, the action-using character rolls a d100 and adds his active crystal's value --- not its level. It succeeds if the result is greater than the defender's defending crystal value plus the difficulty. So in short:
+        Aside from initiative, every roll in combat is listed as ``[Active Crystal] vs [Defending Crystal], difficulty [N]''. For example, the common action \taction{Attack} takes its crystals from the weapon used, so a bow would be ``Air vs Air, difficulty 40''. To make this check, the action-using character rolls a d100 and adds his active crystal's value --- not its level. It succeeds if the result is greater than the defender's defending crystal value plus the difficulty. So in short:
 
         Success = d100 + attacker active crystal value > difficulty + defender's defending crystal value
 
@@ -111,7 +112,7 @@
             Continuous action. Brace for incoming damage. Reduces damage taken by 33\%.
 
         \subsubsection{\taction{Cast}}
-            Quick magical action. If you know any spells, this is how you cast them. The spells specify their rolls and difficulties.
+            Quick magical action. \review{Bruno: By this wording, spells cannot hit flying enemies. Also you can dodge spells.} If you know any spells, this is how you cast them. The spells specify their rolls and difficulties.
 
         \subsubsection{\taction{Draw}}
             Quick action. No roll needed. You take an item or weapon from your inventory and hold it. If you're already holding an item, it returns to your inventory.
@@ -129,7 +130,7 @@
     \subsection{Damage, Types, and Armor}
         Each amount of damage is of exactly one \newterm{damage type}. Characters and creatures may be resistant or vulerable to various damage types; they have no other effect on combat, and have no bearing on the physical or magical status of an attack.
 
-        There are three \newterm{martial} types: \telem{crush}, \telem{cut}, \telem{pierce}; these can represent most of the ways humans can harm each other with conventinal weapons. There are nine \newterm{elemental} types: \telem{fire}, \telem{ice}, \telem{lightning}, \telem{air}, \telem{earth}, \telem{water}, \telem{bio}, \telem{light}, and \telem{shadow};  these can represent damage caused by certain natural effects, exotic technology, and magic.
+        There are three \newterm{martial} types: \telem{crush}, \telem{cut}, \telem{pierce}; these can represent most of the ways humans can harm each other with conventional weapons. There are nine \newterm{elemental} types: \telem{fire}, \telem{ice}, \telem{lightning}, \telem{air}, \telem{earth}, \telem{water}, \telem{bio}, \telem{light}, and \telem{shadow};  these can represent damage caused by certain natural effects, exotic technology, and magic.
 
         \newterm{Armor} is a straight reduction per instance of incoming damage: physical \newterm{armor value} is subracted if the damage is physcal and likewise for magical damage and magical armor value. These are abbreviated to \newterm{PAV} and \newterm{MAV}
         \clearpage
@@ -145,12 +146,13 @@
 
             \item \textbf{Add the roll damage bonus}.
             \item \textbf{Reduce by target's PAV or MAV}.        
-            \item \textbf{Apply critcial hit effects}
+            \item \textbf{Apply critical hit effects}
             \item \textbf{Apply target statuses} like \tstatus{shell} and \tstatus{protect}.
             \item \textbf{Apply elemental resistances}, vulnerability, or absorb.
             \item \textbf{Subtract damage from target health}, activating any effects that trigger as health falls past breakpoints.
         \end{enumerate}
         \review{Wvr: I'm splitting the old point 6 into several points, not sure this is the right order or if i'm missing anything}
+        \review{Bruno: There is no difference when it comes to critical hits, statuses and elemental resistances/vulnerability/absorb. Since they're all multiplication/division, order of operation does not matter.}
 
     \subsection{Healing and Death}\label{subsec:heal}
         
@@ -198,6 +200,8 @@
     \textbf{Rob}: \enquote{08 and 66. That's two hits? Nice! The meteors fall dealing 48 and 46 damage, ignoring his MARM\@. That was a nice crit! I did what, 130 damage?} \\
     \textbf{GM}: \enquote{113. (The Golem still have 115 HP) So the round ends. Roll your initiative for the second round!} \\ 
 \end{multimog}
+
+\review{Bruno: This example conflicts with the new combat rules. You may want to adjust or even redo it completely.}
 
 \begin{multiboco}
     Optional Rule: \textbf{Quick Combat Variant}\pc%
