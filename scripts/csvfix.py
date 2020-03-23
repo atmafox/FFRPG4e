@@ -37,7 +37,7 @@ def fix_csv(inputfn, outputfn):
       else:
         lastrow=row
   
-  with open(outputfn, 'w', encoding="utf8") as outf:
+  with open(outputfn, 'w', encoding="utf8", newline='\n') as outf:
     writer = csv.writer(outf)
     writer.writerows(output_rows)
     
