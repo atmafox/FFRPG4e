@@ -437,7 +437,7 @@ Kunais,10,620,5 x,Add Earth level to damage
 Storm Rapiers,10,595,5 x,\tfxauto{Float}
 Mythril Swords,19,1090,7 x,
 Sai Blades,19,1380,7 x,-10 difficulty to all Reactions
-Undeath Gaze,19,1510,7 x,\tfxtouch{Zombies}
+Undeath Gaze,19,1510,7 x,\tfxtouch{Zombie}
 Rondell,28,1880,10 x,
 Cold Steel Blades,28,2620,10 x,\tfxedamage{Ice}
 Kodachi,28,2710,10 x,\tfxtouch{Disabled}

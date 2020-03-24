@@ -39,7 +39,7 @@ def parse_csv(csvfn, outfn_prefix, template, output_dir):
             if row[-1].startswith('###') and not any(row[1:-1]):
                 if current_file is not None:
                     outfn = os.path.join(output_dir, outfn_prefix + current_file + '.tex')
-                    with open(outfn, 'w') as outf:
+                    with open(outfn, 'w', newline='\n') as outf:
                         outf.writelines('\n'.join(output_lines))
                 output_lines = [header]
                 current_file = row[0]
@@ -59,7 +59,7 @@ def parse_csv(csvfn, outfn_prefix, template, output_dir):
     # Annoying duplication to not lose last group - fix later
     if current_file is not None:
         outfn = os.path.join(output_dir, outfn_prefix + current_file + '.tex')
-        with open(outfn, 'w') as outf:
+        with open(outfn, 'w', newline='\n') as outf:
             outf.writelines('\n'.join(output_lines))
 
 if __name__ == "__main__":
