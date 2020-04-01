@@ -12,3 +12,5 @@ jobs:
           root_file: revised.tex
           args: -xelatex -file-line-error -interaction=nonstopmode
           working_directory: core/
+      - name: Post-Complie AV Scan Current Commit
+      - uses: djdefi/gitavscan@master
