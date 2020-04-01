@@ -4,10 +4,6 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Debug Session
-        env:
-          TMATE_ENCRYPT_PASSWORD: tempotemp
-        uses: tete1030/safe-debugger-action@master
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
@@ -18,4 +14,8 @@ jobs:
           working_directory: core/
 #      - name: Post-Complie AV Scan Current Commit
 #        uses: djdefi/gitavscan@master
+      - name: Setup Debug Session
+        env:
+          TMATE_ENCRYPT_PASSWORD: tempotemp
+        uses: tete1030/safe-debugger-action@master
 
