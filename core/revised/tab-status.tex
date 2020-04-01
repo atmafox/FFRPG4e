@@ -6,7 +6,7 @@
 \begin{longtable}{lccp{0.45\textwidth}}
     \toprule \rowcolor{zebragray} \textbf{Status} & \textbf{Group} & \textbf{Type} & \textbf{Effect} \\ \midrule \endhead%
     \bottomrule \endfoot%9
-    \tstatus{Absorb:} \itshape{(Element)} & Positive & Elemental & Heal \itshape{(elemental)} damage. \\
+    \tstatus{Absorb:} \textit{(Element)} & Positive & Elemental & Heal \textit{(elemental)} damage. \\
     \tstatus{Berserk} & Negative & Mental & You may only perform standard actions. You must always perform the \taction{Attack} action and can't delay. \\
     \tstatus{Blind} & Negative & Seal & Whenever you attack, roll twice and take the worst roll. \\
     \tstatus{Blink} & Positive & Illusion & Whenever you get attacked, the attacker rolls twice and take the worst roll. \\
@@ -21,7 +21,7 @@
     \tstatus{Gravity} & Negative & Fatal & Reduce HP by a fixed amount, ignoring ARM and MARM\@. \\
     \tstatus{Haste} & Positive & Time & Roll one extra initiative die. \\
     \tstatus{Immobilize} & Negative & Seal & You may not perform reactions. \\
-    \tstatus{Immune:} \itshape{(Element)} & Positive & Elemental & Ignore suffered \itshape{(elemental)} damage. \\
+    \tstatus{Immune:} \textit{(Element)} & Positive & Elemental & Ignore suffered \textit{(elemental)} damage. \\
     \tstatus{Meltdown} & Negative & Weaken & Reduce ARM and MARM to 0. \\
     \tstatus{Mute} & Negative & Seal & You may not cast spells \\
     \tstatus{Poison} & Negative & Toxic & At each round's end, lose HP equal to 10\% of max HP\@. \\
@@ -30,7 +30,7 @@
     \tstatus{Reflect} & Positive & Barrier & Reflect effects from a spell that targets you to its caster. If a spell was already reflected, this has no effect. \\
     \tstatus{Regen} & Positive & Strengthen & At each round's end, heal HP equal to 10\% of your max HP\@. \\
     \tstatus{Reraise} & Positive & Barrier & If you would be reduced to 0 HP instead heal to 10\% of max HP and end this effect. \\
-    \tstatus{Resist:} \itshape{(Element)} & Positive & Elemental & Halve suffered \itshape{(elemental)} damage. \\
+    \tstatus{Resist:} \textit{(Element)} & Positive & Elemental & Halve suffered \textit{(elemental)} damage. \\
     \tstatus{Shell} & Positive & Barrier & Reduce magical damage by half after deducting MARM\@. \\
     \tstatus{Sleep} & Negative & Mental & You cannot perform actions, but may delay one die. This condition ends when you suffer damage. \\
     \tstatus{Slow} & Negative & Time & Roll one fewer initiative die. \\
@@ -44,7 +44,7 @@
     \tstatus{Toad} & Negative & Transform & Your attacks deal exactly 1 damage, ignoring ARM or MARM\@. You can't cast Spells, except for the \tspell{Toad} spell. \\
     \tstatus{Vanish} & Positive & Illusion & Enemies may not target you with single-target actions. \\
     \tstatus{Virus} & Negative & Toxic & You may not be healed. \\
-    \tstatus{Vulnerable:} \itshape{(Element)} & Negative & Elemental & Double suffered \itshape{(elemental)} damage. \\
+    \tstatus{Vulnerable:} \textit{(Element)} & Negative & Elemental & Double suffered \textit{(elemental)} damage. \\
     \tstatus{Wall} & Positive & Barrier & Reduce physical damage to 0. \\
     \tstatus{Weaken: Armor} & Negative & Weaken & Reduce ARM by half. \\
     \tstatus{Weaken: Magic} & Negative & Weaken & Deal 25\% less magical damage and magical healing. \\
@@ -72,11 +72,11 @@
         
         Fatal & \tstatus{Condemn}, \tstatus{Death}, \tstatus{Gravity} \\
         
-        Elemental & \tstatus{Vulnerable:} \itshape{(Element)}, \tstatus{Resist:} \itshape{(Element)}, \tstatus{Immune:} \itshape{(Element)}, \tstatus{Absorb:} \itshape{(Element)} \\
+        Elemental & \tstatus{Vulnerable:} \textit{(Element)}, \tstatus{Resist:} \textit{(Element)}, \tstatus{Immune:} \textit{(Element)}, \tstatus{Absorb:} \textit{(Element)} \\
         
-        Weaken & \tstatus{Curse}, \tstatus{Meltdown}, \tstatus{Weaken: Armor}, \tstatus{Weaken: Magic}, \tstatus{Weaken: Mental}, \tstatus{Weaken: Physical},  \tstatus{Weaken: Speed} \tstatus{Weaken: Speed} \\
+        Weaken & \tstatus{Curse}, \tstatus{Meltdown}, \tstatus{Weaken: [Armor, Magic, Mental, Physical, Speed]}\\
         
-        Strengthen & \tstatus{Regen}, \tstatus{Strengthen: Armor}, \tstatus{Strengthen: Magic}, \tstatus{Strengthen: Mental}, \tstatus{Strengthen: Physical},\tstatus {Strengthen: Speed} \\
+        Strengthen & \tstatus{Regen}, \tstatus{Strengthen: [Armor, Magic, Mental, Physical, Speed]}\\
         
         Flight & \tstatus{Float}, \tstatus{Flight} \\
         
