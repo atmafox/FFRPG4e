@@ -15,8 +15,11 @@ jobs:
 #      - name: Post-Complie AV Scan Current Commit
 #        uses: djdefi/gitavscan@master
       - name: Path lister action
-        uses: Rishabh510/Path-lister-action@1.0
         id: pl
+        uses: Rishabh510/Path-lister-action@1.0
+        with:
+          path: "."
+          type: "*"
       - name: Output results
         run: |
           for i in ${{ steps.pl.outputs.paths }}; do
