@@ -54,3 +54,38 @@
     \tstatus{Zombie} & Negative & Transform & Healing effects remove HP or MP rather than curing it. Effects that damage you and heal the user instead damage the user and heal you. \\
 \end{longtable}
 \end{center}
+
+\clearpage
+\section{Status Effect Groups}\label{sec:app-tab-status-groups}
+\markboth{Status Effect Groups}{}
+
+\begin{center}
+    \rowcolors{1}{}{zebragray} % TODO: Change to zebragray after a-zebrastd merges
+    \begin{longtable}{lp{0.75\textwidth}}
+        \toprule \rowcolor{zebragray} \textbf{Status Group} & \textbf{Statuses} \\ \midrule \endhead%
+        \bottomrule \endfoot%9
+        Mental & \tstatus{Berserk}, \tstatus{Charm}, \tstatus{Confuse}, \tstatus{Sleep} \\
+        
+        Illusion & \tstatus{Blink}, \tstatus{Vanish} \\
+        
+        Seal & \tstatus{Blind}, \tstatus{Disable}, \tstatus{Immobilize}, \tstatus{Mute} \\
+        
+        Fatal & \tstatus{Condemn}, \tstatus{Death}, \tstatus{Gravity} \\
+        
+        Elemental & \tstatus{Vulnerable:} \itshape{(Element)}, \tstatus{Resist:} \itshape{(Element)}, \tstatus{Immune:} \itshape{(Element)}, \tstatus{Absorb:} \itshape{(Element)} \\
+        
+        Weaken & \tstatus{Curse}, \tstatus{Meltdown}, \tstatus{Weaken: Armor}, \tstatus{Weaken: Magic}, \tstatus{Weaken: Mental}, \tstatus{Weaken: Physical},  \tstatus{Weaken: Speed} \tstatus{Weaken: Speed} \\
+        
+        Strengthen & \tstatus{Regen}, \tstatus{Strengthen: Armor}, \tstatus{Strengthen: Magic}, \tstatus{Strengthen: Mental}, \tstatus{Strengthen: Physical},\tstatus {Strengthen: Speed} \\
+        
+        Flight & \tstatus{Float}, \tstatus{Flight} \\
+        
+        Time & \tstatus{Slow}, \tstatus{Stop}, \tstatus{Haste}, \tstatus{Premonition} \\
+        
+        Toxic & \tstatus{Poison}, \tstatus{Virus} \\
+        
+        Barrier & \tstatus{Protect}, \tstatus{Shell}, \tstatus{Reflect}, \tstatus{Reraise}, \tstatus{Wall} \\
+        
+        Transform & \tstatus{Stone}, \tstatus{Toad}, \tstatus{Zombie} \\
+    \end{longtable}
+\end{center}    
