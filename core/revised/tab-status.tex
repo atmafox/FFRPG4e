@@ -5,52 +5,87 @@
 \rowcolors{1}{}{zebragray} % TODO: Change to zebragray after a-zebrastd merges
 \begin{longtable}{lccp{0.45\textwidth}}
     \toprule \rowcolor{zebragray} \textbf{Status} & \textbf{Group} & \textbf{Type} & \textbf{Effect} \\ \midrule \endhead%
-    \bottomrule \endfoot%
+    \bottomrule \endfoot%9
+    \tstatus{Absorb:} \textit{(Element)} & Positive & Elemental & Heal \textit{(elemental)} damage. \\
     \tstatus{Berserk} & Negative & Mental & You may only perform standard actions. You must always perform the \taction{Attack} action and can't delay. \\
-    \tstatus{Charm} & Negative & Mental & You consider your allies as enemies and your enemies as allies.  This condition ends if you suffer damage. \\
-    \tstatus{Confuse} & Negative & Mental & You may only perform standard actions. Ends immediately if you take damage.  Whenever you use a standard action, roll 1d10: \newline \rowcolors{1}{zebragray}{} \begin{tabular}{|cp{0.3\textwidth}|} \hline \rowcolor{zebragray} \textbf{Roll} & \textbf{Effect} \\ \hline 1 & Act normally \\ 2 or 10 & No action \\ 3 or 9 & Attack random ally \\ 4 or 8 & Attack random enemy \\ 5 or 6 & Heal, protect, or otherwise assist random enemy \\ 7 & Heal, protect, or otherwise assist random ally \\ \hline \end{tabular} \\
-    \tstatus{Sleep} & Negative & Mental & You cannot perform actions, but may delay one die. This condition ends when you suffer damage. \\
-    \tstatus{Blink} & Positive & Illusion & Whenever you get attacked, the attacker rolls twice and take the worst roll. \\
-    \tstatus{Vanish} & Positive & Illusion & Enemies may not target you with single-target actions. \\
     \tstatus{Blind} & Negative & Seal & Whenever you attack, roll twice and take the worst roll. \\
-    \tstatus{Disable} & Negative & Seal & You may only cast Spells or react. \\
-    \tstatus{Immobilize} & Negative & Seal & You may not perform reactions. \\
-    \tstatus{Mute} & Negative & Seal & You may not cast spells \\
+    \tstatus{Blink} & Positive & Illusion & Whenever you get attacked, the attacker rolls twice and take the worst roll. \\
+    \tstatus{Charm} & Negative & Mental & You consider your allies as enemies and your enemies as allies.  This condition ends if you suffer damage. \\
     \tstatus{Condemn} & Negative & Fatal & If this condition is not removed before it ends, reduce HP to 0. \\
-    \tstatus{Death} & Negative & Fatal & Reduce HP to 0. \\
-    \tstatus{Gravity} & Negative & Fatal & Reduce HP by a fixed amount, ignoring ARM and MARM\@. \\
-    \tstatus{Vulnerable:} \itshape{(Element)} & Negative & Elemental & Double suffered \itshape{(elemental)} damage. \\
-    \tstatus{Resist:} \itshape{(Element)} & Positive & Elemental & Halve suffered \itshape{(elemental)} damage. \\
-    \tstatus{Immune:} \itshape{(Element)} & Positive & Elemental & Ignore suffered \itshape{(elemental)} damage. \\
-    \tstatus{Absorb:} \itshape{(Element)} & Positive & Elemental & Heal \itshape{(elemental)} damage. \\
+    \tstatus{Confuse} & Negative & Mental & You may only perform standard actions. Ends immediately if you take damage.  Whenever you use a standard action, roll 1d10: \newline \rowcolors{1}{zebragray}{} \begin{tabular}{|cp{0.3\textwidth}|} \hline \rowcolor{zebragray} \textbf{Roll} & \textbf{Effect} \\ \hline 1 & Act normally \\ 2 or 10 & No action \\ 3 or 9 & Attack random ally \\ 4 or 8 & Attack random enemy \\ 5 or 6 & Heal, protect, or otherwise assist random enemy \\ 7 & Heal, protect, or otherwise assist random ally \\ \hline \end{tabular} \\
     \tstatus{Curse} & Negative & Weaken & Whenever you get attacked, the attacker rolls twice and take the best roll. \\
+    \tstatus{Death} & Negative & Fatal & Reduce HP to 0. \\
+    \tstatus{Disable} & Negative & Seal & You may only cast Spells or react. \\
+    \tstatus{Flight} & Positive & Flight & Only Ranged attacks or Spells may hit you. Your melee attacks may hit targets with any Flight status unless they specifically may not target Flight status. \\
+    \tstatus{Float} & Positive & Flight & Float about two feet off the ground, causing effects that depend on the ground to not affect you. \\
+    \tstatus{Gravity} & Negative & Fatal & Reduce HP by a fixed amount, ignoring ARM and MARM\@. \\
+    \tstatus{Haste} & Positive & Time & Roll one extra initiative die. \\
+    \tstatus{Immobilize} & Negative & Seal & You may not perform reactions. \\
+    \tstatus{Immune:} \textit{(Element)} & Positive & Elemental & Ignore suffered \textit{(elemental)} damage. \\
     \tstatus{Meltdown} & Negative & Weaken & Reduce ARM and MARM to 0. \\
-    \tstatus{Weaken: Armor} & Negative & Weaken & Reduce ARM by half. \\
-    \tstatus{Weaken: Magic} & Negative & Weaken & Deal 25\% less magical damage and magical healing. \\
-    \tstatus{Weaken: Mental} & Negative & Weaken & Reduce MARM by half. \\
-    \tstatus{Weaken: Physical} & Negative & Weaken & Deal 25\% less physical damage and physical healing. \\
-    \tstatus{Weaken: Speed} & Negative & Weaken & At the start of phase 1, increase each initiative die value by 1. Increase the charge time of all Slow actions by 1. \\
+    \tstatus{Mute} & Negative & Seal & You may not cast spells \\
+    \tstatus{Poison} & Negative & Toxic & At each round's end, lose HP equal to 10\% of max HP\@. \\
+    \tstatus{Premonition} & Positive & Time & Once per round, you may reroll a 1d100 roll. \\
+    \tstatus{Protect} & Positive & Barrier & Reduce physical damage by half after deducting ARM\@. \\
+    \tstatus{Reflect} & Positive & Barrier & Reflect effects from a spell that targets you to its caster. If a spell was already reflected, this has no effect. \\
     \tstatus{Regen} & Positive & Strengthen & At each round's end, heal HP equal to 10\% of your max HP\@. \\
+    \tstatus{Reraise} & Positive & Barrier & If you would be reduced to 0 HP instead heal to 10\% of max HP and end this effect. \\
+    \tstatus{Resist:} \textit{(Element)} & Positive & Elemental & Halve suffered \textit{(elemental)} damage. \\
+    \tstatus{Shell} & Positive & Barrier & Reduce magical damage by half after deducting MARM\@. \\
+    \tstatus{Sleep} & Negative & Mental & You cannot perform actions, but may delay one die. This condition ends when you suffer damage. \\
+    \tstatus{Slow} & Negative & Time & Roll one fewer initiative die. \\
+    \tstatus{Stone} & Negative & Transform & You may not act or suffer damage. \\
+    \tstatus{Stop} & Negative & Time & You may not act. \\
     \tstatus{Strengthen: Armor} & Positive & Strengthen & Increase ARM by half. \\
     \tstatus{Strengthen: Magic} & Positive & Strengthen & Deal 25\% more magical damage and magical healing. \\
     \tstatus{Strengthen: Mental} & Positive & Strengthen & Increase MARM by half. \\
     \tstatus{Strengthen: Physical} & Positive & Strengthen & Deal 25\% more physical damage and physical healing. \\
     \tstatus{Strengthen: Speed} & Positive & Strengthen & At the start of phase 1, reduce each initiative die value by 1. Reduce the charge time of all Slow actions by 1, to a minimum of 1. \\
-    \tstatus{Float} & Positive & Flight & Float about two feet off the ground, causing effects that depend on the ground to not affect you. \\
-    \tstatus{Flight} & Positive & Flight & Only Ranged attacks or Spells may hit you. Your melee attacks may hit targets with any Flight status unless they specifically may not target Flight status. \\
-    \tstatus{Slow} & Negative & Time & Roll one fewer initiative die. \\
-    \tstatus{Stop} & Negative & Time & You may not act. \\
-    \tstatus{Haste} & Positive & Time & Roll one extra initiative die. \\
-    \tstatus{Premonition} & Positive & Time & Once per round, you may reroll a 1d100 roll. \\
-    \tstatus{Poison} & Negative & Toxic & At each round's end, lose HP equal to 10\% of max HP\@. \\
-    \tstatus{Virus} & Negative & Toxic & You may not be healed. \\
-    \tstatus{Protect} & Positive & Barrier & Reduce physical damage by half after deducting ARM\@. \\
-    \tstatus{Shell} & Positive & Barrier & Reduce magical damage by half after deducting MARM\@. \\
-    \tstatus{Wall} & Positive & Barrier & Reduce physical damage to 0. \\
-    \tstatus{Reflect} & Positive & Barrier & Reflect effects from a spell that targets you to its caster. If a spell was already reflected, this has no effect. \\
-    \tstatus{Reraise} & Positive & Barrier & If you would be reduced to 0 HP instead heal to 10\% of max HP and end this effect. \\
-    \tstatus{Stone} & Negative & Transform & You may not act or suffer damage. \\
     \tstatus{Toad} & Negative & Transform & Your attacks deal exactly 1 damage, ignoring ARM or MARM\@. You can't cast Spells, except for the \tspell{Toad} spell. \\
+    \tstatus{Vanish} & Positive & Illusion & Enemies may not target you with single-target actions. \\
+    \tstatus{Virus} & Negative & Toxic & You may not be healed. \\
+    \tstatus{Vulnerable:} \textit{(Element)} & Negative & Elemental & Double suffered \textit{(elemental)} damage. \\
+    \tstatus{Wall} & Positive & Barrier & Reduce physical damage to 0. \\
+    \tstatus{Weaken: Armor} & Negative & Weaken & Reduce ARM by half. \\
+    \tstatus{Weaken: Magic} & Negative & Weaken & Deal 25\% less magical damage and magical healing. \\
+    \tstatus{Weaken: Mental} & Negative & Weaken & Reduce MARM by half. \\
+    \tstatus{Weaken: Physical} & Negative & Weaken & Deal 25\% less physical damage and physical healing. \\
+    \tstatus{Weaken: Speed} & Negative & Weaken & At the start of phase 1, increase each initiative die value by 1. Increase the charge time of all Slow actions by 1. \\
     \tstatus{Zombie} & Negative & Transform & Healing effects remove HP or MP rather than curing it. Effects that damage you and heal the user instead damage the user and heal you. \\
 \end{longtable}
 \end{center}
+
+\clearpage
+\section{Status Effect Groups}\label{sec:app-tab-status-groups}
+\markboth{Status Effect Groups}{}
+
+\begin{center}
+    \rowcolors{1}{}{zebragray} % TODO: Change to zebragray after a-zebrastd merges
+    \begin{longtable}{lp{0.75\textwidth}}
+        \toprule \rowcolor{zebragray} \textbf{Status Group} & \textbf{Statuses} \\ \midrule \endhead%
+        \bottomrule \endfoot%9
+        Mental & \tstatus{Berserk}, \tstatus{Charm}, \tstatus{Confuse}, \tstatus{Sleep} \\
+        
+        Illusion & \tstatus{Blink}, \tstatus{Vanish} \\
+        
+        Seal & \tstatus{Blind}, \tstatus{Disable}, \tstatus{Immobilize}, \tstatus{Mute} \\
+        
+        Fatal & \tstatus{Condemn}, \tstatus{Death}, \tstatus{Gravity} \\
+        
+        Elemental & \tstatus{Vulnerable:} \textit{(Element)}, \tstatus{Resist:} \textit{(Element)}, \tstatus{Immune:} \textit{(Element)}, \tstatus{Absorb:} \textit{(Element)} \\
+        
+        Weaken & \tstatus{Curse}, \tstatus{Meltdown}, \tstatus{Weaken: [Armor, Magic, Mental, Physical, Speed]}\\
+        
+        Strengthen & \tstatus{Regen}, \tstatus{Strengthen: [Armor, Magic, Mental, Physical, Speed]}\\
+        
+        Flight & \tstatus{Float}, \tstatus{Flight} \\
+        
+        Time & \tstatus{Slow}, \tstatus{Stop}, \tstatus{Haste}, \tstatus{Premonition} \\
+        
+        Toxic & \tstatus{Poison}, \tstatus{Virus} \\
+        
+        Barrier & \tstatus{Protect}, \tstatus{Shell}, \tstatus{Reflect}, \tstatus{Reraise}, \tstatus{Wall} \\
+        
+        Transform & \tstatus{Stone}, \tstatus{Toad}, \tstatus{Zombie} \\
+    \end{longtable}
+\end{center}    
