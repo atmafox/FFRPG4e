@@ -150,7 +150,7 @@ The HP, MP, Armor and Magic Armor values depends on the level and Category, acco
 The ARM and MARM values apply to all Classes. When deciding the ARM and MARM values, avoid creating creatures without weaknesses. Antagonists with high Armor usually have low Magic Armor, and vice versa.
 
 \subsection{Abilities and Actions}\label{subsec:gm-abilities}
-All antagonists should have at least a basic attack, which can be physical or magical. Choose an Offensive Stat and Defensive Stat for the attack. The table below shows the adequate damage multiplier for each antagonist’s level.
+All antagonists should have at least a basic attack, which can be physical or magical. This attack is its \taction{Attack} action. Choose an Offensive Stat and Defensive Stat for the attack. The table below shows the adequate damage multiplier for each antagonist’s level.
 
 \begin{center}
     \begin{tabular}{*{4}{M@{-}O}}
@@ -182,19 +182,24 @@ In addition to the actions and reactions that are appropriate to the antagonist,
 
 If you’re new to the FFRPG \ordinalnum{4} Edition, feel free to experiment with your antagonists and test the power level of your group. Different strategies and stat combinations can be either deadly or a push-over, based on the group’s capabilities. When in doubt, put your enemies in the weaker side and increase their power slowly, until you’re comfortable enough with the system.
 
+\subsubsection{Antagonists and Critical Hits}\label{gm-enemycrit}
+All monster actions can crit, unless they're modelled after spells or other abilities that don't have critical hit effects. The bestiary does not list whether the actions can crit or not because having actions crit or not is another dial you can use to make monsters more (or less) deadly. Those critical hits can be 150\% damage for an easier fight, regular double damage on normal encounters, or even higher if you want to challenge your players. A good way to make this kind of manipulation feel fair is giving the players cues about the letality of the enemy: An antagonist described as an experienced assassin will feel more justified doing nasty criticals than a fluffly rabbit-like creature with no legs or arms.
+
+If you're new to this system, be wary that a lucky critical with double damage can one-shot a low Earth mage or Freelancer at early levels. Should your group feel this is unfair and could detract from the experience at lower levels (before level 15), you could use the 150\% critical hits option or remove them entirely from your antagonists. Critical hits can, however, throw a wrench into the player's battle tactics and can be exploited to increase the tension, and will be an important tool in your arsenal to design interesting antagonists and battles.   
+
 \subsection{Final Details}\label{gm-findet}
 With the antagonist’s mechanics done, be sure to flesh out the details that give life to roleplay. These details can be as specific or as general as necessary; an unimportant \tmobmini{}\ may simply have a general description, but an \tmobleet{}\ who will star an entire adventure should be detailed enough for your players love to hate their enemy.
 
 What's its name? What’s its physical description? What’s its personality? Does it have habits, peculiarities, catchphrases? What are its goals, fears, anxieties? What’s its natural habitat? How it relates to the adventure and the other antagonists? These are only some of the questions that you, as a GM, may ask to give depth to the antagonist.
 
 \subsection{Encounter Design}\label{gm-encdsg}
-Designing the antagonists is only part of the GM's job. To properly challenge the players, the combat encounters should contain a suitable number of antagonists. Choosing which antagonists will take part of the battle and their number is a key part in having the game feel fair. There are two general approaches to this:
+Designing the antagonists is only part of the GM's job. Choosing which antagonists will take part of the battle and their number is a key part in having the game feel fair. There are two general approaches to this:
 
-\textbf{Attition-based} adventures try to present lots of smaller encounters between rests. Each encounter should, individually, be easier, so the general challenge of the adventure is to manage the HP, MP and consumables of the party. Use enemies with higher HP, lower damage ratings, few critical hit-able attacks and avoid using many enemies in the same battle before the players have acess to Group damage. In-between encounters, Challenges should present opportunities to further give or drain resources, reinforcing the theme of resource management. During the course of the battles, you can use tools like reinforcements (enemies joining the battle after it started), fleeing enemies, environmental effects (healing, damage and status effects caused by factors other than the antagonists), Steal items and enemy targeting to regulate the challenge, either by increasing or decreasing it as needed.
+\textbf{Attrition-based} adventures try to present lots of smaller encounters between rests. Each encounter should, individually, be easier, so the general challenge of the adventure is to manage the HP, MP and consumables of the party. Use enemies with higher HP, lower damage ratings and few critical hit-able attacks. Avoid using many enemies in the same battle before the players have acess to Group damage. In-between encounters, Challenges should present opportunities to further give or drain resources, reinforcing the theme of resource management. During the course of the battles, you can use tools like reinforcements (enemies joining the battle after it started), fleeing enemies, environmental effects (healing, damage and status effects caused by factors other than the antagonists), Steal items and enemy targeting to regulate the challenge, either by increasing or decreasing it as needed.
 
 \textbf{Tactics-based} adventures try to present fewer, or even one encounter between rests. Each encounter should, individually, be hard, so the general challenge of the adventure is to use the correct tactics in each battle. Use enemies with lower HP, higher damage ratings, and many actions per round. In-between encounters, rests should be easy and/or supplemented with easy acess to healing items, healing springs, or even machines that fully heal (but leave you still hungry). Player defeats should be always a possibility, and having enemies with lots of different attacks (and the opportunity to adjust their tactics on the middle of the battle) will be important to keep the battle exciting and fair. Lastly, building encounters around specific gimmicks and having challenge encounters (encounters that can be solved by means other than reducing the enemies to 0 HP) interspersed with regular combats can bring shake things up and bring diversity to the table.  
 
-\subsubsection{Environment Effects}\label{gm-enveffct}
+\subsubsection{Environmental Effects}\label{gm-enveffct}
 Some effects can passively change the battle rules. Use these effects to change how the battlefield works and present new challenges and opportunities to your players. Here are some examples:
 
 \textit{Heat Wave}: All combatants receive \tstatus{Fire Vulnerable} and \tstatus{Ice Resist} statuses this battle. This has no effect on combatants that already have \tstatus{Vulnerable}, \tstatus{Resist}, \tstatus{Immune} or \tstatus{Absorb} Fire (for the \tstatus{Fire Vulnerable}) or Ice (for the \tstatus{Ice Resist}). 
@@ -211,11 +216,11 @@ Some effects can passively change the battle rules. Use these effects to change 
 
 \textit{Quicksand (X)}: At the start of each round, each combatant receives the \tstatus{Condemn} status effect for the next (X) rounds. This effect automatically fails on targets under the \tstatus{Float}, \tstatus{Flight} or \tstatus{Condemn} status effects. When a character receives the \tstatus{Float} or \tstatus{Flight} status effects, it loses the \tstatus{Condemn} status granted by the quicksand. Any combatant may use the \taction{Flee} action to lose the \tstatus{Condemn} status.
 
-\textit{Mirror Room}: All single-targets attack or spells target a random enemy or ally. All group-target attacks or spells target all combatants, allies and enemies. This does not change self-target actions.
+%\textit{Mirror Room}: All single-targets attack or spells target a random enemy or ally. All group-target attacks or spells target all combatants, allies and enemies. This does not change self-target actions.
 
 \textit{Arrow Rain(X)}: All combatants must use an action to take cover each round or will be dealt (X) physical Puncture-elemental damage at the end of the round. This effect deals double damage on characters under the \tstatus{Flight} status effect. A character may use any reaction that protects against physical Ranged attacks, rolling against the enemy with the highest Defensive Stat, to protect an ally.
 
-\textit{Wild Magic Source}: Every time a combatant rolls a d100 to hit with an action that spends MP, if the die roll is even, double the MP cost, and if the die roll is odd, halve the MP cost. Apply this effect after all other MP reduction/increase effects are applied.
+%\textit{Wild Magic Source}: Every time a combatant rolls a d100 to hit with an action that spends MP, if the die roll is even, double the MP cost, and if the die roll is odd, halve the MP cost. Apply this effect after all other MP reduction/increase effects are applied.
 
 \textit{Cosmic Imbalance}: All physical attacks and spells are magical. All magical attacks and spells are physical.
 
