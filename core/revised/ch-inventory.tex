@@ -236,16 +236,34 @@ Dervish’s exclusive weapon type, the ability to fight with two one-handed blad
 \subsection{Accessories}\label{subsec:inv-accessories}
 
 \begin{multicols}{2}
-Each character can equip up to two accessories at the same time.  However, the equipment's magic interferes with each other.  Thus, if two accessories or an accessory and another piece of equipment including a weapon or armor would have the same effect, they do not stack.  Only the most powerful item of this type will affect you.  Similarly if a character equips three or more accessories, their effects cancel each other and the character will not receive the benefits of any of them.  For example, if a character equips the Wyglar armor (+ 20\% Max HP) and the Orrachea Armlet (+ 10\% Max HP), the HP increase is only 20\%.
+Each character can equip up to two accessories at the same time.  However, the equipment's magic interferes with each other.  Thus, if two accessories or an accessory and another piece of equipment including a weapon or armor would have the same effect, they do not stack and only the most powerful item of this type will affect you.  Similarly if a character equips three or more accessories, their effects cancel each other and the character will not receive the benefits of any of them.  For example, if a character equips the Wyglar armor (+ 20\% Max HP) and the Orrachea Armlet (+ 10\% Max HP), the HP increase is only 20\%.
 
 Morever, if two distinct pieces of equipment impart opposite effects only the negative effect will be gained.  For example, if a character is equipped with an accessory granting \tstatus{Mute} immunity and an armor with SOS-\tstatus{Mute}, that character will be immune to the \tstatus{Mute} status until their HP is below 25\%, but once their HP drops below 25\% will suffer the \tstatus{Mute} and lose their immunity.
 
 Although it may seem simple, equipping an accessory requires the character to spend at least a few minutes focusing on its magic.  Thus, it is impossible to equip or change accessories in the middle of a combat.
 \end{multicols}
 
+\subsubsection{General Accessories}\label{subsec:inv-gacc}
+
+\begin{multicols}{2}
+These accessories are grouped into general types that should be further customized before bought or found. Accessories whose effect mention a Stat Value or Stat Level must refer to a specific Stat (be it Earth, Air, Fire or Water). Accessories whose effect mention a specific Element must refer to a specific Element (other than Crush, Cut and Puncture). Unlike other accessories, a Rogue may swap the Stat or Element using \textit{Invention} as if they were weapons or armors. Feel free to change the names of the acessories to further reflect their nature: an \textit{Elemental Ring} that confers Immunity to Ice may be named \textit{Blizzard Ring}, for instance.
+
+\end{multicols}
+
 \begin{tabacc}[label=inv-acc1]
+    \input{revised/generated/acc-boosters}
+\end{tabacc}
+
+\subsubsection{Special Accessories}\label{subsec:inv-spacc}
+
+\begin{multicols}{2}
+Unlike the General Acessories, these items cannot be further customized and take up a much diverse role. They also cannot be influenced by \textit{Invention}, \textit{Blacksmith} or other equipment-modifying abilities. 
+\end{multicols}
+
+\begin{tabacc}[label=inv-acc2]
     \input{revised/generated/acc-accessories}
 \end{tabacc}
+
 \vspace{\stretch{1}}
 \begin{center}
 \adjincludegraphics[height=.75\textwidth]{block-planet-magic}
