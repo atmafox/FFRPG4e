@@ -59,7 +59,7 @@ Quick action. If the character is unarmed, perform an Earth vs Earth attack, dif
 Reaction. Use when suffering a physical attack. Roll Air vs Earth, difficulty 70. If successful, you don’t suffer the attack’s effects.
 
 \subsubsection{\taction{Item}}
-Slow (4) action. No roll needed. You use an item or replace the equipped weapon with a weapon. In this case, the exchanged weapon is stored in your inventory as a free action.
+Ranged slow (4) action. No roll needed. You use an item or replace the equipped weapon with a weapon. In this case, the exchanged weapon is stored in your inventory as a free action. Should the target be unwilling, you must succeed in the Spell roll (for items that cast Spells) or a Water vs Air, difficulty 40 attack (for items that do not cast Spells).
 
 \subsubsection{\taction{Flee}}
 Quick action. Roll Air vs Air, difficulty 40. If successful, you run away from combat. Use the opponent with the highest Air Stat as the target of this action.
@@ -209,5 +209,7 @@ This section lists several miscellaneous rules that apply to combat encounters. 
 \textbf{Special interactions with Slow actions}: When you get hit by an effect while charging a Slow action, several things can happen. Effects that change charge time (such as \tstatus{Weaken:Speed} and \tstatus{Strengthen:Speed}) can change the delivery phase; Effects that impede the character from acting stop the slow action outright without refunding the cost; \tstatus{Charm} effects means the character will change the target to fit its changed perspective on who's ally and enemy; \tstatus{Berserk} effects will turn the Slow action into an \taction{Attack} action; and lastly, \tstatus{Confuse} means the character uses the Slow action in random target(s).
 
 \textbf{Targets that can't act and initiative}: Targets that cannot act (such as characters with 0 HP and characters under effects such as \tstatus{Stone} or \tstatus{Stop}) still generate initiative as normal, but automatically discard each die once their time to act comes (with the exception of \tstatus{Sleep}, which allows the character to keep exactly 1 delayed die, even if you could otherwise delay more actions). Should their condition be healed mid-round, they can still act normally with any remaining dice. To avoid rolling unnecessary initiative dice, you may opt to roll them only when the character actually gets revived/healed and simply drop any dice that rolls up on an earlier phase.
+
+\textbf{Action Difficulty modifiers}: Several effects can increase or decrease actions' difficulty. This, however, may not make any roll or attack's difficulty lower than 0 or higher than 100. 
 
 \end{multicols}
