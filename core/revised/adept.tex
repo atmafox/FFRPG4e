@@ -30,7 +30,8 @@
 
     \ability{level=1,name=Arcane Discipline, desc={You earn one of the three following actions:}}\\
 
-        \speclede{level=1, action={slow=1,magical=true}, name=Elemental Strike} Choose \telem{Fire}, \telem{Lightning}, or \telem{Ice}. You concentrate the chosen element and strike a weapon attack causing normal damage, using the chosen element. \\
+        \crystal{level}{12pt} & %
+        \taction{Elemental Strike} is a Slow (1) Magical action. Choose \telem{Fire}, \telem{Lightning}, or \telem{Ice}. You concentrate the chosen element and strike a weapon attack causing normal damage, using the chosen element. \\
 
         \speclede{level=1, action={slow=4}, name=Holy Strike} Using your own vital energy as sacred power, you attack with the force of \telem{Light}. Do a weapon attack dealing 150\% weapon damage, \telem{Light}-elemental. \\
 
@@ -40,7 +41,7 @@
     
         \speclede{air=5, water=5, name=Dualism} You gain one of the following actions: \taction{Elemental Strike}, \taction{Holy Strike}, or \taction{Shadow Strike}. \\
 
-        \speclede{earth=6, air=4, name=Will Shield, action={reaction=true}} You can use this reaction whenever you suffer damage. Conjuring up a protective magical shield, you avoid injuries. Perform a Water vs (the greater of Earth or Fire) attack, difficulty 30. If successful, negate all effects of the attack and spend MP equal 10\% of your maximum MP\@. If you do not have enough MP to spend, this ability fails. \\
+        \speclede{earth=6, air=4, name=Will Shield, action={reaction=true}} You can use this reaction whenever you suffer damage. Conjuring up a protective magical shield, you avoid injuries. Perform a Water vs (the greater of Earth or Fire) attack, difficulty 30. If successful, negate all effects of the attack and spend MP equal 10\% of your maximum MP\@. If you do not have enough MP to spend, this ability fails. \textit{Augment:} Reduce this action's difficulty by 10. \\
 
         \speclede{fire=7, name=Quick Channeling} When using an ability, you may reduce its charge time by 1, to a minimum of 0. \\
 
@@ -56,20 +57,20 @@
 
     \tabjobspec{}%
 
-        \speclede{air=6, fire=9, name=Shadow Blade, action={slow=2,magical=true}} Conjuring a tornado of souls, perform a weapon attack against all other combatants, enemies and allies. You deal 150\% weapon damage, \telem{Shadow}-elemental, to all characters hit. \\
+        \speclede{air=6, fire=9, name=Shadow Blade, action={slow=2,magical=true}} Conjuring a tornado of souls, perform a weapon attack against all other combatants, enemies and allies. You deal 150\% weapon damage, \telem{Shadow}-elemental, to all characters hit. \textit{Augment:} This action may be \textit{Ranged} and/or increase its difficulty by 30 against allies.\\
        
-        \speclede{earth=9, air=6, name=Stasis Strike, action={ranged=true,slow=5}} You summon a lightning bolt from heavens. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Light}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Immobilize} status until the end of your next round on the target. \\
+        \speclede{earth=9, air=6, name=Stasis Strike, action={ranged=true,slow=5}} You summon a lightning bolt from heavens. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Light}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Immobilize} status until the end of your next round on the target. \textit{Augment:} This action may inflict \tstatus{Stop} instead of \tstatus{Immobilize}.\\
 
-        \speclede{air=6, water=9, name=Fury Brand, action={slow=5, magical=true}} Create a rune of fury in your weapon and strike. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Fire}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Mute} status until the end of your next round on the target. \\
+        \speclede{air=6, water=9, name=Fury Brand, action={slow=5, magical=true}} Create a rune of fury in your weapon and strike. If you are successful in a weapon attack, difficulty 30, deal 150\% weapon damage, \telem{Fire}-elemental, to a target. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Mute} status until the end of your next round on the target. \textit{Augment:} This action may inflict \tstatus{Berserk} instead of \tstatus{Mute}.\\
 
     \tabjobsep%
 
-    \ability{level=24, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, either gain one of \taction{!Snake Fang}, \taction{!Hallowed Bolt} or \taction{!Black Sky} or augment one of the following actions: Reduce \taction{Will Shield}'s difficulty by 10, \taction{Stasis Strike} may inflict \tstatus{Stop} instead of \tstatus{Immobilize}, \taction{Fury Brand} may inflict \tstatus{Berserk} instead of \tstatus{Mute}, or \taction{Cleansing Strike} may inflict \tstatus{Toad} instead of \tstatus{Disable}.}}\\
+    \ability{level=24, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, either gain one of \taction{!Snake Fang}, \taction{!Hallowed Bolt} or \taction{!Black Sky} or choose one Adept ability (even if you don't have it yet) and unlock its \textit{Augment}.}}\\
     \tabjobspec{}
 
         \speclede{fire=10, name=Night Sword, action={slow=2}} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you drain HP equal to the HP lost\@. \\
 
-        \speclede{earth=10, name=Light's Judgement} You gain the \actype{slow=5} \taction{Cleansing Strike}. This action creates an arcane seal in the air, and then you attack a target with your weapon, destroying the seal and dealing 150\% weapon damage, \telem{Ice}-elemental. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Disable} status until the end of your next round on the target. \\
+        \speclede{earth=10, name=Cleansing Strike, action={slow=5}} This action creates an arcane seal in the air, and then you attack a target with your weapon, destroying the seal and dealing 150\% weapon damage, \telem{Ice}-elemental. If your attack is a critical hit or overcomes difficulty 70, inflict the \tstatus{Disable} status until the end of your next round on the target. \textit{Augment:} This action may inflict \tstatus{Toad} instead of \tstatus{Disable}.\\
 
         \speclede{water=10, name=Reckless Sacrifice} When using an Adept \tatk{action} that inflicts a negative status on a single target, you can choose to automatically hit without performing an attack roll. If you do, you inflict the status on the target and on yourself for the same duration. \\
 
@@ -78,7 +79,7 @@
     \ability{level=42, name=Arcane Shock, desc={You gain the \actype{ranged=true,slow=3,magical=true} \taction{Demi Shock}. Concentrating the arcane forces, you try to break the enemy. Do a Fire vs Earth attack, difficulty 40. If successful, the target loses 50\% of their current HP\@. This counts as a \tstatus{Gravity}-type status effect.}}\\
     \tabjobspec{}
 
-        \speclede{earth=8, water=10, name=Mana Safe} You can spend any amount of MP and an action to heal the same amount of MP to an ally. Any ally can spend any amount of MP and an action to heal on you half that amount of MP\@. \\
+        \speclede{earth=8, water=10, name=Mana Safe} You can spend any amount of MP and an action to heal the same amount of MP to an ally. Any ally can spend any amount of MP and an action to heal on you half that amount of MP\@. Choose one Adept ability and unlock its \textit{Augment}. \\
 
         \speclede{earth=11, fire=11, name=Dark Pact} Whenever you spend HP to use a Quick Adept action that deals \telem{Shadow}-elemental damage, you may spend extra 10\% of your max HP to deal extra 50\% weapon damage. You must declare this Ability before rolling the attack, spending the extra HP regardless of hitting or missing. \\
 

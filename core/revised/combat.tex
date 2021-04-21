@@ -30,7 +30,7 @@ The free action occurs without the character spending an initiative dice. It occ
 
 \subsection{Speeds}\label{subsec:speeds}
 \subsubsection{Quick Action}
-A Quick action occurs when the character acts. The character discards the initiative dice and its effects are immediate. An action with charge time of zero is a quick action.
+A Quick action occurs when the character acts. The character discards the initiative dice and its effects are immediate. An action with zero charge time is a quick action.
 
 \subsubsection{Slow Action}
 A Slow (X) action implies that the character must charge before performing. He declares the action as usual, and then spends (X) phases charging their action. Only after this time has elapsed, the action’s effects will happen. During this charging time, he may not react or do any other actions, but may delay their actions. If he needs to delay more than one action, as he may not delay more than one action, the extra actions are lost. All actions with a charge time of 1 or greater are Slow actions. Some effects may increase or decrease the charge time of your actions, changing the number of phases you need to charge the Slow action.
@@ -58,8 +58,11 @@ Quick action. If the character is unarmed, perform an Earth vs Earth attack, dif
 \subsubsection{\taction{Dodge}}
 Reaction. Use when suffering a physical attack. Roll Air vs Earth, difficulty 70. If successful, you don’t suffer the attack’s effects.
 
+\subsubsection{\taction{Cast}}
+Magical Quick Action. You cast a Spell, either a learned one, one from an equipped item via Spell Weave or Arcane Focus, or by using an Item that casts a spell. When using an item from the inventory, this action is Slow (4).
+
 \subsubsection{\taction{Item}}
-Ranged slow (4) action. No roll needed. You use an item or replace the equipped weapon with a weapon. In this case, the exchanged weapon is stored in your inventory as a free action. Should the target be unwilling, you must succeed in the Spell roll (for items that cast Spells) or a Water vs Air, difficulty 40 attack (for items that do not cast Spells).
+Physical Ranged slow (4) action. Perform an difficulty 40 Water vs Air attack to use an healing item or replace the equipped weapon with a weapon. In this case, the exchanged weapon is stored in your inventory as a free action. 
 
 \subsubsection{\taction{Flee}}
 Quick action. Roll Air vs Air, difficulty 40. If successful, you run away from combat. Use the opponent with the highest Air Stat as the target of this action.
@@ -147,7 +150,7 @@ Lastly, there are no specific Combat rules. To resolve combats, use Challenges a
 \end{multiboco}
 
 \begin{multimog}
-Later in his adventures, JBMog, now a \ordinalnum{30} level character, was in a dungeon with his friends Rob, a \ordinalnum{28} level Warrior/Rune Knight and Nyarly, a \ordinalnum{31} level Adept/Wizard. After an unfortunate failed Challenge roll, they fell into a trap, activating an iron Golem guardian. \\
+Later in his adventures, JBMog, now a \ordinalnum{30} level character, was in a dungeon with his friends Rob, a \ordinalnum{28} level Warrior/Alchemist and Nyarly, a \ordinalnum{31} level Adept/Wizard. After an unfortunate failed Challenge roll, they fell into a trap, activating an iron Golem guardian. \\
 \textbf{GM}: \enquote{Start of Round 1. The creature rolls 1, 3 and 6 as initiative. Roll your initiative!} \\
 \textbf{JB}: \enquote{5, 6 and 9. I use my Preemptive Strike to change the 9 to 1. My initiatives are 1, 5 and 6!} \\
 \textbf{Rob}: \enquote{3, 3, and 8. And Nyarly rolled 4, 5, and 10} \\
@@ -155,7 +158,7 @@ Later in his adventures, JBMog, now a \ordinalnum{30} level character, was in a 
 \textbf{JB}: \enquote{I'll strike the golem with my lance. I rolled a 61, plus my Air is 148 total. It hits?} \\
 \textbf{GM}: \enquote{You try to attack him with your polearm, but the heavy armor of the golem deflects it (The attack targets Earth plus diff 40. His value is 112, so he needed to overcome 152 to hit). He ignores your attacks while he prepares his own. He starts charging a Slow axe attack against Nyarly. We begin Phase 2, and his attack is finished. I roll a 34 (plus his 112 Earth totals 145) for a total 114 damage (110 damage plus 34's singles digit).} \\
 \textbf{Nyarly}: \enquote{Yikes! I will use an interrupt action and react to use \taction{Will Shield}. I spend the 4 and 10 dice. I rolled a 69, for a total of 149. I made it? (The GM nods, as his \taction{Will Shield} have 30 difficulty and the Golem's Earth value is 112, and 149 is greater than 142.) Nyarly creates a magical shield that blocks the blow and spends 14 MP (10\% of his 143 MP).} \\
-\textbf{Rob}: \enquote{Seems no one got actions in Phase 2, so I'm acting at phase 3. Seems that his weak spot is Air, so my first action is to draw my Meteo Knuckle. My second action (Rob can act before the golem since his initiative total is 11 and the Golem's is 9) is to use \taction{Item} to stash my Old Axe and equip the gloves.} \\
+\textbf{Rob}: \enquote{Seems no one got actions in Phase 2, so I'm acting at phase 3. Seems that his weak spot is Air, so my first action is \taction{Item} to swap my Axe for the Meteo Knuckle (he does not roll because he is not resisting the action). My second action (Rob can act before the golem since his initiative total is 11 and the Golem's is 9) is to use \taction{Cast} to buff  myself with a Light Curtain.} \\
 \textbf{GM}: \enquote{The Golem starts to leak out a strange gas. It attacks all characters, rusting your equipment! Whoever got Water lower than 43 is hit with the Weaken (Armor) status until the end of the next round.} (The GM rolled a 31. 31 plus the Golem's Fire value is 113, and the attack had diff 70 and targeted the group) \\
 \textbf{JB}: \enquote{I think the only one hit was Rob (Rob nods). My turn now, right? (Nyarly's initiative total is 5, while JB's is 11) I'll use \taction{Advice} on Rob. I want him to crit with that knuckle!} \\
 \textbf{Nyarly}: \enquote{So, now it is my turn. I'll spend 60 HP to unleash a \taction{Fury Brand}. Rolled 90 for a total of 181 vs Water+30. If it hits, that's 131 Fire damage and maybe Berserk.} \\
