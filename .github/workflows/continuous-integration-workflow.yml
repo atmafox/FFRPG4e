@@ -7,7 +7,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@master
+        uses: xu-cheng/latex-action@2.1.0
         with:
           root_file: revised.tex
           args: -xelatex -file-line-error -interaction=nonstopmode
