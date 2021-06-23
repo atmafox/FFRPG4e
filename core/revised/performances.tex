@@ -4,7 +4,7 @@
     
     Dances are always Quick physical actions. They are focused on your opponents, causing injury, reducing their fighting skills and helping you to get rid of your enemies.
     
-    \textit{Witch Hunt} is a level 1 dance. Perform a Water vs Air attack, difficulty 40. If successful, you deal weapon physical damage on a target. Instead of losing HP, the target loses MP equal to the damage dealt.
+    \textit{Witch Hunt} is a level 1 dance. Perform a Water vs Air attack, difficulty 30. If successful, you deal weapon physical damage on a target. Instead of losing HP, the target loses MP equal to the damage dealt.
     
     \textit{Toxic Dance} is a level 1 dance. Perform a Water vs Earth attack, difficulty 70. If successful, inflict the \tstatus{Poison} status on a target during this and the next three rounds.
 
@@ -14,7 +14,7 @@
     
     \textit{Jitterbug} is a level 2 dance. Perform a Water vs Earth attack, difficulty 50. If successful, you deal weapon physical damage on a target. You drain HP equal to half of the damage dealt.
     
-    \textit{Wicked Waltz} is a level 2 dance. Perform a Water vs Water attack, difficulty 70. If successful, the target loses a third of its current HP\@. This is a \tstatus{Gravity} status effect.
+    \textit{Wicked Waltz} is a level 2 dance. Perform a Water vs Water attack, difficulty 50. If successful, the target loses a third of its current HP\@. This is a \tstatus{Gravity} status effect.
     
     \textit{Sword Dance} is a level 3 dance. Perform a Water vs Fire attack, difficulty 70. If successful, you deal 200\% weapon physical damage on a target.
     
@@ -22,7 +22,7 @@
     
     \textit{Break Dance} is a level 3 dance. Perform a Water vs Earth attack, difficulty 70. If successful, inflict the \tstatus{Stone} status on a target until the end of next round.
     
-    \textit{Virulent Flourish} is a level 4 dance. Perform a Water vs Earth attack, difficulty 70. If successful, inflict the \tstatus{Virus} status on a target until the end of next round.
+    \textit{Virulent Flourish} is a level 4 dance. Perform a Water vs Earth attack, difficulty 70. If successful, deal weapon physical damage and inflict the \tstatus{Virus} status on a target until the end of next round.
     
     \textit{Deadly Duet} is a level 4 dance. Perform a Water vs Water attack, difficulty 70. If successful, you deal weapon physical damage on a target. You drain HP and MP equal to half of damage dealt.
     
@@ -53,7 +53,7 @@
     
     \textit{Requiem} is a level 3 song. Perform a Water vs Air attack, difficulty 50. If successful, inflict magical damage to all combatants, allies or enemies, who possess the \tstatus{Zombie} status, equal to twice your weapon damage.
     
-    \textit{Element Carol} is a level 3 song. Choose an ally and an element: \telem{Fire}, \telem{Ice}, \telem{Lightning}, \telem{Bio}, \telem{Light}, \telem{Shadow}, \telem{Air}, \telem{Water} or \telem{Earth}. Grant the \tstatus{Resist} (chosen element) status to that ally until the end of the round. Moreover, while it is under this effect, its weapon gains the Elemental Damage property, dealing damage of the chosen element.
+    \textit{Element Carol} is a level 3 song. Choose an ally and an element other than: \telem{Cut}, \telem{Crush} or \telem{Puncture}. Grant the \tstatus{Resist} (chosen element) status to that ally until the end of the round. Moreover, while it is under this effect, its weapon gains the Elemental Damage property, dealing damage of the chosen element.
     
     \textit{Seraph Song} is a level 3 song. Perform a Water vs Earth attack, difficulty 20, targeting your group. You should roll this even if the targets want to be hit. You and all your allies who are affected by this performance lose their \tstatus{Poison} and \tstatus{Virus} status effects. In addition, affected targets become Resistant to \tstatus{Toxic}–type status effects until the end of the round.
 
@@ -71,11 +71,11 @@
  
     \subsection{Mimicry}\label{subsec:perf-mimicry}
 
-	Unlike the other performances, a mimicry can be Quick or Slow, Ranged or Melee, physical or magical. When using a mimicry to repeat an action of another character, the performance repeats all the action’s characteristics. In addition, you should spend all the necessary resources to use the action, be it an item, charge time, multiple actions, HP or MP\@. Furthermore, depending on the performance, it may even be a reaction or even not an action at all, simply modifying the effects of other actions. If the mimicked action was a weapon attack, you attack with your own weapon. When mimicking an enemy, unless the enemy's action explicitly indicates a weapon attack or is a Job action, you perform the action using the same Stat and damage multipliers the enemy used. A Mimic should use Delayed and Interrupt actions to use its mimicry to the fullest extent.
+	Mimicry can be Quick or Slow, Ranged or Melee, physical or magical, reaction or even not an action at all. When using a mimicry to repeat an action of another character, the performance repeats all the action’s characteristics, and you should spend all the necessary resources to use the action, be it an item, charge time, multiple actions, HP or MP\@. If the mimicked action was a weapon attack, you attack with your own weapon. When mimicking an enemy, unless the enemy's action explicitly indicates a weapon attack or is a Job action, you perform the action using the same Stat and damage multipliers the enemy used. A Mimic should use Delayed and Interrupt actions to use its mimicry to the fullest extent.
     
     \textit{Mimic}  is a level 1 mimicry. This action may only be used if the action performed this round immediately before using \textit{Mimic} was carried out by an ally. You repeat the ally’s action, with the same target.
     
-    \textit{Mirror Mimic} is a level 1 mimicry. This action may only be used if the action performed this round immediately before using \textit{Mirror Mimic} was conducted by an enemy. You repeat the enemy’s action, with the same target. You may target the enemy who performed the action, instead of the original target. 
+    \textit{Mirror Mimic} is a level 1 mimicry. This action may only be used if the action performed this round immediately before using \textit{Mirror Mimic} was conducted by an enemy. You repeat the enemy’s action, with the same target. You may target the enemy who performed the action instead of the original target. 
     
     \textit{Memory Mimic} is a level 2 mimicry. You repeat an ally’s action, with the same target. You may only repeat actions that were carried out in this round.
 
@@ -89,12 +89,12 @@
 	
 	\textit{Final Mimic} is a level 4 mimicry. When you are reduced to 0 HP for any reason, you may, before falling unconscious, repeat the action that befell you as an interrupt, targeting the ally or enemy that performed the action.  Unlike other mimicry, you don't need to spend HP, MP, charge time or any other extra resources to use \textit{Final Mimic}.
     
-    \textit{Command Mimic} is a level 5 mimicry. Once per combat, before the start of first round, as a free action, you may choose an Ability of any ally. You gain the chosen Ability until the combat’s end. The chosen Ability does not have any effect on your maximum HP and MP, neither on the weapons and armor you may equip. Whenever the chosen Ability gives you a choice to make when gaining it, you may choose any option, regardless of the choice originally made by the ally.
+    \textit{Command Mimic} is a level 5 mimicry. Once per combat as a free action, before the start of first round, you may choose an Ability of any ally. You gain the chosen Ability until the combat’s end. The chosen Ability does not have any effect on your maximum HP and MP, neither on the weapons and armor you may equip. Whenever the chosen Ability gives you a choice to make when gaining it, you may choose any option, regardless of the choice originally made by the ally.
     
     \textit{Take Over} is a level 5 mimicry. Perform a Water vs Water attack, difficulty 70. If successful, inflict the \tstatus{Stop} status on a target until the end of next round. While it remains under the \tstatus{Stop} status, you may use your actions to force it to use one of its actions, targeting characters of your choice. If you perform any action, other than commanding the target to act, before the end of the next round, the target loses the \tstatus{Stop} status.
 \end{multicols}
 \vspace*{\stretch{1}}
 \begin{center}
-    \adjincludegraphics[height=.25\textheight]{block-city-jagged}
+    \adjincludegraphics[height=.5\textheight]{block-city-jagged}
 \end{center}
 \vspace*{\stretch{1}}

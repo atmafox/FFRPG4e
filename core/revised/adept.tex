@@ -24,7 +24,7 @@
 
         \speclede{water=3, name=Spirit Strength} Whenever you need to spend HP to use an action, you may spend an equal amount of MP to prevent the HP loss. \\
 
-        \speclede{earth=3, name=Arcane Fury} While your current MP is greater than zero and you have the \tstatus{Berserk} status, your \taction{Attack} action deals 150\% weapon damage. \\
+        \speclede{earth=3, name=Arcane Fury} While you're equipped with any weapon without \textit{Soul Eater}, increase its damage by your Earth level and give it \textit{Soul Eater}. At level 35, increase the extra damage to 2x your Earth level. \\
 
     \tabjobsep%
 
@@ -65,7 +65,7 @@
 
     \tabjobsep%
 
-    \ability{level=24, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, either gain one of \taction{!Snake Fang}, \taction{!Hallowed Bolt} or \taction{!Black Sky} or choose one Adept ability (even if you don't have it yet) and unlock its \textit{Augment}.}}\\
+    \ability{level=24, name=Arcane Shock, desc={You gain the \actype{ranged=true,slow=3,magical=true} \taction{Demi Shock}. Concentrating the arcane forces, you try to break the enemy. Do a Fire vs Earth attack, difficulty 40. If successful, the target loses 50\% of their current HP\@. This counts as a \tstatus{Gravity}-type status effect.}}\\
     \tabjobspec{}
 
         \speclede{fire=10, name=Night Sword, action={slow=2}} Using dark energies in your favor, you drain the life energy of your target. Attack with your weapon to deal weapon damage, \telem{Shadow}-elemental, to a target, and you drain HP equal to the HP lost\@. \\
@@ -76,7 +76,7 @@
 
     \tabjobsep%
 
-    \ability{level=42, name=Arcane Shock, desc={You gain the \actype{ranged=true,slow=3,magical=true} \taction{Demi Shock}. Concentrating the arcane forces, you try to break the enemy. Do a Fire vs Earth attack, difficulty 40. If successful, the target loses 50\% of their current HP\@. This counts as a \tstatus{Gravity}-type status effect.}}\\
+    \ability{level=42, name=Elemental Soul, desc={Select an element other than \telem{Cut}, \telem{Crush}, or \telem{Puncture}. You become \tstatus{Immune} to all damage of the chosen element. In addition, either gain one of \taction{!Snake Fang}, \taction{!Hallowed Bolt} or \taction{!Black Sky} or choose one Adept ability (even if you don't have it yet) and unlock its \textit{Augment}.}}\\
     \tabjobspec{}
 
         \speclede{earth=8, water=10, name=Mana Safe} You can spend any amount of MP and an action to heal the same amount of MP to an ally. Any ally can spend any amount of MP and an action to heal on you half that amount of MP\@. Choose one Adept ability and unlock its \textit{Augment}. \\
@@ -99,6 +99,6 @@
 \end{tabjob}
 \vspace{\stretch{1}}
 \begin{center}
-    \adjincludegraphics[width=0.65\textwidth,center]{block-three-adepts}
+    \adjincludegraphics[width=0.35\textwidth,center]{block-three-adepts}
 \end{center}
 \vspace{\stretch{1}}
